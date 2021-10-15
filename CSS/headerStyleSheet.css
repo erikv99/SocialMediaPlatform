@@ -1,0 +1,63 @@
+.headerIcon 
+{
+	padding-left: 2em;
+	width: 60px;
+	height: 60px;
+}
+
+.header h1 
+{
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 39px;
+	color: white;
+}
+
+table 
+{
+	padding: 1em 0px;
+}
+
+.header 		
+{
+	position: absolute;
+	min-width: 40em;
+	width: 90%;
+	height: 6em;
+	top: 0px;
+	background-color: #4caf50;
+	margin: 0px;
+	border-bottom: 3px solid #FAB06A;
+	border-radius:  0 0 4em 0
+}
+
+button 
+{
+	font-size: 100%;
+	border-radius: 25px;
+	padding: 8px 16px;
+	margin-top: 7px;
+	background-color: #4caf50;
+	color: #425053;
+	border: 3px outset white;
+
+}
+
+#loginButtons 
+{
+	position: relative;
+	right: 3em;
+	width: 100%;
+	align-content: 	right;
+}
+
+#signupButton
+{
+	margin-right: 1em;
+}
+
+#loginButton, #signupButton
+{
+	float: right;
+}

@@ -1,0 +1,91 @@
+ 
+.loginContainer 
+{
+
+	position: fixed;
+    top: 24%;
+    left: 35%;
+	width: 30%;
+	height: 40vh;
+	z-index: 5455555;	
+}
+
+.loginContainer form 
+{
+	position: relative;	
+	top: 27%;
+	margin: auto;
+	width: 200px;
+	margin-bottom: 0px;
+	text-decoration: bold;
+}
+#submitButton 
+{	
+	margin-top: 10px;
+}
+
+.loginContainer label, input 
+{
+	margin-left: auto;
+	width: 15em;
+	margin-right: auto;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.loginFormContainer 
+{
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 4em;
+	width: 60%;
+	border: 1px groove #4caf50;
+	box-shadow: 0 20px 50px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
+	padding: 24px !important;		
+	background-color: white;
+	color: black;
+	min-width: 200px;
+	border-radius: 7px !important;
+}
+
+.cancelButton 
+{
+	width: 10%;
+	height: 8%;
+	margin-left: 94%;
+	margin-top: -1.2em;
+	border: none;
+	background-color: transparent;
+}
+
+.cancelImage
+{
+	position: relative;
+	right: 0.7em;
+	bottom: 0.3em;
+	width: 1.5em;
+	height: 1.3em;
+	padding-bottom: 1em;
+}
+.submitButton
+{
+	border-radius: 25px;
+	padding: 8px 16px;
+	margin-top: 15px;
+	background-color: #4caf50;
+	color: white;
+	border: 1px groove #4caf50;
+}
+
+.confirmPassword 
+{
+	display: none;
+}
+
+.loginErrorBox 
+{
+	width: 100%;
+	font-size: 25%;
+}
