@@ -2,29 +2,31 @@
 
 require_once("../Controllers/controller.php");
 require_once("../Models/loginModel.php");
+require_once("../Views/loginView.php");
 
 class LoginController extends controller 
 {
 	private Model $model;
 	private View $view;
 
-	function __construct()
-	{
-		// Calling the parent constructor 
-		parent::construct();
+	public function __construct()
+	{	
 
 		// Making our model and view objects
-		$model = new LoginModel();
-		$view = new LoginView();
+		$this->model = new LoginModel();
+		$this->view = new LoginView();
 	}
 
 	public function getView() 
 	{
-		$view->getView();
+		return $this->view->getView();
 	}
 
 } 
 
 $controller = new LoginController();
-$controller->getView();
+$viewToReturn = $controller->getView();
+$jsonResponse = ["view", $viewToReturn];
+
+echo json_encode($jsonResponse);
 ?>

@@ -12,16 +12,17 @@ html, body
 .content
 {
 	padding-top: 5em;
-	padding-left: 5.5em;
+	padding-left: 4.5em;
 	padding-right:  1em;
 	margin-right: 0.2em;
 	align-content: center;
-	background-color: #fff;
-	background-image:
-		linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-		linear-gradient(#eee .1em, transparent .1em);
-	background-size: 100% 1.2em;
+	background: url("../IMG/whitepatternbackground.jpg");
+		background-position: 100%;
+		background-size: 1500px;
+		background-repeat: repeat-y;
+		background-repeat-y: ;
 	min-height: 100vh;
+	min-width: 80vw;
 }
 
 .page 
@@ -31,23 +32,8 @@ html, body
 	border-top: none;
 	border-bottom: none;
 	margin: 2em, 0em;	
+	height: 100vh;
 
-}
-
-.mainSubjectTitle 
-{
-	margin-top:  2em;
-	height:  1.6em;
-	font-size: 1em;
-	text-align: left;
-	width: 20%;
-	padding-left: 1em;
-	padding-top: 0.4em;
-	background-color:  #F3F6F4;
-	box-shadow: 6px 5px lightgray;
-	border-radius: 0.6em;
-	border: 3px groove #4caf50;
-	color:  #4caf50;
 }
 
 .footer 
@@ -76,21 +62,7 @@ html, body
 
 /* Content container / post container css */
 
-.contentContainer 
-{
-	width: auto;
-	min-width: 	35em;
-	margin-left:  auto;
-	padding: 0.2em;
-	margin-right:  auto;
-	border: 3px groove #4caf50;
-	border-radius:  0.5em;
-	box-shadow: 6px 5px lightgray;
-	background-color:  #F3F6F4;
-	max-height: 12em;
-	overflow: hidden;
-	padding-top: 0.5em;
-}
+
 
 .postText 
 {
@@ -140,7 +112,7 @@ html, body
 
 /* General css */
 
-.ImageButton 
+.imageButton 
 {
 	border: none;
 	margin: 0px;
@@ -152,60 +124,15 @@ html, body
 	float: left;
 }
 
-/* Post interaction related css (like, dislike comment etc) */
-.likeCount 
-{
-	font-size: 110%;
-	margin: 0.3em -8px;
-	border-radius: 25px;
-	padding: 4px 8px;
-	background-color: lightgray;
-	color: #425053;
-	position:  relative;
-	bottom:  7px;
-}
-
-.postInteractionSection
-{
-	padding: 1.2em 0.5em 0.5em 0.3em;
-}
-
-.postInteractionSection table 
-{
-	margin:  0px;
-	padding:  0px;
-}
-
-.postInteractionButton 
-{
-	padding: 4px 8px;
-	background-color: lightgray;
-	height: 2.8em;
-	vertical-align: top;
-}
-
-.postInteractionSection	p 
-{
-	margin: 0.2em;
-}
-
-.readPostButton 
-{
-	float: right;
-	color: darkblue;
-	font-weight: 500;
-}
-
 /* Sidebar related css */
 
 .expandedSidebar, .collapsedSidebar 
 {
-	background-color: #4caf50;
+	background-color: #394263;
 	color: white;
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	border-right:  3px solid #FAB06A;
 	border-radius:  0 0 4em 0;
 	margin-top:  6em;
 }

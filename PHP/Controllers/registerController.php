@@ -9,10 +9,10 @@ class RegisterController extends Controller
 	private Model $model;
 
 	function __construct()
-	{
+	{	
 		// Calling the parent constructor
 		parent::construct();
-		
+
 		// Making our model and view
 		$this->model = new RegisterModel();
 		$this->view = new RegisterView();

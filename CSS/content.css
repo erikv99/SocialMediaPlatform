@@ -1,0 +1,60 @@
+.subjectContainer 
+{
+	width: auto;
+	min-width: 	35em;
+	min-height: 14em;
+	margin-left:  auto;
+	margin-top: 2em;
+	margin-right:  auto;
+	border-radius: 0.5em;
+	/* border: 3px groove rgb(57, 66, 99); */
+	box-shadow: 6px 5px darkgrey;
+	background-color:  #F3F6F4;
+	max-height: 12em;
+	overflow: hidden;
+	padding-bottom: 0.3em;
+}
+
+.subjectContainer table 
+{
+	padding:  0px;
+	width: 100%;
+	margin: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+.subjectContainer tr 
+{
+	line-height: 2.5em;
+}
+.subSubjectContainer 
+{
+
+}
+
+.mainSubjectTitle 
+{
+	background: #394263 url("../IMG/catOverlay.png");
+		background-position-x: 100%;
+		background-position-y: 100%;
+		background-repeat: no-repeat;
+	width: 100%;
+	color:  white;
+	padding-left: 0.7em;
+
+}
+
+.subSubjectTitle 
+{
+	padding-left:  0.7em;
+	color 	
+}
+
+
+.collapseSubjectIcon 
+{
+	width: 1em;
+	height: 1em;
+}
+

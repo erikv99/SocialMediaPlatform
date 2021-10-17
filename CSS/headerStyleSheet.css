@@ -1,6 +1,6 @@
 .headerIcon 
 {
-	padding-left: 2em;
+	padding-left: 4em;
 	width: 60px;
 	height: 60px;
 }
@@ -23,13 +23,12 @@ table
 {
 	position: absolute;
 	min-width: 40em;
-	width: 90%;
+	width: 100vw;
 	height: 6em;
 	top: 0px;
-	background-color: #4caf50;
+	background-color: #394263;
 	margin: 0px;
-	border-bottom: 3px solid #FAB06A;
-	border-radius:  0 0 4em 0
+	
 }
 
 button 
@@ -38,8 +37,8 @@ button
 	border-radius: 25px;
 	padding: 8px 16px;
 	margin-top: 7px;
-	background-color: #4caf50;
-	color: #425053;
+	background-color: rgb(57, 66, 99);
+	color: white;
 	border: 3px outset white;
 
 }
