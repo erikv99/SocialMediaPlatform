@@ -1,10 +1,25 @@
+.content
+{
+	padding-top: 7em;
+	padding-left: 4.5em;
+	padding-right:  1em;
+	margin-right: 0.2em;
+	align-content: center;
+	background: url("../IMG/whitepatternbackground.jpg");
+		background-position: 100%;
+		background-size: 1500px;
+		background-repeat: repeat-y;
+		background-repeat-y: ;
+	min-height: 100vh;
+	min-width: 80vw;
+}
+
 .subjectContainer 
 {
 	width: auto;
 	min-width: 	35em;
-	min-height: 14em;
 	margin-left:  auto;
-	margin-top: 2em;
+	margin-bottom: 0.9em;
 	margin-right:  auto;
 	border-radius: 0.5em;
 	/* border: 3px groove rgb(57, 66, 99); */
@@ -12,7 +27,7 @@
 	background-color:  #F3F6F4;
 	max-height: 12em;
 	overflow: hidden;
-	padding-bottom: 0.3em;
+	border:  2px solid #394263;
 }
 
 .subjectContainer table 
@@ -26,35 +41,71 @@
 
 .subjectContainer tr 
 {
-	line-height: 2.5em;
-}
-.subSubjectContainer 
-{
-
+	line-height: 1em;
 }
 
 .mainSubjectTitle 
 {
-	background: #394263 url("../IMG/catOverlay.png");
+		background: #394263 url("../IMG/catOverlay.png");
 		background-position-x: 100%;
 		background-position-y: 100%;
 		background-repeat: no-repeat;
-	width: 100%;
-	color:  white;
+	color:  #5dd4cd;
 	padding-left: 0.7em;
+}
 
+.mainSubjectTitle p, .subSubjectTitle p 
+{
+	margin: 0px;
+	font-weight: 600;
+	font-family: "Trebuchet MS";
+	width: max-content;
+	font-size: 1.2em;
+	margin-top: 1.2em;
+	padding-bottom: 0em;
+	
+}
+
+.subSubjectTitle p 
+{
 }
 
 .subSubjectTitle 
 {
 	padding-left:  0.7em;
-	color 	
+ background: rgb(93,212,205);
+background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 57%); 
+	padding-bottom:  1.2em;
 }
 
 
-.collapseSubjectIcon 
+.collapseSubjectImg
 {
-	width: 1em;
-	height: 1em;
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+	position:  relative;
+	right: 1px;
+}
+
+.collapseSubjectButton 
+{
+	position: relative;
+	background-color: transparent;
+	width: 5%;
+	right: 5px;
+	bottom: 1em;
+	float:  right;
+}
+
+.subjectContainer a 
+{
+	color: #394263;
+	text-decoration: none;
+}
+
+.subjectContainer a:hover 
+{
+	color: white;
 }
 
