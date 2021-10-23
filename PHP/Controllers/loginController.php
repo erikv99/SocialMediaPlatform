@@ -26,7 +26,7 @@ class LoginController extends controller
 
 $controller = new LoginController();
 $viewToReturn = $controller->getView();
-$jsonResponse = ["view", $viewToReturn];
+$jsonResponse = ["view" => $viewToReturn];
 
 echo json_encode($jsonResponse);
 ?>

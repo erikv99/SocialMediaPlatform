@@ -29,40 +29,26 @@ class LoginView extends View
 		<br/>
 		<input class='submitButton' type='submit' value='Log in'>
 		<div class='loginErrorBox'>
-		<p>" . $this->errorMessage . "</p>
+		<p> " . $this->errorMessage . "</p>
 		</div>
 		</form>
 		</div>
 		</div>
-
-		<html>
-		<head>
-		<title>Thoughtshare</title>
-		</head>
-		<body>
-		<div class='overlay'/>	
-		<div class='page'>
-		<div class='content'>
-		</div>
-		<?php 	
-		include_once('Include/header.inc.php');
-		include_once('Include/sidebar.inc.php');
-		?>
-		</div>
-		<link rel='stylesheet' type='text/css' href='../CSS/stylesheet.css'/>
-		<link rel='stylesheet' type='text/css' href='../CSS/loginStyleSheet.css'/>
-		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-		<script type='text/javascript' src='../JS/loginButtonHandler.js'></script>
-		<script type='text/javascript' src='../JS/SidebarFunctions.js'></script>
-		</body>
-		</html>
 		";
 	}
 	
 
 	public function getView() : string 
 	{
-		return $this->view;
+		parent::__construct();
+		// Setting the content in the view we will get from the parent
+		parent::setContent($this->view);
+
+		// Getting the view from the parent which now has the view of this class as content
+		$viewToReturn = parent::getView();
+
+		// Returning the view
+		return $viewToReturn;
 	}
 
 	public function setErrorMessage(string $errorMessage) 

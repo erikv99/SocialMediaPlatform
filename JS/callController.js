@@ -4,8 +4,17 @@ function callController(controllerName)
 
 	$.ajax({url: filePath, success: function(response) 
 	{
+		console.log(response);
 		var jsonObj = JSON.parse(response);
-		$("html").html(jsonObj.view);
+		console.log(jsonObj.view);
+		window.location.href = "empty.php";
+
+		window.onload = function()
+		{
+			$("body").html(jsonObj.view);
+		}
+
+		
 	},
 	error: function(xhr, status, error) 
 	{
