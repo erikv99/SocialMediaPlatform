@@ -1,4 +1,4 @@
-function callController(controllerName) 
+function callController(placeMentTag, controllerName) 
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
 
@@ -6,15 +6,7 @@ function callController(controllerName)
 	{
 		console.log(response);
 		var jsonObj = JSON.parse(response);
-		console.log(jsonObj.view);
-		window.location.href = "empty.php";
-
-		window.onload = function()
-		{
-			$("body").html(jsonObj.view);
-		}
-
-		
+		$(placeMentTag).append(jsonObj.view);	
 	},
 	error: function(xhr, status, error) 
 	{

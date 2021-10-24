@@ -1,20 +1,23 @@
 <?php 
+
+/** Model base class */
+
 class Model
 {
-	private $variables = array();
-
-	// The following functions are for assigning, updating and deleting private variables in the model class. (private since there in a private array/list)
-	protected function assignVariable(string $varName, $varValue)
+	public function __construct()
 	{
-		//global $variables;
-		$this->variables[$varName] = $varValue;
+
 	}
 
-	protected function deleteVariable(string $varName) 
+	/**
+	 * Function which will execute the logic inside the model class. since this function is always being called it must have a return value.
+	 * 
+	 * @return "" is no error
+	 * @return "errorMessage" if a error is found
+	 */
+	public function execute() 
 	{
-		//global $variables;
-		$index = array_search($varName, $this->variables);
-		unset($this->variables[$index]);
+		return "";
 	}
 
 }

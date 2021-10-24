@@ -1,9 +1,12 @@
- 
+.login 
+{
+	width: 100%;
+	height: 100%;
+}
 .loginContainer 
 {
-
 	position: fixed;
-    top: 24%;
+    top: 25%;
     left: 35%;
 	width: 30%;
 	height: 40vh;
@@ -13,7 +16,7 @@
 .loginContainer form 
 {
 	position: relative;	
-	top: 27%;
+	top: 5%;
 	margin: auto;
 	width: 200px;
 	margin-bottom: 0px;
@@ -39,9 +42,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	top: 4em;
 	width: 60%;
-	border: 1px groove #4caf50;
+	border: 3px groove #394263;
 	box-shadow: 0 20px 50px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
 	padding: 24px !important;		
 	background-color: white;
@@ -74,18 +76,25 @@
 	border-radius: 25px;
 	padding: 8px 16px;
 	margin-top: 15px;
-	background-color: #4caf50;
+	background-color: #394263;
 	color: white;
-	border: 1px groove #4caf50;
-}
-
-.confirmPassword 
-{
-	display: none;
+	
 }
 
 .loginErrorBox 
 {
 	width: 100%;
-	font-size: 25%;
+	font-size: 50%;
+}
+.overlay 
+{
+	background: rgba(255,255,255,0.6);
+	backdrop-filter: blur(5px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 122234;
+	filter: blur(5px);
 }

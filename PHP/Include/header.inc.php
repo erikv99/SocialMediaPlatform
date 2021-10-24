@@ -10,8 +10,8 @@
 				<h1>ThougtShare</h1>
 			</td>
 			<td id="loginButtons">
-				<button type="button" id="loginButton" onClick="callController('loginController');">Log in</button>
-				<button type="button" id="signupButton" onClick="showRegister()">Sign up</button>
+				<button type="button" id="loginButton" onClick="callController('body', 'loginController');">Log in</button>
+				<button type="button" id="signupButton" onClick="callController('body', 'registerController');">Sign up</button>
 
 			</td>
 		</tr>

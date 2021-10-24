@@ -1,70 +1,36 @@
 <?php 
+
+	/** View base class */
+
 	class View 
 	{
-		private string $view;
+		/* Variable contains the html/content of the view */
+		private string $viewContent;
 
 		function __construct() 
 		{
-			$this->view = 			
-			"
-			<html>
-			<head>
-				<title>Thoughtshare</title>
-			</head>
-			<body>
-			<div class='overlay'/>	
-			<div class='page'>
-				<div class='content'>
-				</div>
-				<?php 	
-				include_once('Include/header.inc.php');
-				include_once('Include/sidebar.inc.php');
-				?>
-			</div>
-			<link rel='stylesheet' type='text/css' href='../CSS/stylesheet.css'/>
-			<link rel='stylesheet' type='text/css' href='../CSS/loginStyleSheet.css'/>
-			<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-			<script type='text/javascript' src='../JS/loginButtonHandler.js'></script>
-			<script type='text/javascript' src='../JS/SidebarFunctions.js'></script>
-			</body>
-			</html>
-			";
-
+			$this->viewContent = "<h1>View->viewContent is not set</h1>";
 		}
 
-		function setContent($content) 
+		/**
+		 * Function to set the viewContent of a view
+		 * 
+		 * @param string $viewContent
+		 */
+		public function setView($viewContent)
 		{
-			$this->view = 			
-			"
-			<!DOCTYPE html>
-			<html>
-			<head>
-				<title>Thoughtshare</title>
-			</head>
-			<body>
-			<div class='overlay'/>	
-			<div class='page'>
-				<div class='content'>
-				" . $content ."
-				</div>
-				\<?php 	
-				include_once('Include/header.inc.php');
-				include_once('Include/sidebar.inc.php');
-				?\>
-			</div>
-			<link rel='stylesheet' type='text/css' href='../CSS/stylesheet.css'/>
-			<link rel='stylesheet' type='text/css' href='../CSS/loginStyleSheet.css'/>
-			<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-			<script type='text/javascript' src='../JS/loginButtonHandler.js'></script>
-			<script type='text/javascript' src='../JS/SidebarFunctions.js'></script>
-			</body>
-			</html>
-			";
+			$this->viewContent = $viewContent;
 		}
 
-		function getView()
+
+		/**
+		 * Function which will return the viewContent of a view
+		 * 
+		 * @return string $viewContent
+		 */
+		public function getView() : string 
 		{
-			return $this->view;
+			return $this->viewContent;
 		}
 	}
 ?>

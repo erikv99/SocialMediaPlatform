@@ -12,7 +12,6 @@
 	<title>Thoughtshare</title>
 </head>
 <body>
-<div class="overlay"/>	
 <div class="page">
 	<div class="content">
 		<?php 

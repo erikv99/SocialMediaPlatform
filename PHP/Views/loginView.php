@@ -5,18 +5,25 @@ require_once("../Views/view.php");
 class LoginView extends View 
 {
 	private string $errorMessage;
-	private string $view;
+	private View $view;
 
 	function __construct() 
 	{
-
+		$this->view = new View();
 		$this->errorMessage = "";
+		$this->createView();
+	}
 
-		$this->view = 	
+	// This function is needed since if "errormessage" is changed it the view needs to be updated
+	private function createView() 
+	{
+		$this->view->setView( 	
 		"
+		<div class='login'>
+		<div class='overlay'/>	
 		<div class='loginContainer'>
 		<div class='loginFormContainer' style='display:block;'>
-		<button class='cancelButton' onClick='../Controllers/loginController.php'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
 		<img src='../IMG/cancel.png' class='cancelImage'></img>
 		</button>
 		<form action='Controllers/registerController.php' method='POST'>
@@ -24,8 +31,6 @@ class LoginView extends View
 		<input type='text' name='username' minlength='2' maxlength='30' required>
 		<label for='password'>Password: </label>
 		<input type='password' name='password' minlength='2' maxlength='30' required>
-		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
-		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
 		<br/>
 		<input class='submitButton' type='submit' value='Log in'>
 		<div class='loginErrorBox'>
@@ -34,27 +39,23 @@ class LoginView extends View
 		</form>
 		</div>
 		</div>
-		";
+		</div>
+		");
 	}
-	
 
-	public function getView() : string 
+	public function getView() : string
 	{
-		parent::__construct();
-		// Setting the content in the view we will get from the parent
-		parent::setContent($this->view);
-
-		// Getting the view from the parent which now has the view of this class as content
-		$viewToReturn = parent::getView();
+		// Updating the view (incase error message has been changed)
+		$this->createView();
 
 		// Returning the view
-		return $viewToReturn;
+		return $this->view->getView();
 	}
 
+	// Function for updating the error message for this view.
 	public function setErrorMessage(string $errorMessage) 
 	{
 		$this->errorMessage = $errorMessage;
 	}
-
 }
 ?>
