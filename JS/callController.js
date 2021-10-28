@@ -6,6 +6,13 @@ function callController(placeMentTag, controllerName)
 	{
 		console.log(response);
 		var jsonObj = JSON.parse(response);
+		alert(jsonObj.indexViewRequired);
+		if (jsonObj.indexViewRequired == true) 
+		{
+			alert("is true");
+			window.location.replace("../index.php");
+		}
+
 		$(placeMentTag).append(jsonObj.view);	
 	},
 	error: function(xhr, status, error) 
@@ -14,4 +21,6 @@ function callController(placeMentTag, controllerName)
 		alert('Error - ' + errorMessage);
 	}
 	})
+
+	return false;
 }

@@ -6,38 +6,36 @@ class RegisterModel extends Model
 {
 	public function __construct() 
 	{
-
+		$dbConnection = openConnection();
 	}
 
-	public function execute() 
+	public function execute() : array
 	{
+		$returnData = ["indexViewRequired" => false, "message" => ""];
+
 		// Checking if the form is not empty. if it is empty we can return and do not need to execute any data
-		if ($_SERVER['REQUEST_METHOD'] != 'POST') 
+		if (!isset($_POST["username"])) 
 		{
-			return "no data retrieval needed";
+			$returnData["message"] = "No data retrieval needed";
+			$returnData["messageType"] = "alertInfo";
+			return $returnData;
 		}
 
-		$data = $this->getData();
+		$returnData["indexViewRequired"] = true;
+
+		$username = $_POST["username"];
+		$password = $_POST["password"];
+		$confirmPassword = $_POST["confirmPassword"];
 
 		// Checking if given password and confirmpassword match
-		if ($data["password"] != $data["confirmPassword"]) 
+		if ($password != $confirmPassword) 
 		{
-			return "Passwords do not match";
+			$returnData["message"] = "Passwords do not match";
+			$returnData["messageType"] = "alertDanger";
+			return $returnData;
 		}
-
-
-	return "";
-	}
-
-	private function getData() 
-	{
-		$data = [
-			"username" => $_POST["username"],
-			"password" => $_POST["password"],
-			"confirmPassword" => $_POST["confirmPassword"]
-		];
-
-		return $data;
+		
+		return $returnData;
 	}
 }
 ?>

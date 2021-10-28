@@ -6,8 +6,8 @@ require_once("../Views/view.php");
 
 class Controller 
 {
-	public Model $model;
-	public View $view;
+	protected Model $model;
+	protected View $view;
 	public string $viewToReturn;
 
 	public function __construct() 
@@ -26,13 +26,15 @@ class Controller
 		$output = $this->model->execute();
 
 		// If a error occured we're giving that error to the view (return vals for execute = "" = no error "error message" = error)
-		$this->view->setErrormessage($output);
+		$this->view->handleOutput($output);
 
 		// getting the view from our view
 		$this->viewToReturn = $this->view->getView();
 
+		// Checking if this view requires index.php to be loaded first
+
 		// making the response array and returning it
-		$response = ["view" => $this->viewToReturn,];
+		$response = ["view" => $this->viewToReturn, "indexViewRequired" => $output["indexViewRequired"]];
 		return $response;
 	}
 

@@ -11,6 +11,7 @@ class RegisterController extends Controller
 		$this->model = new RegisterModel();
 		$this->view = new RegisterView();
 	}
+
 }
 
 $controller = new RegisterController();

@@ -34,7 +34,6 @@ class LoginView extends View
 		<br/>
 		<input class='submitButton' type='submit' value='Log in'>
 		<div class='loginErrorBox'>
-		<p> " . $this->errorMessage . "</p>
 		</div>
 		</form>
 		</div>
