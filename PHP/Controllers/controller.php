@@ -1,10 +1,10 @@
 <?php
 require_once("../Models/model.php");
 require_once("../Views/view.php");
-
+require_once("../generalFunctions.php");
 /** Controller base class */
 
-class Controller 
+class Controller
 {
 	protected Model $model;
 	protected View $view;
@@ -31,10 +31,8 @@ class Controller
 		// getting the view from our view
 		$this->viewToReturn = $this->view->getView();
 
-		// Checking if this view requires index.php to be loaded first
-
 		// making the response array and returning it
-		$response = ["view" => $this->viewToReturn, "indexViewRequired" => $output["indexViewRequired"]];
+		$response = ["view" => $this->viewToReturn];
 		return $response;
 	}
 

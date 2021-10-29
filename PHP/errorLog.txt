@@ -1,0 +1,797 @@
+2021-10-28 16:20:45:664247: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 16:20:45:665824: varDump alertViewContent setView: 't'
+2021-10-28 16:20:45:667411: varDump alertViewContent getAlertView: 't'
+2021-10-28 16:20:45:668798: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 16:20:45:670166: varDump alertViewContent setView: 't'
+2021-10-28 16:20:45:671184: varDump alertViewContent getView: 't'
+2021-10-28 16:20:48:745129: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 16:20:48:746134: varDump alertViewContent setView: 't'
+2021-10-28 16:20:48:747126: varDump alertViewContent getAlertView: 't'
+2021-10-28 16:20:48:748302: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 16:20:48:749520: varDump alertViewContent setView: 't'
+2021-10-28 16:20:48:750659: varDump alertViewContent getView: 't'
+2021-10-28 16:25:33:356819: View object created in registerView::__construct
+2021-10-28 16:25:33:357887: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 16:25:33:358870: varDump alertViewContent setView: 't'
+2021-10-28 16:25:33:359840: varDump alertViewContent getAlertView: 't'
+2021-10-28 16:25:33:360716: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 16:25:33:361653: varDump alertViewContent setView: 't'
+2021-10-28 16:25:33:362559: varDump alertViewContent getView: 't'
+2021-10-28 16:25:37:784434: View object created in registerView::__construct
+2021-10-28 16:25:37:785472: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 16:25:37:786374: varDump alertViewContent setView: 't'
+2021-10-28 16:25:37:787391: varDump alertViewContent getAlertView: 't'
+2021-10-28 16:25:37:788306: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 16:25:37:789190: varDump alertViewContent setView: 't'
+2021-10-28 16:25:37:790194: varDump alertViewContent getView: 't'
+2021-10-28 17:04:50:228379: View object created in registerView::__construct
+2021-10-28 17:04:50:230005: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:04:50:230916: varDump alertViewContent setView: 't'
+2021-10-28 17:04:50:231891: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:04:50:232877: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:04:50:233814: varDump alertViewContent setView: 't'
+2021-10-28 17:04:50:234758: varDump alertViewContent getView: 't'
+2021-10-28 17:04:57:511742: View object created in registerView::__construct
+2021-10-28 17:04:57:513247: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:04:57:514440: varDump alertViewContent setView: 't'
+2021-10-28 17:04:57:515490: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:04:57:516758: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:04:57:517852: varDump alertViewContent setView: 't'
+2021-10-28 17:04:57:519018: varDump alertViewContent getView: 't'
+2021-10-28 17:05:01:593236: View object created in registerView::__construct
+2021-10-28 17:05:01:594571: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:05:01:596378: varDump alertViewContent setView: 't'
+2021-10-28 17:05:01:597675: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:05:01:598663: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:05:01:599769: varDump alertViewContent setView: 't'
+2021-10-28 17:05:01:600954: varDump alertViewContent getView: 't'
+2021-10-28 17:08:27:527666: View object created in registerView::__construct
+2021-10-28 17:08:27:529150: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:08:27:530814: varDump alertViewContent setView: 't'
+2021-10-28 17:08:27:532792: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:08:27:534021: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:08:27:673290: varDump alertViewContent setView: 't'
+2021-10-28 17:08:27:674662: varDump alertViewContent getView: 't'
+2021-10-28 17:08:29:693936: View object created in registerView::__construct
+2021-10-28 17:08:29:695220: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:08:29:696366: varDump alertViewContent setView: 't'
+2021-10-28 17:08:29:698303: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:08:29:699622: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:08:29:700893: varDump alertViewContent setView: 't'
+2021-10-28 17:08:29:702306: varDump alertViewContent getView: 't'
+2021-10-28 17:08:31:352192: View object created in registerView::__construct
+2021-10-28 17:08:31:353660: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:08:31:354929: varDump alertViewContent setView: 't'
+2021-10-28 17:08:31:356176: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:08:31:357391: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:08:31:359054: varDump alertViewContent setView: 't'
+2021-10-28 17:08:31:360220: varDump alertViewContent getView: 't'
+2021-10-28 17:09:06:453934: View object created in registerView::__construct
+2021-10-28 17:09:06:455228: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:09:06:456631: varDump alertViewContent setView: 't'
+2021-10-28 17:09:06:458027: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:09:06:459355: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:09:06:461029: varDump alertViewContent setView: 't'
+2021-10-28 17:09:06:462714: varDump alertViewContent getView: 't'
+2021-10-28 17:09:30:727037: View object created in registerView::__construct
+2021-10-28 17:09:30:727962: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:09:30:729469: varDump alertViewContent setView: 't'
+2021-10-28 17:09:30:730771: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:09:30:732291: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:09:30:733507: varDump alertViewContent setView: 't'
+2021-10-28 17:09:30:734107: varDump alertViewContent getView: 't'
+2021-10-28 17:15:37:655029: View object created in registerView::__construct
+2021-10-28 17:15:37:656589: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:15:37:657564: varDump alertViewContent setView: 't'
+2021-10-28 17:15:37:658377: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:15:37:659114: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:15:37:659890: varDump alertViewContent setView: 't'
+2021-10-28 17:15:37:661108: varDump alertViewContent getView: 't'
+2021-10-28 17:15:43:912273: View object created in registerView::__construct
+2021-10-28 17:15:43:913139: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:15:43:913993: varDump alertViewContent setView: 't'
+2021-10-28 17:15:43:914815: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:15:43:915485: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:15:43:916177: varDump alertViewContent setView: 't'
+2021-10-28 17:15:43:916799: varDump alertViewContent getView: 't'
+2021-10-28 17:17:27:043713: View object created in registerView::__construct
+2021-10-28 17:17:27:045304: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:17:27:046803: varDump alertViewContent setView: 't'
+2021-10-28 17:17:27:048834:  username val: 
+2021-10-28 17:17:27:050378: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:17:27:051360: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:17:27:052528: varDump alertViewContent setView: 't'
+2021-10-28 17:17:27:053796: varDump alertViewContent getView: 't'
+2021-10-28 17:17:55:127203: View object created in registerView::__construct
+2021-10-28 17:17:55:128513: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:17:55:129657: varDump alertViewContent setView: 't'
+2021-10-28 17:17:55:131067: post username val: 
+2021-10-28 17:17:55:131745: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:17:55:132635: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:17:55:133233: varDump alertViewContent setView: 't'
+2021-10-28 17:17:55:133753: varDump alertViewContent getView: 't'
+2021-10-28 17:22:44:137112: View object created in registerView::__construct
+2021-10-28 17:22:44:138127: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:22:44:139353: varDump alertViewContent setView: 't'
+2021-10-28 17:22:44:140457: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:22:44:141271: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:22:44:142032: varDump alertViewContent setView: 't'
+2021-10-28 17:22:44:142779: varDump alertViewContent getView: 't'
+2021-10-28 17:23:50:449472: View object created in registerView::__construct
+2021-10-28 17:23:50:450509: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:23:50:451475: varDump alertViewContent setView: 't'
+2021-10-28 17:23:50:452181: post username val: empty? 1 isset? 
+2021-10-28 17:23:50:452938: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:23:50:454293: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:23:50:455046: varDump alertViewContent setView: 't'
+2021-10-28 17:23:50:455735: varDump alertViewContent getView: 't'
+2021-10-28 17:24:22:271088: View object created in registerView::__construct
+2021-10-28 17:24:22:271999: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:24:22:272809: varDump alertViewContent setView: 't'
+2021-10-28 17:24:22:273510: post username val: empty? 1 isset? 
+2021-10-28 17:24:22:274050: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:24:22:274591: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:24:22:275255: varDump alertViewContent setView: 't'
+2021-10-28 17:24:22:275842: varDump alertViewContent getView: 't'
+2021-10-28 17:24:55:379679: View object created in registerView::__construct
+2021-10-28 17:24:55:380453: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:24:55:381158: varDump alertViewContent setView: 't'
+2021-10-28 17:24:55:381887: post username val: empty? 1 isset? 
+2021-10-28 17:24:55:382712: post username val: 
+2021-10-28 17:24:55:383332: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:24:55:383955: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:24:55:384685: varDump alertViewContent setView: 't'
+2021-10-28 17:24:55:385482: varDump alertViewContent getView: 't'
+2021-10-28 17:27:12:346622: View object created in registerView::__construct
+2021-10-28 17:27:12:347966: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:27:12:349217: varDump alertViewContent setView: 't'
+2021-10-28 17:27:12:350644: request methodPOST
+2021-10-28 17:27:12:351707: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:27:12:353179: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:27:12:354179: varDump alertViewContent setView: 't'
+2021-10-28 17:27:12:355079: varDump alertViewContent getView: 't'
+2021-10-28 17:27:27:935072: View object created in registerView::__construct
+2021-10-28 17:27:27:935804: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-28 17:27:27:936495: varDump alertViewContent setView: 't'
+2021-10-28 17:27:27:937340: request methodPOST
+2021-10-28 17:27:27:938415: varDump alertViewContent getAlertView: 't'
+2021-10-28 17:27:27:939182: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-28 17:27:27:939845: varDump alertViewContent setView: 't'
+2021-10-28 17:27:27:940456: varDump alertViewContent getView: 't'
+2021-10-29 17:24:03:317276: View object created in registerView::__construct
+2021-10-29 17:24:03:319389: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:24:03:320107: varDump alertViewContent setView: 't'
+2021-10-29 17:24:03:320840: request methodPOST
+2021-10-29 17:24:03:321651: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:24:03:322508: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:24:03:323326: varDump alertViewContent setView: 't'
+2021-10-29 17:24:03:324038: varDump alertViewContent getView: 't'
+2021-10-29 17:24:08:651889: View object created in registerView::__construct
+2021-10-29 17:24:08:652892: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:24:08:653868: varDump alertViewContent setView: 't'
+2021-10-29 17:24:08:654648: request methodPOST
+2021-10-29 17:24:08:655442: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:24:08:656217: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:24:08:656953: varDump alertViewContent setView: 't'
+2021-10-29 17:24:08:657729: varDump alertViewContent getView: 't'
+2021-10-29 17:26:17:983264: View object created in registerView::__construct
+2021-10-29 17:26:17:984577: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:26:17:985672: varDump alertViewContent setView: 't'
+2021-10-29 17:26:17:986529: request methodPOSTisPostEmpty?: 1
+2021-10-29 17:26:17:987194: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:26:17:987929: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:26:17:988784: varDump alertViewContent setView: 't'
+2021-10-29 17:26:17:989526: varDump alertViewContent getView: 't'
+2021-10-29 17:26:21:777474: View object created in registerView::__construct
+2021-10-29 17:26:21:778761: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:26:21:779662: varDump alertViewContent setView: 't'
+2021-10-29 17:26:21:780569: request methodPOSTisPostEmpty?: 1
+2021-10-29 17:26:21:781506: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:26:21:782380: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:26:21:783176: varDump alertViewContent setView: 't'
+2021-10-29 17:26:21:784011: varDump alertViewContent getView: 't'
+2021-10-29 17:27:29:371451: View object created in registerView::__construct
+2021-10-29 17:27:29:372928: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:27:29:374015: varDump alertViewContent setView: 't'
+2021-10-29 17:27:29:374836: Post content: array (
+)
+2021-10-29 17:27:29:375586: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:27:29:376493: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:27:29:377487: varDump alertViewContent setView: 't'
+2021-10-29 17:27:29:378977: varDump alertViewContent getView: 't'
+2021-10-29 17:27:37:481921: View object created in registerView::__construct
+2021-10-29 17:27:37:483092: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:27:37:484109: varDump alertViewContent setView: 't'
+2021-10-29 17:27:37:485267: Post content: array (
+)
+2021-10-29 17:27:37:486332: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:27:37:487081: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:27:37:487811: varDump alertViewContent setView: 't'
+2021-10-29 17:27:37:488649: varDump alertViewContent getView: 't'
+2021-10-29 17:31:19:918090: View object created in registerView::__construct
+2021-10-29 17:31:19:919459: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:31:19:920602: varDump alertViewContent setView: 't'
+2021-10-29 17:31:19:921515: isSubmitbuttonSet? 
+2021-10-29 17:31:19:922506: Post content: array (
+)
+2021-10-29 17:31:19:923926: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:31:19:924950: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:31:19:926060: varDump alertViewContent setView: 't'
+2021-10-29 17:31:19:926844: varDump alertViewContent getView: 't'
+2021-10-29 17:31:28:021126: View object created in registerView::__construct
+2021-10-29 17:31:28:022070: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:31:28:023028: varDump alertViewContent setView: 't'
+2021-10-29 17:31:28:023786: isSubmitbuttonSet? 
+2021-10-29 17:31:28:024951: Post content: array (
+)
+2021-10-29 17:31:28:025927: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:31:28:026822: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:31:28:027566: varDump alertViewContent setView: 't'
+2021-10-29 17:31:28:028290: varDump alertViewContent getView: 't'
+2021-10-29 17:32:53:073774: View object created in registerView::__construct
+2021-10-29 17:32:53:074967: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:32:53:076156: varDump alertViewContent setView: 't'
+2021-10-29 17:32:53:077102: isSubmitbuttonSet? 
+2021-10-29 17:32:53:078016: Post content: array (
+)
+2021-10-29 17:32:53:078924: Post content: array (
+)
+2021-10-29 17:32:53:079707: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:32:53:080725: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:32:53:081641: varDump alertViewContent setView: 't'
+2021-10-29 17:32:53:082343: varDump alertViewContent getView: 't'
+2021-10-29 17:32:56:336463: View object created in registerView::__construct
+2021-10-29 17:32:56:337349: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:32:56:338266: varDump alertViewContent setView: 't'
+2021-10-29 17:32:56:338919: isSubmitbuttonSet? 
+2021-10-29 17:32:56:339656: Post content: array (
+)
+2021-10-29 17:32:56:340373: Post content: array (
+)
+2021-10-29 17:32:56:341236: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:32:56:342003: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:32:56:342743: varDump alertViewContent setView: 't'
+2021-10-29 17:32:56:343470: varDump alertViewContent getView: 't'
+2021-10-29 17:33:35:368454: View object created in registerView::__construct
+2021-10-29 17:33:35:369638: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 17:33:35:370972: varDump alertViewContent setView: 't'
+2021-10-29 17:33:35:372018: isSubmitbuttonSet? 
+2021-10-29 17:33:35:373006: Post content: array (
+)
+2021-10-29 17:33:35:374098: GET content: NULL
+2021-10-29 17:33:35:374765: varDump alertViewContent getAlertView: 't'
+2021-10-29 17:33:35:375425: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 17:33:35:376106: varDump alertViewContent setView: 't'
+2021-10-29 17:33:35:376706: varDump alertViewContent getView: 't'
+2021-10-29 19:33:19:093876: View object created in registerView::__construct
+2021-10-29 19:33:19:095003: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:33:19:095811: varDump alertViewContent setView: 't'
+2021-10-29 19:33:19:096639: isSubmitbuttonSet? 
+2021-10-29 19:33:19:097559: Post content: array (
+)
+2021-10-29 19:33:19:098487: GET content: array (
+)
+2021-10-29 19:33:19:099354: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:33:19:100196: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:33:19:100922: varDump alertViewContent setView: 't'
+2021-10-29 19:33:19:101566: varDump alertViewContent getView: 't'
+2021-10-29 19:37:27:570424: View object created in registerView::__construct
+2021-10-29 19:37:27:571521: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:37:27:572519: varDump alertViewContent setView: 't'
+2021-10-29 19:37:27:573402: isSubmitbuttonSet? 
+2021-10-29 19:37:27:574159: Post content: array (
+)
+2021-10-29 19:37:27:574799: GET content: array (
+)
+2021-10-29 19:37:27:575474: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:37:27:576127: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:37:27:576861: varDump alertViewContent setView: 't'
+2021-10-29 19:37:27:577588: varDump alertViewContent getView: 't'
+2021-10-29 19:39:10:676352: View object created in registerView::__construct
+2021-10-29 19:39:10:677415: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:39:10:678367: varDump alertViewContent setView: 't'
+2021-10-29 19:39:10:679126: isSubmitbuttonSet? 
+2021-10-29 19:39:10:679851: Post content: array (
+)
+2021-10-29 19:39:10:680578: GET content: array (
+)
+2021-10-29 19:39:10:681461: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:39:10:682347: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:39:10:683038: varDump alertViewContent setView: 't'
+2021-10-29 19:39:10:683714: varDump alertViewContent getView: 't'
+2021-10-29 19:39:17:219908: View object created in registerView::__construct
+2021-10-29 19:39:17:220798: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:39:17:221747: varDump alertViewContent setView: 't'
+2021-10-29 19:39:17:222647: isSubmitbuttonSet? 
+2021-10-29 19:39:17:223494: Post content: array (
+)
+2021-10-29 19:39:17:224338: GET content: array (
+)
+2021-10-29 19:39:17:225123: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:39:17:225863: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:39:17:226611: varDump alertViewContent setView: 't'
+2021-10-29 19:39:17:227315: varDump alertViewContent getView: 't'
+2021-10-29 19:40:56:627295: View object created in registerView::__construct
+2021-10-29 19:40:56:628381: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:40:56:629376: varDump alertViewContent setView: 't'
+2021-10-29 19:40:56:630221: Post content in registerController: array (
+)
+2021-10-29 19:40:56:630993: isSubmitbuttonSet? 
+2021-10-29 19:40:56:631965: Post content: array (
+)
+2021-10-29 19:40:56:632700: GET content: array (
+)
+2021-10-29 19:40:56:633406: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:40:56:634058: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:40:56:634771: varDump alertViewContent setView: 't'
+2021-10-29 19:40:56:635480: varDump alertViewContent getView: 't'
+2021-10-29 19:41:12:297354: View object created in registerView::__construct
+2021-10-29 19:41:12:298264: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:41:12:299490: varDump alertViewContent setView: 't'
+2021-10-29 19:41:12:300621: Post content in registerController: array (
+)
+2021-10-29 19:41:12:301615: isSubmitbuttonSet? 
+2021-10-29 19:41:12:302737: Post content: array (
+)
+2021-10-29 19:41:12:303440: GET content: array (
+)
+2021-10-29 19:41:12:304183: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:41:12:304903: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:41:12:305673: varDump alertViewContent setView: 't'
+2021-10-29 19:41:12:306366: varDump alertViewContent getView: 't'
+2021-10-29 19:42:09:456461: View object created in registerView::__construct
+2021-10-29 19:42:09:457615: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:42:09:458411: varDump alertViewContent setView: 't'
+2021-10-29 19:42:09:459140: Post content in registerController: array (
+)
+2021-10-29 19:42:09:459937: isSubmitbuttonSet? 
+2021-10-29 19:42:09:460628: Post content: array (
+)
+2021-10-29 19:42:09:461336: GET content: array (
+)
+2021-10-29 19:42:09:462184: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:42:09:462918: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:42:09:463600: varDump alertViewContent setView: 't'
+2021-10-29 19:42:09:464357: varDump alertViewContent getView: 't'
+2021-10-29 19:42:41:790145: View object created in registerView::__construct
+2021-10-29 19:42:41:791335: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:42:41:792701: varDump alertViewContent setView: 't'
+2021-10-29 19:42:41:793900: Post content in registerController: array (
+)
+2021-10-29 19:42:41:794956: isSubmitbuttonSet? 
+2021-10-29 19:42:41:795746: Post content: array (
+)
+2021-10-29 19:42:41:796508: GET content: array (
+)
+2021-10-29 19:42:41:797281: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:42:41:797934: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:42:41:798561: varDump alertViewContent setView: 't'
+2021-10-29 19:42:41:799202: varDump alertViewContent getView: 't'
+2021-10-29 19:44:02:946421: View object created in registerView::__construct
+2021-10-29 19:44:02:947646: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:44:02:948814: varDump alertViewContent setView: 't'
+2021-10-29 19:44:02:949862: Post content in registerController: array (
+)
+2021-10-29 19:44:02:950642: isSubmitbuttonSet? 
+2021-10-29 19:44:02:951635: Post content: array (
+)
+2021-10-29 19:44:02:952548: GET content: array (
+)
+2021-10-29 19:44:02:953266: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:44:02:953981: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:44:02:954674: varDump alertViewContent setView: 't'
+2021-10-29 19:44:02:955439: varDump alertViewContent getView: 't'
+2021-10-29 19:44:06:194725: View object created in registerView::__construct
+2021-10-29 19:44:06:195818: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:44:06:196617: varDump alertViewContent setView: 't'
+2021-10-29 19:44:06:197787: Post content in registerController: array (
+)
+2021-10-29 19:44:06:198733: isSubmitbuttonSet? 
+2021-10-29 19:44:06:199636: Post content: array (
+)
+2021-10-29 19:44:06:200490: GET content: array (
+)
+2021-10-29 19:44:06:201402: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:44:06:202251: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:44:06:202957: varDump alertViewContent setView: 't'
+2021-10-29 19:44:06:203607: varDump alertViewContent getView: 't'
+2021-10-29 19:44:12:586870: View object created in registerView::__construct
+2021-10-29 19:44:12:588296: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:44:12:589743: varDump alertViewContent setView: 't'
+2021-10-29 19:44:12:591867: Post content in registerController: array (
+)
+2021-10-29 19:44:12:593307: isSubmitbuttonSet? 
+2021-10-29 19:44:12:594798: Post content: array (
+)
+2021-10-29 19:44:12:595764: GET content: array (
+)
+2021-10-29 19:44:12:596558: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:44:12:597479: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:44:12:598392: varDump alertViewContent setView: 't'
+2021-10-29 19:44:12:599043: varDump alertViewContent getView: 't'
+2021-10-29 19:45:56:187881: View object created in registerView::__construct
+2021-10-29 19:45:56:188885: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:45:56:189911: varDump alertViewContent setView: 't'
+2021-10-29 19:45:56:191143: Post content in registerController: array (
+)
+2021-10-29 19:45:56:192025: isSubmitbuttonSet? 
+2021-10-29 19:45:56:193287: Post content: array (
+)
+2021-10-29 19:45:56:194304: GET content: array (
+)
+2021-10-29 19:45:56:195014: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:45:56:195853: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:45:56:196638: varDump alertViewContent setView: 't'
+2021-10-29 19:45:56:197579: varDump alertViewContent getView: 't'
+2021-10-29 19:46:04:088748: View object created in registerView::__construct
+2021-10-29 19:46:04:089992: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:46:04:091026: varDump alertViewContent setView: 't'
+2021-10-29 19:46:04:092292: Post content in registerController: array (
+  'username' => 'sadsaasassadsa',
+  'password' => 'dsad',
+  'confirmPassword' => 'asdas',
+)
+2021-10-29 19:46:04:093173: isSubmitbuttonSet? 
+2021-10-29 19:46:04:094052: Post content: array (
+  'username' => 'sadsaasassadsa',
+  'password' => 'dsad',
+  'confirmPassword' => 'asdas',
+)
+2021-10-29 19:46:04:094736: GET content: array (
+)
+2021-10-29 19:46:04:095487: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:46:04:096219: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:46:04:096911: varDump alertViewContent setView: 't'
+2021-10-29 19:46:04:097613: varDump alertViewContent getView: 't'
+2021-10-29 19:48:22:351841: View object created in registerView::__construct
+2021-10-29 19:48:22:353088: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:48:22:354271: varDump alertViewContent setView: 't'
+2021-10-29 19:48:22:355045: isSubmitbuttonSet? 
+2021-10-29 19:48:22:355714: Post content: array (
+)
+2021-10-29 19:48:22:356567: GET content: array (
+)
+2021-10-29 19:48:22:357266: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:48:22:358014: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:48:22:358765: varDump alertViewContent setView: 't'
+2021-10-29 19:48:22:359454: varDump alertViewContent getView: 't'
+2021-10-29 19:48:26:026026: View object created in registerView::__construct
+2021-10-29 19:48:26:026841: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:48:26:027848: varDump alertViewContent setView: 't'
+2021-10-29 19:48:26:028654: isSubmitbuttonSet? 1
+2021-10-29 19:48:26:029407: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sadas',
+  'confirmPassword' => 'sada',
+)
+2021-10-29 19:48:26:030166: GET content: array (
+)
+2021-10-29 19:48:26:031070: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:48:26:031747: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:48:26:032492: varDump alertViewContent setView: 't'
+2021-10-29 19:48:26:033188: varDump alertViewContent getView: 't'
+2021-10-29 19:51:01:854391: View object created in registerView::__construct
+2021-10-29 19:51:01:855501: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:51:01:856272: varDump alertViewContent setView: 't'
+2021-10-29 19:51:01:857188: isSubmitbuttonSet? 
+2021-10-29 19:51:01:857973: Post content: array (
+)
+2021-10-29 19:51:01:859236: post username val: 
+2021-10-29 19:51:01:859951: POST EMPTY
+2021-10-29 19:51:01:860681: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:51:01:861374: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:51:01:862067: varDump alertViewContent setView: 't'
+2021-10-29 19:51:01:862776: varDump alertViewContent getView: 't'
+2021-10-29 19:51:05:200379: View object created in registerView::__construct
+2021-10-29 19:51:05:201597: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:51:05:202864: varDump alertViewContent setView: 't'
+2021-10-29 19:51:05:203978: isSubmitbuttonSet? 
+2021-10-29 19:51:05:204825: Post content: array (
+)
+2021-10-29 19:51:05:205999: post username val: 
+2021-10-29 19:51:05:206837: POST EMPTY
+2021-10-29 19:51:05:207817: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:51:05:208784: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:51:05:210154: varDump alertViewContent setView: 't'
+2021-10-29 19:51:05:211035: varDump alertViewContent getView: 't'
+2021-10-29 19:51:42:031414: View object created in registerView::__construct
+2021-10-29 19:51:42:032460: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:51:42:033544: varDump alertViewContent setView: 't'
+2021-10-29 19:51:42:034643: isSubmitbuttonSet? 
+2021-10-29 19:51:42:035399: Post content: array (
+)
+2021-10-29 19:51:42:036259: POST EMPTY
+2021-10-29 19:51:42:037009: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:51:42:037881: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:51:42:038691: varDump alertViewContent setView: 't'
+2021-10-29 19:51:42:039458: varDump alertViewContent getView: 't'
+2021-10-29 19:52:18:410675: View object created in registerView::__construct
+2021-10-29 19:52:18:412443: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:52:18:413300: varDump alertViewContent setView: 't'
+2021-10-29 19:52:18:413994: isSubmitbuttonSet? 
+2021-10-29 19:52:18:414718: Post content: array (
+)
+2021-10-29 19:52:18:415469: POST EMPTY
+2021-10-29 19:52:18:416162: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:52:18:416842: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:52:18:417505: varDump alertViewContent setView: 't'
+2021-10-29 19:52:18:418151: varDump alertViewContent getView: 't'
+2021-10-29 19:52:21:524745: View object created in registerView::__construct
+2021-10-29 19:52:21:525540: constructor called, caller: Called by __construct From Class RegisterView
+2021-10-29 19:52:21:526379: varDump alertViewContent setView: 't'
+2021-10-29 19:52:21:527175: isSubmitbuttonSet? 1
+2021-10-29 19:52:21:527983: Post content: array (
+  'username' => 'sadasdsadasdsad',
+  'password' => 'sadasd',
+  'confirmPassword' => 'sadas',
+)
+2021-10-29 19:52:21:528705: post username val: sadasdsadasdsad
+2021-10-29 19:52:21:529470: varDump alertViewContent getAlertView: 't'
+2021-10-29 19:52:21:530260: varDump alertViewContent handleOutput: '<div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+2021-10-29 19:52:21:531198: varDump alertViewContent setView: 't'
+2021-10-29 19:52:21:531947: varDump alertViewContent getView: 't'

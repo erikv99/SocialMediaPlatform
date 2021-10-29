@@ -1,26 +1,46 @@
 function callController(placeMentTag, controllerName) 
 {
-	var filePath = "../PHP/Controllers/" + controllerName + ".php";
+	this.sendAjaxRequest(placeMentTag, controllerName, "")
+}
 
-	$.ajax({url: filePath, success: function(response) 
+function callControllerFromForm(placeMentTag, controllerName, formID) 
+{
+	var formData = $("." + formID).serialize();
+	this.sendAjaxRequest(placeMentTag, controllerName, formData);
+}
+
+function sendAjaxRequest(placeMentTag, controllerName, data) 
+{
+	var filePath = "../PHP/Controllers/" + controllerName + ".php";
+	
+	$.ajax(
+	{
+		url: filePath, 
+		method: "POST", 
+		data: data,
+	success: function(response) 
 	{
 		console.log(response);
 		var jsonObj = JSON.parse(response);
-		alert(jsonObj.indexViewRequired);
+
 		if (jsonObj.indexViewRequired == true) 
 		{
 			alert("is true");
-			window.location.replace("../index.php");
+			//window.location = "../index.php";
+
+			window.addEventListener('load', function () {
+		  		alert("It's loaded!");
+			});
 		}
+
 
 		$(placeMentTag).append(jsonObj.view);	
 	},
 	error: function(xhr, status, error) 
 	{
+		console.log("prblem");
 		var errorMessage = xhr.status + ': ' + xhr.statusText
-		alert('Error - ' + errorMessage);
+		console.log('Error - ' + errorMessage)
 	}
 	})
-
-	return false;
 }
