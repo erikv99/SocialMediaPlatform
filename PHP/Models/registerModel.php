@@ -14,7 +14,6 @@ class RegisterModel extends Model
 		$returnData = ["message" => ""];
 
 		// Checking if the form is not empty. if it is empty we can return and do not need to execute any data
-		logError("isSubmitbuttonSet? " . isset($_POST['password']));
 		logError("Post content: " . var_export($_POST, true) );
 
 		if (empty($_POST))

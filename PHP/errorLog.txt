@@ -1,797 +1,3715 @@
-2021-10-28 16:20:45:664247: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 16:20:45:665824: varDump alertViewContent setView: 't'
-2021-10-28 16:20:45:667411: varDump alertViewContent getAlertView: 't'
-2021-10-28 16:20:45:668798: varDump alertViewContent handleOutput: '<div class="alertInfo">
+
+2021-10-29 20:19:22:998804: View object created in registerView::__construct
+
+2021-10-29 20:19:23:000878: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:19:23:001760: isSubmitbuttonSet? 
+
+2021-10-29 20:19:23:002647: Post content: array (
+)
+
+2021-10-29 20:19:23:003613: POST EMPTY
+
+2021-10-29 20:19:23:004598: varDump alertViewContent handleOutput: '<div class="alertInfo">
 			No data retrieval needed
 			<button class="closeAlertBut imageButton" onClick="closeAlert();">
 			<img class="closeAlertImage" src="../IMG/cancel.png">
 			</button>
 			</div>'
-2021-10-28 16:20:45:670166: varDump alertViewContent setView: 't'
-2021-10-28 16:20:45:671184: varDump alertViewContent getView: 't'
-2021-10-28 16:20:48:745129: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 16:20:48:746134: varDump alertViewContent setView: 't'
-2021-10-28 16:20:48:747126: varDump alertViewContent getAlertView: 't'
-2021-10-28 16:20:48:748302: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 16:20:48:749520: varDump alertViewContent setView: 't'
-2021-10-28 16:20:48:750659: varDump alertViewContent getView: 't'
-2021-10-28 16:25:33:356819: View object created in registerView::__construct
-2021-10-28 16:25:33:357887: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 16:25:33:358870: varDump alertViewContent setView: 't'
-2021-10-28 16:25:33:359840: varDump alertViewContent getAlertView: 't'
-2021-10-28 16:25:33:360716: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 16:25:33:361653: varDump alertViewContent setView: 't'
-2021-10-28 16:25:33:362559: varDump alertViewContent getView: 't'
-2021-10-28 16:25:37:784434: View object created in registerView::__construct
-2021-10-28 16:25:37:785472: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 16:25:37:786374: varDump alertViewContent setView: 't'
-2021-10-28 16:25:37:787391: varDump alertViewContent getAlertView: 't'
-2021-10-28 16:25:37:788306: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 16:25:37:789190: varDump alertViewContent setView: 't'
-2021-10-28 16:25:37:790194: varDump alertViewContent getView: 't'
-2021-10-28 17:04:50:228379: View object created in registerView::__construct
-2021-10-28 17:04:50:230005: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:04:50:230916: varDump alertViewContent setView: 't'
-2021-10-28 17:04:50:231891: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:04:50:232877: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:04:50:233814: varDump alertViewContent setView: 't'
-2021-10-28 17:04:50:234758: varDump alertViewContent getView: 't'
-2021-10-28 17:04:57:511742: View object created in registerView::__construct
-2021-10-28 17:04:57:513247: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:04:57:514440: varDump alertViewContent setView: 't'
-2021-10-28 17:04:57:515490: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:04:57:516758: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:04:57:517852: varDump alertViewContent setView: 't'
-2021-10-28 17:04:57:519018: varDump alertViewContent getView: 't'
-2021-10-28 17:05:01:593236: View object created in registerView::__construct
-2021-10-28 17:05:01:594571: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:05:01:596378: varDump alertViewContent setView: 't'
-2021-10-28 17:05:01:597675: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:05:01:598663: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:05:01:599769: varDump alertViewContent setView: 't'
-2021-10-28 17:05:01:600954: varDump alertViewContent getView: 't'
-2021-10-28 17:08:27:527666: View object created in registerView::__construct
-2021-10-28 17:08:27:529150: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:08:27:530814: varDump alertViewContent setView: 't'
-2021-10-28 17:08:27:532792: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:08:27:534021: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:08:27:673290: varDump alertViewContent setView: 't'
-2021-10-28 17:08:27:674662: varDump alertViewContent getView: 't'
-2021-10-28 17:08:29:693936: View object created in registerView::__construct
-2021-10-28 17:08:29:695220: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:08:29:696366: varDump alertViewContent setView: 't'
-2021-10-28 17:08:29:698303: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:08:29:699622: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:08:29:700893: varDump alertViewContent setView: 't'
-2021-10-28 17:08:29:702306: varDump alertViewContent getView: 't'
-2021-10-28 17:08:31:352192: View object created in registerView::__construct
-2021-10-28 17:08:31:353660: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:08:31:354929: varDump alertViewContent setView: 't'
-2021-10-28 17:08:31:356176: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:08:31:357391: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:08:31:359054: varDump alertViewContent setView: 't'
-2021-10-28 17:08:31:360220: varDump alertViewContent getView: 't'
-2021-10-28 17:09:06:453934: View object created in registerView::__construct
-2021-10-28 17:09:06:455228: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:09:06:456631: varDump alertViewContent setView: 't'
-2021-10-28 17:09:06:458027: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:09:06:459355: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:09:06:461029: varDump alertViewContent setView: 't'
-2021-10-28 17:09:06:462714: varDump alertViewContent getView: 't'
-2021-10-28 17:09:30:727037: View object created in registerView::__construct
-2021-10-28 17:09:30:727962: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:09:30:729469: varDump alertViewContent setView: 't'
-2021-10-28 17:09:30:730771: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:09:30:732291: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:09:30:733507: varDump alertViewContent setView: 't'
-2021-10-28 17:09:30:734107: varDump alertViewContent getView: 't'
-2021-10-28 17:15:37:655029: View object created in registerView::__construct
-2021-10-28 17:15:37:656589: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:15:37:657564: varDump alertViewContent setView: 't'
-2021-10-28 17:15:37:658377: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:15:37:659114: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:15:37:659890: varDump alertViewContent setView: 't'
-2021-10-28 17:15:37:661108: varDump alertViewContent getView: 't'
-2021-10-28 17:15:43:912273: View object created in registerView::__construct
-2021-10-28 17:15:43:913139: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:15:43:913993: varDump alertViewContent setView: 't'
-2021-10-28 17:15:43:914815: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:15:43:915485: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:15:43:916177: varDump alertViewContent setView: 't'
-2021-10-28 17:15:43:916799: varDump alertViewContent getView: 't'
-2021-10-28 17:17:27:043713: View object created in registerView::__construct
-2021-10-28 17:17:27:045304: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:17:27:046803: varDump alertViewContent setView: 't'
-2021-10-28 17:17:27:048834:  username val: 
-2021-10-28 17:17:27:050378: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:17:27:051360: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:17:27:052528: varDump alertViewContent setView: 't'
-2021-10-28 17:17:27:053796: varDump alertViewContent getView: 't'
-2021-10-28 17:17:55:127203: View object created in registerView::__construct
-2021-10-28 17:17:55:128513: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:17:55:129657: varDump alertViewContent setView: 't'
-2021-10-28 17:17:55:131067: post username val: 
-2021-10-28 17:17:55:131745: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:17:55:132635: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:17:55:133233: varDump alertViewContent setView: 't'
-2021-10-28 17:17:55:133753: varDump alertViewContent getView: 't'
-2021-10-28 17:22:44:137112: View object created in registerView::__construct
-2021-10-28 17:22:44:138127: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:22:44:139353: varDump alertViewContent setView: 't'
-2021-10-28 17:22:44:140457: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:22:44:141271: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:22:44:142032: varDump alertViewContent setView: 't'
-2021-10-28 17:22:44:142779: varDump alertViewContent getView: 't'
-2021-10-28 17:23:50:449472: View object created in registerView::__construct
-2021-10-28 17:23:50:450509: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:23:50:451475: varDump alertViewContent setView: 't'
-2021-10-28 17:23:50:452181: post username val: empty? 1 isset? 
-2021-10-28 17:23:50:452938: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:23:50:454293: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:23:50:455046: varDump alertViewContent setView: 't'
-2021-10-28 17:23:50:455735: varDump alertViewContent getView: 't'
-2021-10-28 17:24:22:271088: View object created in registerView::__construct
-2021-10-28 17:24:22:271999: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:24:22:272809: varDump alertViewContent setView: 't'
-2021-10-28 17:24:22:273510: post username val: empty? 1 isset? 
-2021-10-28 17:24:22:274050: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:24:22:274591: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:24:22:275255: varDump alertViewContent setView: 't'
-2021-10-28 17:24:22:275842: varDump alertViewContent getView: 't'
-2021-10-28 17:24:55:379679: View object created in registerView::__construct
-2021-10-28 17:24:55:380453: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:24:55:381158: varDump alertViewContent setView: 't'
-2021-10-28 17:24:55:381887: post username val: empty? 1 isset? 
-2021-10-28 17:24:55:382712: post username val: 
-2021-10-28 17:24:55:383332: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:24:55:383955: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:24:55:384685: varDump alertViewContent setView: 't'
-2021-10-28 17:24:55:385482: varDump alertViewContent getView: 't'
-2021-10-28 17:27:12:346622: View object created in registerView::__construct
-2021-10-28 17:27:12:347966: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:27:12:349217: varDump alertViewContent setView: 't'
-2021-10-28 17:27:12:350644: request methodPOST
-2021-10-28 17:27:12:351707: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:27:12:353179: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:27:12:354179: varDump alertViewContent setView: 't'
-2021-10-28 17:27:12:355079: varDump alertViewContent getView: 't'
-2021-10-28 17:27:27:935072: View object created in registerView::__construct
-2021-10-28 17:27:27:935804: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-28 17:27:27:936495: varDump alertViewContent setView: 't'
-2021-10-28 17:27:27:937340: request methodPOST
-2021-10-28 17:27:27:938415: varDump alertViewContent getAlertView: 't'
-2021-10-28 17:27:27:939182: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-28 17:27:27:939845: varDump alertViewContent setView: 't'
-2021-10-28 17:27:27:940456: varDump alertViewContent getView: 't'
-2021-10-29 17:24:03:317276: View object created in registerView::__construct
-2021-10-29 17:24:03:319389: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:24:03:320107: varDump alertViewContent setView: 't'
-2021-10-29 17:24:03:320840: request methodPOST
-2021-10-29 17:24:03:321651: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:24:03:322508: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:24:03:323326: varDump alertViewContent setView: 't'
-2021-10-29 17:24:03:324038: varDump alertViewContent getView: 't'
-2021-10-29 17:24:08:651889: View object created in registerView::__construct
-2021-10-29 17:24:08:652892: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:24:08:653868: varDump alertViewContent setView: 't'
-2021-10-29 17:24:08:654648: request methodPOST
-2021-10-29 17:24:08:655442: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:24:08:656217: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:24:08:656953: varDump alertViewContent setView: 't'
-2021-10-29 17:24:08:657729: varDump alertViewContent getView: 't'
-2021-10-29 17:26:17:983264: View object created in registerView::__construct
-2021-10-29 17:26:17:984577: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:26:17:985672: varDump alertViewContent setView: 't'
-2021-10-29 17:26:17:986529: request methodPOSTisPostEmpty?: 1
-2021-10-29 17:26:17:987194: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:26:17:987929: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:26:17:988784: varDump alertViewContent setView: 't'
-2021-10-29 17:26:17:989526: varDump alertViewContent getView: 't'
-2021-10-29 17:26:21:777474: View object created in registerView::__construct
-2021-10-29 17:26:21:778761: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:26:21:779662: varDump alertViewContent setView: 't'
-2021-10-29 17:26:21:780569: request methodPOSTisPostEmpty?: 1
-2021-10-29 17:26:21:781506: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:26:21:782380: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:26:21:783176: varDump alertViewContent setView: 't'
-2021-10-29 17:26:21:784011: varDump alertViewContent getView: 't'
-2021-10-29 17:27:29:371451: View object created in registerView::__construct
-2021-10-29 17:27:29:372928: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:27:29:374015: varDump alertViewContent setView: 't'
-2021-10-29 17:27:29:374836: Post content: array (
+
+2021-10-29 20:19:23:005582: varDump alertViewContent getView: ''
+
+2021-10-29 20:20:02:423368: View object created in registerView::__construct
+
+2021-10-29 20:20:02:424568: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:20:02:425646: Post content: array (
+  'username' => 'asdsadasda',
+  'password' => 'sadsa',
+  'confirmPassword' => 'sdsadsa',
 )
-2021-10-29 17:27:29:375586: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:27:29:376493: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:27:29:377487: varDump alertViewContent setView: 't'
-2021-10-29 17:27:29:378977: varDump alertViewContent getView: 't'
-2021-10-29 17:27:37:481921: View object created in registerView::__construct
-2021-10-29 17:27:37:483092: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:27:37:484109: varDump alertViewContent setView: 't'
-2021-10-29 17:27:37:485267: Post content: array (
-)
-2021-10-29 17:27:37:486332: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:27:37:487081: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:27:37:487811: varDump alertViewContent setView: 't'
-2021-10-29 17:27:37:488649: varDump alertViewContent getView: 't'
-2021-10-29 17:31:19:918090: View object created in registerView::__construct
-2021-10-29 17:31:19:919459: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:31:19:920602: varDump alertViewContent setView: 't'
-2021-10-29 17:31:19:921515: isSubmitbuttonSet? 
-2021-10-29 17:31:19:922506: Post content: array (
-)
-2021-10-29 17:31:19:923926: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:31:19:924950: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:31:19:926060: varDump alertViewContent setView: 't'
-2021-10-29 17:31:19:926844: varDump alertViewContent getView: 't'
-2021-10-29 17:31:28:021126: View object created in registerView::__construct
-2021-10-29 17:31:28:022070: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:31:28:023028: varDump alertViewContent setView: 't'
-2021-10-29 17:31:28:023786: isSubmitbuttonSet? 
-2021-10-29 17:31:28:024951: Post content: array (
-)
-2021-10-29 17:31:28:025927: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:31:28:026822: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:31:28:027566: varDump alertViewContent setView: 't'
-2021-10-29 17:31:28:028290: varDump alertViewContent getView: 't'
-2021-10-29 17:32:53:073774: View object created in registerView::__construct
-2021-10-29 17:32:53:074967: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:32:53:076156: varDump alertViewContent setView: 't'
-2021-10-29 17:32:53:077102: isSubmitbuttonSet? 
-2021-10-29 17:32:53:078016: Post content: array (
-)
-2021-10-29 17:32:53:078924: Post content: array (
-)
-2021-10-29 17:32:53:079707: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:32:53:080725: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:32:53:081641: varDump alertViewContent setView: 't'
-2021-10-29 17:32:53:082343: varDump alertViewContent getView: 't'
-2021-10-29 17:32:56:336463: View object created in registerView::__construct
-2021-10-29 17:32:56:337349: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:32:56:338266: varDump alertViewContent setView: 't'
-2021-10-29 17:32:56:338919: isSubmitbuttonSet? 
-2021-10-29 17:32:56:339656: Post content: array (
-)
-2021-10-29 17:32:56:340373: Post content: array (
-)
-2021-10-29 17:32:56:341236: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:32:56:342003: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:32:56:342743: varDump alertViewContent setView: 't'
-2021-10-29 17:32:56:343470: varDump alertViewContent getView: 't'
-2021-10-29 17:33:35:368454: View object created in registerView::__construct
-2021-10-29 17:33:35:369638: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 17:33:35:370972: varDump alertViewContent setView: 't'
-2021-10-29 17:33:35:372018: isSubmitbuttonSet? 
-2021-10-29 17:33:35:373006: Post content: array (
-)
-2021-10-29 17:33:35:374098: GET content: NULL
-2021-10-29 17:33:35:374765: varDump alertViewContent getAlertView: 't'
-2021-10-29 17:33:35:375425: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 17:33:35:376106: varDump alertViewContent setView: 't'
-2021-10-29 17:33:35:376706: varDump alertViewContent getView: 't'
-2021-10-29 19:33:19:093876: View object created in registerView::__construct
-2021-10-29 19:33:19:095003: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:33:19:095811: varDump alertViewContent setView: 't'
-2021-10-29 19:33:19:096639: isSubmitbuttonSet? 
-2021-10-29 19:33:19:097559: Post content: array (
-)
-2021-10-29 19:33:19:098487: GET content: array (
-)
-2021-10-29 19:33:19:099354: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:33:19:100196: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:33:19:100922: varDump alertViewContent setView: 't'
-2021-10-29 19:33:19:101566: varDump alertViewContent getView: 't'
-2021-10-29 19:37:27:570424: View object created in registerView::__construct
-2021-10-29 19:37:27:571521: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:37:27:572519: varDump alertViewContent setView: 't'
-2021-10-29 19:37:27:573402: isSubmitbuttonSet? 
-2021-10-29 19:37:27:574159: Post content: array (
-)
-2021-10-29 19:37:27:574799: GET content: array (
-)
-2021-10-29 19:37:27:575474: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:37:27:576127: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:37:27:576861: varDump alertViewContent setView: 't'
-2021-10-29 19:37:27:577588: varDump alertViewContent getView: 't'
-2021-10-29 19:39:10:676352: View object created in registerView::__construct
-2021-10-29 19:39:10:677415: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:39:10:678367: varDump alertViewContent setView: 't'
-2021-10-29 19:39:10:679126: isSubmitbuttonSet? 
-2021-10-29 19:39:10:679851: Post content: array (
-)
-2021-10-29 19:39:10:680578: GET content: array (
-)
-2021-10-29 19:39:10:681461: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:39:10:682347: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:39:10:683038: varDump alertViewContent setView: 't'
-2021-10-29 19:39:10:683714: varDump alertViewContent getView: 't'
-2021-10-29 19:39:17:219908: View object created in registerView::__construct
-2021-10-29 19:39:17:220798: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:39:17:221747: varDump alertViewContent setView: 't'
-2021-10-29 19:39:17:222647: isSubmitbuttonSet? 
-2021-10-29 19:39:17:223494: Post content: array (
-)
-2021-10-29 19:39:17:224338: GET content: array (
-)
-2021-10-29 19:39:17:225123: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:39:17:225863: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:39:17:226611: varDump alertViewContent setView: 't'
-2021-10-29 19:39:17:227315: varDump alertViewContent getView: 't'
-2021-10-29 19:40:56:627295: View object created in registerView::__construct
-2021-10-29 19:40:56:628381: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:40:56:629376: varDump alertViewContent setView: 't'
-2021-10-29 19:40:56:630221: Post content in registerController: array (
-)
-2021-10-29 19:40:56:630993: isSubmitbuttonSet? 
-2021-10-29 19:40:56:631965: Post content: array (
-)
-2021-10-29 19:40:56:632700: GET content: array (
-)
-2021-10-29 19:40:56:633406: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:40:56:634058: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:40:56:634771: varDump alertViewContent setView: 't'
-2021-10-29 19:40:56:635480: varDump alertViewContent getView: 't'
-2021-10-29 19:41:12:297354: View object created in registerView::__construct
-2021-10-29 19:41:12:298264: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:41:12:299490: varDump alertViewContent setView: 't'
-2021-10-29 19:41:12:300621: Post content in registerController: array (
-)
-2021-10-29 19:41:12:301615: isSubmitbuttonSet? 
-2021-10-29 19:41:12:302737: Post content: array (
-)
-2021-10-29 19:41:12:303440: GET content: array (
-)
-2021-10-29 19:41:12:304183: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:41:12:304903: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:41:12:305673: varDump alertViewContent setView: 't'
-2021-10-29 19:41:12:306366: varDump alertViewContent getView: 't'
-2021-10-29 19:42:09:456461: View object created in registerView::__construct
-2021-10-29 19:42:09:457615: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:42:09:458411: varDump alertViewContent setView: 't'
-2021-10-29 19:42:09:459140: Post content in registerController: array (
-)
-2021-10-29 19:42:09:459937: isSubmitbuttonSet? 
-2021-10-29 19:42:09:460628: Post content: array (
-)
-2021-10-29 19:42:09:461336: GET content: array (
-)
-2021-10-29 19:42:09:462184: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:42:09:462918: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:42:09:463600: varDump alertViewContent setView: 't'
-2021-10-29 19:42:09:464357: varDump alertViewContent getView: 't'
-2021-10-29 19:42:41:790145: View object created in registerView::__construct
-2021-10-29 19:42:41:791335: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:42:41:792701: varDump alertViewContent setView: 't'
-2021-10-29 19:42:41:793900: Post content in registerController: array (
-)
-2021-10-29 19:42:41:794956: isSubmitbuttonSet? 
-2021-10-29 19:42:41:795746: Post content: array (
-)
-2021-10-29 19:42:41:796508: GET content: array (
-)
-2021-10-29 19:42:41:797281: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:42:41:797934: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:42:41:798561: varDump alertViewContent setView: 't'
-2021-10-29 19:42:41:799202: varDump alertViewContent getView: 't'
-2021-10-29 19:44:02:946421: View object created in registerView::__construct
-2021-10-29 19:44:02:947646: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:44:02:948814: varDump alertViewContent setView: 't'
-2021-10-29 19:44:02:949862: Post content in registerController: array (
-)
-2021-10-29 19:44:02:950642: isSubmitbuttonSet? 
-2021-10-29 19:44:02:951635: Post content: array (
-)
-2021-10-29 19:44:02:952548: GET content: array (
-)
-2021-10-29 19:44:02:953266: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:44:02:953981: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:44:02:954674: varDump alertViewContent setView: 't'
-2021-10-29 19:44:02:955439: varDump alertViewContent getView: 't'
-2021-10-29 19:44:06:194725: View object created in registerView::__construct
-2021-10-29 19:44:06:195818: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:44:06:196617: varDump alertViewContent setView: 't'
-2021-10-29 19:44:06:197787: Post content in registerController: array (
-)
-2021-10-29 19:44:06:198733: isSubmitbuttonSet? 
-2021-10-29 19:44:06:199636: Post content: array (
-)
-2021-10-29 19:44:06:200490: GET content: array (
-)
-2021-10-29 19:44:06:201402: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:44:06:202251: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:44:06:202957: varDump alertViewContent setView: 't'
-2021-10-29 19:44:06:203607: varDump alertViewContent getView: 't'
-2021-10-29 19:44:12:586870: View object created in registerView::__construct
-2021-10-29 19:44:12:588296: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:44:12:589743: varDump alertViewContent setView: 't'
-2021-10-29 19:44:12:591867: Post content in registerController: array (
-)
-2021-10-29 19:44:12:593307: isSubmitbuttonSet? 
-2021-10-29 19:44:12:594798: Post content: array (
-)
-2021-10-29 19:44:12:595764: GET content: array (
-)
-2021-10-29 19:44:12:596558: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:44:12:597479: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:44:12:598392: varDump alertViewContent setView: 't'
-2021-10-29 19:44:12:599043: varDump alertViewContent getView: 't'
-2021-10-29 19:45:56:187881: View object created in registerView::__construct
-2021-10-29 19:45:56:188885: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:45:56:189911: varDump alertViewContent setView: 't'
-2021-10-29 19:45:56:191143: Post content in registerController: array (
-)
-2021-10-29 19:45:56:192025: isSubmitbuttonSet? 
-2021-10-29 19:45:56:193287: Post content: array (
-)
-2021-10-29 19:45:56:194304: GET content: array (
-)
-2021-10-29 19:45:56:195014: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:45:56:195853: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:45:56:196638: varDump alertViewContent setView: 't'
-2021-10-29 19:45:56:197579: varDump alertViewContent getView: 't'
-2021-10-29 19:46:04:088748: View object created in registerView::__construct
-2021-10-29 19:46:04:089992: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:46:04:091026: varDump alertViewContent setView: 't'
-2021-10-29 19:46:04:092292: Post content in registerController: array (
-  'username' => 'sadsaasassadsa',
-  'password' => 'dsad',
-  'confirmPassword' => 'asdas',
-)
-2021-10-29 19:46:04:093173: isSubmitbuttonSet? 
-2021-10-29 19:46:04:094052: Post content: array (
-  'username' => 'sadsaasassadsa',
-  'password' => 'dsad',
-  'confirmPassword' => 'asdas',
-)
-2021-10-29 19:46:04:094736: GET content: array (
-)
-2021-10-29 19:46:04:095487: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:46:04:096219: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:46:04:096911: varDump alertViewContent setView: 't'
-2021-10-29 19:46:04:097613: varDump alertViewContent getView: 't'
-2021-10-29 19:48:22:351841: View object created in registerView::__construct
-2021-10-29 19:48:22:353088: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:48:22:354271: varDump alertViewContent setView: 't'
-2021-10-29 19:48:22:355045: isSubmitbuttonSet? 
-2021-10-29 19:48:22:355714: Post content: array (
-)
-2021-10-29 19:48:22:356567: GET content: array (
-)
-2021-10-29 19:48:22:357266: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:48:22:358014: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:48:22:358765: varDump alertViewContent setView: 't'
-2021-10-29 19:48:22:359454: varDump alertViewContent getView: 't'
-2021-10-29 19:48:26:026026: View object created in registerView::__construct
-2021-10-29 19:48:26:026841: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:48:26:027848: varDump alertViewContent setView: 't'
-2021-10-29 19:48:26:028654: isSubmitbuttonSet? 1
-2021-10-29 19:48:26:029407: Post content: array (
-  'username' => 'sadsasadsad',
-  'password' => 'sadas',
-  'confirmPassword' => 'sada',
-)
-2021-10-29 19:48:26:030166: GET content: array (
-)
-2021-10-29 19:48:26:031070: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:48:26:031747: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:48:26:032492: varDump alertViewContent setView: 't'
-2021-10-29 19:48:26:033188: varDump alertViewContent getView: 't'
-2021-10-29 19:51:01:854391: View object created in registerView::__construct
-2021-10-29 19:51:01:855501: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:51:01:856272: varDump alertViewContent setView: 't'
-2021-10-29 19:51:01:857188: isSubmitbuttonSet? 
-2021-10-29 19:51:01:857973: Post content: array (
-)
-2021-10-29 19:51:01:859236: post username val: 
-2021-10-29 19:51:01:859951: POST EMPTY
-2021-10-29 19:51:01:860681: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:51:01:861374: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:51:01:862067: varDump alertViewContent setView: 't'
-2021-10-29 19:51:01:862776: varDump alertViewContent getView: 't'
-2021-10-29 19:51:05:200379: View object created in registerView::__construct
-2021-10-29 19:51:05:201597: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:51:05:202864: varDump alertViewContent setView: 't'
-2021-10-29 19:51:05:203978: isSubmitbuttonSet? 
-2021-10-29 19:51:05:204825: Post content: array (
-)
-2021-10-29 19:51:05:205999: post username val: 
-2021-10-29 19:51:05:206837: POST EMPTY
-2021-10-29 19:51:05:207817: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:51:05:208784: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:51:05:210154: varDump alertViewContent setView: 't'
-2021-10-29 19:51:05:211035: varDump alertViewContent getView: 't'
-2021-10-29 19:51:42:031414: View object created in registerView::__construct
-2021-10-29 19:51:42:032460: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:51:42:033544: varDump alertViewContent setView: 't'
-2021-10-29 19:51:42:034643: isSubmitbuttonSet? 
-2021-10-29 19:51:42:035399: Post content: array (
-)
-2021-10-29 19:51:42:036259: POST EMPTY
-2021-10-29 19:51:42:037009: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:51:42:037881: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:51:42:038691: varDump alertViewContent setView: 't'
-2021-10-29 19:51:42:039458: varDump alertViewContent getView: 't'
-2021-10-29 19:52:18:410675: View object created in registerView::__construct
-2021-10-29 19:52:18:412443: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:52:18:413300: varDump alertViewContent setView: 't'
-2021-10-29 19:52:18:413994: isSubmitbuttonSet? 
-2021-10-29 19:52:18:414718: Post content: array (
-)
-2021-10-29 19:52:18:415469: POST EMPTY
-2021-10-29 19:52:18:416162: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:52:18:416842: varDump alertViewContent handleOutput: '<div class="alertInfo">
-			No data retrieval needed
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
-			</button>
-			</div>'
-2021-10-29 19:52:18:417505: varDump alertViewContent setView: 't'
-2021-10-29 19:52:18:418151: varDump alertViewContent getView: 't'
-2021-10-29 19:52:21:524745: View object created in registerView::__construct
-2021-10-29 19:52:21:525540: constructor called, caller: Called by __construct From Class RegisterView
-2021-10-29 19:52:21:526379: varDump alertViewContent setView: 't'
-2021-10-29 19:52:21:527175: isSubmitbuttonSet? 1
-2021-10-29 19:52:21:527983: Post content: array (
-  'username' => 'sadasdsadasdsad',
-  'password' => 'sadasd',
-  'confirmPassword' => 'sadas',
-)
-2021-10-29 19:52:21:528705: post username val: sadasdsadasdsad
-2021-10-29 19:52:21:529470: varDump alertViewContent getAlertView: 't'
-2021-10-29 19:52:21:530260: varDump alertViewContent handleOutput: '<div class="alertDanger">
+
+2021-10-29 20:20:02:426569: post username val: asdsadasda
+
+2021-10-29 20:20:02:427547: varDump alertViewContent handleOutput: '<div class="alertDanger">
 			Passwords do not match
 			<button class="closeAlertBut imageButton" onClick="closeAlert();">
 			<img class="closeAlertImage" src="../IMG/cancel.png">
 			</button>
 			</div>'
-2021-10-29 19:52:21:531198: varDump alertViewContent setView: 't'
-2021-10-29 19:52:21:531947: varDump alertViewContent getView: 't'
+
+2021-10-29 20:20:02:428329: varDump alertViewContent getView: ''
+
+2021-10-29 20:27:00:342490: View object created in registerView::__construct
+
+2021-10-29 20:27:00:344287: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:27:00:346718: Post content: array (
+)
+
+2021-10-29 20:27:00:348632: POST EMPTY
+
+2021-10-29 20:27:00:350867: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:27:00:353545: varDump alertViewContent getView: NULL
+
+2021-10-29 20:27:43:262426: View object created in registerView::__construct
+
+2021-10-29 20:27:43:263607: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:27:43:264749: Post content: array (
+)
+
+2021-10-29 20:27:43:265898: POST EMPTY
+
+2021-10-29 20:27:43:267603: varDump alertViewContent handleOutput: NULL
+
+2021-10-29 20:27:43:268835: varDump alertViewContent getView: NULL
+
+2021-10-29 20:27:54:171124: View object created in registerView::__construct
+
+2021-10-29 20:27:54:172357: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:27:54:173391: Post content: array (
+)
+
+2021-10-29 20:27:54:174320: POST EMPTY
+
+2021-10-29 20:27:54:175252: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:27:54:177072: varDump alertViewContent getView: NULL
+
+2021-10-29 20:28:07:001930: View object created in registerView::__construct
+
+2021-10-29 20:28:07:003222: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:28:07:004337: Post content: array (
+)
+
+2021-10-29 20:28:07:005515: POST EMPTY
+
+2021-10-29 20:28:07:006619: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:28:07:008081: varDump alertViewContent getView: NULL
+
+2021-10-29 20:28:54:325893: View object created in registerView::__construct
+
+2021-10-29 20:28:54:326900: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:28:54:327762: Post content: array (
+)
+
+2021-10-29 20:28:54:328633: POST EMPTY
+
+2021-10-29 20:28:54:329521: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:28:54:331314: varDump alertViewContent getView: NULL
+
+2021-10-29 20:29:20:404435: View object created in registerView::__construct
+
+2021-10-29 20:29:20:405789: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:29:20:406989: Post content: array (
+)
+
+2021-10-29 20:29:20:407880: POST EMPTY
+
+2021-10-29 20:29:20:408782: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:29:20:410017: varDump alertViewContent getView: 
+
+2021-10-29 20:29:33:634851: View object created in registerView::__construct
+
+2021-10-29 20:29:33:635985: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:29:33:637119: Post content: array (
+)
+
+2021-10-29 20:29:33:638037: POST EMPTY
+
+2021-10-29 20:29:33:638888: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:29:33:640077: varDump alertViewContent getView: 
+
+2021-10-29 20:29:44:556099: View object created in registerView::__construct
+
+2021-10-29 20:29:44:557277: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:29:44:558319: Post content: array (
+)
+
+2021-10-29 20:29:44:559592: POST EMPTY
+
+2021-10-29 20:29:44:560802: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:30:33:857386: View object created in registerView::__construct
+
+2021-10-29 20:30:33:858720: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:30:33:859896: Post content: array (
+)
+
+2021-10-29 20:30:33:861251: POST EMPTY
+
+2021-10-29 20:30:33:863016: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:30:33:864632: varDump alertViewContent getView: 
+
+2021-10-29 20:30:48:916744: View object created in registerView::__construct
+
+2021-10-29 20:30:48:918688: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:30:48:921257: Post content: array (
+)
+
+2021-10-29 20:30:48:923462: POST EMPTY
+
+2021-10-29 20:30:48:925324: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:30:48:926923: varDump alertViewContent getView: 
+
+2021-10-29 20:31:06:496480: View object created in registerView::__construct
+
+2021-10-29 20:31:06:497923: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:31:06:499056: Post content: array (
+)
+
+2021-10-29 20:31:06:499967: POST EMPTY
+
+2021-10-29 20:31:06:501115: varDump alertViewContent handleOutput: NULL
+
+2021-10-29 20:31:06:502380: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:31:19:285136: View object created in registerView::__construct
+
+2021-10-29 20:31:19:286731: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:31:19:289026: Post content: array (
+)
+
+2021-10-29 20:31:19:291176: POST EMPTY
+
+2021-10-29 20:31:19:293256: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:31:19:295291: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:31:27:311043: View object created in registerView::__construct
+
+2021-10-29 20:31:27:312149: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:31:27:313035: Post content: array (
+  'username' => 'sadasdsadasdasa',
+  'password' => 'sdasd',
+  'confirmPassword' => 'asd',
+)
+
+2021-10-29 20:31:27:313783: post username val: sadasdsadasdasa
+
+2021-10-29 20:31:27:314470: varDump alertViewContent handleOutput: '<div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:31:27:315056: varDump alertViewContent getView: <div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:32:25:067285: View object created in registerView::__construct
+
+2021-10-29 20:32:25:067985: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:32:25:068927: Post content: array (
+)
+
+2021-10-29 20:32:25:069742: POST EMPTY
+
+2021-10-29 20:32:25:070604: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:32:25:071373: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:32:25:072041: yes
+
+2021-10-29 20:32:28:513348: View object created in registerView::__construct
+
+2021-10-29 20:32:28:514297: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:32:28:515133: Post content: array (
+  'username' => 'sadsasad',
+  'password' => 'sadas',
+  'confirmPassword' => 'asd',
+)
+
+2021-10-29 20:32:28:515756: post username val: sadsasad
+
+2021-10-29 20:32:28:516445: varDump alertViewContent handleOutput: '<div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:32:28:517453: varDump alertViewContent getView: <div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:32:28:518235: yes
+
+2021-10-29 20:32:32:896601: View object created in registerView::__construct
+
+2021-10-29 20:32:32:897438: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:32:32:898256: Post content: array (
+  'username' => 'sadassadas',
+  'password' => 'sadsa',
+  'confirmPassword' => 'asd',
+)
+
+2021-10-29 20:32:32:899011: post username val: sadassadas
+
+2021-10-29 20:32:32:899658: varDump alertViewContent handleOutput: '<div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:32:32:900331: varDump alertViewContent getView: <div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:32:32:901028: yes
+
+2021-10-29 20:33:53:499585: View object created in registerView::__construct
+
+2021-10-29 20:33:53:500435: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:33:53:501553: Post content: array (
+)
+
+2021-10-29 20:33:53:502734: POST EMPTY
+
+2021-10-29 20:33:53:503522: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:33:53:504564: this->view->getview inside registerview: 
+
+2021-10-29 20:33:53:505467: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:33:53:506275: yes
+
+2021-10-29 20:34:02:461413: View object created in registerView::__construct
+
+2021-10-29 20:34:02:462255: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:34:02:462992: Post content: array (
+)
+
+2021-10-29 20:34:02:463561: POST EMPTY
+
+2021-10-29 20:34:02:464255: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:34:02:464997: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:34:02:466744: yes
+
+2021-10-29 20:34:02:467931: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:34:02:468759: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:34:02:470075: yes
+
+2021-10-29 20:34:05:815790: View object created in registerView::__construct
+
+2021-10-29 20:34:05:816604: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:34:05:817388: Post content: array (
+  'username' => 'sadasdsadasdas',
+  'password' => 'asdas',
+  'confirmPassword' => 'asd',
+)
+
+2021-10-29 20:34:05:818141: post username val: sadasdsadasdas
+
+2021-10-29 20:34:05:818800: varDump alertViewContent handleOutput: '<div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:34:05:819458: varDump alertViewContent getView: <div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:34:05:820197: yes
+
+2021-10-29 20:34:05:820866: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:34:05:821542: varDump alertViewContent getView: <div class="alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:34:05:822468: yes
+
+2021-10-29 20:36:28:920062: View object created in registerView::__construct
+
+2021-10-29 20:36:28:921554: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:36:28:922388: Post content: array (
+)
+
+2021-10-29 20:36:28:923094: POST EMPTY
+
+2021-10-29 20:36:28:923750: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:36:28:924343: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:36:28:924919: yes
+
+2021-10-29 20:36:28:925560: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:36:28:926152: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:36:28:926803: yes
+
+2021-10-29 20:36:46:247656: View object created in registerView::__construct
+
+2021-10-29 20:36:46:248650: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:36:46:250075: Post content: array (
+)
+
+2021-10-29 20:36:46:251259: POST EMPTY
+
+2021-10-29 20:36:46:252509: varDump alertViewContent handleOutput: '<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:36:46:253754: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:36:46:254731: yes
+
+2021-10-29 20:36:46:255307: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:36:46:255957: varDump alertViewContent getView: <div class="alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:36:46:256535: yes
+
+2021-10-29 20:39:31:954900: View object created in registerView::__construct
+
+2021-10-29 20:39:31:955910: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:39:31:956824: Post content: array (
+)
+
+2021-10-29 20:39:31:957610: POST EMPTY
+
+2021-10-29 20:39:31:958261: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:39:31:958875: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:39:31:959477: yes
+
+2021-10-29 20:39:31:960112: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:39:31:960744: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:39:31:961401: yes
+
+2021-10-29 20:40:50:290932: View object created in registerView::__construct
+
+2021-10-29 20:40:50:292836: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:40:50:293757: Post content: array (
+)
+
+2021-10-29 20:40:50:294423: POST EMPTY
+
+2021-10-29 20:40:50:295111: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:40:50:295708: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:40:50:296276: yes
+
+2021-10-29 20:40:50:296904: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:40:50:297580: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:40:50:298144: yes
+
+2021-10-29 20:42:15:444606: View object created in registerView::__construct
+
+2021-10-29 20:42:15:445432: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:42:15:446247: Post content: array (
+)
+
+2021-10-29 20:42:15:446966: POST EMPTY
+
+2021-10-29 20:42:15:447569: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:42:15:448231: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:42:15:448858: yes
+
+2021-10-29 20:42:15:449456: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:42:15:450050: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:42:15:450803: yes
+
+2021-10-29 20:42:21:202991: View object created in registerView::__construct
+
+2021-10-29 20:42:21:204040: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 20:42:21:204694: Post content: array (
+  'username' => 'ik',
+  'password' => 'ben',
+  'confirmPassword' => 'aap',
+)
+
+2021-10-29 20:42:21:205598: post username val: ik
+
+2021-10-29 20:42:21:206462: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 20:42:21:207210: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:42:21:207913: yes
+
+2021-10-29 20:42:21:208503: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:42:21:209075: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 20:42:21:209683: yes
+
+2021-10-29 21:03:15:777657: View object created in registerView::__construct
+
+2021-10-29 21:03:15:778885: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:03:15:780031: Post content: array (
+)
+
+2021-10-29 21:03:15:780765: POST EMPTY
+
+2021-10-29 21:03:15:781480: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:03:15:782156: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:15:782916: yes
+
+2021-10-29 21:03:15:783615: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:15:784272: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:15:784963: yes
+
+2021-10-29 21:03:50:545594: View object created in registerView::__construct
+
+2021-10-29 21:03:50:546673: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:03:50:547495: Post content: array (
+)
+
+2021-10-29 21:03:50:548183: POST EMPTY
+
+2021-10-29 21:03:50:548926: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:03:50:549623: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:50:550354: yes
+
+2021-10-29 21:03:50:551238: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:50:551983: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:50:552647: yes
+
+2021-10-29 21:03:56:814332: View object created in registerView::__construct
+
+2021-10-29 21:03:56:815356: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:03:56:816243: Post content: array (
+)
+
+2021-10-29 21:03:56:816995: POST EMPTY
+
+2021-10-29 21:03:56:817671: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:03:56:818600: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:56:819291: yes
+
+2021-10-29 21:03:56:820004: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:56:820705: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:03:56:821363: yes
+
+2021-10-29 21:04:03:200240: View object created in registerView::__construct
+
+2021-10-29 21:04:03:201242: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:04:03:202088: Post content: array (
+)
+
+2021-10-29 21:04:03:202796: POST EMPTY
+
+2021-10-29 21:04:03:203580: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:04:03:204268: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:04:03:205098: yes
+
+2021-10-29 21:04:03:205739: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:04:03:206372: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:04:03:207001: yes
+
+2021-10-29 21:06:26:272602: View object created in registerView::__construct
+
+2021-10-29 21:06:26:274324: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:06:26:275705: Post content: array (
+)
+
+2021-10-29 21:06:26:276860: POST EMPTY
+
+2021-10-29 21:06:26:277753: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:06:26:278595: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:06:26:279492: yes
+
+2021-10-29 21:06:26:280187: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:06:26:280974: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:06:26:281639: yes
+
+2021-10-29 21:07:28:226538: View object created in registerView::__construct
+
+2021-10-29 21:07:28:227563: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:07:28:228400: Post content: array (
+)
+
+2021-10-29 21:07:28:229313: POST EMPTY
+
+2021-10-29 21:07:28:230127: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:07:28:230982: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:07:28:231737: yes
+
+2021-10-29 21:07:28:232488: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:07:28:233224: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:07:28:233869: yes
+
+2021-10-29 21:08:40:852399: View object created in registerView::__construct
+
+2021-10-29 21:08:40:853809: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:08:40:855094: Post content: array (
+)
+
+2021-10-29 21:08:40:856085: POST EMPTY
+
+2021-10-29 21:08:40:856810: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:08:40:857490: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:08:40:858200: yes
+
+2021-10-29 21:08:40:858903: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:08:40:859872: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:08:40:860647: yes
+
+2021-10-29 21:08:57:321305: View object created in registerView::__construct
+
+2021-10-29 21:08:57:322460: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:08:57:323828: Post content: array (
+)
+
+2021-10-29 21:08:57:324949: POST EMPTY
+
+2021-10-29 21:08:57:326056: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:08:57:327215: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:08:57:328269: yes
+
+2021-10-29 21:08:57:329151: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:08:57:330111: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:08:57:330933: yes
+
+2021-10-29 21:09:04:661254: View object created in registerView::__construct
+
+2021-10-29 21:09:04:662357: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:04:663625: Post content: array (
+)
+
+2021-10-29 21:09:04:664690: POST EMPTY
+
+2021-10-29 21:09:04:665485: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:04:666249: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:04:667037: yes
+
+2021-10-29 21:09:04:667731: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:04:668437: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:04:669069: yes
+
+2021-10-29 21:09:08:864768: View object created in registerView::__construct
+
+2021-10-29 21:09:08:865779: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:08:866925: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:08:867706: post username val: sadsasadsad
+
+2021-10-29 21:09:08:868425: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:08:869218: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:08:869955: yes
+
+2021-10-29 21:09:08:870697: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:08:871387: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:08:872048: yes
+
+2021-10-29 21:09:10:269095: View object created in registerView::__construct
+
+2021-10-29 21:09:10:270188: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:10:271527: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:10:272491: post username val: sadsasadsad
+
+2021-10-29 21:09:10:273373: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:10:274091: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:10:274859: yes
+
+2021-10-29 21:09:10:275736: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:10:276399: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:10:277151: yes
+
+2021-10-29 21:09:11:264502: View object created in registerView::__construct
+
+2021-10-29 21:09:11:265483: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:11:266380: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:11:267152: post username val: sadsasadsad
+
+2021-10-29 21:09:11:267783: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:11:268474: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:11:269124: yes
+
+2021-10-29 21:09:11:269767: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:11:270545: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:11:271269: yes
+
+2021-10-29 21:09:13:240724: View object created in registerView::__construct
+
+2021-10-29 21:09:13:242022: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:13:243319: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:13:244263: post username val: sadsasadsad
+
+2021-10-29 21:09:13:244948: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:13:245731: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:13:246377: yes
+
+2021-10-29 21:09:13:247087: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:13:247787: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:13:248634: yes
+
+2021-10-29 21:09:14:372151: View object created in registerView::__construct
+
+2021-10-29 21:09:14:373081: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:14:373951: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:14:374810: post username val: sadsasadsad
+
+2021-10-29 21:09:14:375637: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:14:376426: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:377093: yes
+
+2021-10-29 21:09:14:377729: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:378349: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:379021: yes
+
+2021-10-29 21:09:14:598908: View object created in registerView::__construct
+
+2021-10-29 21:09:14:599885: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:14:600742: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:14:601456: post username val: sadsasadsad
+
+2021-10-29 21:09:14:602179: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:14:602903: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:603694: yes
+
+2021-10-29 21:09:14:604482: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:605106: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:605770: yes
+
+2021-10-29 21:09:14:818526: View object created in registerView::__construct
+
+2021-10-29 21:09:14:819384: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:14:820114: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:14:820877: post username val: sadsasadsad
+
+2021-10-29 21:09:14:821506: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:14:822266: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:823002: yes
+
+2021-10-29 21:09:14:823794: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:824513: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:14:825164: yes
+
+2021-10-29 21:09:15:011223: View object created in registerView::__construct
+
+2021-10-29 21:09:15:012181: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:15:013016: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:15:013837: post username val: sadsasadsad
+
+2021-10-29 21:09:15:014737: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:15:015486: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:15:016243: yes
+
+2021-10-29 21:09:15:016970: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:15:017705: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:15:018417: yes
+
+2021-10-29 21:09:15:230008: View object created in registerView::__construct
+
+2021-10-29 21:09:15:230853: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:15:231926: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:15:233082: post username val: sadsasadsad
+
+2021-10-29 21:09:15:233881: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:15:234600: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:15:235308: yes
+
+2021-10-29 21:09:15:236058: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:15:236749: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:15:237586: yes
+
+2021-10-29 21:09:18:375566: View object created in registerView::__construct
+
+2021-10-29 21:09:18:376490: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:18:377531: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:18:378701: post username val: sadsasadsad
+
+2021-10-29 21:09:18:379713: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:18:380488: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:18:381171: yes
+
+2021-10-29 21:09:18:381841: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:18:382852: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:18:383590: yes
+
+2021-10-29 21:09:18:822348: View object created in registerView::__construct
+
+2021-10-29 21:09:18:823247: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:18:823972: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:18:824780: post username val: sadsasadsad
+
+2021-10-29 21:09:18:825466: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:18:826203: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:18:826869: yes
+
+2021-10-29 21:09:18:827546: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:18:828379: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:18:829328: yes
+
+2021-10-29 21:09:19:186105: View object created in registerView::__construct
+
+2021-10-29 21:09:19:186947: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:19:187981: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:19:188674: post username val: sadsasadsad
+
+2021-10-29 21:09:19:189372: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:19:190032: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:19:190684: yes
+
+2021-10-29 21:09:19:191432: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:19:192136: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:19:192770: yes
+
+2021-10-29 21:09:19:594777: View object created in registerView::__construct
+
+2021-10-29 21:09:19:595694: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:19:596552: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:19:597535: post username val: sadsasadsad
+
+2021-10-29 21:09:19:598322: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:19:598979: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:19:599808: yes
+
+2021-10-29 21:09:19:600428: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:19:601040: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:19:601722: yes
+
+2021-10-29 21:09:19:999644: View object created in registerView::__construct
+
+2021-10-29 21:09:20:000793: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:20:002097: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:20:003158: post username val: sadsasadsad
+
+2021-10-29 21:09:20:004154: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:20:004953: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:005623: yes
+
+2021-10-29 21:09:20:006256: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:006865: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:007511: yes
+
+2021-10-29 21:09:20:424432: View object created in registerView::__construct
+
+2021-10-29 21:09:20:425270: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:20:426085: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:20:426766: post username val: sadsasadsad
+
+2021-10-29 21:09:20:427612: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:20:428394: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:429129: yes
+
+2021-10-29 21:09:20:429803: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:430596: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:431425: yes
+
+2021-10-29 21:09:20:803222: View object created in registerView::__construct
+
+2021-10-29 21:09:20:804343: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:20:805389: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:20:806236: post username val: sadsasadsad
+
+2021-10-29 21:09:20:806892: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:20:807627: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:808280: yes
+
+2021-10-29 21:09:20:808908: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:809540: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:20:810232: yes
+
+2021-10-29 21:09:21:172487: View object created in registerView::__construct
+
+2021-10-29 21:09:21:173410: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:21:174370: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:21:175520: post username val: sadsasadsad
+
+2021-10-29 21:09:21:176505: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:21:177601: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:21:178499: yes
+
+2021-10-29 21:09:21:179343: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:21:180209: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:21:180937: yes
+
+2021-10-29 21:09:21:576814: View object created in registerView::__construct
+
+2021-10-29 21:09:21:577807: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:21:578921: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:21:579969: post username val: sadsasadsad
+
+2021-10-29 21:09:21:580926: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:21:581939: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:21:582670: yes
+
+2021-10-29 21:09:21:583433: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:21:584170: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:21:584959: yes
+
+2021-10-29 21:09:22:017336: View object created in registerView::__construct
+
+2021-10-29 21:09:22:018119: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:22:018847: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:22:019596: post username val: sadsasadsad
+
+2021-10-29 21:09:22:020573: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:22:021246: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:021953: yes
+
+2021-10-29 21:09:22:022638: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:023312: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:024005: yes
+
+2021-10-29 21:09:22:357120: View object created in registerView::__construct
+
+2021-10-29 21:09:22:358011: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:22:358773: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:22:359470: post username val: sadsasadsad
+
+2021-10-29 21:09:22:360301: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:22:361037: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:361783: yes
+
+2021-10-29 21:09:22:362567: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:363278: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:364036: yes
+
+2021-10-29 21:09:22:791385: View object created in registerView::__construct
+
+2021-10-29 21:09:22:792540: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:22:793962: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:22:795316: post username val: sadsasadsad
+
+2021-10-29 21:09:22:796234: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:22:797039: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:797795: yes
+
+2021-10-29 21:09:22:798493: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:799280: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:22:799914: yes
+
+2021-10-29 21:09:23:187930: View object created in registerView::__construct
+
+2021-10-29 21:09:23:188903: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:23:189976: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:23:191137: post username val: sadsasadsad
+
+2021-10-29 21:09:23:192266: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:23:192971: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:193702: yes
+
+2021-10-29 21:09:23:194415: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:195146: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:195927: yes
+
+2021-10-29 21:09:23:554837: View object created in registerView::__construct
+
+2021-10-29 21:09:23:555782: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:23:556745: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:23:557659: post username val: sadsasadsad
+
+2021-10-29 21:09:23:558515: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:23:559159: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:559778: yes
+
+2021-10-29 21:09:23:560417: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:561049: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:561696: yes
+
+2021-10-29 21:09:23:816371: View object created in registerView::__construct
+
+2021-10-29 21:09:23:817136: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:23:818041: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:23:818830: post username val: sadsasadsad
+
+2021-10-29 21:09:23:819541: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:23:820375: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:821200: yes
+
+2021-10-29 21:09:23:822080: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:822998: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:23:823643: yes
+
+2021-10-29 21:09:24:022274: View object created in registerView::__construct
+
+2021-10-29 21:09:24:023113: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:24:023878: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:24:024600: post username val: sadsasadsad
+
+2021-10-29 21:09:24:025511: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:24:026197: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:026993: yes
+
+2021-10-29 21:09:24:027666: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:028329: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:029105: yes
+
+2021-10-29 21:09:24:218563: View object created in registerView::__construct
+
+2021-10-29 21:09:24:219706: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:24:221035: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:24:221990: post username val: sadsasadsad
+
+2021-10-29 21:09:24:222782: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:24:223564: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:224323: yes
+
+2021-10-29 21:09:24:225063: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:225798: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:226502: yes
+
+2021-10-29 21:09:24:427459: View object created in registerView::__construct
+
+2021-10-29 21:09:24:428513: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:24:429727: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:24:430550: post username val: sadsasadsad
+
+2021-10-29 21:09:24:431208: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:24:431847: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:432461: yes
+
+2021-10-29 21:09:24:433099: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:433743: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:434494: yes
+
+2021-10-29 21:09:24:625753: View object created in registerView::__construct
+
+2021-10-29 21:09:24:626541: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:24:627453: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:24:628422: post username val: sadsasadsad
+
+2021-10-29 21:09:24:629286: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:24:629981: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:630741: yes
+
+2021-10-29 21:09:24:631519: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:632485: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:633112: yes
+
+2021-10-29 21:09:24:824617: View object created in registerView::__construct
+
+2021-10-29 21:09:24:825929: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:24:827023: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:24:827824: post username val: sadsasadsad
+
+2021-10-29 21:09:24:828680: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:24:829486: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:830334: yes
+
+2021-10-29 21:09:24:831322: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:832194: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:24:832943: yes
+
+2021-10-29 21:09:26:581137: View object created in registerView::__construct
+
+2021-10-29 21:09:26:582404: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:26:583221: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:26:583910: post username val: sadsasadsad
+
+2021-10-29 21:09:26:584775: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:26:585568: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:26:586327: yes
+
+2021-10-29 21:09:26:587114: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:26:587838: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:26:588781: yes
+
+2021-10-29 21:09:27:815712: View object created in registerView::__construct
+
+2021-10-29 21:09:27:816749: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:27:817846: Post content: array (
+  'username' => 'sadsasadsad',
+  'password' => 'sad',
+  'confirmPassword' => 'asdsa',
+)
+
+2021-10-29 21:09:27:818594: post username val: sadsasadsad
+
+2021-10-29 21:09:27:819294: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:27:820123: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:27:820953: yes
+
+2021-10-29 21:09:27:821640: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:27:822326: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:27:823092: yes
+
+2021-10-29 21:09:39:782091: View object created in registerView::__construct
+
+2021-10-29 21:09:39:785770: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:39:786999: Post content: array (
+)
+
+2021-10-29 21:09:39:788086: POST EMPTY
+
+2021-10-29 21:09:39:789088: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:39:789897: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:39:790694: yes
+
+2021-10-29 21:09:39:791610: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:39:792431: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:39:793280: yes
+
+2021-10-29 21:09:46:112333: View object created in registerView::__construct
+
+2021-10-29 21:09:46:113228: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 21:09:46:114056: Post content: array (
+)
+
+2021-10-29 21:09:46:114968: POST EMPTY
+
+2021-10-29 21:09:46:115759: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 21:09:46:116502: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:46:117257: yes
+
+2021-10-29 21:09:46:117962: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:46:118639: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 21:09:46:119418: yes
+
+2021-10-29 23:21:23:640752: View object created in registerView::__construct
+
+2021-10-29 23:21:23:642079: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 23:21:23:643488: Post content: array (
+)
+
+2021-10-29 23:21:23:644237: POST EMPTY
+
+2021-10-29 23:21:23:644902: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 23:21:23:645590: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 23:21:23:646383: yes
+
+2021-10-29 23:21:23:647039: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 23:21:23:647723: varDump alertViewContent getView: <div class=" alert alertInfo">
+			No data retrieval needed
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 23:21:23:648362: yes
+
+2021-10-29 23:21:26:839911: View object created in registerView::__construct
+
+2021-10-29 23:21:26:841135: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-10-29 23:21:26:842259: Post content: array (
+  'username' => 'asdsadasdasa',
+  'password' => 'sda',
+  'confirmPassword' => 'sa',
+)
+
+2021-10-29 23:21:26:842985: post username val: asdsadasdasa
+
+2021-10-29 23:21:26:843723: varDump alertViewContent handleOutput: '<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>'
+
+2021-10-29 23:21:26:844357: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 23:21:26:845031: yes
+
+2021-10-29 23:21:26:846251: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("login", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 23:21:26:847110: varDump alertViewContent getView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png">
+			</button>
+			</div>
+
+2021-10-29 23:21:26:847771: yes

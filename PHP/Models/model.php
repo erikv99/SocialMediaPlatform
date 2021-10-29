@@ -20,7 +20,7 @@ class Model
 	public function execute() 
 	{
 		// In case this function is not used in the specific model it is still called by the controller as per design. thats why we want to return these values so the program doesnt have a panic attack
-		$returnData = ["indexViewRequired" => false, "message" => ""];
+		$returnData = ["message" => ""];
 		return $returnData;
 	}
 

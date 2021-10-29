@@ -7,7 +7,7 @@ function logError($message)
         $log = fopen("../errorLog.txt", "a+") or die("Unable to open error log file!");
         $currentDate = new DateTime();
         $logPrefix = $currentDate->format('Y-m-d H:i:s:u');
-        $logPrefix .= ": ";
+        $logPrefix =  "\n" . $logPrefix . ": ";
         fwrite($log, $logPrefix . $message . "\n");
         fclose($log);   
     }

@@ -5,8 +5,8 @@
 	class View 
 	{
 		/* Variable contains the html/content of the view */
-		private string $viewContent = "t";
-		private string $alertViewContent = "t";
+		private string $viewContent = "";
+		static private string $alertViewContent = "";
 
 		function __construct() 
 		{
@@ -26,25 +26,27 @@
 		 */
 		public function setView($viewContent)
 		{
-			logError("varDump alertViewContent setView: " . var_export($this->alertViewContent, true));
 			$this->viewContent = $viewContent;
 		}
 
 		/**
 		 * Function which will return the viewContent of a view
 		 * 
-		 * @return string $viewContent
+		 * @return 
 		 */
-		public function getView() : string 
+		public function getView() 
 		{
-			logError("varDump alertViewContent getView: " . var_export($this->alertViewContent, true));
-			if ($this->alertViewContent != "") 
+
+			logError("varDump alertViewContent getView: " . $this::$alertViewContent);
+			if ($this::$alertViewContent != "") 
 			{
-				return $this->viewContent . $this->alertViewContent;
+				logError("yes");
+				return $this->viewContent . $this::$alertViewContent;
 
 			}
 			else 
 			{
+				logError("no");
 				return $this->viewContent;
 			}
 
@@ -58,13 +60,15 @@
 			// Checking if the $output contains a  message that isnt empty
 			if ($output["message"] != "") 
 			{
+				
 				// Getting the alert view
 				$alertView = $this->getAlertView($output["messageType"], $output["message"]);
-
+				
 				// Adding the alert view to our current view 
-				$this->alertViewContent = $alertView;
+				$this::$alertViewContent = $alertView;
+				
 			}
-			logError("varDump alertViewContent handleOutput: " . var_export($this->alertViewContent, true));	
+			logError("varDump alertViewContent handleOutput: " . var_export($this::$alertViewContent, true));	
 		}
 
 		private function getAlertView($alertType, $alertMessage) 
@@ -79,13 +83,12 @@
 			}
 
 			$alertView = 
-			'<div class="' . $alertType . '">
+			'<div class=" alert ' . $alertType . '">
 			' . $alertMessage . '
 			<button class="closeAlertBut imageButton" onClick="closeAlert();">
 			<img class="closeAlertImage" src="../IMG/cancel.png">
 			</button>
 			</div>';
-			logError("varDump alertViewContent getAlertView: " . var_export($this->alertViewContent, true));
 			return $alertView;
 		}
 	}

@@ -6,8 +6,8 @@ require_once("../generalFunctions.php");
 
 class Controller
 {
-	protected Model $model;
-	protected View $view;
+	public Model $model;
+	public View $view;
 	public string $viewToReturn;
 
 	public function __construct() 
