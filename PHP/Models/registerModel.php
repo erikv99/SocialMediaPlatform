@@ -13,18 +13,13 @@ class RegisterModel extends Model
 	{
 		$returnData = ["message" => ""];
 
-		// Checking if the form is not empty. if it is empty we can return and do not need to execute any data
-		logError("Post content: " . var_export($_POST, true) );
-
+		// If the form is empty we dont want to continue
 		if (empty($_POST))
 		{
-			logError("POST EMPTY");
-			$returnData["message"] = "No data retrieval needed";
-			$returnData["messageType"] = "alertInfo";
 			return $returnData;
 		}
 
-		logError("post username val: " . $_POST["username"]);
+		// Getting the values from the form
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 		$confirmPassword = $_POST["confirmPassword"];
@@ -32,13 +27,14 @@ class RegisterModel extends Model
 		// Checking if given password and confirmpassword match
 		if ($password != $confirmPassword) 
 		{
+
 			$returnData["message"] = "Passwords do not match";
 			$returnData["messageType"] = "alertDanger";
 			return $returnData;
 		}
 
-			$returnData["message"] = "fucking work";
-			$returnData["messageType"] = "alertDanger";
+		$returnData["message"] = "Shit should be good";
+		$returnData["messageType"] = "alertInfo";
 		return $returnData;
 	}
 }

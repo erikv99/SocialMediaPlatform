@@ -86,7 +86,7 @@
 			'<div class=" alert ' . $alertType . '">
 			' . $alertMessage . '
 			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
 			</button>
 			</div>';
 			return $alertView;

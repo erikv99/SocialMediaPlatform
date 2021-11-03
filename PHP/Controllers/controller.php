@@ -33,6 +33,7 @@ class Controller
 
 		// making the response array and returning it
 		$response = ["view" => $this->viewToReturn];
+		
 		return $response;
 	}
 

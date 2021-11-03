@@ -24,7 +24,7 @@ class RegisterView extends View
 		<button class='cancelButton' onClick='closeLoginContainer();'>
 		<img src='" . $cancelImgPath . "' class='cancelImage'></img>
 		</button>
-		<form class='loginForm' onsubmit='callControllerFromForm(\"login\", \"registerController\", \"loginForm\"); return false;' method='POST'>
+		<form class='loginForm' onsubmit='callControllerFromForm(\"body\", \"registerController\", \"loginForm\"); return false;' method='POST'>
 		<label for='text'>Username: </label>
 		<input type='text' name='username' minlength='2' maxlength='30' required>
 		<label for='password'>Password: </label>
