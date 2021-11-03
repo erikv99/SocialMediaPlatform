@@ -1,5 +1,4 @@
 <?php 
-require_once("../Include/dbConnect.php");
 
 /** Model base class */
 class Model
