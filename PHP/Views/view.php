@@ -6,18 +6,10 @@
 	{
 		/* Variable contains the html/content of the view */
 		private string $viewContent = "";
+
+		// These variables are static so their state remains the same between calls
 		static private string $alertViewContent = "";
-
-		function __construct() 
-		{
-			logError("constructor called, caller: " . getCallingFunctionName());
-
-		}
-
-		function __destruct()
-		{
-			logError("destructor called");
-		}
+		static private bool $returnAlertOnly = false;
 
 		/**
 		 * Function to set the viewContent of a view
@@ -30,48 +22,54 @@
 		}
 
 		/**
-		 * Function which will return the viewContent of a view
+		 * Function which will set the viewContent of a view
 		 * 
-		 * @return 
 		 */
 		public function getView() 
 		{
-
-			logError("varDump alertViewContent getView: " . $this::$alertViewContent);
-			if ($this::$alertViewContent != "") 
+			// Returning either view, view + alertview or just the alertview
+			if ($this::$alertViewContent != "" and $this::$returnAlertOnly == true) 
 			{
-				logError("yes");
-				return $this->viewContent . $this::$alertViewContent;
-
+				return $this->getAlertView();
+			} 
+			elseif ($this::$alertViewContent != "" and $this::$returnAlertOnly == false)
+			{
+				return $this->viewContent . $this->getAlertView();
 			}
 			else 
 			{
-				logError("no");
 				return $this->viewContent;
 			}
-
-
 		}
 
+		/**
+		 * Will handle the output given by model->execute
+		 * 
+		 * @param $output
+		 */
 		public function handleOutput($output) 
 		{
 
-
-			// Checking if the $output contains a  message that isnt empty
-			if ($output["message"] != "") 
+			// Checking if the $output contains a  message key
+			if (array_key_exists("message", $output))
 			{
-				
-				// Getting the alert view
-				$alertView = $this->getAlertView($output["messageType"], $output["message"]);
-				
-				// Adding the alert view to our current view 
-				$this::$alertViewContent = $alertView;
-				
+				// Setting the alert view
+				$this->setAlertView($output["messageType"], $output["message"]);	
 			}
-			logError("varDump alertViewContent handleOutput: " . var_export($this::$alertViewContent, true));	
+
+			// Checking if the $output contains a getAlertOnly key indicating that only the alert should be returned (this is the case if a registry is succesfull)
+			if (array_key_exists("getAlertOnly", $output)) 
+			{
+				// This is basically not needed since we only return the getAlertOnly key if its true but we check if its true in case we change the way this works later
+				logError("getAlertOnly: " . $output["getAlertOnly"] . "if statement true or false: " . $output["getAlertOnly"] == true);
+				if ($output["getAlertOnly"] == true) 
+				{
+					$this::$returnAlertOnly = true;
+				}
+			}
 		}
 
-		private function getAlertView($alertType, $alertMessage) 
+		private function setAlertView($alertType, $alertMessage) 
 		{	
 			
 			// Available alert types are, alertDanger, alertInfo, alertSuccess and alertWarning
@@ -89,7 +87,12 @@
 			<img class="closeAlertImage" src="../IMG/cancel.png"/>
 			</button>
 			</div>';
-			return $alertView;
+			$this::$alertViewContent = $alertView;
+		}
+
+		public function getAlertView() : string 
+		{
+			return $this::$alertViewContent;
 		}
 	}
 ?>

@@ -9686,3 +9686,1091 @@
     1 => '.alert',
   ),
 )
+
+2021-11-04 11:57:41:644560: View object created in registerView::__construct
+
+2021-11-04 11:57:41:645811: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-11-04 11:57:41:646473: varDump alertViewContent handleOutput: ''
+
+2021-11-04 11:57:41:647118: varDump alertViewContent getView: 
+
+2021-11-04 11:57:41:647817: no
+
+2021-11-04 11:57:41:648524: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		
+
+2021-11-04 11:57:41:649167: varDump alertViewContent getView: 
+
+2021-11-04 11:57:41:649813: no
+
+2021-11-04 11:57:41:650453: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 11:57:58:039879: View object created in registerView::__construct
+
+2021-11-04 11:57:58:040895: constructor called, caller: Called by __construct From Class RegisterView
+
+2021-11-04 11:57:58:137653: varDump alertViewContent handleOutput: '<div class=" alert alertInfo">
+			Shit should be good
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>'
+
+2021-11-04 11:57:58:138861: varDump alertViewContent getView: <div class=" alert alertInfo">
+			Shit should be good
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 11:57:58:140101: yes
+
+2021-11-04 11:57:58:141130: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			Shit should be good
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 11:57:58:141795: varDump alertViewContent getView: <div class=" alert alertInfo">
+			Shit should be good
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 11:57:58:142713: yes
+
+2021-11-04 11:57:58:143727: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertInfo">
+			Shit should be good
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 12:39:00:833293: View object created in registerView::__construct
+
+2021-11-04 12:39:00:835011: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 12:39:00:835713: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 12:40:01:771955: View object created in registerView::__construct
+
+2021-11-04 12:40:01:772915: handleOutput output: array (
+  'message' => '',
+)
+
+2021-11-04 12:40:01:773833: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 12:40:01:774487: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 12:40:55:401282: View object created in registerView::__construct
+
+2021-11-04 12:40:55:402168: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		
+
+2021-11-04 12:40:55:402934: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 12:41:30:407852: View object created in registerView::__construct
+
+2021-11-04 12:41:30:505421: handleOutput output: array (
+  'returnAlertOnly' => true,
+  'message' => 'Registry succesfull, you can now log in',
+  'messageType' => 'alertSuccess',
+)
+
+2021-11-04 12:41:30:506530: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 12:41:30:507493: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:43:05:480093: View object created in registerView::__construct
+
+2021-11-04 13:43:05:506893: handleOutput output: array (
+  'message' => 'Username is taken, please try again',
+  'messageType' => 'alertDanger',
+)
+
+2021-11-04 13:43:05:508152: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Username is taken, please try again
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 13:43:05:509306: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Username is taken, please try again
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:43:20:997627: View object created in registerView::__construct
+
+2021-11-04 13:43:20:998515: handleOutput output: array (
+  'message' => 'Passwords do not match',
+  'messageType' => 'alertDanger',
+)
+
+2021-11-04 13:43:20:999523: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 13:43:21:000459: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:43:29:542522: View object created in registerView::__construct
+
+2021-11-04 13:43:29:543116: handleOutput output: array (
+  'message' => 'Passwords do not match',
+  'messageType' => 'alertDanger',
+)
+
+2021-11-04 13:43:29:543781: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 13:43:29:544411: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:44:57:481807: View object created in registerView::__construct
+
+2021-11-04 13:44:57:568818: handleOutput output: array (
+  'returnAlertOnly' => true,
+  'message' => 'Registry succesfull, you can now log in',
+  'messageType' => 'alertSuccess',
+)
+
+2021-11-04 13:44:57:570031: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 13:44:57:571024: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:48:24:837870: View object created in registerView::__construct
+
+2021-11-04 13:48:24:838886: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		
+
+2021-11-04 13:48:24:839673: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:48:34:933371: View object created in registerView::__construct
+
+2021-11-04 13:48:35:032159: handleOutput output: array (
+  'returnAlertOnly' => true,
+  'message' => 'Registry succesfull, you can now log in',
+  'messageType' => 'alertSuccess',
+)
+
+2021-11-04 13:48:35:033119: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 13:48:35:034100: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:49:28:556716: View object created in registerView::__construct
+
+2021-11-04 13:49:28:557659: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		
+
+2021-11-04 13:49:28:558888: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:49:35:937162: View object created in registerView::__construct
+
+2021-11-04 13:49:36:045075: handleOutput output: array (
+  'getAlertOnly' => true,
+  'message' => 'Registry succesfull, you can now log in',
+  'messageType' => 'alertSuccess',
+)
+
+2021-11-04 13:49:36:046094: 1
+
+2021-11-04 13:49:36:047104: this->view->getview inside registerview: 
+		<div class='login'>
+		<div class='overlay'/>	
+		<div class='loginContainer'>
+		<div class='loginFormContainer' style='display:block;'>
+		<button class='cancelButton' onClick='closeLoginContainer();'>
+		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		</button>
+		<form class='loginForm' onsubmit='callControllerFromForm("body", "registerController", "loginForm"); return false;' method='POST'>
+		<label for='text'>Username: </label>
+		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<label for='password'>Password: </label>
+		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
+		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
+		<br/>
+		<input class='submitButton' type='submit' value='Sign up'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 13:49:36:047987: Response: array (
+  'view' => '
+		<div class=\'login\'>
+		<div class=\'overlay\'/>	
+		<div class=\'loginContainer\'>
+		<div class=\'loginFormContainer\' style=\'display:block;\'>
+		<button class=\'cancelButton\' onClick=\'closeLoginContainer();\'>
+		<img src=\'../IMG/cancel.png\' class=\'cancelImage\'></img>
+		</button>
+		<form class=\'loginForm\' onsubmit=\'callControllerFromForm("body", "registerController", "loginForm"); return false;\' method=\'POST\'>
+		<label for=\'text\'>Username: </label>
+		<input type=\'text\' name=\'username\' minlength=\'2\' maxlength=\'30\' required>
+		<label for=\'password\'>Password: </label>
+		<input type=\'password\' name=\'password\' minlength=\'2\' maxlength=\'30\' required>
+		<label class=\'confirmPassword\' for=\'confirmPassword\'>Confirm password</label>
+		<input class=\'confirmPassword\' type=\'password\' name=\'confirmPassword\' minlength=\'2\' maxlength=\'30\' required/>
+		<br/>
+		<input class=\'submitButton\' type=\'submit\' value=\'Sign up\'>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>',
+  'objectsToRemove' => 
+  array (
+    0 => '.login',
+    1 => '.alert',
+  ),
+)
+
+2021-11-04 13:51:32:335292: getAlertOnly	key exists: 
+
+2021-11-04 13:51:38:146097: handleOutput output: array (
+  'getAlertOnly' => true,
+  'message' => 'Registry succesfull, you can now log in',
+  'messageType' => 'alertSuccess',
+)
+
+2021-11-04 13:51:38:147040: getAlertOnly	key exists: 1
+
+2021-11-04 13:51:38:147987: 1
+
+2021-11-04 13:53:58:967723: getAlertOnly	key exists: 
+
+2021-11-04 13:53:58:968646: getview alertView: 
+
+2021-11-04 13:54:06:021764: getAlertOnly	key exists: 1
+
+2021-11-04 13:54:06:022844: 1
+
+2021-11-04 13:54:06:023934: getview alertView: <div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 15:25:17:442815: getAlertOnly	key exists: 
+
+2021-11-04 15:25:17:443818: getview alertView: 
+
+2021-11-04 15:25:17:444599: if 3
+
+2021-11-04 15:25:23:045060: getAlertOnly	key exists: 1
+
+2021-11-04 15:25:23:045985: 1
+
+2021-11-04 15:25:23:046754: getview alertView: <div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 15:25:23:047479: if 2
+
+2021-11-04 15:26:14:023049: getAlertOnly	key exists: 
+
+2021-11-04 15:26:14:023863: getview alertView: 
+
+2021-11-04 15:26:14:024510: this->returnAlertOnly	= false
+
+2021-11-04 15:26:14:025296: if 3
+
+2021-11-04 15:26:22:569700: getAlertOnly	key exists: 1
+
+2021-11-04 15:26:22:570754: 1
+
+2021-11-04 15:26:22:571859: getview alertView: <div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 15:26:22:572939: this->returnAlertOnly	= false
+
+2021-11-04 15:26:22:573809: if 2
+
+2021-11-04 15:32:49:502871: getAlertOnly	key exists: 
+
+2021-11-04 15:32:49:503988: getview alertView: 
+
+2021-11-04 15:32:49:505381: this->returnAlertOnly	= NULL
+
+2021-11-04 15:32:49:506202: if 3
+
+2021-11-04 15:33:25:154586: getAlertOnly	key exists: 
+
+2021-11-04 15:33:25:155840: getview alertView: 
+
+2021-11-04 15:33:25:156607: this->returnAlertOnly	= false
+
+2021-11-04 15:33:25:157280: if 3
+
+2021-11-04 15:33:32:002372: getAlertOnly	key exists: 1
+
+2021-11-04 15:33:32:003569: 1
+
+2021-11-04 15:33:32:004669: getview alertView: <div class=" alert alertSuccess">
+			Registry succesfull, you can now log in
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 15:33:32:005660: this->returnAlertOnly	= true
+
+2021-11-04 15:33:32:006414: if 1
+
+2021-11-04 15:35:54:007167: getAlertOnly	key exists: 
+
+2021-11-04 15:35:54:008064: getview alertView: 
+
+2021-11-04 15:35:54:008880: this->returnAlertOnly	= false
+
+2021-11-04 15:35:54:009511: if 3
+
+2021-11-04 15:35:57:664842: getAlertOnly	key exists: 
+
+2021-11-04 15:35:57:665751: getview alertView: <div class=" alert alertDanger">
+			Passwords do not match
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 15:35:57:666656: this->returnAlertOnly	= false
+
+2021-11-04 15:35:57:667540: if 2
+
+2021-11-04 15:36:10:270504: getAlertOnly	key exists: 
+
+2021-11-04 15:36:10:271607: getview alertView: <div class=" alert alertDanger">
+			Username is taken, please try again
+			<button class="closeAlertBut imageButton" onClick="closeAlert();">
+			<img class="closeAlertImage" src="../IMG/cancel.png"/>
+			</button>
+			</div>
+
+2021-11-04 15:36:10:272605: this->returnAlertOnly	= false
+
+2021-11-04 15:36:10:273584: if 2

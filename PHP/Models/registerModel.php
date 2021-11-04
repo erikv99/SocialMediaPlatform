@@ -11,7 +11,7 @@ class RegisterModel extends Model
 
 	public function execute() : array
 	{
-		$returnData = ["message" => ""];
+		$returnData = [];
 
 		// If the form is empty we dont want to continue
 		if (empty($_POST))
@@ -44,8 +44,9 @@ class RegisterModel extends Model
 		// Creating our new user in the database
 		$this->createUser($username, $password);
 
-		$returnData["message"] = "Shit should be good";
-		$returnData["messageType"] = "alertInfo";
+		$returnData["getAlertOnly"] = true;
+		$returnData["message"] = "Registry succesfull, you can now log in";
+		$returnData["messageType"] = "alertSuccess";
 		return $returnData;
 	}
 
@@ -96,10 +97,13 @@ class RegisterModel extends Model
 		// Opening a db connection and adding the user to the database
 		$dbConnection = $this->openDBConnection();
 
+		// Hashing the password
+		$hashedPass = password_hash($password, PASSWORD_DEFAULT);
+
 		try 
 		{
 			$stmt = $dbConnection->prepare("INSERT INTO users (userName, password, creationDate) VALUES (?, ?, now())");
-			$stmt->execute([$username, $password]); 
+			$stmt->execute([$username, $hashedPass]); 
 		}
 		catch (PDOException $e) 
 		{

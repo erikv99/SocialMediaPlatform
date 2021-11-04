@@ -26,6 +26,5 @@ $response = $controller->register();
 // Adding the objects which need to be removed to the response 
 $response["objectsToRemove"] = $objectsToRemove;
 
-logError("Response: " . var_export($response, true));
 echo json_encode($response);
 ?>

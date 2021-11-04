@@ -7,7 +7,6 @@ class RegisterView extends View
 
 	function __construct() 
 	{
-		logError("View object created in registerView::__construct");
 		$this->view = new View();
 		$this->createView();
 	}
@@ -44,7 +43,7 @@ class RegisterView extends View
 	{
 		// Updating the view (incase message has been changed)
 		$this->createView();
-		logError("this->view->getview inside registerview: " . $this->view->getView());
+
 		// Getting the view and returning it
 		return $this->view->getView();
 	}

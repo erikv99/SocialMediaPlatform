@@ -8,8 +8,6 @@ class LoginController extends Controller
 {
 	public function __construct()
 	{	
-		parent::__construct();
-		
 		// Making our model and view objects
 		$this->model = new LoginModel();
 		$this->view = new LoginView();
@@ -18,5 +16,7 @@ class LoginController extends Controller
 
 $controller = new LoginController();
 $response = $controller->register();
+$objectsToRemove = [".login", ".alert"];
+$response["objectsToRemove"] = $objectsToRemove;
 echo json_encode($response);
 ?>

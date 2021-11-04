@@ -11,16 +11,11 @@ class Model
 	}
 
 	/**
-	 * Function which will execute the logic inside the model class. since this function is always being called it must have a return value.
+	 * Function which will execute the logic inside the model class.
 	 * 
-	 * @return "" is no error
-	 * @return "message" and "messageType" if a message is needed
 	 */
 	public function execute() 
 	{
-		// In case this function is not used in the specific model it is still called by the controller as per design. thats why we want to return these values so the program doesnt have a panic attack
-		$returnData = ["message" => ""];
-		return $returnData;
 	}
 
 	/**
