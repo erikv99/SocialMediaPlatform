@@ -1,5 +1,7 @@
 <?php 
 
+require_once("../generalFunctions.php");
+
 /** Model base class */
 class Model
 {
@@ -45,11 +47,42 @@ class Model
 	/**
 	 * Function for closing a existing database connection
 	 * 
-	 * @param open database connection
+	 * @param open database connection (passed by reference)
 	 */ 
-	protected function closeDBConnection($conn)
+	protected function closeDBConnection(&$conn)
 	{	
-	$conn = null;
+		$conn = null;
+	}
+
+	/**
+	 * Function to check if the given username is already present in the user table in the database
+	 * function is placed in the model base since it is used more then once
+	 * 
+	 * @return bool doesUserExist
+	 */
+	protected function usernameExists(string $username) 
+	{
+		// Opening a DB connection and checking if the given username is present in our data table
+		$dbConnection = $this->openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("SELECT COUNT(userName) FROM users WHERE userName = ?");
+			$stmt->execute([$username]);
+			$output = $stmt->fetch()["COUNT(userName)"];
+		}
+		catch (PDOException $e) 
+		{
+			die("<br>Error checking if user exists in database: " . $e->getMessage());
+		}
+
+
+		// If the username is present $doesUserExist will be true otherwise it shall be false.
+		$doesUserExist = ($output > 0) ? true : false;
+
+		// Closing the DB connection and returning the result
+		$this->closeDBConnection($dbConnection);
+		return $doesUserExist;
 	}
 
 }

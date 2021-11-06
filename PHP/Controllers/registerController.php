@@ -2,7 +2,6 @@
 require_once("../Models/registerModel.php");
 require_once("../Controllers/controller.php");
 require_once("../Views/registerView.php");
-require_once("../generalFunctions.php");
 
 class RegisterController extends Controller 
 {

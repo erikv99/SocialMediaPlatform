@@ -1,6 +1,6 @@
 <?php 
 require_once("../Views/view.php");
-require_once("../generalFunctions.php");
+
 class RegisterView extends View 
 {	
 	private View $view;

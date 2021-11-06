@@ -6,6 +6,11 @@ class LoginModel extends Model
 {
 	public function __construct()
 	{
+
+	}
+
+	public function execute() : array 
+	{
 		$returnData = [];
 
 		// If the form is empty we dont want to continue
@@ -17,30 +22,24 @@ class LoginModel extends Model
 		// Getting the values from the form
 		$username = $_POST["username"];
 		$password = $_POST["password"];
-		$confirmPassword = $_POST["confirmPassword"];
 
-		// Checking if given password and confirmpassword match
-		if ($password != $confirmPassword) 
-		{
-
-			$returnData["message"] = "Passwords do not match";
-			$returnData["messageType"] = "alertDanger";
+		// If either the password is incorrect or the username doesnt exist we pass the same message to not disclose valuable information.
+		if (!$this->usernameExists($username) OR !$this->isPasswordCorrect($username, $password)) 
+		{	
+			$returnData["message"] = "Username or password incorrect, please try again";
+			$returnData["messageType"] = "alertWarning";
 			return $returnData;
 		}
 
-		// Checking if the given username already exists
-		if ($this->usernameExists($username)) 
-		{
-			$returnData["message"] = "Username is taken, please try again";
-			$returnData["messageType"] = "alertDanger";
-			return $returnData;
-		}
+		// starting a session and loggin the user in
+		session_start();
+		$_SESSION['username'] = $username;
+		$_SESSION['loggedIn'] = true;
 
-		// Creating our new user in the database
-		$this->createUser($username, $password);
 
+		// If everthing is well we only want the alert to be returned, not the login itself.
 		$returnData["getAlertOnly"] = true;
-		$returnData["message"] = "Registry succesfull, you can now log in";
+		$returnData["message"] = "Login succesfull";
 		$returnData["messageType"] = "alertSuccess";
 		return $returnData;
 	}
@@ -73,7 +72,7 @@ class LoginModel extends Model
 		}
 
 		// Checking if the password matches the hashed version then returning the result.
-		$passwordCorrect = password_verify($password, $hashedPassword)
+		$passwordCorrect = password_verify($password, $hashedPassword);
 		return $passwordCorrect;
 	}
 }

@@ -4,19 +4,18 @@ require_once("../Views/view.php");
 
 class LoginView extends View 
 {
-	private string $errorMessage;
+
 	private View $view;
 
 	function __construct() 
 	{
 		$this->view = new View();
-		$this->errorMessage = "";
 		$this->createView();
 	}
 
-	// This function is needed since if "errormessage" is changed it the view needs to be updated
 	private function createView() 
 	{
+		$cancelImgPath = "../IMG/cancel.png";
 		$this->view->setView( 	
 		"
 		<div class='login'>
@@ -24,17 +23,15 @@ class LoginView extends View
 		<div class='loginContainer'>
 		<div class='loginFormContainer' style='display:block;'>
 		<button class='cancelButton' onClick='closeLoginContainer();'>
-		<img src='../IMG/cancel.png' class='cancelImage'></img>
+		<img src='" . $cancelImgPath . "' class='cancelImage'></img>
 		</button>
-		<form action='Controllers/registerController.php' method='POST'>
+		<form class='loginForm' onsubmit='callControllerFromForm(\"body\", \"loginController\", \"loginForm\"); return false;' method='POST'>
 		<label for='text'>Username: </label>
 		<input type='text' name='username' minlength='2' maxlength='30' required>
 		<label for='password'>Password: </label>
 		<input type='password' name='password' minlength='2' maxlength='30' required>
 		<br/>
 		<input class='submitButton' type='submit' value='Log in'>
-		<div class='loginErrorBox'>
-		</div>
 		</form>
 		</div>
 		</div>
@@ -49,12 +46,6 @@ class LoginView extends View
 
 		// Returning the view
 		return $this->view->getView();
-	}
-
-	// Function for updating the error message for this view.
-	public function setErrorMessage(string $errorMessage) 
-	{
-		$this->errorMessage = $errorMessage;
 	}
 }
 ?>

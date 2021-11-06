@@ -1,6 +1,3 @@
-<?php
-	session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +24,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="../JS/buttonHandler.js"></script>
+<script type="text/javascript" src="../JS/onDocumentReady.js"></script>
 </body>
 </html>
 
