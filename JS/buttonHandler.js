@@ -32,3 +32,23 @@ function expandSidebar()
 	$(".expandedSidebar").fadeIn("slow");
 	$(".content").css("padding-left", "14em");
 }
+
+function logout() 
+{
+	$.ajax({
+
+		url: "Ajax/logout.ajax.php",
+		method: "GET",
+
+		success: function() 
+		{
+			// since we already know we logged the user out we dont do a loginCheck but just call the userNotLoggedIn function directly
+			userIsNotLoggedIn();
+		},
+		error: function(xhr, status, error) 
+		{
+			var errorMessage = xhr.status + ': ' + xhr.statusText;
+			console.log(errorMessage);
+		}
+	});
+}

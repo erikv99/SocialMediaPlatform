@@ -33,13 +33,21 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 
 			// Getting our view from our object and appending it (placing it before) the placementTag
 			$(placeMentTag).append(jsonObj.view);	
+
+			// If we did any action regarding the loginController we want to do a loginCheck()
+			if (controllerName == "loginController") 
+			{
+				loginCheck();
+			}
 		},
 		error: function(xhr, status, error) 
 		{
 			var errorMessage = xhr.status + ': ' + xhr.statusText;
 			console.log(errorMessage);
-		}
+		},
 	});
+
+
 }
 
 // Function to remove multiple elements from the view, requires an array with the className of each object to be removed

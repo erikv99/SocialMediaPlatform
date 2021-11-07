@@ -43,20 +43,17 @@ button
 
 }
 
-#loginButtons 
+#loginButtons, #logoutButtons
 {
+	display: none;
 	position: relative;
-	right: 3em;
+	right: 1.5em;
 	width: 100%;
 	align-content: 	right;
+	text-align: right;
 }
 
-#signupButton
+#signupButton, #accountButton
 {
-	margin-right: 1em;
-}
-
-#loginButton, #signupButton
-{
-	float: right;
+	margin-right: 0.5em;
 }

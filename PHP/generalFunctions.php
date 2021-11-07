@@ -13,31 +13,8 @@ function logError($message)
     }
     catch (Exception $e)
     {
-        die("fuckign guckad");
         die($e->getMessage());
     }
 }
 
-function getCallingFunctionName($completeTrace=false)
-{
-    $trace=debug_backtrace();
-    if($completeTrace)
-    {
-        $str = '';
-        foreach($trace as $caller)
-        {
-            $str .= " -- Called by {$caller['function']}";
-            if (isset($caller['class']))
-                $str .= " From Class {$caller['class']}";
-        }
-    }
-    else
-    {
-        $caller=$trace[2];
-        $str = "Called by {$caller['function']}";
-        if (isset($caller['class']))
-            $str .= " From Class {$caller['class']}";
-    }
-    return $str;
-}
 ?>
