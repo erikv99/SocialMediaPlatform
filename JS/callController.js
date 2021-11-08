@@ -21,6 +21,7 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 
 		success: function(response) 
 		{
+			console.log("Content before parse:\n" + response);
 			// Parsing the json to a object
 			var jsonObj = JSON.parse(response); 
 
@@ -46,8 +47,6 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 			console.log(errorMessage);
 		},
 	});
-
-
 }
 
 // Function to remove multiple elements from the view, requires an array with the className of each object to be removed
