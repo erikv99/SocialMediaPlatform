@@ -25,6 +25,8 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 			// Parsing the json to a object
 			var jsonObj = JSON.parse(response); 
 
+			console.log("Content after parse:\n" + jsonObj.view);
+
 			// Checking if the jsonObj contains a "objectsToRemove" key. (only returned if needed)
 			if (jsonObj.hasOwnProperty("objectsToRemove")) 
 			{

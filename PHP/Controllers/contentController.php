@@ -14,8 +14,11 @@ class ContentController extends Controller
 
 $controller = new ContentController();
 
-// TODO : add objectsToRemove if needed
-
 $response = $controller->register();
+
+// Adding the object which need to be removed before adding the current view.
+$objectsToRemove = ["subjectContainer"];
+$response["objectsToRemove"] = $objectsToRemove;
+
 echo json_encode($response);
 ?>

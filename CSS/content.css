@@ -22,10 +22,8 @@
 	margin-bottom: 0.9em;
 	margin-right:  auto;
 	border-radius: 0.5em;
-	/* border: 3px groove rgb(57, 66, 99); */
 	box-shadow: 6px 5px darkgrey;
 	background-color:  #F3F6F4;
-	max-height: 12em;
 	overflow: hidden;
 	border:  2px solid #394263;
 }
@@ -44,7 +42,7 @@
 	line-height: 1em;
 }
 
-.mainSubjectTitle 
+.primarySubjectTitle 
 {
 		background: #394263 url("../IMG/catOverlay.png");
 		background-position-x: 100%;
@@ -54,7 +52,7 @@
 	padding-left: 0.7em;
 }
 
-.mainSubjectTitle p, .subSubjectTitle p 
+.primarySubjectTitle p, .secondarySubjectTitle p 
 {
 	margin: 0px;
 	font-weight: 600;
@@ -66,11 +64,11 @@
 	
 }
 
-.subSubjectTitle p 
+.secondarySubjectTitle p 
 {
 }
 
-.subSubjectTitle 
+.secondarySubjectTitle 
 {
 	padding-left:  0.7em;
  background: rgb(93,212,205);

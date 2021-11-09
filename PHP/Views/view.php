@@ -10,6 +10,7 @@
 		// These variables are static so their state remains the same between calls
 		static private string $alertViewContent = "";
 		static private bool $returnAlertOnly = false;
+		static private array $output = [];
 
 		/**
 		 * Function to set the viewContent of a view
@@ -49,6 +50,7 @@
 		 */
 		public function handleOutput($output) 
 		{
+			logError("handleOutput output: " . var_export($output, true));
 
 			// Checking if the $output contains a  message key
 			if (array_key_exists("message", $output))
@@ -67,6 +69,10 @@
 					$this::$returnAlertOnly = true;
 				}
 			}
+
+			// After handeling possible alerts we set the $output variable
+			$this::$output = $output;
+
 		}
 
 		private function setAlertView($alertType, $alertMessage) 
@@ -93,6 +99,11 @@
 		public function getAlertView() : string 
 		{
 			return $this::$alertViewContent;
+		}
+
+		protected function getOutput() : array 
+		{
+			return $this::$output;
 		}
 	}
 ?>

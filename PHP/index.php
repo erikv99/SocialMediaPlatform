@@ -15,13 +15,8 @@
 <div class="page">
 	<div class="content">
 		<script type = "text/javascript">  
-			callController("body", "contentController");
+			callController(".content", "contentController");
          </script> 
-		<?php 
-
-			include("subjectContainer.php");
-
-		?> 
 	</div>
 		<?php 	
 	include_once("Include/header.inc.php");
