@@ -12,10 +12,18 @@ function closeAlert()
 function collapseSubject(containerID) 
 {
 	// In order for this to work each subjectContainer gets a identifier. which will be given to this function in order to collapse the correct sub-subjects
-}
-
-function expandSubject() 
-{
+	// Checkign if we need to hide or show it (im aware toggle exists but i need this for other purposes as well)
+	// Rotating the collapse img accordingly
+	if($(containerID).find(".secondarySubjectRow").is(":visible")) 
+	{
+		$(containerID).find(".secondarySubjectRow").hide();
+		rotateImage($(containerID).find(".collapseSubjectImg"), 180);
+	} 
+	else 
+	{
+		$(containerID).find(".secondarySubjectRow").show();
+		rotateImage($(containerID).find(".collapseSubjectImg"), 0);
+	}
 
 }
 

@@ -145,6 +145,41 @@ html, body
 	height:  30px;
 }
 
+.sidebarContent 
+{
+	margin-top: 1.8em;
+}
+
+.expandedSidebar p 
+{
+	border-radius: 10px;
+	border:  1px outset white;
+	padding: 4px 8px;
+	margin: 5px 20px;
+	font-size: 100%;
+
+
+}
+
+.button 
+{
+	  background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
+		text-align: center;
+		transition: 0.5s;
+		background-size: 200% auto;
+		color: white;            
+		box-shadow: 0 0 20px black;
+		border: 1px outset white;
+}
+
+.button:hover 
+{
+		background-position: right center; /* change the direction of the change here */
+		color: #fff;
+		text-decoration: none;
+}
+
+
 
 .alert {
   position: relative;

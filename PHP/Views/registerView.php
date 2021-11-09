@@ -31,7 +31,7 @@ class RegisterView extends View
 		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
 		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
 		<br/>
-		<input class='submitButton' type='submit' value='Sign up'>
+		<input class='submitButton button' type='submit' value='Sign up'>
 		</form>
 		</div>
 		</div>

@@ -45,5 +45,16 @@ function loginCheck()
 			console.log(errorMessage);
 		}
 	});
+}
 
+// function will rotate a img by x degrees, requires a jquery img handle
+function rotateImage(imgHandle, degrees) 
+{
+	imgHandle.css({
+		"transform" : "rotate(" + degrees + "deg)",
+		"-moz-transform" : "rotate(" + degrees + "deg)",
+		"-ms-transform" : "rotate(" + degrees + "deg)",
+		"-webkit-transform" : "rotate(" + degrees + "deg)",
+		"-o-transform" : "rotate(" + degrees + "deg)"
+	});
 }

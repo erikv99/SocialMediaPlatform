@@ -18,9 +18,7 @@ class ContentView extends View
 		// Looping thru each primarySubject
 		for ($i = 0; $i < count($primarySubjects); $i++) 
 		{
-			//die(var_export($subjects, true));
 			$secondarySubjectArr = $subjects[$primarySubjects[$i]];
-			logError("secsubarr: " . var_export($secondarySubjectArr, true));
 			$secondarySubjectView = "";
 
 			// Looping through all the secondary subjects
@@ -28,7 +26,7 @@ class ContentView extends View
 			{
 				// Adding a secondarySubject view for each secondary subject
 				$secondarySubjectView .= '
-				<tr>
+				<tr class="secondarySubjectRow">
 					<td class="secondarySubjectTitle">
 						<p><a href="#SubSubject"> ' . $secondarySubjectArr[$j] . '</a></p>
 					</td>
@@ -37,19 +35,19 @@ class ContentView extends View
 
 			// Making the subject view (current primarysubject with all its secondarysubject)
 			$subjectView = 
-			'<div class="subjectContainer">
+			"<div class='subjectContainer' id='subjectContainer" . $primarySubjects[$i] . "' >
 			<table>
 				<tr>
-					<td id="subjectContainer' . $primarySubjects[$i] . '" class="primarySubjectTitle">
-						<p>' . $primarySubjects[$i] . '</p>
-						<button class="imageButton collapseSubjectButton">
-							<img class="collapseSubjectImg" src="../IMG/collapse.png">
+					<td class='primarySubjectTitle'>
+						<p><i class='fas fa-book'></i> " . $primarySubjects[$i] . "</p>
+						<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\"#subjectContainer" . $primarySubjects[$i] . "\");'>
+							<img class='collapseSubjectImg' src='../IMG/collapse.png'>
 						</button>
 					</td>
 				</tr>
-				' . $secondarySubjectView . '
+				" . $secondarySubjectView . "
 			</table>
-			</div>';
+			</div>";
 
 			// Adding the current subjectContainer to the view we want to set
 			$viewToSet .= $subjectView;
