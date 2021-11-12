@@ -1,4 +1,5 @@
 <?php
+ini_set('memory_limit', '4000M'); 
 require_once("../Models/model.php");
 require_once("../Views/view.php");
 require_once("../generalFunctions.php");
@@ -30,12 +31,11 @@ class Controller
 
 		// getting the view from our view
 		$this->viewToReturn = $this->view->getView();
-		logError("view in controller: " . $this->view->getView());
+	
 		// making the response array and returning it
 		$response = ["view" => $this->viewToReturn];
 		
 		return $response;
 	}
-
 }
 ?>

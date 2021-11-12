@@ -31,6 +31,12 @@ table
 	
 }
 
+.headerTitle
+{
+	color: inherit;
+	text-decoration: inherit;
+}
+
 button 
 {
 	font-size: 100%;

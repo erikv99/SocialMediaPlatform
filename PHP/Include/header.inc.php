@@ -7,7 +7,7 @@
 				<img src="../IMG/headerIcon.png" class="headerIcon" alt="Thinking related image"/>	
 			</td>
 			<td>
-				<h1>ThougtShare</h1>
+				<h1><a class="headerTitle" href="index.php">ThougtShare</a></h1>
 			</td>
 			<td id="loginButtons">
 				<button type="button" class="button" id="signupButton" onClick="callController('body', 'registerController');"><i class="fas fa-user-plus"></i> Sign up</button>

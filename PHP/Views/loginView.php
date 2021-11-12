@@ -31,7 +31,7 @@ class LoginView extends View
 		<label for='password'>Password: </label>
 		<input type='password' name='password' minlength='2' maxlength='30' required>
 		<br/>
-		<input class='submitButton' type='submit' value='Log in'>
+		<input class='submitButton button' type='submit' value='Log in'>
 		</form>
 		</div>
 		</div>

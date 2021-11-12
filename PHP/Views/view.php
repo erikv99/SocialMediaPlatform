@@ -1,5 +1,7 @@
 <?php 
 	require_once("../generalFunctions.php");
+	require_once("alertView.php");
+
 	/** View base class */
 
 	class View 
@@ -8,7 +10,6 @@
 		private string $viewContent = "";
 
 		// These variables are static so their state remains the same between calls
-		static private string $alertViewContent = "";
 		static private bool $returnAlertOnly = false;
 		static private array $output = [];
 
@@ -23,23 +24,35 @@
 		}
 
 		/**
-		 * Function which will set the viewContent of a view
+		 * Function which will return the view
 		 * 
+		 * There are 2 options.
+		 * Getting just the normal view + alertview (filled if set empty if not set)
+		 * Getting only the alertview
+		 * 
+		 * @return correct view depending on the situation.
 		 */
 		public function getView() 
 		{
-			// Returning either view, view + alertview or just the alertview
-			if ($this::$alertViewContent != "" and $this::$returnAlertOnly == true) 
+			$output = $this::$output;
+			$alertView = "";
+
+			// Checking if the view requires a alert or not
+			if (isset($output["messageType"]) and isset($output["message"]))
+			{	
+				// Getting the view of the alert
+				$alertViewObj = new ALertView($output["messageType"], $output["message"]);
+				$alertView = $alertViewObj->getView();
+			}
+
+			// Returning either only the alertview or view + alertview (can be empty or not)
+			if ($this::$returnAlertOnly) 
 			{
-				return $this->getAlertView();
-			} 
-			elseif ($this::$alertViewContent != "" and $this::$returnAlertOnly == false)
-			{
-				return $this->viewContent . $this->getAlertView();
+				return $alertView;
 			}
 			else 
 			{
-				return $this->viewContent;
+				return $this->viewContent . $alertView;
 			}
 		}
 
@@ -50,55 +63,19 @@
 		 */
 		public function handleOutput($output) 
 		{
-			logError("handleOutput output: " . var_export($output, true));
-
-			// Checking if the $output contains a  message key
-			if (array_key_exists("message", $output))
-			{
-				// Setting the alert view
-				$this->setAlertView($output["messageType"], $output["message"]);	
-			}
 
 			// Checking if the $output contains a getAlertOnly key indicating that only the alert should be returned (this is the case if a registry is succesfull)
 			if (array_key_exists("getAlertOnly", $output)) 
 			{
 				// This is basically not needed since we only return the getAlertOnly key if its true but we check if its true in case we change the way this works later
-				logError("getAlertOnly: " . $output["getAlertOnly"] . "if statement true or false: " . $output["getAlertOnly"] == true);
 				if ($output["getAlertOnly"] == true) 
 				{
 					$this::$returnAlertOnly = true;
 				}
 			}
 
-			// After handeling possible alerts we set the $output variable
+			// After checking if we only want a alertview we set the $output variable
 			$this::$output = $output;
-
-		}
-
-		private function setAlertView($alertType, $alertMessage) 
-		{	
-			
-			// Available alert types are, alertDanger, alertInfo, alertSuccess and alertWarning
-
-			// If alertType is not valid we will return this as the error
-			if ($alertType != "alertDanger" && $alertType != "alertInfo" && $alertType != "alertSuccess" && $alertType != "alertWarning") 
-			{
-				$alertType = "alertDanger";
-			}
-
-			$alertView = 
-			'<div class=" alert ' . $alertType . '">
-			' . $alertMessage . '
-			<button class="closeAlertBut imageButton" onClick="closeAlert();">
-			<img class="closeAlertImage" src="../IMG/cancel.png"/>
-			</button>
-			</div>';
-			$this::$alertViewContent = $alertView;
-		}
-
-		public function getAlertView() : string 
-		{
-			return $this::$alertViewContent;
 		}
 
 		protected function getOutput() : array 

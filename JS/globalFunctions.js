@@ -25,7 +25,6 @@ function loginCheck()
 
 		success: function(response) 
 		{
-			console.log(response);
 			// Parsing the json response into a object
 			var obj = JSON.parse(response);
 

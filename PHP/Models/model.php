@@ -1,16 +1,14 @@
 <?php 
 
 require_once("../generalFunctions.php");
+require_once("../Exceptions/databaseException.php");
 
 /** Model base class */
 class Model
 {
 
 
-	public function __construct()
-	{
-
-	}
+	public function __construct(){}
 
 	/**
 	 * Function which will execute the logic inside the model class.
@@ -18,6 +16,7 @@ class Model
 	 */
 	public function execute() 
 	{
+		return [];
 	}
 
 	/**
@@ -38,7 +37,7 @@ class Model
 		}
 		catch (PDOException $e) 
 		{
-			die("<br>Database connection failed: " . $e->getMessage());
+			throw new DBException($e->getMessage());	
 		}
 
 		return $conn;
@@ -73,7 +72,7 @@ class Model
 		}
 		catch (PDOException $e) 
 		{
-			die("<br>Error checking if user exists in database: " . $e->getMessage());
+			throw new DBException($e->getMessage());
 		}
 
 

@@ -12,7 +12,7 @@ function callControllerFromForm(placeMentTag, controllerName, formID)
 function sendAjaxRequest(placeMentTag, controllerName, data) 
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
-	
+	console.log("callController to " + controllerName);
 	$.ajax(
 	{
 		url: filePath, 

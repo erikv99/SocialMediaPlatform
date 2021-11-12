@@ -1,10 +1,21 @@
-<?php 
+<?php
+
 function logError($message) 
+{
+    writeLog("error", $message);
+}
+
+function logDebug($message) 
+{
+    writeLog("debug", $message);
+}
+
+function writeLog($logName, $message) 
 {
     try 
     {
         // Opening a text file in append mode, setting the current time and date as prefex then writing the message and closing the file.
-        $log = fopen("../errorLog.txt", "a+") or die("Unable to open error log file!");
+        $log = fopen("../Logs/" . $logName . ".txt", "a+") or die("Unable to open error log file!");
         $currentDate = new DateTime();
         $logPrefix = $currentDate->format('Y-m-d H:i:s:u');
         $logPrefix =  "\n" . $logPrefix . ": ";
@@ -16,5 +27,4 @@ function logError($message)
         die($e->getMessage());
     }
 }
-
 ?>
