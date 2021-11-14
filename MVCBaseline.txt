@@ -3,25 +3,21 @@ require_once("../Views/view.php");
 
 class SubjectPageView extends View 
 {
-	private View $view;
 
 	public function __construct()
 	{
-		$this->view = new View();
 		$this->createView();
 	}
 
 	private function createView() 
 	{
-		$this->view->setView("
-
-		");
+		$this::$viewContent = "";
 	}
 
 	public function getView() : string 
 	{
 		$this->createView();
-		return $this->view->getView();
+		return Parent::getViewContent();
 	}
 
 }
@@ -53,10 +49,11 @@ class SubjectPageController extends Controller
 	public function __construct() 
 	{
 		$this->view = new SubjectPageView();
+		$this->model = new SubjectPageModel();
 	}
 }
 
-$controller = new AlertController();
+$controller = new SubjectPageController();
 $response = $controller->register();
 echo json_encode($response);
 ?>

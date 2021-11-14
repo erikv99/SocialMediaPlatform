@@ -3,25 +3,19 @@
 	require_once("alertView.php");
 
 	/** View base class */
-
-	class View 
+	abstract class View 
 	{
 		/* Variable contains the html/content of the view */
-		private string $viewContent = "";
+		static protected string $viewContent = "";
 
 		// These variables are static so their state remains the same between calls
-		static private bool $returnAlertOnly = false;
 		static private array $output = [];
 
-		/**
-		 * Function to set the viewContent of a view
-		 * 
-		 * @param string $viewContent
-		 */
-		public function setView($viewContent)
-		{
-			$this->viewContent = $viewContent;
-		}
+		// Function which creates the view specific to the type of view
+		abstract protected function createView();
+
+		// Function which returns the view 
+		abstract public function getView();
 
 		/**
 		 * Function which will return the view
@@ -32,55 +26,52 @@
 		 * 
 		 * @return correct view depending on the situation.
 		 */
-		public function getView() 
+		public function getViewContent() 
 		{
 			$output = $this::$output;
-			$alertView = "";
+			$alertView = $this->getAlertView();
+
+			// Returning either only the alertview or view + alertview (can be empty or not)
+			if (isset($output["getAlertOnly"])) 
+			{
+				if ($output["getAlertOnly"] == true) 
+				{
+					logDebug("returnalertonly = yes\n alertview = " . var_export($alertView, true));
+					return $alertView;
+				}
+			}
+
+			return $this::$viewContent . $alertView;
+		}
+
+		public function setOutput($output) 
+		{
+			$this::$output = $output;
+		}
+
+		public function getOutput() : array 
+		{
+			return $this::$output;
+		}
+
+		private function getAlertView()
+		{
+			$output = $this::$output;
 
 			// Checking if the view requires a alert or not
 			if (isset($output["messageType"]) and isset($output["message"]))
 			{	
 				// Getting the view of the alert
-				$alertViewObj = new ALertView($output["messageType"], $output["message"]);
+				$alertViewObj = new ALertView();
+				$alertViewObj->createView($output["messageType"], $output["message"]);
 				$alertView = $alertViewObj->getView();
-			}
-
-			// Returning either only the alertview or view + alertview (can be empty or not)
-			if ($this::$returnAlertOnly) 
-			{
 				return $alertView;
 			}
 			else 
 			{
-				return $this->viewContent . $alertView;
-			}
-		}
-
-		/**
-		 * Will handle the output given by model->execute
-		 * 
-		 * @param $output
-		 */
-		public function handleOutput($output) 
-		{
-
-			// Checking if the $output contains a getAlertOnly key indicating that only the alert should be returned (this is the case if a registry is succesfull)
-			if (array_key_exists("getAlertOnly", $output)) 
-			{
-				// This is basically not needed since we only return the getAlertOnly key if its true but we check if its true in case we change the way this works later
-				if ($output["getAlertOnly"] == true) 
-				{
-					$this::$returnAlertOnly = true;
-				}
+				return "";
 			}
 
-			// After checking if we only want a alertview we set the $output variable
-			$this::$output = $output;
-		}
-
-		protected function getOutput() : array 
-		{
-			return $this::$output;
 		}
 	}
 ?>

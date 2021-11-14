@@ -23,7 +23,7 @@ function callControllerFromForm(placeMentTag, controllerName, formID)
 function sendAjaxRequest(placeMentTag, controllerName, data) 
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
-	console.log("callController to " + controllerName);
+	console.log("callController to " + filePath);
 	$.ajax(
 	{
 		url: filePath, 
@@ -54,10 +54,25 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 				loginCheck();
 			}
 		},
-		error: function(xhr, status, error) 
+		error: function(jqXHR, exception) 
 		{
-			var errorMessage = xhr.status + ': ' + xhr.statusText;
-			console.log(errorMessage);
+			var msg = '';
+        	if (jqXHR.status === 0) {
+        	    msg = 'Didnt connect, verify Network.';
+        	} else if (jqXHR.status == 404) {
+        	    msg = 'Requested page not found. [404]';
+        	} else if (jqXHR.status == 500) {
+        	    msg = 'Internal Server Error [500].';
+        	} else if (exception === 'parsererror') {
+        	    msg = 'Requested JSON parse failed.';
+        	} else if (exception === 'timeout') {
+        	    msg = 'Time out error.';
+        	} else if (exception === 'abort') {
+        	    msg = 'Ajax request aborted.';
+        	} else {
+        	    msg = 'Uncaught Error.\n' + jqXHR.responseText;
+        	}
+			console.log(msg);
 		},
 	});
 }

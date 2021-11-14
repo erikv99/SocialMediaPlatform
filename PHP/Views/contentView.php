@@ -4,14 +4,9 @@ require_once("../Views/view.php");
 
 class ContentView extends View 
 {
-	public function __construct()
+	protected function createView() 
 	{
-		$this->view = new View();
-	}
-
-	private function createView() 
-	{
-		$subjects = $this->view->getOutput()["subjects"];
+		$subjects = $this->getOutput()["subjects"];
 		$primarySubjects = array_keys($subjects);
 		$viewToSet = "";
 
@@ -53,13 +48,13 @@ class ContentView extends View
 			$viewToSet .= $subjectView;
 		}
 
-		$this->view->setView($viewToSet);
+		$this::$viewContent = $viewToSet;
 	}
 
 	public function getView() : string 
 	{
 		$this->createView();
-		return $this->view->getView();
+		return Parent::getViewContent();
 	}
 }
 ?>

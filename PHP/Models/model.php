@@ -5,20 +5,14 @@ require_once("../Exceptions/databaseException.php");
 require_once("../Exceptions/customException.php");
 
 /** Model base class */
-class Model
+abstract class Model
 {
 
 
 	public function __construct(){}
 
-	/**
-	 * Function which will execute the logic inside the model class.
-	 * 
-	 */
-	public function execute() 
-	{
-		return [];
-	}
+	// This functions executes the model logic.
+	abstract protected function execute() : array;
 
 	/**
 	 * Function will open a db connection and return it
@@ -83,6 +77,22 @@ class Model
 		// Closing the DB connection and returning the result
 		$this->closeDBConnection($dbConnection);
 		return $doesUserExist;
+	}
+
+	/**
+	 * Function which checks if the data variable in the post request is empty or not. 
+	 */
+	protected function isPostDataEmpty() 
+	{
+		$returnVal = $_POST["data"] == "" ? true : false;
+		return $returnVal;
+	}
+
+	protected function isPostFormDataEmpty() 
+	{
+		$returnVal = !isset($_POST["username"]) ? true : false;
+		logDebug("returnval isPostFormDataEmpty: " . var_export($returnVal, true));
+		return $returnVal;
 	}
 
 }

@@ -4,17 +4,14 @@ require_once("../Models/model.php");
 
 class LoginModel extends Model 
 {
-	public function __construct()
-	{
-
-	}
+	public function __construct() {}
 
 	public function execute() : array 
 	{
 		$returnData = [];
 
 		// If the form is empty we dont want to continue
-		if (empty($_POST))
+		if ($this->isPostFormDataEmpty())
 		{
 			return $returnData;
 		}

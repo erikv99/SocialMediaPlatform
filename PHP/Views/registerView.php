@@ -3,18 +3,16 @@ require_once("../Views/view.php");
 
 class RegisterView extends View 
 {	
-	private View $view;
 
 	function __construct() 
 	{
-		$this->view = new View();
 		$this->createView();
 	}
 	
-	private function createView() 
+	protected function createView() 
 	{
 		$cancelImgPath = "../IMG/cancel.png";
-		$this->view->setView(
+		$this::$viewContent =
 		"
 		<div class='login'>
 		<div class='overlay'/>	
@@ -36,7 +34,7 @@ class RegisterView extends View
 		</div>
 		</div>
 		</div>
-		");
+		";
 	}
 
 	public function getView() : string
@@ -45,7 +43,7 @@ class RegisterView extends View
 		$this->createView();
 
 		// Getting the view and returning it
-		return $this->view->getView();
+		return Parent::getViewContent();
 	}
 }
 ?>

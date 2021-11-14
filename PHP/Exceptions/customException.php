@@ -16,6 +16,7 @@ class CustomException extends Exception
 
 		// Calling parent constructor
 		parent::__construct($message, $code, $previous);
+
 	}
 }
 ?>

@@ -26,8 +26,8 @@ class Controller
 		// Executing the logic in the model
 		$output = $this->model->execute();
 
-		// If a error occured we're giving that error to the view (return vals for execute = "" = no error "error message" = error)
-		$this->view->handleOutput($output);
+		// setting the output we got from the model execute function
+		$this->view->setOutput($output);
 
 		// getting the view from our view
 		$this->viewToReturn = $this->view->getView();
