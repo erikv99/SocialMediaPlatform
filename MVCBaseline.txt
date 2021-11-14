@@ -1,0 +1,62 @@
+<?php  
+require_once("../Views/view.php");
+
+class SubjectPageView extends View 
+{
+	private View $view;
+
+	public function __construct()
+	{
+		$this->view = new View();
+		$this->createView();
+	}
+
+	private function createView() 
+	{
+		$this->view->setView("
+
+		");
+	}
+
+	public function getView() : string 
+	{
+		$this->createView();
+		return $this->view->getView();
+	}
+
+}
+?>
+
+<?php  
+require_once("../Models/model.php");
+
+class SubjectPageModel extends Model
+{
+	public function __construct() {}
+
+	public function execute() : array 
+	{
+		$returnData = [];
+
+		return $returnData;
+	}
+}
+?>
+
+<?php  
+require_once("../Controllers/controller.php");
+require_once("../Views/subjectPageView.php");
+require_once("../Models/subjectPageModel.php");
+
+class SubjectPageController extends Controller 
+{
+	public function __construct() 
+	{
+		$this->view = new SubjectPageView();
+	}
+}
+
+$controller = new AlertController();
+$response = $controller->register();
+echo json_encode($response);
+?>

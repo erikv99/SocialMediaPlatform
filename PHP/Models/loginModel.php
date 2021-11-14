@@ -67,8 +67,7 @@ class LoginModel extends Model
 		}
 		catch (PDOException $e) 
 		{
-			die("Database error, please check the log file.");
-			logError("DATABASE ERROR: Error getting password from table users in database, function: isPasswordCorrect in file loginModel.php");
+			throw new DBException($e->getMessage());
 		}
 
 		// Checking if the password matches the hashed version then returning the result.

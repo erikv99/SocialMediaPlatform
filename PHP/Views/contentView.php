@@ -25,12 +25,12 @@ class ContentView extends View
 			for ($j = 0; $j < count($secondarySubjectArr); $j++) 
 			{
 				// Adding a secondarySubject view for each secondary subject
-				$secondarySubjectView .= '
-				<tr class="secondarySubjectRow">
-					<td class="secondarySubjectTitle">
-						<p><a href="#SubSubject"> ' . $secondarySubjectArr[$j] . '</a></p>
+				$secondarySubjectView .= "
+				<tr class='secondarySubjectRow'>
+					<td class='secondarySubjectTitle'>
+						<p><a onclick='callController(\".content\", \"subjectPageController\", \"" . $secondarySubjectArr[$j] . "\")'> " . $secondarySubjectArr[$j] . "</a></p>
 					</td>
-				</tr>';
+				</tr>";
 			}
 
 			// Making the subject view (current primarysubject with all its secondarysubject)
@@ -39,7 +39,7 @@ class ContentView extends View
 			<table>
 				<tr>
 					<td class='primarySubjectTitle'>
-						<p><i class='fas fa-book'></i> " . $primarySubjects[$i] . "</p>
+						<p><a onclick='callController(\".content\", \"subjectPageController\", \"" . $primarySubjects[$i] . "\")'><i class='fas fa-book'></i> " . $primarySubjects[$i] . "</a></p>
 						<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\"#subjectContainer" . $primarySubjects[$i] . "\");'>
 							<img class='collapseSubjectImg' src='../IMG/collapse.png'>
 						</button>

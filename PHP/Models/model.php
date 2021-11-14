@@ -2,6 +2,7 @@
 
 require_once("../generalFunctions.php");
 require_once("../Exceptions/databaseException.php");
+require_once("../Exceptions/customException.php");
 
 /** Model base class */
 class Model

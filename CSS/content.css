@@ -66,6 +66,7 @@
 
 .secondarySubjectTitle p 
 {
+	color: #394263;
 }
 
 .secondarySubjectTitle 
@@ -98,7 +99,7 @@ background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 5
 
 .subjectContainer a 
 {
-	color: #394263;
+	
 	text-decoration: none;
 }
 
@@ -106,4 +107,5 @@ background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 5
 {
 	color: white;
 }
+
 

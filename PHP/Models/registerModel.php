@@ -15,6 +15,7 @@ class RegisterModel extends Model
 		// If the form is empty we dont want to continue
 		if (empty($_POST))
 		{
+			throw new CustomException("$_POST variable is empty");
 			return $returnData;
 		}
 

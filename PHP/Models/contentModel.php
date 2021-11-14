@@ -9,39 +9,14 @@ class ContentModel extends Model
 	{
 		$returnData = [];
 
-		// Get all subjects with their sub-subject.
-		$dbConn = $this->openDBConnection();
-		$dbResult = [];
+		// Getting the results table from our database
+		$dbOutput = $this->getSubjectsFromDatabase();
 
-		try
-		{
-			// Getting all primary and secondary subjects
-			$stmt = $dbConn->prepare("SELECT * FROM `subjects`");
-			$stmt->execute();
-			$dbResult = $stmt->fetchAll();
-		}
-		catch (PDOException $e)
-		{
-			logError("DATABASE ERROR: Error getting primarysubjects in function execute of file contentModel.php");
-			logError($e->getMessage());
-			die("Database error, please check the log file.");
-		}
+		// Getting the primarySubjects from the database output
+		$primarySubjects = $this->getPrimarySubjects($dbOutput);
 
-		// Getting all primary subjects from our dbResults and putting them in a seperate array
-		$arrayKeys = [];
-
-		for ($i = 0; $i < count($dbResult); $i++) 
-		{
-			// Since each index is a array in itself we put it in a var first
-			$currArray = $dbResult[$i];
-	
-			// Getting the primary key and adding it to our primaryKeys array.
-			$currPrimaryKey = $currArray["PrimarySubject"];
-			array_push($arrayKeys, $currPrimaryKey);
-		}
-
-		// Looping thru all the primary/secondy key value pairs and organizing them in a array for later use
-		$subjects = $this->getSecondarySubjects($arrayKeys, $dbResult);
+		// Gettubg tge secondary and primary subjects in a array
+		$subjects = $this->getSecondarySubjects($primarySubjects, $dbOutput);
 		
 		$returnData["subjects"] = $subjects;	
 		return $returnData;
@@ -84,6 +59,59 @@ class ContentModel extends Model
 			$secondarySubjects[$primarySubjectKeys[$i]] = $secondarySubjectsForCurrentKey;
 		}
 		return $secondarySubjects;
+	}
+
+	/**
+	 * Function for getting all the data entries for "subjects" from the database
+	 * 
+	 * @return array containing the database return values.
+	 */
+	private function getSubjectsFromDatabase() : array
+	{
+
+		// Get all subjects with their sub-subject.
+		$dbConn = $this->openDBConnection();
+		$dbOutput = [];
+		
+		try
+		{
+			// Getting all primary and secondary subjects
+			$stmt = $dbConn->prepare("SELECT * FROM `subjects`");
+			$stmt->execute();
+			$dbOutput = $stmt->fetchAll();
+		}
+		catch (PDOException $e)
+		{
+			throw new DBException($e->getMessage());
+		}	
+		
+		return $dbOutput;
+	}
+
+	/**
+	 * Function for getting all the primary subjects in a seperate array from out dbOutput.
+	 * 
+	 * We need this function since array_keys() wont be usuable in our case
+	 * 
+	 * @param array containing the dbOutput from the results table
+	 * @return array containing all primary subject inside the dbOutput
+	 */
+	private function getPrimarySubjects($dbOutput) 
+	{
+		// Getting all primary subjects from our dbResults and putting them in a seperate array
+		$primarySubjects = [];
+
+		for ($i = 0; $i < count($dbOutput); $i++) 
+		{
+			// Since each index is a array in itself we put it in a var first
+			$currArray = $dbOutput[$i];
+	
+			// Getting the primary key and adding it to our primaryKeys array.
+			$currPrimaryKey = $currArray["PrimarySubject"];
+			array_push($primarySubjects, $currPrimaryKey);
+		}
+
+		return $primarySubjects;
 	}
 }
 

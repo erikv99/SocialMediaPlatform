@@ -1,4 +1,5 @@
-errorLog.txt
+debug.txt
+error.txt
 debugLog.txt
 
 .sublime-project
