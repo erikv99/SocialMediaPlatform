@@ -31,7 +31,7 @@ class Controller
 
 		// getting the view from our view
 		$this->viewToReturn = $this->view->getView();
-	
+		logDebug("viewtoreturn: " . var_export($this->view->getView(), true));
 		// making the response array and returning it
 		$response = ["view" => $this->viewToReturn];
 		

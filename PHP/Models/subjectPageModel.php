@@ -10,9 +10,8 @@ class SubjectPageModel extends Model
 		$returnData = [];
 
 		// Checking if the post var is empty or not. 
-		if (empty($_POST))
+		if ($this->isPostDataEmpty())
 		{
-			throw new CustomException("$_POST variable is empty");
 			return $returnData;
 		}
 
@@ -22,8 +21,11 @@ class SubjectPageModel extends Model
 		// Getting all secondary subjects which fall under the given primary subject
 		$secondarySubjects = $this->getSecondarySubjects($subject);
 
+		// Putting the primarysubject and secondary subjects in the returnData.
+		$returnData["primarySubject"] = $subject;
+		$returnData["secondarySubjects"] = $secondarySubjects;
 
-		logDebug(var_export($secondarySubjects), true);
+		logDebug(var_export($secondarySubjects, true));
 		return $returnData;
 	}
 
@@ -41,16 +43,19 @@ class SubjectPageModel extends Model
 
 		try 
 		{
-			$stmt = $dbConn->prepare("SELECT * FROM `subjects` WHERE `PrimarySubject` = ?");
+			$stmt = $dbConn->prepare("SELECT * FROM subjects WHERE PrimarySubject = ?");
 			$stmt->execute([$subject]);
-			$dbOutput = $stmt->fetchAll();
+			$dbOutput =	 $stmt->fetchAll();
+			logDebug("do we reach this: yes");
 		}
 		catch (PDOException $e) 
 		{
 			throw new DBException($e->getMessage());
 		}
 
-		logDebug("we reach this");
+		$this->closeDBConnection($dbConn);
+
+		logDebug("dboutput: " . var_export($dbOutput, true));
 		// Since the db output is a nested loop we have to filter out the stuff we dont need 
 		for ($i = 0; $i < count($dbOutput); $i++) 
 		{

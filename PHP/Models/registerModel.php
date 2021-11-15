@@ -8,7 +8,6 @@ class RegisterModel extends Model
 	public function execute() : array
 	{
 		$returnData = [];
-		logDebug("post: " . var_export($_POST, true));
 				
 		if ($this->isPostFormDataEmpty()) 
 		{

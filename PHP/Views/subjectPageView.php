@@ -5,14 +5,29 @@ class SubjectPageView extends View
 {
 	protected function createView() 
 	{
+		$output = $this->getOutput();
+		$secondarySubjects = $output["secondarySubjects"];
+
 		$this::$viewContent = 
 		"
-		<div class='subjectContainer'>
+		<div class='subjectContainer subjectPageTitle'>
 			<table>
-				<tr><td class='primarySubjectTitle'><p>" . "test" . "</p></td></tr>
+				<tr><td class=''><p>" . $output["primarySubject"] . "</p></td></tr>
 			</table>
 		</div>
 		";
+
+		for ($i = 0; $i < count($secondarySubjects); $i++) 
+		{
+			$this::$viewContent .= 
+			"
+			<div class='subjectContainer'>
+				<table>
+					<tr class='secondarySubjectRow'><td class='secondarySubjectTitle'><p>" . $secondarySubjects[$i] . "</p></td></tr>
+				</table>
+			</div>
+			";
+		}
 	}
 
 	public function getView() : string 

@@ -108,4 +108,20 @@ background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 5
 	color: white;
 }
 
+.subjectPageTitle 
+{
+  font-family: 'Electrolize', sans-serif;
+  background: 
+  	-webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
+ 	-webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 30%, rgba(55, 230, 235, 1) 0%);
+	padding:  0.2em;
+	
+}
+
+.subjectPageTitle p 
+{
+	padding-left: 1em;
+	text-transform: uppercase;
+}
+
 
