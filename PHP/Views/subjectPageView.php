@@ -19,6 +19,7 @@ class SubjectPageView extends View
 
 		for ($i = 0; $i < count($secondarySubjects); $i++) 
 		{
+			logDebug("do we even reach");
 			$this::$viewContent .= 
 			"
 			<div class='subjectContainer'>
