@@ -8,7 +8,6 @@ html, body
 {
     max-width: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 .page 
 {
@@ -109,8 +108,7 @@ html, body
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	border-radius:  0 0 4em 0;
-	margin-top:  6em;
+	height: 100vh;
 }
 .expandedSidebar 
 {
@@ -128,14 +126,14 @@ html, body
 .sbCollapseArrow 
 {
 	position:  relative;
-	top:  1em;
+	top:  6.5em;
 	left:  9.5em;
 }
 
 .sbExpandArrow 
 {
 	position:  relative;
-	top: 1em;
+	top: 6.5em;
 	right: -0.6em;
 }
 

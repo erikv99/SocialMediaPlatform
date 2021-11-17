@@ -19,13 +19,10 @@
 	width: auto;
 	min-width: 	35em;
 	margin-left:  auto;
-	margin-bottom: 0.9em;
+	margin-bottom: 0.25em;
 	margin-right:  auto;
-	border-radius: 0.5em;
-	box-shadow: 6px 5px darkgrey;
-	background-color:  #F3F6F4;
+	border-radius: 5px;
 	overflow: hidden;
-	border:  2px solid #394263;
 }
 
 .subjectContainer table 
@@ -39,7 +36,7 @@
 
 .subjectContainer tr 
 {
-	line-height: 1em;
+	line-height: 2.5em;
 }
 
 .primarySubjectTitle 
@@ -59,9 +56,15 @@
 	font-family: "Trebuchet MS";
 	width: max-content;
 	font-size: 1.2em;
-	margin-top: 1.2em;
-	padding-bottom: 0em;
 	
+}
+
+.primarySubjectTitle p 
+{
+	position: relative;
+	bottom: 0.1em;
+	float: left;
+
 }
 
 .secondarySubjectTitle p 
@@ -72,9 +75,8 @@
 .secondarySubjectTitle 
 {
 	padding-left:  0.7em;
- background: rgb(93,212,205);
-background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 57%); 
-	padding-bottom:  1.2em;
+ 	background: rgb(93,212,205);
+	background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 57%); 
 }
 
 
@@ -85,6 +87,7 @@ background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 5
 	vertical-align: middle;
 	position:  relative;
 	right: 1px;
+	top: 0.6em;
 }
 
 .collapseSubjectButton 
@@ -92,9 +95,9 @@ background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 5
 	position: relative;
 	background-color: transparent;
 	width: 5%;
-	right: 5px;
-	bottom: 1em;
+	bottom: 0.1em;
 	float:  right;
+	height: 100%;
 }
 
 .subjectContainer a 
@@ -108,7 +111,7 @@ background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 5
 	color: white;
 }
 
-.subjectPageTitle 
+.primarySubjectPageTitle 
 {
   font-family: 'Electrolize', sans-serif;
   background: 
@@ -118,10 +121,17 @@ background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 5
 	
 }
 
-.subjectPageTitle p 
+.primarySubjectPageTitle p 
 {
 	padding-left: 1em;
 	text-transform: uppercase;
 }
 
+#previewPostAuthor 
+{
+	font-size: 10px;
+	margin-top: 0.3em;
+}
 
+.previewPostsOutline 
+{	border: 1px solid #394263;}

@@ -89,7 +89,7 @@ class ContentModel extends Model
 		try
 		{
 			// Getting all secondary subjects for the current primary subject
-			$stmt = $dbConn->prepare("SELECT `SecondarySubject` FROM `posts` WHERE `PrimarySubject` = ?");
+			$stmt = $dbConn->prepare("SELECT SecondarySubject FROM subjects WHERE PrimarySubject = ?");
 			$stmt->execute([$primarySubject]);
 			$dbOutput = $stmt->fetchAll();
 		}

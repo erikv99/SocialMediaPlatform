@@ -3,9 +3,7 @@ function callController(placeMentTag, controllerName, data = "")
 	// Since data is just a single value we have to put it in array form
 	var dataToSend = {data : data};
 	this.sendAjaxRequest(placeMentTag, controllerName, dataToSend);
-}
-
-// Function for calling a controller and sending data with it. 
+} 
 
 // Function for calling a controller from inside a form action
 function callControllerFromForm(placeMentTag, controllerName, formID) 
@@ -14,11 +12,6 @@ function callControllerFromForm(placeMentTag, controllerName, formID)
 	this.sendAjaxRequest(placeMentTag, controllerName, formData);
 }
 
-// Function for calling a subject page controller. we need to know which subject so its a seperate function in this case
-//function callSubjectPageController(placeMentTag, controllerName, subject) 
-//{
-//	this.sendAjaxRequest(placeMentTag, controllerName, subject)
-//}
 
 function sendAjaxRequest(placeMentTag, controllerName, data) 
 {

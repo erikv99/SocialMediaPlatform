@@ -1,19 +1,19 @@
 <?php  
 require_once("../Controllers/controller.php");
-require_once("../Views/subjectPageView.php");
-require_once("../Models/subjectPageModel.php");
+require_once("../Views/primarySubjectView.php");
+require_once("../Models/primarySubjectModel.php");
 
-class SubjectPageController extends Controller 
+class PrimarySubjectController extends Controller 
 {
 	public function __construct() 
 	{
-		$this->view = new SubjectPageView();
-		$this->model = new SubjectPageModel();
+		$this->view = new PrimarySubjectView();
+		$this->model = new PrimarySubjectModel();
 	}
 
 }
 
-$controller = new SubjectPageController();
+$controller = new PrimarySubjectController();
 $response = $controller->register();
 
 // Adding the objects which need to be removed to the response
