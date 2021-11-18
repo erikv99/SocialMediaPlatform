@@ -145,7 +145,8 @@ html, body
 
 .sidebarContent 
 {
-	margin-top: 1.8em;
+	position: relative;
+	top: 7em;
 }
 
 .expandedSidebar p 

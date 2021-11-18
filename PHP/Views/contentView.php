@@ -31,7 +31,7 @@ class ContentView extends View
 			// Making the subject view (current primarysubject with all its secondarysubject)
 			$subjectView = 
 			"<div class='subjectContainer subjectContainer" . $primarySubjects[$i] . "' >
-			<table>
+			<table class='previewPostsOutline'>
 				<tr>
 					<td class='primarySubjectTitle'>
 						<p><a onclick='callController(\".content\", \"primarySubjectController\", \"" . $primarySubjects[$i] . "\")'><i class='fas fa-book'></i> " . $primarySubjects[$i] . "</a></p>

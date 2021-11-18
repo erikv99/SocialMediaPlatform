@@ -62,7 +62,6 @@
 .primarySubjectTitle p 
 {
 	position: relative;
-	bottom: 0.1em;
 	float: left;
 
 }
@@ -117,14 +116,19 @@
   background: 
   	-webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
  	-webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 30%, rgba(55, 230, 235, 1) 0%);
-	padding:  0.2em;
+	border: 4px solid #394263;
 	
 }
 
 .primarySubjectPageTitle p 
 {
-	padding-left: 1em;
+	padding-left: 0.7em;
 	text-transform: uppercase;
+	font-weight: 600;
+	font-family: "Trebuchet MS";
+	color: #394263;
+  font-size: 1.2em;
+  margin: 0px;
 }
 
 #previewPostAuthor 
@@ -134,4 +138,15 @@
 }
 
 .previewPostsOutline 
-{	border: 1px solid #394263;}
+{	border: 4px solid #394263;}
+
+.previewPostsTable tr
+{
+	line-height: 	initial;
+}
+
+.previewPostsTable tbody
+{
+	display: block;
+	padding: 0.4em 0.2em;
+}

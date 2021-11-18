@@ -13,7 +13,7 @@ class PrimarySubjectView extends View
 		"
 		<div class='subjectContainer primarySubjectPageTitle'>
 			<table>
-				<tr><td class=''><p><i class='fab fa-jira'></i> " . $output["primarySubject"] . "</p></td></tr>
+				<tr><td class=''><p><i class='fas fa-marker'></i> " . $output["primarySubject"] . "</p></td></tr>
 			</table>
 		</div>
 		";
@@ -75,7 +75,7 @@ class PrimarySubjectView extends View
 				$previewPostsView .= 
 				"
 				<tr class='secondarySubjectRow postPreview" . $secondarySubject ."'><td class='secondarySubjectTitle'>
-				<table>
+				<table class='previewPostsTable'>
 				<tr><td><p>" . $post["postTitle"] . "</p></td></tr>
 				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by " . $post["postCreatorID"] . "</p></td></tr>
 
