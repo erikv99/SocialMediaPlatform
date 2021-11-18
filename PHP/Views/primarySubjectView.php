@@ -47,6 +47,12 @@ class PrimarySubjectView extends View
 		return Parent::getViewContent();
 	}
 
+	/**
+	 * Function gets previewPostsview for the given secondary subject
+	 * 
+	 * @param string $secondarySubject
+	 * @return string $previewPostsView
+	 */
 	private function getPreviewPostsView($previewPosts, $secondarySubject) : string 
 	{
 		$previewPostsView = "";
@@ -76,8 +82,11 @@ class PrimarySubjectView extends View
 				"
 				<tr class='secondarySubjectRow postPreview" . $secondarySubject ."'><td class='secondarySubjectTitle'>
 				<table class='previewPostsTable'>
-				<tr><td><p>" . $post["postTitle"] . "</p></td></tr>
-				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by " . $post["postCreatorID"] . "</p></td></tr>
+				<tr>
+				<td><p>" . $post["postTitle"] . "</p></td>
+				<td><p>Posted on: " . $this->getTimeAgoCreatedView($post["postCreationDatetime"]) . "</p></td>
+				</tr>
+				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by " . $post["userName"] . "</p></td></tr>
 
 				</table>
 				";
@@ -87,6 +96,56 @@ class PrimarySubjectView extends View
 		
 		return $previewPostsView;
 	}
+
+	/**
+	 * Figures out how long ago the post was made and returns this.
+	 * This function contains both model and view, for easy of use its placed in the view class in this case
+	 * 
+	 * @param $postCreationDatetime
+	 * @return string $timeAgoCreatedView
+	 */
+	private function getTimeAgoCreatedView($postCreationDatetime) 
+	{
+		$postCreationDT = new DateTime($postCreationDatetime);
+		$nowDT = new DateTime("NOW");
+		$difference = $nowDT->diff($postCreationDT);
+		$timeAgoCreated = "";
+		logDebug("daydifference: " . $difference->d);
+		
+		// This function is really long and ugly but i really wanted to make it :)
+		// If years > 0 
+		if ($difference->y != 0) 
+		{
+			$timeAgoCreated = "more then " . $difference->y . " year(s)";
+		} 
+		elseif($difference->m != 0) 
+		{
+			$timeAgoCreated = "more then " . $difference->m . " month(s)";
+		}
+		elseif($difference->d != 0) 
+		{
+			$timeAgoCreated = "more then " . $difference->d . " day(s)";
+		}
+		elseif($difference->h != 0) 
+		{
+			$timeAgoCreated = "more then " . $difference->h . " hour(s)";
+		}	 
+		elseif($difference->m != 0) 
+		{
+			$timeAgoCreated = "more then " . $difference->m . " minute(s)";
+		}
+		else 
+		{
+			$timeAgoCreated = "less then a minute";
+		}
+
+
+		$view = "Posted $timeAgoCreated ago";
+		return $view;
+		//logDebug("difference: " . var_export($difference, true));
+	}
+
+	// get year month days
 
 }
 ?>

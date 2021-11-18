@@ -89,7 +89,7 @@ class PrimarySubjectModel extends Model
 
 		try 
 		{
-			$stmt = $dbConn->prepare("SELECT * FROM posts WHERE SecondarySubject = ? ORDER BY postCreationDatetime DESC LIMIT $numOfPosts");
+			$stmt = $dbConn->prepare("SELECT posts.*, users.userName FROM `posts` INNER JOIN `users` ON posts.postCreatorID = users.userID WHERE SecondarySubject = ? AND users.userID = posts.postCreatorID ORDER BY posts.postCreationDatetime DESC LIMIT $numOfPosts");
 			$stmt->execute([$secondarySubject]);
 			$dbOutput =	 $stmt->fetchAll();
 		}
