@@ -1,5 +1,6 @@
 <?php  
 require_once("../Views/view.php");
+require_once("../Objects/post.php");
 
 class PrimarySubjectView extends View 
 {
@@ -86,9 +87,23 @@ class PrimarySubjectView extends View
 				<td><p>" . $post["postTitle"] . "</p></td>
 				</tr>
 				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $post["userName"] . "</b> " . $this->getTimeAgoCreatedView($post["postCreationDatetime"]) . "</p></td></tr>
-
 				</table>
 				";
+
+				// Creating a new post object
+				/*$post = new Post($posts[$i]);
+				$postData = $post->getData();
+				$previewPostsView .= 
+				"
+				<tr class='secondarySubjectRow postPreview" . $secondarySubject ."'><td class='secondarySubjectTitle'>
+				<table class='previewPostsTable'>
+				<tr>
+				<td><p>" . $postData["postTitle"] . "</p></td>
+				</tr>
+				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $postData["userName"] . "</b> " . $post->getTimeAgoCreated() . "</p></td></tr>
+
+				</table>
+				";*/
 			}
 
 		}	

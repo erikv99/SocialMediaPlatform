@@ -18,6 +18,10 @@
 		// Function which returns the view 
 		abstract public function getView();
 
+		public function __destruct() 
+		{
+			logDebug("destruct view");
+		}
 		/**
 		 * Function which will return the view
 		 * 
