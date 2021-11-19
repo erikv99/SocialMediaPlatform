@@ -18,6 +18,9 @@ class PrimarySubjectModel extends Model
 		// Getting the values that we're send with the ajax request
 		$subject = $_POST['data'];
 
+		// Setting the data needed for the locationBar
+		$returnData["locations"] = [$subject => "callController('.content', 'primarySubjectController', '$subject')",];
+
 		// Getting all secondary subjects which fall under the given primary subject
 		$secondarySubjects = $this->getSecondarySubjects($subject);
 		$previewPosts = $this->getPreviewPosts($secondarySubjects);

@@ -70,8 +70,6 @@ class ContentModel extends Model
 			$subjects[$primarySubjects[$i]] = $secondarySubjects;
 		}
 
-
-		logDebug("Subjects return: " . var_export($subjects, true));
 		return $subjects;
 	}
 

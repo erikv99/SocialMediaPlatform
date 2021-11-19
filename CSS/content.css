@@ -52,7 +52,6 @@
 .primarySubjectTitle p, .secondarySubjectTitle p 
 {
 	margin: 0px;
-	font-weight: 600;
 	font-family: "Trebuchet MS";
 	width: max-content;
 	font-size: 1.2em;
@@ -124,7 +123,6 @@
 {
 	padding-left: 0.7em;
 	text-transform: uppercase;
-	font-weight: 600;
 	font-family: "Trebuchet MS";
 	color: #394263;
   font-size: 1.2em;
@@ -149,4 +147,36 @@
 {
 	display: block;
 	padding: 0.4em 0.2em;
+}
+
+.locationBar ul 
+{
+	list-style-type: none;
+	display: inline;
+}
+
+.locationBar li 
+{
+	float: left;
+	margin: 0px 2px;
+}
+.locationBar 
+{
+	color:  #5dd4cd;
+	font-family: "Courier New";
+	font-size: 0.9em;
+	position: absolute;
+	top: 5em;
+	z-index: 400;
+	left: 6.5em;
+}
+
+.locationBar a:hover 
+{
+	color: white;
+}
+.locationBar a 
+{
+	text-decoration: none;
+	color: #5dd4cd;
 }

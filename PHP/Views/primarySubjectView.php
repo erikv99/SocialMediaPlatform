@@ -84,9 +84,8 @@ class PrimarySubjectView extends View
 				<table class='previewPostsTable'>
 				<tr>
 				<td><p>" . $post["postTitle"] . "</p></td>
-				<td><p>Posted on: " . $this->getTimeAgoCreatedView($post["postCreationDatetime"]) . "</p></td>
 				</tr>
-				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by " . $post["userName"] . "</p></td></tr>
+				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $post["userName"] . "</b> " . $this->getTimeAgoCreatedView($post["postCreationDatetime"]) . "</p></td></tr>
 
 				</table>
 				";
@@ -110,29 +109,27 @@ class PrimarySubjectView extends View
 		$nowDT = new DateTime("NOW");
 		$difference = $nowDT->diff($postCreationDT);
 		$timeAgoCreated = "";
-		logDebug("daydifference: " . $difference->d);
 		
 		// This function is really long and ugly but i really wanted to make it :)
-		// If years > 0 
 		if ($difference->y != 0) 
 		{
-			$timeAgoCreated = "more then " . $difference->y . " year(s)";
+			$timeAgoCreated = $difference->y . " year(s)";
 		} 
 		elseif($difference->m != 0) 
 		{
-			$timeAgoCreated = "more then " . $difference->m . " month(s)";
+			$timeAgoCreated = $difference->m . " month(s)";
 		}
 		elseif($difference->d != 0) 
 		{
-			$timeAgoCreated = "more then " . $difference->d . " day(s)";
+			$timeAgoCreated = $difference->d . " day(s)";
 		}
 		elseif($difference->h != 0) 
 		{
-			$timeAgoCreated = "more then " . $difference->h . " hour(s)";
+			$timeAgoCreated = $difference->h . " hour(s)";
 		}	 
 		elseif($difference->m != 0) 
 		{
-			$timeAgoCreated = "more then " . $difference->m . " minute(s)";
+			$timeAgoCreated = $difference->m . " minute(s)";
 		}
 		else 
 		{
@@ -140,12 +137,8 @@ class PrimarySubjectView extends View
 		}
 
 
-		$view = "Posted $timeAgoCreated ago";
+		$view = "$timeAgoCreated ago";
 		return $view;
-		//logDebug("difference: " . var_export($difference, true));
 	}
-
-	// get year month days
-
 }
 ?>

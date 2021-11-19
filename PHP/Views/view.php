@@ -1,6 +1,7 @@
 <?php 
 	require_once("../generalFunctions.php");
 	require_once("alertView.php");
+	require_once("locationBarView.php");
 
 	/** View base class */
 	abstract class View 
@@ -36,12 +37,27 @@
 			{
 				if ($output["getAlertOnly"] == true) 
 				{
-					logDebug("returnalertonly = yes\n alertview = " . var_export($alertView, true));
 					return $alertView;
 				}
 			}
 
-			return $this::$viewContent . $alertView;
+			// Making a new locationbar object
+			$locationBar = new LocationBarView();
+
+			// Checking if the field "locations" exists/is set.
+			if (isset($output["locations"])) 
+			{
+				// Setting hte locations for the locationBar
+				$locationBar->setLocations($output["locations"]);
+			}
+
+			// Creating the locationbar view.
+			$locationBar->createView();
+
+			// Returning the view. prepended by the locationbar view and containing the $alertview at the end. 
+			// If locationBar is not specifically set it will contain just a link to the homepage.
+			// If alertView  is not set it will contain a empty string
+			return $locationBar->getView() . $this::$viewContent . $alertView;
 		}
 
 		public function setOutput($output) 
