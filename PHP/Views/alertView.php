@@ -1,6 +1,8 @@
 <?php  
-require_once("../Views/view.php");
 
+/**
+ * View class for alerts, does not extend view since it doesn't use its functions.
+ */
 class AlertView
 {
 	static private string $alertView = "";

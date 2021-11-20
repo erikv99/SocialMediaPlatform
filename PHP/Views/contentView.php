@@ -83,9 +83,7 @@ class ContentView extends View
 
 	public function getView() : string 
 	{
-		logDebug("createview: " . var_export($this->createView($this::$output),true));
 		$this::$viewContent = $this->createView($this::$output);
-		logDebug("viewcontent" . var_export($this::$viewContent,true));
 		return Parent::getViewContent();
 	}
 }

@@ -1,5 +1,5 @@
 <?php  
-require_once("../Models/model.php");
+require_once("model.php");
 
 class PrimarySubjectModel extends Model
 {

@@ -1,5 +1,5 @@
 <?php  
-require_once("../Models/model.php");
+require_once("model.php");
 
 class ContentModel extends Model 
 {
@@ -37,8 +37,10 @@ class ContentModel extends Model
 		catch (PDOException $e)
 		{
 			throw new DBException($e->getMessage());
-			$this->closeDBConnection($conn);
+			
 		}	
+
+		$this->closeDBConnection($conn);
 
 		// Since the db output contains of arrays containing the primarysubject we're taking that apart real quick
 		for ($i = 0; $i < count($dbOutput); $i++) 
@@ -94,8 +96,9 @@ class ContentModel extends Model
 		catch (PDOException $e)
 		{
 			throw new DBException($e->getMessage());
-			$this->closeDBConnection($conn);
 		}	
+
+		$this->closeDBConnection($conn);
 
 		$secondarySubjects = [];
 

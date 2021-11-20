@@ -1,5 +1,5 @@
 <?php  
-require_once("../Views/view.php");
+require_once("view.php");
 require_once("../Objects/post.php");
 
 class PrimarySubjectView extends View 

@@ -1,6 +1,10 @@
 <?php  
 require_once("../Views/view.php");
 
+
+/**
+ * View class for the locationbars, does not extend view since it doesn't use its functions.
+ */
 class LocationBarView 
 {	
 	// EX: Home > Fruits > Apple > Post: How apples are made 

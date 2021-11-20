@@ -7,17 +7,13 @@ require_once("../Exceptions/customException.php");
 /** Model base class */
 abstract class Model
 {
-
-
-	public function __construct(){}
-
 	// This functions executes the model logic.
 	abstract protected function execute() : array;
 
 	/**
 	 * Function will open a db connection and return it
 	 * 
-	 * @return 
+	 * @return $openedDBConnection
 	 */
 	protected function openDBConnection()
 	{ 
@@ -45,7 +41,7 @@ abstract class Model
 	 */ 
 	protected function closeDBConnection(&$conn)
 	{	
-		$conn = null;
+		unset($conn);
 	}
 
 	/**
@@ -68,8 +64,8 @@ abstract class Model
 		catch (PDOException $e) 
 		{
 			throw new DBException($e->getMessage());
-		}
 
+		}
 
 		// If the username is present $doesUserExist will be true otherwise it shall be false.
 		$doesUserExist = ($output > 0) ? true : false;

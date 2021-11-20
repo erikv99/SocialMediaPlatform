@@ -1,5 +1,5 @@
 <?php 
-require_once("../Models/model.php");
+require_once("model.php");
 
 class RegisterModel extends Model  
 {
@@ -56,7 +56,8 @@ class RegisterModel extends Model
 		// Checking if the username already exists in the database (this is checked before but just for safety done again here since this function relies on the user not existing yet)
 		if ($this->usernameExists($username)) 
 		{
-			die("Function createUser was given a username which already exists. please call usernameExists() and validate before creating a new user.");
+			logError("Function createUser was given a username which already exists. please call usernameExists() and validate before creating a new user.");
+			die("Error: Refer to error.txt for information");
 		}
 
 		// Opening a db connection and adding the user to the database
@@ -72,8 +73,10 @@ class RegisterModel extends Model
 		}
 		catch (PDOException $e) 
 		{
-			die("<br>Error creating user in database: " . $e->getMessage());
+			throw new DBException($e->getMessage());
 		}
+
+		$this->closeDBConnection($dbConnection);
 
 	}
 }

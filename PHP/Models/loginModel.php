@@ -1,6 +1,6 @@
 <?php 
 
-require_once("../Models/model.php");
+require_once("model.php");
 
 class LoginModel extends Model 
 {
@@ -66,6 +66,8 @@ class LoginModel extends Model
 		{
 			throw new DBException($e->getMessage());
 		}
+
+		$this->closeDBConnection($dbConn);
 
 		// Checking if the password matches the hashed version then returning the result.
 		$passwordCorrect = password_verify($password, $hashedPassword);
