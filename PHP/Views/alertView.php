@@ -1,13 +1,13 @@
 <?php  
 require_once("../Views/view.php");
 
-class AlertView extends View
+class AlertView
 {
 	static private string $alertView = "";
 
 	public function _construct($alertType = "", $alertMessage = "") 
 	{
-		$this->createView($alertType, $alertMessage);
+		$this::$alertView = $this->createView($alertType, $alertMessage);
 	}
 
 	public function createView($alertType = "", $alertMessage = "") 
@@ -23,20 +23,22 @@ class AlertView extends View
 			$alertType = "alertDanger";
 		}
 		
-		$this::$alertView = 
+		$view = 
 		'<div class=" alert ' . $alertType . '">
 		' . $alertMessage . '
 		<button class="closeAlertBut imageButton" onClick="closeAlert();">
 		<img class="closeAlertImage" src="../IMG/cancel.png"/>
 		</button>
 		</div>';
+
+		return $view;
 	}
 	public function getView() : string 
 	{
 		// if there is not yet a view object or the view inside it is empty we do createView()
 		if ($this::$alertView == "") 
 		{
-			$this->createView();
+			$this::$alertView = $this->createView();
 		}
 
 		return $this::$alertView;

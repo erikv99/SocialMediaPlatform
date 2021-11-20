@@ -10,12 +10,17 @@
 		static protected string $viewContent = "";
 
 		// These variables are static so their state remains the same between calls
-		static private array $output = [];
+		static protected array $output = [];
 
 		// Function which creates the view specific to the type of view
-		abstract protected function createView();
+		abstract protected function createView(array $modelOutput) : string;
 
-		// Function which returns the view 
+		/**
+ 		* Creates the view and returns it
+ 		* 
+ 		* @param array $modelView
+ 		* @return string $view
+ 		*/
 		abstract public function getView();
 
 		public function __destruct() 
@@ -51,13 +56,11 @@
 			// Checking if the field "locations" exists/is set.
 			if (isset($output["locations"])) 
 			{
-				// Setting hte locations for the locationBar
+				// Setting the locations for the locationBar
 				$locationBar->setLocations($output["locations"]);
 			}
 
-			// Creating the locationbar view.
-			$locationBar->createView();
-
+			logDebug("locationbar->getview = " . var_export($locationBar->getView(),true));
 			// Returning the view. prepended by the locationbar view and containing the $alertview at the end. 
 			// If locationBar is not specifically set it will contain just a link to the homepage.
 			// If alertView  is not set it will contain a empty string

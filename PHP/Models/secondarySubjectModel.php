@@ -1,7 +1,7 @@
 <?php  
 require_once("model.php");
 
-class PrimarySubjectModel extends Model
+class SecondarySubjectModel extends Model
 {
 	public function __construct() {}
 
@@ -24,16 +24,16 @@ class PrimarySubjectModel extends Model
 		// Setting the data needed for the locationBar
 		$returnData["locations"] = 
 		[
-			$subject => "callController('.content', 'PrimarySubjectController', '$primarySubject')",
+			$primarySubject => "callController('.content', 'PrimarySubjectController', '$primarySubject')",
 			$secondarySubject => "callController('.content', 'SecondarySubjectController', '$secondarySubject')"
 		];
 
 		// Getting the last x posts to preview.
 		$previewPosts = $this->getPosts($secondarySubject);
-		logDebug("previewPosts: " . var_export($previewPosts, true));
+		
 		// Putting the primarysubject and secondary subjects in the returnData.
-		$returnData["primarySubject"] = $subject;
-		$returnData["secondarySubjects"] = $secondarySubjects;
+		$returnData["primarySubject"] = $primarySubject;
+		$returnData["secondarySubject"] = $secondarySubject;
 		$returnData["previewPosts"] = $previewPosts;
 
 		return $returnData;
@@ -48,7 +48,7 @@ class PrimarySubjectModel extends Model
 	private function getPosts($secondarySubject) 
 	{
 		$posts = [];
-
+		$dbConn = $this->openDBConnection();
 		try 
 		{
 			$stmt = $dbConn->prepare("SELECT posts.*, users.userName FROM `posts` INNER JOIN `users` ON posts.postCreatorID = users.userID WHERE SecondarySubject = ? AND users.userID = posts.postCreatorID ORDER BY posts.postCreationDatetime");

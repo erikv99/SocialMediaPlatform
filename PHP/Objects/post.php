@@ -5,11 +5,11 @@ Class Post
 {
 	// NOTE: i decided not to make a getter/setter for each data point in the $postDBData since they wont be changed just used for getting other data like timeAgoCreated. Only content and title may change and these have dedicated update functions to do this.
 
-	private $dbData = [];
+	private array $dbData = [];
 
-	public function __construct(array $postDBData) 
+	public function __construct(array $postDBData = []) 
 	{
-		$this->$dbData = $postDBData;
+		$this->dbData = $postDBData;
 	}
 
 	/**
@@ -17,7 +17,7 @@ Class Post
 	 * 
 	 * @return string $timeAgoCreated
 	 */
-	public function getTimeAgoCreated() 
+	private function getTimeAgoCreated() 
 	{
 		// Checking if the $dbData has a $postcreationDateTime property.
 		if (!isset($this->dbData["postCreationDatetime"]))
@@ -26,10 +26,18 @@ Class Post
 			{
 				throw new CustomException("postCreationDatetime not set in dbData, is dbData updated/set?");
 			} 
-			catch(CustomException $e) {}
+			catch(CustomException $e) { die("Check error.txt, or inform administrator"); }
 		} 
 
-		// Getting the 
+		if (empty($this->dbData["postCreationDatetime"])) 
+		{
+			try
+			{
+				throw new CustomException("postCreationDatetime is empty.");
+			} catch (CustomException $e) { return "notSet"; }
+		}
+	
+	
 		$postCreationDT = new DateTime($this->dbData["postCreationDatetime"]);
 		$nowDT = new DateTime("NOW");
 		$difference = $nowDT->diff($postCreationDT);
@@ -63,6 +71,28 @@ Class Post
 
 		$view = "$timeAgoCreated ago";
 		return $view;
+	}
+
+	/**
+	 * Returns the view for the current post its preview
+	 * 
+	 * @return $string previewView
+	 */
+	public function getPreviewView() 
+	{
+		$data = $this->dbData;
+
+		$postPreviewView = 
+		"
+		<table class='previewPostsTable'>
+		<tr>
+		<td><p>" . $data["postTitle"] . "</p></td>
+		</tr>
+		<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["userName"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
+		</table>
+		";
+
+		return $postPreviewView; 
 	}
 
 	/**

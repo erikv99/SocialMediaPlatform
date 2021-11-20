@@ -4,16 +4,33 @@ require_once("view.php");
 class SecondarySubjectView extends View 
 {
 	/**
-	 * Creates the view for us to return
+	 * Creates the view and returns it
+	 * 
+	 * @param array $modelView
+	 * @return string $view
 	 */
-	protected function createView()
+	protected function createView(array $modelOutput) : string
 	{
-		// Getting the output stored in the view.
-		$output = $this::$output;
+		// Getting the previewPosts which are set up by our model.
+		$previewPosts = $output["previewPosts"];
 
-		
+		$view = "<div class='subjectContainer'><table><tr><td><p><p><i class='fas fa-marker'></i> " . $output["secondarySubject"] . "</p></td></tr></table>";
 
+		// Looping through the previewPosts
+		for ($i = 0; $i  < count($previewPosts); $i++) 
+		{
+			// Making a post obj for the current post
+			$post = $previewPosts[$i];
+			
+			// Getting the previewView
+			$postPreviewView = $post->getPreviewView();
 
+			// Adding the view to the total view.
+			$view .= $postPreviewView;
+		}
+
+		$view .= "</div>";
+		return $view;
 	}
 
 	/**
@@ -23,7 +40,7 @@ class SecondarySubjectView extends View
 	 */
 	public function getView() : string 
 	{
-		$this->createView();
+		$this::$contentView = $this->createView($this::$output);
 		return Parent::getViewContent();
 	}
 }

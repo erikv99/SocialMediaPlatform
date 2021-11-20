@@ -1,0 +1,5 @@
+20-11-2021:
+* All createView() functions inside specific views now get a input and return a value. This is for better error handeling when scaling.
+* Further improvements on the post class.
+* made contentView less of a mess and it should now be more in line with the Single-responsibility principle.
+* Further documentation of so far undocumented or not specifically documented functions.

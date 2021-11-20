@@ -2,17 +2,17 @@
 require_once("../Views/view.php");
 
 class RegisterView extends View 
-{	
-
-	function __construct() 
-	{
-		$this->createView();
-	}
-	
-	protected function createView() 
+{		
+	/**
+	 * Creates the view and returns it
+	 * 
+	 * @param array $modelView
+	 * @return string $view
+	 */
+	protected function createView(array $modelOutput) : string
 	{
 		$cancelImgPath = "../IMG/cancel.png";
-		$this::$viewContent =
+		$view =
 		"
 		<div class='login'>
 		<div class='overlay'/>	
@@ -35,12 +35,14 @@ class RegisterView extends View
 		</div>
 		</div>
 		";
+
+		return $view;
 	}
 
 	public function getView() : string
 	{
 		// Updating the view (incase message has been changed)
-		$this->createView();
+		$this::$viewContent = $this->createView($this::$output);
 
 		// Getting the view and returning it
 		return Parent::getViewContent();

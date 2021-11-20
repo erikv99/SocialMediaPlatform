@@ -4,17 +4,22 @@ require_once("../Objects/post.php");
 
 class PrimarySubjectView extends View 
 {
-	protected function createView() 
+	/**
+	* Creates the view and returns it
+	* 
+	* @param array $modelView
+	* @return string $view
+	*/
+	protected function createView($modelOutput) : string
 	{
-		$output = $this->getOutput();
-		$secondarySubjects = $output["secondarySubjects"];
-		$previewPosts = $output["previewPosts"];
+		$secondarySubjects = $modelOutput["secondarySubjects"];
+		$previewPosts = $modelOutput["previewPosts"];
 
-		$this::$viewContent = 
+		$view = 
 		"
 		<div class='subjectContainer primarySubjectPageTitle'>
 			<table>
-				<tr><td class=''><p><i class='fas fa-marker'></i> " . $output["primarySubject"] . "</p></td></tr>
+				<tr><td class=''><p><i class='fas fa-marker'></i> " . $modelOutput["primarySubject"] . "</p></td></tr>
 			</table>
 		</div>
 		";
@@ -26,7 +31,7 @@ class PrimarySubjectView extends View
 			$previewPostsView = $this->getPreviewPostsView($previewPosts, $secondarySubjects[$i]);
 
 			// Creating the view for the current secondary subject
-			$this::$viewContent .= 
+			$view .=
 			"
 			<div class='subjectContainer previewPost" . $secondarySubjects[$i] . "'>
 				<table class='previewPostsOutline'>
@@ -40,11 +45,13 @@ class PrimarySubjectView extends View
 			</div>
 			";
 		}
+
+		return $view;
 	}
 
 	public function getView() : string 
 	{
-		$this->createView();
+		$this::$viewContent = $this->createView($this::$output);
 		return Parent::getViewContent();
 	}
 
@@ -78,82 +85,19 @@ class PrimarySubjectView extends View
 			// Looping thru all the posts for the current secondarysubject
 			for ($i = 0; $i < count($posts); $i++) 
 			{
-				$post = $posts[$i];
+				// Making a post obj using the data.
+				$post = new Post($posts[$i]);
+
+				// Making the view 
 				$previewPostsView .= 
 				"
 				<tr class='secondarySubjectRow postPreview" . $secondarySubject ."'><td class='secondarySubjectTitle'>
-				<table class='previewPostsTable'>
-				<tr>
-				<td><p>" . $post["postTitle"] . "</p></td>
-				</tr>
-				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $post["userName"] . "</b> " . $this->getTimeAgoCreatedView($post["postCreationDatetime"]) . "</p></td></tr>
-				</table>
+				" .  $post->getPreviewView() . "
 				";
-
-				// Creating a new post object
-				/*$post = new Post($posts[$i]);
-				$postData = $post->getData();
-				$previewPostsView .= 
-				"
-				<tr class='secondarySubjectRow postPreview" . $secondarySubject ."'><td class='secondarySubjectTitle'>
-				<table class='previewPostsTable'>
-				<tr>
-				<td><p>" . $postData["postTitle"] . "</p></td>
-				</tr>
-				<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $postData["userName"] . "</b> " . $post->getTimeAgoCreated() . "</p></td></tr>
-
-				</table>
-				";*/
 			}
-
 		}	
-		
+				
 		return $previewPostsView;
-	}
-
-	/**
-	 * Figures out how long ago the post was made and returns this.
-	 * This function contains both model and view, for easy of use its placed in the view class in this case
-	 * 
-	 * @param $postCreationDatetime
-	 * @return string $timeAgoCreatedView
-	 */
-	private function getTimeAgoCreatedView($postCreationDatetime) 
-	{
-		$postCreationDT = new DateTime($postCreationDatetime);
-		$nowDT = new DateTime("NOW");
-		$difference = $nowDT->diff($postCreationDT);
-		$timeAgoCreated = "";
-		
-		// This function is really long and ugly but i really wanted to make it :)
-		if ($difference->y != 0) 
-		{
-			$timeAgoCreated = $difference->y . " year(s)";
-		} 
-		elseif($difference->m != 0) 
-		{
-			$timeAgoCreated = $difference->m . " month(s)";
-		}
-		elseif($difference->d != 0) 
-		{
-			$timeAgoCreated = $difference->d . " day(s)";
-		}
-		elseif($difference->h != 0) 
-		{
-			$timeAgoCreated = $difference->h . " hour(s)";
-		}	 
-		elseif($difference->m != 0) 
-		{
-			$timeAgoCreated = $difference->m . " minute(s)";
-		}
-		else 
-		{
-			$timeAgoCreated = "less then a minute";
-		}
-
-
-		$view = "$timeAgoCreated ago";
-		return $view;
 	}
 }
 ?>

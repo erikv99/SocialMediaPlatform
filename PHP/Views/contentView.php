@@ -4,56 +4,88 @@ require_once("../Views/view.php");
 
 class ContentView extends View 
 {
-	protected function createView() 
+	protected function createView(array $modelOutput) : string 
 	{
-		$subjects = $this->getOutput()["subjects"];
+		// Getting the subjects from our modelOutput.
+		$subjects = $modelOutput["subjects"];
+
+		// Getting the primary subjects by getting the array_keys (prim subs)
 		$primarySubjects = array_keys($subjects);
-		$viewToSet = "";
+		$view = "";
 
 		// Looping thru each primarySubject
 		for ($i = 0; $i < count($primarySubjects); $i++) 
-		{
-			$secondarySubjectArr = $subjects[$primarySubjects[$i]];
-			$secondarySubjectView = "";
+		{	
+			$primarySubject = $primarySubjects[$i];
 
-			// Looping through all the secondary subjects
-			for ($j = 0; $j < count($secondarySubjectArr); $j++) 
-			{
-				// Adding a secondarySubject view for each secondary subject
-				$secondarySubjectView .= "
-				<tr class='secondarySubjectRow'>
-					<td class='secondarySubjectTitle'>
-						<p><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubjects[$i] . "," . $secondarySubjectArr[$j] . "\")'> " . $secondarySubjectArr[$j] . "</a></p>
-					</td>
-				</tr>";
-			}
+			// Getting the array containing all the secondarysubjects for the current primarysubject
+			$secondarySubjectsArr = $subjects[$primarySubject];
+			
+			// Getting the table row views for the secondary subjects for the current primarysubject
+			$secondarySubjectsRowView = $this->getSecondarySubjectsRowView($secondarySubjectsArr, $primarySubject);
 
-			// Making the subject view (current primarysubject with all its secondarysubject)
-			$subjectView = 
-			"<div class='subjectContainer subjectContainer" . $primarySubjects[$i] . "' >
-			<table class='previewPostsOutline'>
-				<tr>
-					<td class='primarySubjectTitle'>
-						<p><a onclick='callController(\".content\", \"primarySubjectController\", \"" . $primarySubjects[$i] . "\")'><i class='fas fa-book'></i> " . $primarySubjects[$i] . "</a></p>
-						<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\".subjectContainer" . $primarySubjects[$i] . "\");'>
-							<img class='collapseSubjectImg' src='../IMG/collapse.png'>
-						</button>
-					</td>
-				</tr>
-				" . $secondarySubjectView . "
-			</table>
-			</div>";
+			// Getting the subjectContainer view for the current subject.
+			$subjectView = $this->getSubjectView($primarySubject, $secondarySubjectsRowView);
 
-			// Adding the current subjectContainer to the view we want to set
-			$viewToSet .= $subjectView;
+			// Adding the current subjectContainer to the view
+			$view .= $subjectView;
 		}
 
-		$this::$viewContent = $viewToSet;
+		return $view;
+	}
+
+	private function getSubjectView($primarySubject, $secondarySubjectsRowView) 
+	{
+		// Making the subject view (current primarysubject with all its secondarysubject)
+		$view = 
+		"<div class='subjectContainer subjectContainer" . $primarySubject . "' >
+		<table class='previewPostsOutline'>
+			<tr>
+				<td class='primarySubjectTitle'>
+					<p><a onclick='callController(\".content\", \"primarySubjectController\", \"" . $primarySubject . "\")'><i class='fas fa-book'></i> " . $primarySubject . "</a></p>
+					<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\".subjectContainer" . $primarySubject . "\");'>
+						<img class='collapseSubjectImg' src='../IMG/collapse.png'>
+					</button>
+				</td>
+			</tr>
+			" . $secondarySubjectsRowView . "
+		</table>
+		</div>";
+
+		return $view;
+	}
+
+	private function getSecondarySubjectsRowView($secondarySubjectsArr, $primarySubject) 
+	{
+		$view = "";
+
+		// Looping through all the secondary subjects in the array
+		for ($i = 0; $i < count($secondarySubjectsArr); $i++) 
+		{
+			// Adding a secondarySubject view for each secondary subject
+			$view .= $this->getSecondarySubjectRowView($secondarySubjectsArr[$i], $primarySubject);
+		}
+
+		return $view;
+	}
+
+	private function getSecondarySubjectRowView($secondarySubject, $primarySubject) 
+	{
+		$view = 
+		"<tr class='secondarySubjectRow'>
+			<td class='secondarySubjectTitle'>
+				<p><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubject . "\")'> " . $secondarySubject . "</a></p>
+			</td>
+		</tr>";
+
+		return $view;
 	}
 
 	public function getView() : string 
 	{
-		$this->createView();
+		logDebug("createview: " . var_export($this->createView($this::$output),true));
+		$this::$viewContent = $this->createView($this::$output);
+		logDebug("viewcontent" . var_export($this::$viewContent,true));
 		return Parent::getViewContent();
 	}
 }

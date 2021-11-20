@@ -4,8 +4,13 @@ require_once("../Views/view.php");
 
 class LoginView extends View 
 {
-
-	protected function createView() 
+	/**
+	* Creates the view and returns it
+	* 
+	* @param array $modelView
+	* @return string $view
+	*/
+	protected function createView(array $modelView) : string
 	{
 		$cancelImgPath = "../IMG/cancel.png";
 		$this::$viewContent =
@@ -30,11 +35,11 @@ class LoginView extends View
 		</div>
 		";
 	}
-
+	
 	public function getView() : string
 	{
 		// Updating the view
-		$this->createView();
+		$this::$viewContent = $this->createView($this::$output);
 
 		// Returning the view
 		return Parent::getViewContent();
