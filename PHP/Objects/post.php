@@ -86,9 +86,9 @@ Class Post
 		"
 		<table class='previewPostsTable'>
 		<tr>
-		<td><p>" . $data["postTitle"] . "</p></td>
+		<td><p class='postPreviewTitle'>" . $data["postTitle"] . "</p></td>
 		</tr>
-		<tr><td><p id='previewPostAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["userName"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
+		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["userName"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>
 		";
 

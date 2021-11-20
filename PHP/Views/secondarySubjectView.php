@@ -15,7 +15,12 @@ class SecondarySubjectView extends View
 		// Getting the previewPosts which are set up by our model.
 		$previewPosts = $modelOutput["previewPosts"];
 
-		$view = "<div class='subjectContainer'><table><tr><td><p><p><i class='fas fa-marker'></i> " . $modelOutput["secondarySubject"] . "</p></td></tr></table>";
+		//$view = "<div class='subjectContainer'><table class='previewPostOutline'><tr><td><p><i class='fas fa-marker'></i> " . $modelOutput["secondarySubject"] . "</p></td></tr></table>";
+
+		$view = "
+		<div class='subjectContainer'>
+		<table class='previewPostsOutline'>
+		<tr><td class='primarySubjectTitle'><p><i class='fab fa-hive'></i> " . $modelOutput["secondarySubject"] . "</p></td></tr>";
 
 		// Looping through the previewPosts
 		for ($i = 0; $i  < count($previewPosts); $i++) 
@@ -30,7 +35,7 @@ class SecondarySubjectView extends View
 			$view .= $postPreviewView;
 		}
 
-		$view .= "</div>";
+		$view .= "</table></div>";
 		return $view;
 	}
 

@@ -19,7 +19,7 @@ class PrimarySubjectView extends View
 		"
 		<div class='subjectContainer primarySubjectPageTitle'>
 			<table>
-				<tr><td class=''><p><i class='fas fa-marker'></i> " . $modelOutput["primarySubject"] . "</p></td></tr>
+				<tr class=''><td class=''><p><i class='fas fa-marker'></i> " . $modelOutput["primarySubject"] . "</p></td></tr>
 			</table>
 		</div>
 		";
@@ -34,8 +34,8 @@ class PrimarySubjectView extends View
 			$view .=
 			"
 			<div class='subjectContainer previewPost" . $secondarySubjects[$i] . "'>
-				<table class='previewPostsOutline'>
-					<tr ><td class='primarySubjectTitle'><p><i class='fab fa-hive'></i> " . $secondarySubjects[$i] . "</p>
+				<table>
+					<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i> " . $secondarySubjects[$i] . "</p>
 							<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\".previewPost" . $secondarySubjects[$i] . "\");'>
 							<img class='collapseSubjectImg' src='../IMG/collapse.png'>
 						</button>
@@ -78,7 +78,7 @@ class PrimarySubjectView extends View
 		if (empty($posts)) 
 		{
 			// If its empty we want to add a "no posts created yet" type box
-			$previewPostsView = "<tr class='secondarySubjectRow'><td class='secondarySubjectTitle'><p>No posts available!</p></td></tr>";
+			$previewPostsView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubTitle'><p>No posts available!</p></td></tr>";
 	 	}
 		else 
 		{
@@ -91,7 +91,7 @@ class PrimarySubjectView extends View
 				// Making the view 
 				$previewPostsView .= 
 				"
-				<tr class='secondarySubjectRow postPreview" . $secondarySubject ."'><td class='secondarySubjectTitle'>
+				<tr class='subjectContainerSubRow postPreview" . $secondarySubject ."'><td class='subjectContainerSubRowTD postPreviewTD'>
 				" .  $post->getPreviewView() . "
 				";
 			}

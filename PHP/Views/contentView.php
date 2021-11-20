@@ -39,10 +39,12 @@ class ContentView extends View
 		// Making the subject view (current primarysubject with all its secondarysubject)
 		$view = 
 		"<div class='subjectContainer subjectContainer" . $primarySubject . "' >
-		<table class='previewPostsOutline'>
-			<tr>
-				<td class='primarySubjectTitle'>
-					<p><a onclick='callController(\".content\", \"primarySubjectController\", \"" . $primarySubject . "\")'><i class='fas fa-book'></i> " . $primarySubject . "</a></p>
+		<table>
+			<tr class='subjectContainerHeaderRow'>
+				<td>
+					<p class='subjectContainerHeaderTitle'>
+						<a onclick='callController(\".content\", \"primarySubjectController\", \"" . $primarySubject . "\")'><i class='fas fa-book'></i> " . $primarySubject . "</a>
+					</p>
 					<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\".subjectContainer" . $primarySubject . "\");'>
 						<img class='collapseSubjectImg' src='../IMG/collapse.png'>
 					</button>
@@ -72,9 +74,8 @@ class ContentView extends View
 	private function getSecondarySubjectRowView($secondarySubject, $primarySubject) 
 	{
 		$view = 
-		"<tr class='secondarySubjectRow'>
-			<td class='secondarySubjectTitle'>
-				<p><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubject . "\")'> " . $secondarySubject . "</a></p>
+		"<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'>
+				<p class='subjectContainerSubTitle'><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubject . "\")'> " . $secondarySubject . "</a></p>
 			</td>
 		</tr>";
 

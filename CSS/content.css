@@ -23,6 +23,7 @@
 	margin-right:  auto;
 	border-radius: 5px;
 	overflow: hidden;
+	border: 4px solid #394263;
 }
 
 .subjectContainer table 
@@ -31,52 +32,7 @@
 	width: 100%;
 	margin: 0px;
 	border-spacing: 0px;
-	border-collapse: collapse;
 }
-
-.subjectContainer tr 
-{
-	line-height: 2.5em;
-}
-
-.primarySubjectTitle 
-{
-		background: #394263 url("../IMG/catOverlay.png");
-		background-position-x: 100%;
-		background-position-y: 100%;
-		background-repeat: no-repeat;
-	color:  #5dd4cd;
-	padding-left: 0.7em;
-}
-
-.primarySubjectTitle p, .secondarySubjectTitle p 
-{
-	margin: 0px;
-	font-family: "Trebuchet MS";
-	width: max-content;
-	font-size: 1.2em;
-	
-}
-
-.primarySubjectTitle p 
-{
-	position: relative;
-	float: left;
-
-}
-
-.secondarySubjectTitle p 
-{
-	color: #394263;
-}
-
-.secondarySubjectTitle 
-{
-	padding-left:  0.7em;
- 	background: rgb(93,212,205);
-	background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 57%); 
-}
-
 
 .collapseSubjectImg
 {
@@ -100,7 +56,6 @@
 
 .subjectContainer a 
 {
-	
 	text-decoration: none;
 }
 
@@ -127,26 +82,6 @@
 	color: #394263;
   font-size: 1.2em;
   margin: 0px;
-}
-
-#previewPostAuthor 
-{
-	font-size: 10px;
-	margin-top: 0.3em;
-}
-
-.previewPostsOutline 
-{	border: 4px solid #394263;}
-
-.previewPostsTable tr
-{
-	line-height: 	initial;
-}
-
-.previewPostsTable tbody
-{
-	display: block;
-	padding: 0.4em 0.2em;
 }
 
 .locationBar ul 
@@ -179,4 +114,78 @@
 {
 	text-decoration: none;
 	color: #5dd4cd;
+}
+
+.postPreviewRow 
+{
+
+}
+
+.postPreviewTitle 
+{
+	margin: 0px;
+	font-size: 1.2em;
+	margin-top: 3px;
+}
+
+.postPreviewTD 
+{
+	margin: 0px;
+}
+
+.postPreviewAuthor 
+{
+	font-size: 10px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.postPreviewAuthor, .postPreviewTitle 
+{
+	padding-left: 8px;
+}
+
+.subjectContainerHeaderRow 
+{
+	background: #394263 url("../IMG/catOverlay.png");
+	background-position-x: 100%;
+	background-position-y: 100%;
+	background-repeat: no-repeat;
+	color: #5dd4cd;
+}
+
+.subjectContainerHeaderTitle, .subjectContainerSubTitle 
+{
+	margin: 0px;
+	font-family: "Trebuchet MS";
+	width: max-content;
+	font-size: 1.2em;
+	padding-left: 0.3em;
+}
+
+.subjectContainerHeaderTitle 
+{
+	position: relative;
+	float: left;
+	bottom: 0.1em;
+}
+
+.subjectContainerSubRowTD
+{
+	background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 57%);
+}
+.subjectContainerSubTitle 
+{
+	padding: 0.25em;
+}
+
+.subjectContainerHeaderRow
+{
+	line-height: 2.5em;
+}
+
+.subjectContainerSubRow 
+{
+	line-height: initial;
+	color: #394263;
 }
