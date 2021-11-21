@@ -87,9 +87,20 @@ abstract class Model
 	protected function isPostFormDataEmpty() 
 	{
 		$returnVal = !isset($_POST["username"]) ? true : false;
-		logDebug("returnval isPostFormDataEmpty: " . var_export($returnVal, true));
 		return $returnVal;
 	}
 
+	/**
+	 * Makes sure only a alert gets returned. all other actions stop.
+	 *
+	 * @param string $alertType
+	 * @param string $alertMessage
+	 */
+	protected function returnAlertOnly(string $alertType, string $alertMessage) 
+	{
+		echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"$alertType\",\"alertMessage\":\"$alertMessage\"});</script>"]);
+		die();
+	}
+	
 }
 ?>

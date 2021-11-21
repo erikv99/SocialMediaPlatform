@@ -9,6 +9,9 @@ class LoginModel extends Model
 	public function execute() : array 
 	{
 		$returnData = [];
+		
+		// Making sure we're not getting a extra location bar
+		$returnData["locations"] = ["noLocationBar" => true,];
 
 		// If the form is empty we dont want to continue
 		if ($this->isPostFormDataEmpty())
@@ -33,12 +36,8 @@ class LoginModel extends Model
 		$_SESSION['username'] = $username;
 		$_SESSION['loggedIn'] = true;
 
-
-		// If everthing is well we only want the alert to be returned, not the login itself.
-		$returnData["getAlertOnly"] = true;
-		$returnData["message"] = "Login succesfull";
-		$returnData["messageType"] = "alertSuccess";
-		return $returnData;
+		// If everthing is well we only want the alert to be returned, not the view itself.
+		$this->returnAlertOnly("alertSuccess", "Login succesful");
 	}
 
 	/**

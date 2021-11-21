@@ -14,3 +14,10 @@
 * Further work on secondarySubjectPage
 * secondary subject titles in subjects/home page now link to secondarySubjectPage
 * secondary subject titles in primarySubjectsPage now link to secondarySubjectPage
+* Updated gitignore
+
+21-11-2021 v2:
+* Fixed a bug causing the page to resize after certain actions
+* Changed the way alertView is getting called by both the registerModel and loginModel. They both now call the controller when only requiring a alert to be shown.
+* Increase in documentation
+* 

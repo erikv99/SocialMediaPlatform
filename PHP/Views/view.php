@@ -35,14 +35,13 @@
 		public function getViewContent() 
 		{
 			$output = $this::$output;
-			$alertView = $this->getAlertView();
 
 			// Returning either only the alertview or view + alertview (can be empty or not)
 			if (isset($output["getAlertOnly"])) 
 			{
 				if ($output["getAlertOnly"] == true) 
 				{
-					return $alertView;
+					return $this->getAlertView();
 				}
 			}
 
@@ -60,7 +59,7 @@
 			// Returning the view. prepended by the locationbar view and containing the $alertview at the end. 
 			// If locationBar is not specifically set it will contain just a link to the homepage.
 			// If alertView  is not set it will contain a empty string
-			return $locationBar->getView() . $this::$viewContent . $alertView;
+			return $locationBar->getView() . $this::$viewContent . $this->getAlertView();
 		}
 
 		public function setOutput($output) 
@@ -81,8 +80,7 @@
 			if (isset($output["messageType"]) and isset($output["message"]))
 			{	
 				// Getting the view of the alert
-				$alertViewObj = new ALertView();
-				$alertViewObj->createView($output["messageType"], $output["message"]);
+				$alertViewObj = new ALertView($output["messageType"], $output["message"]);
 				$alertView = $alertViewObj->getView();
 				return $alertView;
 			}

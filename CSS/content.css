@@ -5,12 +5,6 @@
 	padding-right:  1em;
 	margin-right: 0.2em;
 	align-content: center;
-	background: url("../IMG/whitepatternbackground.jpg");
-		background-position: 100%;
-		background-size: 1500px;
-		background-repeat: repeat-y;
-		background-repeat-y: ;
-	min-height: 100vh;
 	min-width: 80vw;
 }
 

@@ -22,6 +22,7 @@ class Controller
 		// setting the output we got from the model execute function
 		$this->view->setOutput($output);
 
+		logDebug("view output: " . var_export($this->view->getOutput(),true));
 		// getting the view from our view
 		$viewToReturn = $this->view->getView();
 				

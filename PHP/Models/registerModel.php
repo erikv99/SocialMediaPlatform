@@ -8,6 +8,9 @@ class RegisterModel extends Model
 	public function execute() : array
 	{
 		$returnData = [];
+
+		// Making sure we're not getting a extra location bar
+		$returnData["locations"] = ["noLocationBar" => true,];
 				
 		if ($this->isPostFormDataEmpty()) 
 		{
@@ -39,10 +42,8 @@ class RegisterModel extends Model
 		// Creating our new user in the database
 		$this->createUser($username, $password);
 
-		$returnData["getAlertOnly"] = true;
-		$returnData["message"] = "Registry succesfull, you can now log in";
-		$returnData["messageType"] = "alertSuccess";
-		return $returnData;
+		// If everthing is well we only want the alert to be returned, not the view itself.
+		$this->returnAlertOnly("alertSuccess", "Registry succesful, you can now log in");
 	}
 
 	/**
@@ -77,7 +78,6 @@ class RegisterModel extends Model
 		}
 
 		$this->closeDBConnection($dbConnection);
-
 	}
 }
 ?>

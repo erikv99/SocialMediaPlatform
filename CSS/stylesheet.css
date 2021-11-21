@@ -8,14 +8,16 @@ html, body
 {
     max-width: 100%;
     overflow-x: hidden;
+    height: 100vh;
 }
 .page 
 {
 	font-family: "Roboto";
-	border-top: none;
-	border-bottom: none;
-	margin: 2em, 0em;	
-	height: 100vh;
+		background: url("../IMG/whitepatternbackground.jpg");
+		background-position: 100%;
+		background-size: 1500px;
+		background-repeat: repeat-y;
+		height: 100%;
 
 }
 
@@ -180,8 +182,9 @@ html, body
 
 
 .alert {
-  position: relative;
-  bottom: 3.5em;
+  position: absolute;
+  bottom: 1em;
+  left: 32em;
   min-width: 30em;
   width: 30em;
   padding: 12px 16px;

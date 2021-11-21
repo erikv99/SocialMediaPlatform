@@ -17,7 +17,7 @@ class RegisterController extends Controller
 $controller = new RegisterController();
 
 // Adding the object which need to be removed before adding the current view.
-$objectsToRemove = [".login", ".alert", ".locationBar"];
+$objectsToRemove = [".login", ".alert"];
 
 // Getting the view from the controller
 $response = $controller->register();

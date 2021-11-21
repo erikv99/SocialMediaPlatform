@@ -10,9 +10,7 @@ class LocationBarView
 	// EX: Home > Fruits > Apple > Post: How apples are made 
 	// Home > Primary Subject > Secondary subject
 	// Home > User: Erik
-	// NOT SHOWING THIS ON THE HOME PAGE SINCE WE CAN ONLY SHOW "Home there????????????????"
 
-	// Each page calls this with either 1, 2 or 3 arguments. 
 	static private array $locations = [];
 
 	static private string $locationBarView = "";
@@ -39,6 +37,12 @@ class LocationBarView
 	 */
 	public function createView(array $locations = []) : string 
 	{
+		// Checking if the view doesn't want a locationbar
+		if (isset($locations["noLocationBar"])) 
+		{
+			return "";
+		}
+
 		$view = "<div class='locationBar'><ul><li><i class='fas fa-map-signs'></i></li><li><a href='index.php'>ThoughtShare</a></li>";
 		$view .= "<li><i class='fas fa-chevron-right'></i></li><li><a href='index.php'>Subjects</a></li>";
 	
