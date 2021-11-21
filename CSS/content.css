@@ -64,7 +64,7 @@
 	color: white;
 }
 
-.primarySubjectPageTitle 
+.primarySubjectPageTitle, .secondarySubjectPageTitle
 {
   font-family: 'Electrolize', sans-serif;
   background: 
@@ -74,14 +74,14 @@
 	
 }
 
-.primarySubjectPageTitle p 
+.primarySubjectPageTitle p, .secondarySubjectPageTitle p 
 {
 	padding-left: 0.7em;
 	text-transform: uppercase;
 	font-family: "Trebuchet MS";
 	color: #394263;
   font-size: 1.2em;
-  margin: 0px;
+  margin: 0.5em 0em;
 }
 
 .locationBar ul 
@@ -145,6 +145,11 @@
 	padding-left: 8px;
 }
 
+.noPostAvailable 
+{
+	padding-bottom: 0.4em;
+	padding-top: 0.2em;
+}
 .subjectContainerHeaderRow 
 {
 	background: #394263 url("../IMG/catOverlay.png");
@@ -159,7 +164,7 @@
 	margin: 0px;
 	font-family: "Trebuchet MS";
 	width: max-content;
-	font-size: 1.2em;
+	font-size: 20px;
 	padding-left: 0.3em;
 }
 

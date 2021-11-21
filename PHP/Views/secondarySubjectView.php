@@ -15,26 +15,38 @@ class SecondarySubjectView extends View
 		// Getting the previewPosts which are set up by our model.
 		$previewPosts = $modelOutput["previewPosts"];
 
-		//$view = "<div class='subjectContainer'><table class='previewPostOutline'><tr><td><p><i class='fas fa-marker'></i> " . $modelOutput["secondarySubject"] . "</p></td></tr></table>";
-
+		// Getting the first part of the view, basically the secondary subject title
 		$view = "
 		<div class='subjectContainer'>
-		<table class='previewPostsOutline'>
-		<tr><td class='primarySubjectTitle'><p><i class='fab fa-hive'></i> " . $modelOutput["secondarySubject"] . "</p></td></tr>";
+		<table>
+			<tr class='subjectContainerHeaderRow'>
+			<td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i> " . $modelOutput["secondarySubject"] . "</p></td>
+			</tr>";
 
-		// Looping through the previewPosts
-		for ($i = 0; $i  < count($previewPosts); $i++) 
+		// Checking if any posts available are empty or not
+		if (empty($previewPosts)) 
 		{
-			// Making a post obj for the current post
-			$post = new Post($previewPosts[$i]);
-			
-			// Getting the previewView
-			$postPreviewView = $post->getPreviewView();
-
-			// Adding the view to the total view.
+			// Getting the view for no posts
+			$postPreviewView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='subjectContainerSubTitle'>No posts available!</p></td></tr>";
 			$view .= $postPreviewView;
 		}
+		else
+		{
+			// Looping through the previewPosts
+			for ($i = 0; $i  < count($previewPosts); $i++) 
+			{
+				// Making a post obj for the current post
+				$post = new Post($previewPosts[$i]);
+				
+				// Getting the previewView
+				$postPreviewView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'>" . $post->getPreviewView() . "</td></tr>";
+				
+				// Adding the view to the total view.
+				$view .= $postPreviewView;
+			}
+		}
 
+		// Adding the last line of the view then returning it
 		$view .= "</table></div>";
 		return $view;
 	}

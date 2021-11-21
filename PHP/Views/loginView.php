@@ -13,7 +13,7 @@ class LoginView extends View
 	protected function createView(array $modelView) : string
 	{
 		$cancelImgPath = "../IMG/cancel.png";
-		$this::$viewContent =
+		$view =
 		"
 		<div class='login'>
 		<div class='overlay'/>	
@@ -34,6 +34,8 @@ class LoginView extends View
 		</div>
 		</div>
 		";
+
+		return $view;
 	}
 	
 	public function getView() : string

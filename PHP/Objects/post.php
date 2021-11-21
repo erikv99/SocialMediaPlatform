@@ -124,6 +124,23 @@ Class Post
 	}
 
 	/**
+	 * Checks if the post is empty or not
+	 * 
+	 * @return boolean $isEmpty
+	 */ 
+	public function isEmpty() 
+	{
+		if (!isset($this->dbData["postTitle"]) or $this->dbData["postTitle"] == "") 
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
+
+	/**
 	 * Function returns the dbData
 	 *	
 	 * @return array $dbData;

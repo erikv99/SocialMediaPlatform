@@ -6,3 +6,11 @@
 
 20-11-2021 C2:
 * Removed redundant code.
+* Made sure DB connection is closed everywhere after usage.
+* Made sure every die() has a logError.
+* Made sure every DB exceptions throws a custom DB exception.
+
+21-11-2021
+* Further work on secondarySubjectPage
+* secondary subject titles in subjects/home page now link to secondarySubjectPage
+* secondary subject titles in primarySubjectsPage now link to secondarySubjectPage

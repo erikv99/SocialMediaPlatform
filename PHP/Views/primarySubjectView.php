@@ -14,12 +14,13 @@ class PrimarySubjectView extends View
 	{
 		$secondarySubjects = $modelOutput["secondarySubjects"];
 		$previewPosts = $modelOutput["previewPosts"];
-
+		$primarySubject = $modelOutput["primarySubject"];
+		
 		$view = 
 		"
 		<div class='subjectContainer primarySubjectPageTitle'>
 			<table>
-				<tr class=''><td class=''><p><i class='fas fa-marker'></i> " . $modelOutput["primarySubject"] . "</p></td></tr>
+				<tr class=''><td class=''><p><i class='fas fa-marker'></i> " . $primarySubject . "</p></td></tr>
 			</table>
 		</div>
 		";
@@ -35,7 +36,7 @@ class PrimarySubjectView extends View
 			"
 			<div class='subjectContainer previewPost" . $secondarySubjects[$i] . "'>
 				<table>
-					<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i> " . $secondarySubjects[$i] . "</p>
+					<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubjects[$i] . "\")'> " . $secondarySubjects[$i] . "</a></p>
 							<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\".previewPost" . $secondarySubjects[$i] . "\");'>
 							<img class='collapseSubjectImg' src='../IMG/collapse.png'>
 						</button>
@@ -78,7 +79,7 @@ class PrimarySubjectView extends View
 		if (empty($posts)) 
 		{
 			// If its empty we want to add a "no posts created yet" type box
-			$previewPostsView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubTitle'><p>No posts available!</p></td></tr>";
+			$previewPostsView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='postPreviewTitle noPostAvailable'>No posts available!</p></td></tr>";
 	 	}
 		else 
 		{
@@ -91,7 +92,7 @@ class PrimarySubjectView extends View
 				// Making the view 
 				$previewPostsView .= 
 				"
-				<tr class='subjectContainerSubRow postPreview" . $secondarySubject ."'><td class='subjectContainerSubRowTD postPreviewTD'>
+				<tr class='subjectContainerSubRow postPreview" . $secondarySubject ."' ><td class='subjectContainerSubRowTD postPreviewTD'>
 				" .  $post->getPreviewView() . "
 				";
 			}
