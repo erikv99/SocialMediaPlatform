@@ -77,6 +77,8 @@ abstract class Model
 
 	/**
 	 * Function which checks if the data variable in the post request is empty or not. 
+	 *
+	 * @return bool isPostDataEmpty
 	 */
 	protected function isPostDataEmpty() 
 	{
@@ -84,6 +86,11 @@ abstract class Model
 		return $returnVal;
 	}
 
+	/**
+	 * 
+	 * 
+	 * 
+	 */
 	protected function isPostFormDataEmpty() 
 	{
 		$returnVal = !isset($_POST["username"]) ? true : false;
