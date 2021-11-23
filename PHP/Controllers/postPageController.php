@@ -1,18 +1,18 @@
 <?php
-require_once("../Models/postModel.php");
+require_once("../Models/postPageModel.php");
 require_once("../Controllers/controller.php");
-require_once("../Views/postView.php");
+require_once("../Views/postPageView.php");
 
-class PostController extends Controller
+class PostPageController extends Controller
 {
 	public function __construct()
 	{
-		$this->model = new PostModel();
-		$this->view = new PostView();
+		$this->model = new PostPageModel();
+		$this->view = new PostPageView();
 	}
 }
 
-$controller = new PostController();
+$controller = new PostPageController();
 
 $response = $controller->register();
 

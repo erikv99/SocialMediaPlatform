@@ -1,7 +1,7 @@
 <?php  
 require_once("model.php");
 
-class PostModel extends Model 
+class PostPageModel extends Model 
 {
 	$returnData = [];
 

@@ -1,11 +1,11 @@
 <?php  
 require_once("view.php");
 
-class PostView extends View 
+class PostPageView extends View 
 {
 	private function createView(array $modelView) : string 
 	{
-		$view = "postview";
+		$view = "PostPageView";
 		return $view;
 	}
 

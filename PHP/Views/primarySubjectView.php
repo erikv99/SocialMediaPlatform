@@ -36,7 +36,8 @@ class PrimarySubjectView extends View
 			"
 			<div class='subjectContainer previewPost" . $secondarySubjects[$i] . "'>
 				<table>
-					<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubjects[$i] . "\")'> " . $secondarySubjects[$i] . "</a></p>
+					<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i>
+					<a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubjects[$i] . "\")'> " . $secondarySubjects[$i] . "</a></p>
 							<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\".previewPost" . $secondarySubjects[$i] . "\");'>
 							<img class='collapseSubjectImg' src='../IMG/collapse.png'>
 						</button>
