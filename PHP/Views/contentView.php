@@ -1,6 +1,6 @@
 <?php
 
-require_once("../Views/view.php");
+require_once("view.php");
 
 class ContentView extends View 
 {
