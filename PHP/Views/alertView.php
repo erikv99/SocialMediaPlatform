@@ -9,13 +9,11 @@ class AlertView
 
 	public function __construct($alertType = "", $alertMessage = "") 
 	{
-		logDebug("alertView construct: $alertType, $alertMessage");
 		$this::$alertView = $this->createView($alertType, $alertMessage);
 	}
 
 	public function createView($alertType = "", $alertMessage = "") 
 	{
-		logDebug("alertview createview =  $alertType, $alertMessage");
 		if ($alertMessage == "") 
 		{
 			$alertMessage = "A error occured, please inform a administrator";
@@ -42,7 +40,6 @@ class AlertView
 		// if there is not yet a view object or the view inside it is empty we do createView()
 		if ($this::$alertView == "") 
 		{
-			logDebug("this is called");
 			$this::$alertView = $this->createView();
 		}
 

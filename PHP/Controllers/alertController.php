@@ -28,8 +28,6 @@ class AlertController
 			$this->view = new AlertView($modelOutput["alertType"], $modelOutput["alertMessage"]);
 		}
 
-		logDebug("AlertController modelOutput = " . var_export($modelOutput, true));
-
 		// making the response array and returning it
 		$response = ["view" => $this->view->getView()];
 		

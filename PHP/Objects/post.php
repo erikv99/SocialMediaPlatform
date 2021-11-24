@@ -5,22 +5,21 @@ Class Post
 {
 	// NOTE: i decided not to make a getter/setter for each data point in the $postDBData since they wont be changed just used for getting other data like timeAgoCreated. Only content and title may change and these have dedicated update functions to do this.
 
-	private array $dbData = [];
+	private static array $dbData;
 
 	public function __construct(array $postDBData = []) 
 	{
-		$this->dbData = $postDBData;
+		$this::$dbData = $postDBData;
 	}
-
 	/**
 	 * Function figures out how long ago the post was created in relation to the current time.
 	 * 
 	 * @return string $timeAgoCreated
 	 */
-	private function getTimeAgoCreated() 
+	public function getTimeAgoCreated() 
 	{
 		// Checking if the $dbData has a $postcreationDateTime property.
-		if (!isset($this->dbData["postCreationDatetime"]))
+		if (!isset($this::$dbData["postCreationDatetime"]))
 		{
 			try 
 			{
@@ -29,7 +28,7 @@ Class Post
 			catch(CustomException $e) { die("Check error.txt, or inform administrator"); }
 		} 
 
-		if (empty($this->dbData["postCreationDatetime"])) 
+		if (empty($this::$dbData["postCreationDatetime"])) 
 		{
 			try
 			{
@@ -38,7 +37,7 @@ Class Post
 		}
 	
 	
-		$postCreationDT = new DateTime($this->dbData["postCreationDatetime"]);
+		$postCreationDT = new DateTime($this::$dbData["postCreationDatetime"]);
 		$nowDT = new DateTime("NOW");
 		$difference = $nowDT->diff($postCreationDT);
 		$timeAgoCreated = "";
@@ -80,13 +79,13 @@ Class Post
 	 */
 	public function getPreviewView() 
 	{
-		$data = $this->dbData;
+		$data = $this::$dbData;
 
 		$postPreviewView = 
 		"
 		<table class='previewPostsTable'>
 		<tr>
-		<td><p class='postPreviewTitle'><a onclick='callController(\".body\", \"postPageController\", \"" . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
+		<td><p class='postPreviewTitle'><a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "," . $data["SecondarySubject"] . "," . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
 		</tr>
 		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["userName"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>
@@ -130,7 +129,7 @@ Class Post
 	 */ 
 	public function isEmpty() 
 	{
-		if (!isset($this->dbData["postTitle"]) or $this->dbData["postTitle"] == "") 
+		if (!isset($this::$dbData["postTitle"]) or $this::$dbData["postTitle"] == "") 
 		{
 			return true;
 		}
@@ -147,7 +146,7 @@ Class Post
 	 */
 	public function getData() 
 	{
-		return $this->dbData;
+		return $this::$dbData;
 	}
 }
 ?>

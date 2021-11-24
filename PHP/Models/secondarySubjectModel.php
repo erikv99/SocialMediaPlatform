@@ -25,7 +25,7 @@ class SecondarySubjectModel extends Model
 		$returnData["locations"] = 
 		[
 			$primarySubject => "callController('.content', 'PrimarySubjectController', '$primarySubject')",
-			$secondarySubject => "callController('.content', 'SecondarySubjectController', '$secondarySubject')"
+			$secondarySubject => "callController('.content', 'SecondarySubjectController', '$primarySubject,$secondarySubject')"
 		];
 
 		// Getting the last x posts to preview.

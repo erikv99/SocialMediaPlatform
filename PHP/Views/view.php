@@ -54,8 +54,7 @@
 				// Setting the locations for the locationBar
 				$locationBar->setLocations($output["locations"]);
 			}
-
-			logDebug("locationbar->getview = " . var_export($locationBar->getView(),true));
+			
 			// Returning the view. prepended by the locationbar view and containing the $alertview at the end. 
 			// If locationBar is not specifically set it will contain just a link to the homepage.
 			// If alertView  is not set it will contain a empty string
