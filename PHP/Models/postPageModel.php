@@ -5,6 +5,12 @@ class PostPageModel extends Model
 {
 	public function execute() : array
 	{
+		/** the viewType options which can be returned are:
+ 		* normal : does not include a edit or delete button in the header
+ 		* owner : user == post owner, includes a edit and delete button
+ 		* edit : view which gives user the option to edit the post. (since user only sees edit/delete but if he owns the post no extra validation is needed)
+		*/
+
 		$returnData = [];
 
 		// Checking if the post var is empty or not. 
@@ -18,30 +24,41 @@ class PostPageModel extends Model
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 		$postID = $temp[2];
-		$buttonAction = "";
 
-		// Checking if a 4th argument is given (only when the edit or delete button is pressed)
-		if(isset($temp[3])) 
-		{ 
-			$buttonAction = $temp[3];
-			if ($buttonAction != "")
-			if ($buttonAction == "delete") 
-			{
-				// Delete the post
-			}
-
-			// 1. is user logged in? no then go back.
-			// 2. is user id same as creator of post id? no then go back
-			// 3. Return editable view.
-		}
+		// Checking which button action is required if any.
+		$buttonAction = $this->checkButtonAction($temp);
+		
+		// Unsetting the var since we dont need it anymore.
 		unset($temp);
 
 		// Getting the json array containing all the data of that post.
 		$postData = $this->getPostData($postID);
 		$returnData["postData"] = $postData;
 
-		// setting the buttonAction for the view
-		$returnData["buttonAction"] = $buttonAction;
+		// Checking if the user is the owner of the post
+		if ($this->isUserPostOwner($postData["userName"])) 
+		{
+			$returnData["viewType"] = "owner";
+		}
+
+		// If the button action is not none we check if it is delete or edit and execute the correct actions accordingly
+		if ($buttonAction != "none") 
+		{
+			if ($buttonAction == "delete") 
+			{
+				// Deleting the post and redirecting the user to the secondary subject above it.
+				$this->deletePostAndRedirect($postData, $primarySubject, $secondarySubject);
+			}
+			// This is only a else if for readability
+			elseif ($buttonAction == "edit") 
+			{
+				$returnData["viewType"] = "edit";
+			}
+		}
+
+			// 1. is user logged in? no then go back.
+			// 2. is user id same as creator of post id? no then go back
+			// 3. Return editable view.
 
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
@@ -62,7 +79,7 @@ class PostPageModel extends Model
 	 */
 	private function getPostData($postID) 
 	{
-		$dbConn = $this->openDBConnection();
+		$dbConn = openDBConnection();
 		$dbOutput = [];
 
 		try
@@ -76,23 +93,35 @@ class PostPageModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
-		$this->closeDBConnection($dbConn);
+		closeDBConnection($dbConn);
 		return $dbOutput;
 	}
 
 	/**
-	 * Figures out which viewtype we want to request for the view. 
+	 * Figures out if a button action has been given, if so it set the right actions in motion
 	 * 
-	 * the options are:
-	 * normal : does not include a edit or delete button in the header
-	 * owner : user == post owner, includes a edit and delete button
-	 * edit : view which gives user the option to edit the post.
-	 *
-	 * @return string $viewType
+	 * @param array $splitResult 
 	 */
-	private function getViewType()
+	private function checkButtonAction (array $splitResult)
 	{
+		// Checking if a 4th argument is given returning otherwise. (only given when the edit or delete button is pressed)
+		if(!isset($splitResult[3])) 
+		{
+			return "none";
+		}
 
+		switch($splitResult[3])
+		{
+			case "delete":
+				return "delete";
+				break;
+			case "edit":
+				return "edit";
+				break;
+			default:
+				return "none";
+				break;
+		}
 	}
 
 	/**
@@ -119,6 +148,20 @@ class PostPageModel extends Model
 		return $isPostOwner;
 	}
 
+	/**
+	 * Deletes the post from DB and redirects the user back to the upperlaying secondarysubject.
+	 * 
+	 * @param array $postData
+	 */
+	private function deletePostAndRedirect($postData, $primarySubject, $secondarySubject) 
+	{
+		// Making a post obj using the postdata, then deleting it
+		$post = new Post($postData);
+		$post->delete();
 
+		// Stopping	the code and giving back JS that will call the secondarySubjectController and redirect the user to the secondarysubject that the just deleted post was in
+		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'secondarySubjectController', '$primarySubject,$secondarySubject');</script>"]);
+		die();
+	}
 }
 ?>

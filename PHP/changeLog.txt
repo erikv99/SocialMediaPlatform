@@ -21,3 +21,9 @@
 * Changed the way alertView is getting called by both the registerModel and loginModel. They both now call the controller when only requiring a alert to be shown.
 * Increase in documentation
 * 
+
+
+Cursor is now a pointer when hovering hyperlinks
+Edit/Delete buttons are now only displayed when user is the post owner in postPage
+Post delete button now fully functioning.
+Open/Close db functions moved from model to generalfunctions since other scripts needed access as well and otherwise it had to be declared twice.

@@ -27,4 +27,39 @@ function writeLog($logName, $message)
         die($e->getMessage());
     }
 }
+
+/**
+ * Function for closing a existing database connection
+ * 
+ * @param open database connection (passed by reference)
+ */ 
+function closeDBConnection(&$conn)
+{   
+    unset($conn);
+}
+
+/**
+ * Function will open a db connection and return it
+ * 
+ * @return $openedDBConnection
+ */
+function openDBConnection()
+{ 
+    $dbHost = "localhost";
+    $dbUser = "root";
+    $dbPass = "";
+    $dbName = "thoughtshare";
+
+    try 
+    {
+        $conn = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName . ";", $dbUser, $dbPass);
+    }
+    catch (PDOException $e) 
+    {
+        throw new DBException($e->getMessage());    
+    }
+
+    return $conn;
+}
+
 ?>

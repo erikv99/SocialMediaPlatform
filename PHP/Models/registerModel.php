@@ -62,7 +62,7 @@ class RegisterModel extends Model
 		}
 
 		// Opening a db connection and adding the user to the database
-		$dbConnection = $this->openDBConnection();
+		$dbConnection = openDBConnection();
 
 		// Hashing the password
 		$hashedPass = password_hash($password, PASSWORD_DEFAULT);
@@ -77,7 +77,7 @@ class RegisterModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
-		$this->closeDBConnection($dbConnection);
+		closeDBConnection($dbConnection);
 	}
 }
 ?>

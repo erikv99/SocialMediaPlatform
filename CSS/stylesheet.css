@@ -10,6 +10,12 @@ html, body
     overflow-x: hidden;
     height: 100vh;
 }
+
+a:hover
+{
+	cursor: pointer;
+}
+
 .page 
 {
 	font-family: "Roboto";

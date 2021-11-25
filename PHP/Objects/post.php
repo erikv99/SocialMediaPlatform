@@ -11,6 +11,7 @@ Class Post
 	{
 		$this::$dbData = $postDBData;
 	}
+
 	/**
 	 * Function figures out how long ago the post was created in relation to the current time.
 	 * 
@@ -18,26 +19,15 @@ Class Post
 	 */
 	public function getTimeAgoCreated() 
 	{
-		// Checking if the $dbData has a $postcreationDateTime property.
-		if (!isset($this::$dbData["postCreationDatetime"]))
+		// Checking if data is set or not.
+		if(!$this->isDataSet()) 
 		{
-			try 
-			{
-				throw new CustomException("postCreationDatetime not set in dbData, is dbData updated/set?");
-			} 
-			catch(CustomException $e) { die("Check error.txt, or inform administrator"); }
-		} 
-
-		if (empty($this::$dbData["postCreationDatetime"])) 
-		{
-			try
-			{
-				throw new CustomException("postCreationDatetime is empty.");
-			} catch (CustomException $e) { return "notSet"; }
+			// No need for error since that is handled inside the isdataset function
+			return "Error";
 		}
-	
-	
-		$postCreationDT = new DateTime($this::$dbData["postCreationDatetime"]);
+
+		$data = $this::$dbData;
+		$postCreationDT = new DateTime($data["postCreationDatetime"]);
 		$nowDT = new DateTime("NOW");
 		$difference = $nowDT->diff($postCreationDT);
 		$timeAgoCreated = "";
@@ -79,6 +69,13 @@ Class Post
 	 */
 	public function getPreviewView() 
 	{
+		// Checking if data is set or not.
+		if(!$this->isDataSet()) 
+		{
+			// No need for error since that is handled inside the isdataset function
+			return "Error";
+		}
+
 		$data = $this::$dbData;
 
 		$postPreviewView = 
@@ -119,24 +116,28 @@ Class Post
 	 */
 	public function delete() 
 	{
-
-	}
-
-	/**
-	 * Checks if the post is empty or not
-	 * 
-	 * @return boolean $isEmpty
-	 */ 
-	public function isEmpty() 
-	{
-		if (!isset($this::$dbData["postTitle"]) or $this::$dbData["postTitle"] == "") 
+		// Checking if data is set or not.
+		if(!$this->isDataSet()) 
 		{
-			return true;
+			// No need for error since that is handled inside the isdataset function
+			return;
 		}
-		else 
+		
+		$postID = $this::$dbData["postID"]; 
+		logDebug("deleted post");
+		$dbConn = openDBConnection();
+
+		try
 		{
-			return false;
+			$stmt = $dbConn->prepare("DELETE FROM posts WHERE postID = ?");
+			$stmt->execute([$postID]);
 		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+		}
+
+		closeDBConnection($dbConn);
 	}
 
 	/**
@@ -147,6 +148,30 @@ Class Post
 	public function getData() 
 	{
 		return $this::$dbData;
+	}
+
+	/**
+	 * Checks if the data is set or not. if not it will throw a exception
+	 * 
+	 * @param bool $isDataSet
+	 */
+	private function isDataSet() 
+	{
+		if (!isset($this::$dbData["postTitle"])) 
+		{
+			try 
+			{
+				throw new CustomException("dbData not properely set");
+			} 
+			catch(CustomException $e) 
+			{ 
+				die("Check error.txt, or inform administrator"); 
+			}
+
+			return false;
+		}
+
+		return true;
 	}
 }
 ?>

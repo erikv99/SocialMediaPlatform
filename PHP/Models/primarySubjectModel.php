@@ -40,7 +40,7 @@ class PrimarySubjectModel extends Model
 	 */
 	private function getSecondarySubjects($subject) 
 	{
-		$dbConn = $this->openDBConnection();
+		$dbConn = openDBConnection();
 		$dbOutput = [];
 		$secondarySubjects = [];
 
@@ -55,7 +55,7 @@ class PrimarySubjectModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
-		$this->closeDBConnection($dbConn);
+		closeDBConnection($dbConn);
 
 		// Since the db output is a nested loop we have to filter out the stuff we dont need 
 		for ($i = 0; $i < count($dbOutput); $i++) 
@@ -87,7 +87,7 @@ class PrimarySubjectModel extends Model
 
 	private function getLastXPosts(int $numOfPosts, string $secondarySubject) : array
 	{
-		$dbConn = $this->openDBConnection();
+		$dbConn = openDBConnection();
 		$dbOutput = [];
 
 		try 
@@ -101,7 +101,7 @@ class PrimarySubjectModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
-		$this->closeDBConnection($dbConn);
+		closeDBConnection($dbConn);
 		return $dbOutput;
 	}
 }

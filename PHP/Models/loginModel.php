@@ -50,7 +50,7 @@ class LoginModel extends Model
 	private function isPasswordCorrect(string $username, string $password) : bool 
 	{
 		// Opening a DB connection
-		$dbConn = $this->openDBConnection();
+		$dbConn = openDBConnection();
 
 		$hashedPassword = "";
 
@@ -66,7 +66,7 @@ class LoginModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
-		$this->closeDBConnection($dbConn);
+		closeDBConnection($dbConn);
 
 		// Checking if the password matches the hashed version then returning the result.
 		$passwordCorrect = password_verify($password, $hashedPassword);

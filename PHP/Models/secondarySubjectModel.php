@@ -48,7 +48,7 @@ class SecondarySubjectModel extends Model
 	private function getPosts($secondarySubject) 
 	{
 		$posts = [];
-		$dbConn = $this->openDBConnection();
+		$dbConn = openDBConnection();
 		try 
 		{
 			$stmt = $dbConn->prepare("SELECT posts.*, users.userName FROM `posts` INNER JOIN `users` ON posts.postCreatorID = users.userID WHERE SecondarySubject = ? AND users.userID = posts.postCreatorID ORDER BY posts.postCreationDatetime");
@@ -60,7 +60,7 @@ class SecondarySubjectModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
-		$this->closeDBConnection($dbConn);
+		closeDBConnection($dbConn);
 		return $posts;
 	}
 }

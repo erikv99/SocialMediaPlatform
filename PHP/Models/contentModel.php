@@ -23,7 +23,7 @@ class ContentModel extends Model
 	 */
 	private function getPrimarySubjects() : array
 	{
-		$dbConn = $this->openDBConnection();
+		$dbConn = openDBConnection();
 		$dbOutput = [];
 		$primarySubjects = [];
 
@@ -40,7 +40,7 @@ class ContentModel extends Model
 			
 		}	
 
-		$this->closeDBConnection($conn);
+		closeDBConnection($conn);
 
 		// Since the db output contains of arrays containing the primarysubject we're taking that apart real quick
 		for ($i = 0; $i < count($dbOutput); $i++) 
@@ -83,7 +83,7 @@ class ContentModel extends Model
 	 */
 	private function getSecondarySubjects($primarySubject) : array
 	{
-		$dbConn = $this->openDBConnection();
+		$dbConn = openDBConnection();
 		$dbOutput = [];	
 		
 		try
@@ -98,7 +98,7 @@ class ContentModel extends Model
 			throw new DBException($e->getMessage());
 		}	
 
-		$this->closeDBConnection($conn);
+		closeDBConnection($conn);
 
 		$secondarySubjects = [];
 

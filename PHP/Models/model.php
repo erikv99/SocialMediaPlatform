@@ -11,40 +11,6 @@ abstract class Model
 	abstract protected function execute() : array;
 
 	/**
-	 * Function will open a db connection and return it
-	 * 
-	 * @return $openedDBConnection
-	 */
-	protected function openDBConnection()
-	{ 
-		$dbHost = "localhost";
-		$dbUser = "root";
-		$dbPass = "";
-		$dbName = "thoughtshare";
-
-		try 
-		{
-			$conn = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName . ";", $dbUser, $dbPass);
-		}
-		catch (PDOException $e) 
-		{
-			throw new DBException($e->getMessage());	
-		}
-
-		return $conn;
-	}
-
-	/**
-	 * Function for closing a existing database connection
-	 * 
-	 * @param open database connection (passed by reference)
-	 */ 
-	protected function closeDBConnection(&$conn)
-	{	
-		unset($conn);
-	}
-
-	/**
 	 * Function to check if the given username is already present in the user table in the database
 	 * function is placed in the model base since it is used more then once
 	 * 
@@ -53,7 +19,7 @@ abstract class Model
 	protected function usernameExists(string $username) 
 	{
 		// Opening a DB connection and checking if the given username is present in our data table
-		$dbConnection = $this->openDBConnection();
+		$dbConnection = openDBConnection();
 
 		try 
 		{
@@ -71,7 +37,7 @@ abstract class Model
 		$doesUserExist = ($output > 0) ? true : false;
 
 		// Closing the DB connection and returning the result
-		$this->closeDBConnection($dbConnection);
+		closeDBConnection($dbConnection);
 		return $doesUserExist;
 	}
 

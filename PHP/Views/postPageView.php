@@ -17,7 +17,7 @@ class PostPageView extends View
 			<td><p class='postTitle'>" . $data["postTitle"] . "</p>
 			<div class='postActionButtons'>
 				<a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "," . $data["SecondarySubject"] . "," . $data["postID"] . ",edit\")'><i class='fas fa-edit'></i></a>
-				<a><i class='far fa-trash-alt'></i></a>
+				<a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "," . $data["SecondarySubject"] . "," . $data["postID"] . ",delete\")'><i class='far fa-trash-alt'></i></a>
 			</div></tr></td>
 			<tr class='postContainerContentRow'><td><p class='postContent'>" . $data["postContent"] .  "</p></td></tr>
 			<tr class='postContainerContentRow'><td><p class='postAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["userName"] . "</b> " . $post->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
