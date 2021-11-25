@@ -124,7 +124,6 @@ Class Post
 		}
 		
 		$postID = $this::$dbData["postID"]; 
-		logDebug("deleted post");
 		$dbConn = openDBConnection();
 
 		try

@@ -8,7 +8,7 @@ class PostPageView extends View
 	{		
 		$post = new Post($modelOutput["postData"]);
 		$data = $post->getData();
-		
+		logDebug("data: " . var_export($modelOutput["viewType"],true));
 		
 		$view = "
 		<div class='postContainer'>

@@ -34,7 +34,8 @@ class PostPageModel extends Model
 		// Getting the json array containing all the data of that post.
 		$postData = $this->getPostData($postID);
 		$returnData["postData"] = $postData;
-
+		$returnData["viewType"] = "normal";
+		
 		// Checking if the user is the owner of the post
 		if ($this->isUserPostOwner($postData["userName"])) 
 		{
