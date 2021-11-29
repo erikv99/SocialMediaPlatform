@@ -27,3 +27,9 @@ Cursor is now a pointer when hovering hyperlinks
 Edit/Delete buttons are now only displayed when user is the post owner in postPage (Not Finished)
 Post delete button now fully functioning.
 Open/Close db functions moved from model to generalfunctions since other scripts needed access as well and otherwise it had to be declared twice.
+
+
+
+29-11
+Fixed edit not working anymore after recent changes.
+Fixed delete not working anymore

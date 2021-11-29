@@ -11,6 +11,7 @@ class PostPageView extends View
 		$viewType = $modelOutput["viewType"];
 		$view = "";
 		// Getting the right type of view depending on the viewtype. 
+		logDebug("viewtype: " . var_export($viewType,true));
 		switch($viewType) 
 		{
 			case "normal":
@@ -75,7 +76,7 @@ class PostPageView extends View
 		<div class='postContainer'>
 		<table>
 			<tr class='postContainerHeaderRow'>
-			<td><p class='postTitle'>" . $data["postTitle"] . "</p>
+			<td><p class='postTitle'>" . $data["postTitle"] . "edit" . "</p>
 			<div class='postActionButtons'>
 				<a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "," . $data["SecondarySubject"] . "," . $data["postID"] . ",delete\")'><i class='far fa-trash-alt'></i></a>
 				<a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "," . $data["SecondarySubject"] . "," . $data["postID"] . ",save\")'><i class='fas fa-check	'></i></a>

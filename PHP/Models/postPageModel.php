@@ -12,23 +12,34 @@ class PostPageModel extends Model
 		*/
 
 		$returnData = [];
-
 		// Checking if the post var is empty or not. 
 		if ($this->isPostDataEmpty())
 		{
 			return $returnData;
 		}
 
-		// Splitting the post data on the comma to get the prim sub, sec sub and postID
+		$returnData["viewType"] = "normal";
+		
+		// Getting the data from the request and putting it in variables for easier usage.
 		$requestData = $this->getRequestData();
 		$primarySubject = $requestData["primarySubject"];
 		$secondarySubject = $requestData["secondarySubject"];
 		$postID = $requestData["postID"];
+
+		// Getting the json array containing all the data of that post.
+		$postData = $this->getPostData($postID);
+
+		// Checking if the user is the owner of the post
+		if ($this->isUserPostOwner($postData["userName"])) 
+		{
+			$returnData["viewType"] = "owner";
+		}
 		
 		//  handeling any button action we might need to handle
-		$output = $this->handleButtonAction();
+		$output = $this->handleButtonAction($postData);
+		logDebug("handleButtonAction output: " . var_export($output,true));
 
-		// If handleButtonAction returned anything this will be the viewtype.
+		// If handleButtonAction returned anything this will be the viewtype. (edit is the only option)
 		if ($output != "") 
 		{
 			$returnData["viewType"] = $output;
@@ -37,16 +48,8 @@ class PostPageModel extends Model
 		// Unsetting the output and button action vars
 		unset($output, $buttonAction);
 
-		// Getting the json array containing all the data of that post.
-		$postData = $this->getPostData($postID);
+		// Setting the postdata
 		$returnData["postData"] = $postData;
-		$returnData["viewType"] = "normal";
-		
-		// Checking if the user is the owner of the post
-		if ($this->isUserPostOwner($postData["userName"])) 
-		{
-			$returnData["viewType"] = "owner";
-		}
 
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
@@ -103,12 +106,14 @@ class PostPageModel extends Model
 	/**
 	 * Figures out if a button action has been given, if so it set the right actions in motion
 	 * 
+	 * @param array $postData
 	 * @return string $buttonAction
 	 */
-	private function handleButtonAction ()
+	private function handleButtonAction (array $postData)
 	{
 		// Getting the data from the post request splitted on each comma
 		$splitResult = explode(",", $_POST['data']);
+		logDebug("postdata: " . var_export($postData,true));
 
 		// Checking if a 4th argument is given returning otherwise. (only given when the edit or delete button is pressed)
 		if(!isset($splitResult[3])) 
@@ -124,11 +129,11 @@ class PostPageModel extends Model
 
 			case "delete":
 				// Deleting the post and redirecting the user to the secondary subject above it.
-				$this->deletePostAndRedirect($postData, $primarySubject, $secondarySubject);
+				$this->deletePostAndRedirect($postData);
 				break;
 
 			case "save": 
-				$this->saveEditedPost();
+				$this->saveEditedPost($postData);
 				break;
 
 			case "edit":
@@ -168,15 +173,32 @@ class PostPageModel extends Model
 	 * 
 	 * @param array $postData
 	 */
-	private function deletePostAndRedirect($postData, $primarySubject, $secondarySubject) 
+	private function deletePostAndRedirect($postData) 
 	{
 		// Making a post obj using the postdata, then deleting it
 		$post = new Post($postData);
+		$primarySubject = $postData["PrimarySubject"];
+		$secondarySubject = $postData["SecondarySubject"];
 		$post->delete();
 
 		// Stopping	the code and giving back JS that will call the secondarySubjectController and redirect the user to the secondarysubject that the just deleted post was in
 		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'secondarySubjectController', '$primarySubject,$secondarySubject');</script>"]);
 		die();
+	}
+
+	/** Handles saving the edited content of the post.
+	 * 
+	 *	@param array $postData
+	 */
+	private function saveEditedPost($postData)
+	{
+		// Making a post obj using the postdata
+		$post = new Post($postData);
+
+		// Get the edited content from the textArea here.
+		
+
+		//$post->updateContent($)
 	}
 }
 ?>
