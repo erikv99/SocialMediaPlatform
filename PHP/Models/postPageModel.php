@@ -20,16 +20,22 @@ class PostPageModel extends Model
 		}
 
 		// Splitting the post data on the comma to get the prim sub, sec sub and postID
-		$temp = explode(",", $_POST['data']);
-		$primarySubject = $temp[0];
-		$secondarySubject = $temp[1];
-		$postID = $temp[2];
-
-		// Checking which button action is required if any.
-		$buttonAction = $this->checkButtonAction($temp);
+		$requestData = $this->getRequestData();
+		$primarySubject = $requestData["primarySubject"];
+		$secondarySubject = $requestData["secondarySubject"];
+		$postID = $requestData["postID"];
 		
-		// Unsetting the var since we dont need it anymore.
-		unset($temp);
+		//  handeling any button action we might need to handle
+		$output = $this->handleButtonAction();
+
+		// If handleButtonAction returned anything this will be the viewtype.
+		if ($output != "") 
+		{
+			$returnData["viewType"] = $output;
+		}
+
+		// Unsetting the output and button action vars
+		unset($output, $buttonAction);
 
 		// Getting the json array containing all the data of that post.
 		$postData = $this->getPostData($postID);
@@ -42,25 +48,6 @@ class PostPageModel extends Model
 			$returnData["viewType"] = "owner";
 		}
 
-		// If the button action is not none we check if it is delete or edit and execute the correct actions accordingly
-		if ($buttonAction != "none") 
-		{
-			if ($buttonAction == "delete") 
-			{
-				// Deleting the post and redirecting the user to the secondary subject above it.
-				$this->deletePostAndRedirect($postData, $primarySubject, $secondarySubject);
-			}
-			// This is only a else if for readability
-			elseif ($buttonAction == "edit") 
-			{
-				$returnData["viewType"] = "edit";
-			}
-		}
-
-			// 1. is user logged in? no then go back.
-			// 2. is user id same as creator of post id? no then go back
-			// 3. Return editable view.
-
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
 		[
@@ -70,6 +57,21 @@ class PostPageModel extends Model
 		];
 
 		return $returnData;
+	}
+
+	/**
+	 * Will get and format the data from the post request
+	 * 
+	 * @return array $requestData
+	 */
+	private function getRequestData() 
+	{
+		// Splitting the string on the comma, assigning the vals to a array
+		$temp = explode(",", $_POST['data']);
+		$postRequestData["primarySubject"] = $temp[0];
+		$postRequestData["secondarySubject"] = $temp[1];
+		$postRequestData["postID"] = $temp[2];	
+		return $postRequestData;
 	}
 
 	/**
@@ -101,28 +103,40 @@ class PostPageModel extends Model
 	/**
 	 * Figures out if a button action has been given, if so it set the right actions in motion
 	 * 
-	 * @param array $splitResult 
+	 * @return string $buttonAction
 	 */
-	private function checkButtonAction (array $splitResult)
+	private function handleButtonAction ()
 	{
+		// Getting the data from the post request splitted on each comma
+		$splitResult = explode(",", $_POST['data']);
+
 		// Checking if a 4th argument is given returning otherwise. (only given when the edit or delete button is pressed)
 		if(!isset($splitResult[3])) 
 		{
-			return "none";
+			return "";
 		}
 
 		switch($splitResult[3])
 		{
-			case "delete":
-				return "delete";
+			case "none":
+				return;
 				break;
+
+			case "delete":
+				// Deleting the post and redirecting the user to the secondary subject above it.
+				$this->deletePostAndRedirect($postData, $primarySubject, $secondarySubject);
+				break;
+
+			case "save": 
+				$this->saveEditedPost();
+				break;
+
 			case "edit":
 				return "edit";
 				break;
-			default:
-				return "none";
-				break;
 		}
+
+		return "";
 	}
 
 	/**

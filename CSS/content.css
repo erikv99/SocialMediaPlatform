@@ -241,7 +241,6 @@
 	margin-top: 3px;
 	position: relative;
 	float: left;
-	bottom: 0.1em;
 	margin: 0px;
 	font-family: "Trebuchet MS";
 	width: max-content;
@@ -258,7 +257,7 @@
 
 .postContent 
 {
-	padding: 5px 0px 1px 8px;
+	padding: 5px 8px 1px 8px;
 	margin:  0px;
 }
 
@@ -267,10 +266,20 @@
 	position: relative;
 	float: right;
 	padding-right: 0.4em;
-	width: 3em;
 }
 .postActionButtons a 
 {
 	margin-right: 0.5em;
 	color: lightseagreen;
+}
+
+.postContainer textarea 
+{
+	background: none;
+	border: none;
+	width: 100%;
+	height: auto;
+	font-family: inherit;
+	resize: none;
+
 }

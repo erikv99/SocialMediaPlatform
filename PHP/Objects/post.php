@@ -96,19 +96,29 @@ Class Post
 	 * 
 	 * @param $string updatedContent
 	 */
-	public function updateContent($updatedContent) 
+	public function updateContent(string $updatedContent) 
 	{
+		// Checking if data is set or not.
+		if(!$this->isDataSet()) 
+		{
+			// No need for error since that is handled inside the isdataset function
+			return;
+		}
 
-	}
+		$postID = $this::$dbData["postID"]; 
+		$dbConn = openDBConnection();
 
-	/**
-	 * Function updates the title of this post inside the database
-	 * 
-	 * @param $string updatedTitle
-	 */
-	public function updateTitle($updatedTitle) 
-	{
+		try
+		{
+			$stmt = $dbConn->prepare("UPDATE posts SET postContent = ? WHERE postID = ?");
+			$stmt->execute([$updatedContent, $postID]);
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+		}
 
+		closeDBConnection($dbConn);
 	}
 
 	/**
