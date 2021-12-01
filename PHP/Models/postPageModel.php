@@ -113,14 +113,16 @@ class PostPageModel extends Model
 	{
 		// Getting the data from the post request splitted on each comma
 		$splitResult = explode(",", $_POST['data']);
-		logDebug("postdata: " . var_export($postData,true));
+	
 
 		// Checking if a 4th argument is given returning otherwise. (only given when the edit or delete button is pressed)
 		if(!isset($splitResult[3])) 
 		{
+			logDebug("split empty");
 			return "";
 		}
 
+		logDebug("split3 : " . var_export($splitResult[3],true));
 		switch($splitResult[3])
 		{
 			case "none":
@@ -191,14 +193,17 @@ class PostPageModel extends Model
 	 *	@param array $postData
 	 */
 	private function saveEditedPost($postData)
-	{
+	{	
+		logDebug("saveEditedPost being called");
 		// Making a post obj using the postdata
 		$post = new Post($postData);
 
-		// Get the edited content from the textArea here.
-		
-
-		//$post->updateContent($)
+		// Getting data from the post request, 5th arg is the data from the textArea (updated content), no need for validation since this function only gets called if the 4th arg (button action) is save. which is only the case when the save button is pressed.
+		$splitResult = explode(",", $_POST['data']);
+		logDebug("splitresult in saveedit : " . var_export($splitResult,true));
+		$editedContent = $splitResult[4];		
+		logDebug("editedContent: " .  var_export($editedContent,true));
+		$post->updateContent($editedContent);
 	}
 }
 ?>
