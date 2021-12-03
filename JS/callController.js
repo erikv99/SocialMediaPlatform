@@ -16,6 +16,10 @@ function callControllerFromForm(placeMentTag, controllerName, formID)
 function sendAjaxRequest(placeMentTag, controllerName, data) 
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
+	
+	// Handeling the actions regarding a eventual refresh page. we need to save some info in some cases
+	this.saveCallControllerInfo(placeMentTag, controllerName, data);
+
 	console.log("callController to " + filePath);
 	$.ajax(
 	{
@@ -77,4 +81,24 @@ function removeElementsFromView(objectsToRemove)
 	{
 		$(objectsToRemove[i]).remove();
 	}
+}
+
+// Checks if the callController info needs to be saved, this is the case for basically all controllers except a few specific ones.
+// Reason for saving this is when a page request is needed we need to know which controller was last called.
+function saveCallControllerInfo(placeMentTag, controllerName, data) 
+{
+	var excludedControllers = [
+	"loginController",
+	"registerController",
+	"alertController",
+	];
+	
+	// Checking if the controller name is one of the excluded controllers, returning if this is the case
+	if (excludedControllers.includes(controllerName)) { return; }
+
+	// Saving the current controller call in a cookie for later usage if needed.
+	document.cookie = "lastControllerPlacementTag=" + placeMentTag;
+	document.cookie = "lastControllerName=" + controllerName;
+	document.cookie = "lastControllerData=" + JSON.stringify(data);	
+
 }

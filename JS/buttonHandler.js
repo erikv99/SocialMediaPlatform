@@ -52,6 +52,9 @@ function logout()
 		{
 			// since we already know we logged the user out we dont do a loginCheck but just call the userNotLoggedIn function directly
 			userIsNotLoggedIn();
+
+			// refreshing the page incase anything in the view needs to change
+			refreshPage();
 		},
 		error: function(xhr, status, error) 
 		{

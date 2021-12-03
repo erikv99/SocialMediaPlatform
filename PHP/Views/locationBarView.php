@@ -43,8 +43,8 @@ class LocationBarView
 			return "";
 		}
 
-		$view = "<div class='locationBar'><ul><li><i class='fas fa-map-signs'></i></li><li><a href='index.php'>ThoughtShare</a></li>";
-		$view .= "<li><i class='fas fa-chevron-right'></i></li><li><a href='index.php'>Subjects</a></li>";
+		$view = "<div class='locationBar'><ul><li><i class='fas fa-map-signs'></i></li><li><a onclick='callController(\".content\", \"contentController\");'>ThoughtShare</a></li>";
+		$view .= "<li><i class='fas fa-chevron-right'></i></li><li><a onclick='callController(\".content\", \"contentController\");'>Subjects</a></li>";
 	
 		foreach ($locations as $key => $value)
 		{

@@ -43,7 +43,8 @@ class RegisterModel extends Model
 		$this->createUser($username, $password);
 
 		// If everthing is well we only want the alert to be returned, not the view itself.
-		$this->returnAlertOnly("alertSuccess", "Registry succesful, you can now log in");
+		echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"$alertType\",\"alertMessage\":\"Registry succesful\"});</script>"]);
+		die();
 	}
 
 	/**

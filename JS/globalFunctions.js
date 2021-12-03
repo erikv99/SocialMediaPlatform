@@ -57,3 +57,41 @@ function rotateImage(imgHandle, degrees)
 		"-o-transform" : "rotate(" + degrees + "deg)"
 	});
 }
+
+// Function refreshes the current page, gets the last called controller from the cookies then calls this controller using the callController function
+function refreshPage() 
+{	
+	console.log("refreshPage called");
+
+	// Getting the data for the controller to call from the cookie
+	var controllerName = this.getCookie("lastControllerName");
+	var placementTag = this.getCookie("lastControllerPlacementTag");
+	var dataAsJson = this.getCookie("lastControllerData");
+	console.log("dataAsJson: " + dataAsJson);
+	// Transforming the json to a obj.
+	var dataObj = JSON.parse(dataAsJson);
+	console.log("dataobj: " + dataObj);
+	// getting the data itself
+	var data = dataObj["data"];
+	console.log("data: " + data);
+
+	// Calling that controller
+	callController(placementTag, controllerName, data);
+}
+
+// Definitely not copied this from https://www.w3schools.com/js/js_cookies.asp
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}

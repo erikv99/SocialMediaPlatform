@@ -37,7 +37,6 @@ class PostPageModel extends Model
 		
 		//  handeling any button action we might need to handle
 		$output = $this->handleButtonAction($postData);
-		logDebug("handleButtonAction output: " . var_export($output,true));
 
 		// If handleButtonAction returned anything this will be the viewtype. (edit is the only option)
 		if ($output != "") 
@@ -194,16 +193,24 @@ class PostPageModel extends Model
 	 */
 	private function saveEditedPost($postData)
 	{	
-		logDebug("saveEditedPost being called");
 		// Making a post obj using the postdata
 		$post = new Post($postData);
 
 		// Getting data from the post request, 5th arg is the data from the textArea (updated content), no need for validation since this function only gets called if the 4th arg (button action) is save. which is only the case when the save button is pressed.
 		$splitResult = explode(",", $_POST['data']);
-		logDebug("splitresult in saveedit : " . var_export($splitResult,true));
 		$editedContent = $splitResult[4];		
-		logDebug("editedContent: " .  var_export($editedContent,true));
+
+		// Saving the updated content.
 		$post->updateContent($editedContent);
+
+		$primarySubject = $postData["PrimarySubject"];
+		$secondarySubject = $postData["SecondarySubject"];
+		$postID = $postData["postID"];
+
+		// Stopping the code and calling the postPageController to refresh the post
+		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject,$secondarySubject,$postID');</script>"]);
+		die();
+		// Refresh here?
 	}
 }
 ?>

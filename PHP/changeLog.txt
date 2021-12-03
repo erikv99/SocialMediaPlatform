@@ -1,35 +1,9 @@
-20-11-2021:
-* All createView() functions inside specific views now get a input and return a value. This is for better error handeling when scaling.
-* Further improvements on the post class.
-* made contentView less of a mess and it should now be more in line with the Single-responsibility principle.
-* Further documentation of so far undocumented or not specifically documented functions.
+- Logo link is now non refresh
+- First 2 locationbar elements are now non refresh
+- Post is now reloaded after editing it.
+- Post is now reloaded after a login / logout
+- Post edit text now has the correct color.
 
-20-11-2021 C2:
-* Removed redundant code.
-* Made sure DB connection is closed everywhere after usage.
-* Made sure every die() has a logError.
-* Made sure every DB exceptions throws a custom DB exception.
-
-21-11-2021
-* Further work on secondarySubjectPage
-* secondary subject titles in subjects/home page now link to secondarySubjectPage
-* secondary subject titles in primarySubjectsPage now link to secondarySubjectPage
-* Updated gitignore
-
-21-11-2021 v2:
-* Fixed a bug causing the page to resize after certain actions
-* Changed the way alertView is getting called by both the registerModel and loginModel. They both now call the controller when only requiring a alert to be shown.
-* Increase in documentation
-* 
++
 
 
-Cursor is now a pointer when hovering hyperlinks
-Edit/Delete buttons are now only displayed when user is the post owner in postPage (Not Finished)
-Post delete button now fully functioning.
-Open/Close db functions moved from model to generalfunctions since other scripts needed access as well and otherwise it had to be declared twice.
-
-
-
-29-11
-Fixed edit not working anymore after recent changes.
-Fixed delete not working anymore

@@ -80,7 +80,7 @@ class PostPageView extends View
 		<div class='postContainer'>
 		<table>
 			<tr class='postContainerHeaderRow'>
-			<td><p class='postTitle'>" . $data["postTitle"] . "edit" . "</p>
+			<td><p class='postTitle'>" . $data["postTitle"] . "</p>
 			<div class='postActionButtons'>
 				<a onclick='callController(\".content\", \"postPageController\", \"$editButtonDataArgument\");'><i class='far fa-trash-alt'></i></a>
 				<a onclick='callController(\".content\", \"postPageController\", \"$saveButtonDataArgument);'><i class='fas fa-check'></i></a>

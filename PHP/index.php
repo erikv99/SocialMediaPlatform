@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="../JS/buttonHandler.js"></script>
 	<script type="text/javascript" src="../JS/onDocumentReady.js"></script>
 	<script type="text/javascript" src="../JS/callController.js"></script>
-
 	<title>Thoughtshare</title>
 </head>
 <body>

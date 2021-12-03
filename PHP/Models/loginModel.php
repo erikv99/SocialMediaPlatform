@@ -37,7 +37,9 @@ class LoginModel extends Model
 		$_SESSION['loggedIn'] = true;
 
 		// If everthing is well we only want the alert to be returned, not the view itself.
-		$this->returnAlertOnly("alertSuccess", "Login succesful");
+		// First we refresh the page (we made get a different view once we logged in) then calling the login succes alert.
+		echo json_encode(["view" => "<script type='text/javascript'>refreshPage(); callController(\".page\", \"alertController\", {\"alertType\":\"alertSuccess\",\"alertMessage\":\"Login succesful\"});</script>"]);
+		die();
 	}
 
 	/**
