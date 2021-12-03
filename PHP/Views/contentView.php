@@ -45,9 +45,11 @@ class ContentView extends View
 					<p class='subjectContainerHeaderTitle'>
 						<a onclick='callController(\".content\", \"primarySubjectController\", \"" . $primarySubject . "\")'><i class='fas fa-book'></i> " . $primarySubject . "</a>
 					</p>
-					<button class='imageButton collapseSubjectButton' onClick='collapseSubject(\".subjectContainer" . $primarySubject . "\");'>
-						<img class='collapseSubjectImg' src='../IMG/collapse.png'>
+					<div class='SCHeaderRowSingleButton'>
+					<button class='imageButton SCHeaderRowButton' onClick='collapseSubject(\".subjectContainer" . $primarySubject . "\");'>
+						<img class='SCHeaderRowButtonImg' src='../IMG/collapse.png'>
 					</button>
+					</div>
 				</td>
 			</tr>
 			" . $secondarySubjectsRowView . "

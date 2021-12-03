@@ -67,19 +67,18 @@ function refreshPage()
 	var controllerName = this.getCookie("lastControllerName");
 	var placementTag = this.getCookie("lastControllerPlacementTag");
 	var dataAsJson = this.getCookie("lastControllerData");
-	console.log("dataAsJson: " + dataAsJson);
+
 	// Transforming the json to a obj.
 	var dataObj = JSON.parse(dataAsJson);
-	console.log("dataobj: " + dataObj);
+
 	// getting the data itself
 	var data = dataObj["data"];
-	console.log("data: " + data);
 
 	// Calling that controller
 	callController(placementTag, controllerName, data);
 }
 
-// Definitely not copied this from https://www.w3schools.com/js/js_cookies.asp
+// Definitely didn't copy this from https://www.w3schools.com/js/js_cookies.asp
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);

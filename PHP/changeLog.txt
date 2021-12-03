@@ -6,4 +6,9 @@
 
 +
 
+- Added a add post image icon button which later will link to the new page for that specific secondary subject.
+- CSS changes which were needed for contentView
+- Fixed collapse not being rotated anymore.
+
++
 

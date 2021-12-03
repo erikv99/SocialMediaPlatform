@@ -14,15 +14,16 @@ function collapseSubject(containerID)
 	// In order for this to work each subjectContainer gets a identifier. which will be given to this function in order to collapse the correct sub-subjects
 	// Checkign if we need to hide or show it (im aware toggle exists but i need this for other purposes as well)
 	// Rotating the collapse img accordingly
+	// NOTE: we also kind of rotate the add post (plus icon img) but since its the same upside down as normal its not noticable so just leaving that as is for now.
 	if($(containerID).find(".subjectContainerSubRow").is(":visible")) 
 	{
 		$(containerID).find(".subjectContainerSubRow").hide();
-		rotateImage($(containerID).find(".collapseSubjectImg"), 180);
+		rotateImage($(containerID).find(".SCHeaderRowButtonImg"), 180);
 	} 
 	else 
 	{
 		$(containerID).find(".subjectContainerSubRow").show();
-		rotateImage($(containerID).find(".collapseSubjectImg"), 0);
+		rotateImage($(containerID).find(".SCHeaderRowButtonImg"), 0);
 	}
 
 }
