@@ -10,8 +10,8 @@ class PostPageView extends View
 		$data = $post->getData();
 		$viewType = $modelOutput["viewType"];
 		$view = "";
+		
 		// Getting the right type of view depending on the viewtype. 
-		logDebug("viewtype: " . var_export($viewType,true));
 		switch($viewType) 
 		{
 			case "normal":
