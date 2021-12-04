@@ -12,6 +12,7 @@ class PostPageModel extends Model
 		*/
 
 		$returnData = [];
+		
 		// Checking if the post var is empty or not. 
 		if ($this->isPostDataEmpty())
 		{

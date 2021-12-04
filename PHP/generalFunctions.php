@@ -62,4 +62,26 @@ function openDBConnection()
     return $conn;
 }
 
+/**
+ * Checks if current site visitor is logged in. 
+ * 
+ * @return bool $isLoggedIn;
+ */
+function isUserLoggedIn() 
+{
+    session_start();
+    
+    // Checking if the loggedIn session variable is set
+    if (isset($_SESSION["loggedIn"]))
+    {
+        // checking if it is set to true
+        if ($_SESSION["loggedIn"] == true) 
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 ?>
