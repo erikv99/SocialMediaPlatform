@@ -35,7 +35,7 @@ class CreatePostModel extends Model
 			// Just a little bit of extra verification, not really needed but whatever.
 			if ($temp[2] == "create") 
 			{
-				this->createNewPost($temp);
+				$this->createNewPost($temp);
 				logDebug("create, temp: " . var_export($temp,true));
 
 			}
@@ -53,8 +53,9 @@ class CreatePostModel extends Model
 
 	private function createNewPost(array $temp)  
 	{
-		// WE NEED OWNER ID????
+		session_start();
 
+		//$postCreatorID = 
 	}	
 }
 ?>

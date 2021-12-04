@@ -31,7 +31,7 @@ class PostPageModel extends Model
 		$postData = $this->getPostData($postID);
 
 		// Checking if the user is the owner of the post
-		if ($this->isUserPostOwner($postData["userName"])) 
+		if ($this->isUserPostOwner($postData["postCreator"])) 
 		{
 			$returnData["viewType"] = "owner";
 		}
@@ -90,7 +90,7 @@ class PostPageModel extends Model
 
 		try
 		{
-			$stmt = $dbConn->prepare("SELECT posts.*, users.userName FROM `posts` INNER JOIN `users` ON posts.postCreatorID = users.userID WHERE postID = ? AND users.userID = posts.postCreatorID ORDER BY posts.postCreationDatetime");
+			$stmt = $dbConn->prepare("SELECT * FROM `posts` WHERE postID = ? ORDER BY postCreationDatetime");
 			$stmt->execute([$postID]);
 			$dbOutput = $stmt->fetch();
 		}

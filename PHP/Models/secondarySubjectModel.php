@@ -51,7 +51,7 @@ class SecondarySubjectModel extends Model
 		$dbConn = openDBConnection();
 		try 
 		{
-			$stmt = $dbConn->prepare("SELECT posts.*, users.userName FROM `posts` INNER JOIN `users` ON posts.postCreatorID = users.userID WHERE SecondarySubject = ? AND users.userID = posts.postCreatorID ORDER BY posts.postCreationDatetime");
+			$stmt = $dbConn->prepare("SELECT * FROM `posts` WHERE SecondarySubject = ? ORDER BY postCreationDatetime");
 			$stmt->execute([$secondarySubject]);
 			$posts = $stmt->fetchAll();
 		}

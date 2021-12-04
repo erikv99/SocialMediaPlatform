@@ -75,8 +75,8 @@ Class Post
 			// No need for error since that is handled inside the isdataset function
 			return "Error";
 		}
-
 		$data = $this::$dbData;
+		logDebug("blabla data : " . var_export($data,true));
 
 		$postPreviewView = 
 		"
@@ -84,7 +84,7 @@ Class Post
 		<tr>
 		<td><p class='postPreviewTitle'><a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "," . $data["SecondarySubject"] . "," . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
 		</tr>
-		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["userName"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
+		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["postCreator"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>
 		";
 

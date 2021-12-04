@@ -43,7 +43,7 @@ class RegisterModel extends Model
 		$this->createUser($username, $password);
 
 		// If everthing is well we only want the alert to be returned, not the view itself.
-		echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"$alertType\",\"alertMessage\":\"Registry succesful\"});</script>"]);
+		echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertSuccess\",\"alertMessage\":\"Registry succesful\"});</script>"]);
 		die();
 	}
 
@@ -70,7 +70,7 @@ class RegisterModel extends Model
 
 		try 
 		{
-			$stmt = $dbConnection->prepare("INSERT INTO users (userName, password, creationDate) VALUES (?, ?, now())");
+			$stmt = $dbConnection->prepare("INSERT INTO users (username, password, creationDate) VALUES (?, ?, now())");
 			$stmt->execute([$username, $hashedPass]); 
 		}
 		catch (PDOException $e) 
