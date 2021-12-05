@@ -31,8 +31,7 @@ class LoginModel extends Model
 			return $returnData;
 		}
 
-		// starting a session and loggin the user in
-		session_start();
+		// loggin the user in in the session
 		$_SESSION['username'] = $username;
 		$_SESSION['loggedIn'] = true;
 

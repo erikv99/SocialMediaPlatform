@@ -36,6 +36,7 @@ function loginCheck()
 			else if(obj.loginButtonsAction == "hide") 
 			{
 				userIsLoggedIn();
+				refreshPage();
 			}
 		},
 		error: function(xhr, status, error) 

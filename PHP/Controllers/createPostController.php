@@ -17,7 +17,7 @@ $controller = new CreatePostController();
 $response = $controller->register();
 
 // Adding the object which need to be removed before adding the current view.
-$objectsToRemove = [".locationBar", ".subjectContainer", ".alert"];
+$objectsToRemove = [".locationBar", ".subjectContainer", ".alert", ".postContainer"];
 $response["objectsToRemove"] = $objectsToRemove;
 
 echo json_encode($response);

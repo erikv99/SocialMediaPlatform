@@ -12,3 +12,10 @@
 
 +
 
+- Fixed a bug where delete wasn't working inside the edit function for a post.
+- Moved the starting of a php session to the controller, allowing the removal if this on other locations and no chance for a duplicate opening of sessions (encoutered warnings)
+- Create post now fully functional.
+- All new post buttons now have the right controller call
+- Fixed a bug which allowed a user to still edit a posts when logging out while in the edit view.
+- Fixed a bug where the post view was not shown when when a user logged out while editing.
+- Removed left over logDebug calls.

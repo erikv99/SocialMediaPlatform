@@ -118,11 +118,9 @@ class PostPageModel extends Model
 		// Checking if a 4th argument is given returning otherwise. (only given when the edit or delete button is pressed)
 		if(!isset($splitResult[3])) 
 		{
-			logDebug("split empty");
 			return "";
 		}
 
-		logDebug("split3 : " . var_export($splitResult[3],true));
 		switch($splitResult[3])
 		{
 			case "none":
@@ -154,8 +152,6 @@ class PostPageModel extends Model
 	 */
 	private function isUserPostOwner(string $postOwner) 
 	{
-		session_start();
-
 		// returning if the session var loggedIn is not set
 		if (!isset($_SESSION["loggedIn"])) { return false; }
 

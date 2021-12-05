@@ -75,8 +75,8 @@ Class Post
 			// No need for error since that is handled inside the isdataset function
 			return "Error";
 		}
+		
 		$data = $this::$dbData;
-		logDebug("blabla data : " . var_export($data,true));
 
 		$postPreviewView = 
 		"

@@ -53,9 +53,9 @@ abstract class Model
 	}
 
 	/**
+	 * Function checks if the postFormData is empty or not, intended for login/register only.
 	 * 
-	 * 
-	 * 
+	 * $return bool isPostFormDataEmpty
 	 */
 	protected function isPostFormDataEmpty() 
 	{

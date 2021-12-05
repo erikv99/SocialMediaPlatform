@@ -91,11 +91,17 @@ function saveCallControllerInfo(placeMentTag, controllerName, data)
 	"loginController",
 	"registerController",
 	"alertController",
+	"createPostController"
 	];
 	
 	// Checking if the controller name is one of the excluded controllers, returning if this is the case
 	if (excludedControllers.includes(controllerName)) { return; }
 
+	// If its the post page controller we ONLY want to save it if the arguments dont contain the word EDIT
+	// Reason is that if its edit and someone logs out, the page will be refreshed, if the call containing edit gets saved this is the view which is called.
+	// in simpler terms if user logges out while in edit mode he will still get a edit view if we save that controller call
+	if (controllerName == "postPageController" && data["data"].includes("edit")) { return; }
+	
 	// Saving the current controller call in a cookie for later usage if needed.
 	document.cookie = "lastControllerPlacementTag=" + placeMentTag;
 	document.cookie = "lastControllerName=" + controllerName;

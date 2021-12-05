@@ -16,6 +16,8 @@ class Controller
 	 */
 	public function register() 
 	{
+		session_start();
+		
 		// Executing the logic in the model
 		$output = $this->model->execute();
 

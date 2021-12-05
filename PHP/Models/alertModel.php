@@ -21,8 +21,6 @@ Class AlertModel
 				}
 			}
 		}
- 
- 		logDebug("alertModel returnData = " . var_export($returnData,true));
 		return $returnData;
 	}
 }

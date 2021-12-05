@@ -36,7 +36,6 @@ class CreatePostModel extends Model
 			if ($temp[2] == "create") 
 			{
 				$this->createNewPost($temp);
-				logDebug("create, temp: " . var_export($temp,true));
 
 			}
 		}
@@ -51,11 +50,53 @@ class CreatePostModel extends Model
 		return $returnData;
 	}
 
+	/**
+	 * Actually creates the new post inside the DB. 
+	 * 
+	 * Since a check if the user is logged in was performed earlier we wont do it again here.
+	 * 
+	 * @param array $temp
+	 */
 	private function createNewPost(array $temp)  
 	{
-		session_start();
+		$postCreator = $_SESSION['username'];
+		$currentDate = new DateTime();
+		$currentDate = $currentDate->format('Y-m-d H:i:s');
+		$dbConn = openDBConnection();
+		$postTitle = $temp[3];
+		$postContent = $temp[4];
+		$primarySubject = $temp[0];
+		$secondarySubject = $temp[1];
 
-		//$postCreatorID = 
+		// Creating a new post
+		try
+		{
+			$stmt = $dbConn->prepare("INSERT INTO posts (postCreator, postCreationDatetime, postTitle, postContent, PrimarySubject, SecondarySubject) VALUES (?, ?, ?, ?, ?, ?)");
+			$stmt->execute([$postCreator, $currentDate, $postTitle, $postContent, $primarySubject, $secondarySubject]);
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+		}
+
+		// Getting the new post ID to show it to the user.
+		try
+		{
+			$stmt = $dbConn->prepare("SELECT postID FROM posts WHERE postCreationDatetime = ? AND postCreator = ?");
+			$stmt->execute([$currentDate, $postCreator]);
+			$dbOutput = $stmt->fetch();
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+		}
+
+		$postID = $dbOutput["postID"];
+		closeDBConnection($dbConn);
+		
+		// Displaying the just created post by calling the postcontroller. 
+		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject,$secondarySubject,$postID');</script>"]);
+		die();
 	}	
 }
 ?>

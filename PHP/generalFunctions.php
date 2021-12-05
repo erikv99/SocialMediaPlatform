@@ -69,8 +69,6 @@ function openDBConnection()
  */
 function isUserLoggedIn() 
 {
-    session_start();
-    
     // Checking if the loggedIn session variable is set
     if (isset($_SESSION["loggedIn"]))
     {
