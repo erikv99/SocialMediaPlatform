@@ -184,7 +184,8 @@ class PostPageModel extends Model
 		die();
 	}
 
-	/** Handles saving the edited content of the post.
+	/** 
+	 * Handles saving the edited content of the post.
 	 * 
 	 *	@param array $postData
 	 */
@@ -197,6 +198,16 @@ class PostPageModel extends Model
 		$splitResult = explode(",", $_POST['data']);
 		$editedContent = $splitResult[4];		
 
+		logDebug("editedContent: " . var_export($editedContent,true));
+
+		// Checking if the editedContent contains atleast 1 letter using regex (dont want empty content) (checking length wont be enough since spaces count for the length as well.)
+		if (!preg_match('/[A-Za-z]/', $editedContent))
+		{
+			echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertError\",\"alertMessage\":\"Content must atleast contain 1 letter\"});</script>"]);
+			die();
+		}
+
+		logDebug("shouldnt reach this friend.");
 		// Saving the updated content.
 		$post->updateContent($editedContent);
 
@@ -207,7 +218,6 @@ class PostPageModel extends Model
 		// Stopping the code and calling the postPageController to refresh the post
 		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject,$secondarySubject,$postID');</script>"]);
 		die();
-		// Refresh here?
 	}
 }
 ?>

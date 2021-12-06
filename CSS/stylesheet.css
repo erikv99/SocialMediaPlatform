@@ -219,7 +219,7 @@ a:hover
   color: rgba(138, 109, 59, 1);
 }
 
-.alert.alertDanger {
+.alert.alertError {
   background-color: rgba(248, 215, 218, 1);
   border-color: rgba(220, 53, 69, 1);
   color: rgba(114, 28, 36,1);

@@ -27,7 +27,7 @@ class RegisterModel extends Model
 		{
 
 			$returnData["message"] = "Passwords do not match";
-			$returnData["messageType"] = "alertDanger";
+			$returnData["messageType"] = "alertError";
 			return $returnData;
 		}
 
@@ -35,7 +35,7 @@ class RegisterModel extends Model
 		if ($this->usernameExists($username)) 
 		{
 			$returnData["message"] = "Username is taken, please try again";
-			$returnData["messageType"] = "alertDanger";
+			$returnData["messageType"] = "alertError";
 			return $returnData;
 		}
 

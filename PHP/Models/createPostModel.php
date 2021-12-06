@@ -63,10 +63,13 @@ class CreatePostModel extends Model
 		$currentDate = new DateTime();
 		$currentDate = $currentDate->format('Y-m-d H:i:s');
 		$dbConn = openDBConnection();
-		$postTitle = $temp[3];
+		$postTitle = ucfirst($temp[3]);
 		$postContent = $temp[4];
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
+
+		// Checking if the title or content isn't empty
+		$this->validateInput($postTitle, $postContent);
 
 		// Creating a new post
 		try
@@ -97,6 +100,31 @@ class CreatePostModel extends Model
 		// Displaying the just created post by calling the postcontroller. 
 		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject,$secondarySubject,$postID');</script>"]);
 		die();
-	}	
+	}
+
+	/**
+	 * Checks if the title and content input has atleast 1 char each.
+	 * 
+	 * @param string $title
+	 * @param string $content
+	 */
+	private function validateInput(string $title, string $content) 
+	{
+		// Checking if the title contains atleast 1 normal letter
+		if (!preg_match('/[A-Za-z]/', $title))
+		{
+			echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertError\",\"alertMessage\":\"Title must atleast contain 1 letter\"});</script>"]);
+			die();
+		}
+
+		// Checking if the content contains atleast 1 normal letter
+		if (!preg_match('/[A-Za-z]/', $content))
+		{
+			echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertError\",\"alertMessage\":\"Content must atleast contain 1 letter\"});</script>"]);
+			die();
+		}
+
+
+	}
 }
 ?>

@@ -20,9 +20,9 @@ class AlertView
 		}
 
 		// If alertType is not valid we will return this as the error
-		if ($alertType != "alertDanger" && $alertType != "alertInfo" && $alertType != "alertSuccess" && $alertType != "alertWarning") 
+		if ($alertType != "alertError" && $alertType != "alertInfo" && $alertType != "alertSuccess" && $alertType != "alertWarning") 
 		{
-			$alertType = "alertDanger";
+			$alertType = "alertError";
 		}
 		
 		$view = 

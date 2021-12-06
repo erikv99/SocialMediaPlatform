@@ -19,3 +19,10 @@
 - Fixed a bug which allowed a user to still edit a posts when logging out while in the edit view.
 - Fixed a bug where the post view was not shown when when a user logged out while editing.
 - Removed left over logDebug calls.
+
++
+
+- First letter of a post title will now automatically be capitalized.
+- Validation to check if the content is not empty when editing a post
+- Validation to check if the content is not empty when creating a new post
+- Validation to check if the title is not empty when creating a new post
