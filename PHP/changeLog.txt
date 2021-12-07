@@ -26,3 +26,8 @@
 - Validation to check if the content is not empty when editing a post
 - Validation to check if the content is not empty when creating a new post
 - Validation to check if the title is not empty when creating a new post
+
++
+
+- Html tags are now escaped when posts are made or edited, preventing html/script injections.
+- Started working on the subject proposal page

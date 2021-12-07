@@ -63,8 +63,8 @@ class CreatePostModel extends Model
 		$currentDate = new DateTime();
 		$currentDate = $currentDate->format('Y-m-d H:i:s');
 		$dbConn = openDBConnection();
-		$postTitle = ucfirst($temp[3]);
-		$postContent = $temp[4];
+		$postTitle = htmlentities(ucfirst($temp[3]));
+		$postContent = htmlentities($temp[4]);
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 

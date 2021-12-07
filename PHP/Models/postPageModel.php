@@ -196,9 +196,7 @@ class PostPageModel extends Model
 
 		// Getting data from the post request, 5th arg is the data from the textArea (updated content), no need for validation since this function only gets called if the 4th arg (button action) is save. which is only the case when the save button is pressed.
 		$splitResult = explode(",", $_POST['data']);
-		$editedContent = $splitResult[4];		
-
-		logDebug("editedContent: " . var_export($editedContent,true));
+		$editedContent = htmlentities($splitResult[4]);		
 
 		// Checking if the editedContent contains atleast 1 letter using regex (dont want empty content) (checking length wont be enough since spaces count for the length as well.)
 		if (!preg_match('/[A-Za-z]/', $editedContent))
@@ -207,7 +205,6 @@ class PostPageModel extends Model
 			die();
 		}
 
-		logDebug("shouldnt reach this friend.");
 		// Saving the updated content.
 		$post->updateContent($editedContent);
 
