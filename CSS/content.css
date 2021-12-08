@@ -316,7 +316,7 @@
 {
 	position: relative;
 	left: 0.5em;
-	top: 0.45em;
+	top: 0.5em;
 	vertical-align: top;
 }
 
@@ -331,4 +331,21 @@
 	resize: none;
 	font-size: inherit;
 	font-family: inherit;
+	margin-top: 0px;
+}
+
+.proposalTextArea 
+{
+	margin-bottom: 0.7em;
+}
+
+.proposalListBox 
+{
+	position: relative;
+	left: 0.7em;
+	top: 0.5em;
+	border: 2px solid #394263;
+	background: none;
+	border-radius: 10%;
+	margin-bottom: 0.3em;
 }

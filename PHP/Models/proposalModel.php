@@ -7,6 +7,12 @@ class ProposalModel extends Model
 	{
 		$returnData = [];
 
+		logDebug("POST: " . var_export($_POST,true));
+		
+		// Getting the primary subjects, needed in the view.
+		$primarySubjects = $this->getPrimarySubjects();
+		$returnData["primarySubjects"] = $primarySubjects;
+
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
 		[

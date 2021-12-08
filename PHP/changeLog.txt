@@ -31,3 +31,10 @@
 
 - Html tags are now escaped when posts are made or edited, preventing html/script injections.
 - Started working on the subject proposal page
+
++ 
+
+- getPrimarySubjects and getSecondarySubjects moved to the model instead of specific models since there used more then once.
+- Proposalpage layout now finished.
+- Proposal data will now be send to model when clicking the propose button.
+
