@@ -12,13 +12,6 @@ class PostPageModel extends Model
 		*/
 
 		$returnData = [];
-		
-		// Checking if the post var is empty or not. 
-		if ($this->isPostDataEmpty())
-		{
-			return $returnData;
-		}
-
 		$returnData["viewType"] = "normal";
 		
 		// Getting the data from the request and putting it in variables for easier usage.
@@ -201,8 +194,7 @@ class PostPageModel extends Model
 		// Checking if the editedContent contains atleast 1 letter using regex (dont want empty content) (checking length wont be enough since spaces count for the length as well.)
 		if (!preg_match('/[A-Za-z]/', $editedContent))
 		{
-			echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertError\",\"alertMessage\":\"Content must atleast contain 1 letter\"});</script>"]);
-			die();
+			$this->dieWithAlert("alertError", "Content must atleast contain 1 letter");
 		}
 
 		// Saving the updated content.

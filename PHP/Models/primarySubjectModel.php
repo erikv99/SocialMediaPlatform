@@ -9,12 +9,6 @@ class PrimarySubjectModel extends Model
 	{
 		$returnData = [];
 
-		// Checking if the post var is empty or not. 
-		if ($this->isPostDataEmpty())
-		{
-			return $returnData;
-		}
-
 		// Getting the values that we're send with the ajax request
 		$subject = $_POST['data'];
 

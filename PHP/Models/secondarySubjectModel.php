@@ -9,12 +9,6 @@ class SecondarySubjectModel extends Model
 	{
 		$returnData = [];
 
-		// Checking if the post var is empty or not. 
-		if ($this->isPostDataEmpty())
-		{
-			return $returnData;
-		}
-
 		// Splitting the post data on the comma to get both the primary and secondary subject
 		$temp = explode(",", $_POST['data']);
 		$primarySubject = $temp[0];

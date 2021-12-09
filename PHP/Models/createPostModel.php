@@ -7,17 +7,10 @@ class CreatePostModel extends Model
 	{
 		$returnData = [];
 
-		// Checking if the post var is empty or not. 
-		if ($this->isPostDataEmpty())
-		{
-			return $returnData;
-		}
-
 		// Checking if user is logged in, else returning with a alert informing the user
 		if (!isUserLoggedIn()) 
 		{
-			echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertInfo\",\"alertMessage\":\"Must be logged in to create a new post\"});</script>"]);
-			die();
+			$this->dieWithAlert("alertInfo", "Must be logged in to create a new post");
 		}
 
 		// Getting the primary and secondary subjects from the data given
@@ -113,18 +106,14 @@ class CreatePostModel extends Model
 		// Checking if the title contains atleast 1 normal letter
 		if (!preg_match('/[A-Za-z]/', $title))
 		{
-			echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertError\",\"alertMessage\":\"Title must atleast contain 1 letter\"});</script>"]);
-			die();
+			$this->dieWithAlert("alertError", "Title must atleast contain 1 letter");
 		}
 
 		// Checking if the content contains atleast 1 normal letter
 		if (!preg_match('/[A-Za-z]/', $content))
 		{
-			echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertError\",\"alertMessage\":\"Content must atleast contain 1 letter\"});</script>"]);
-			die();
+			$this->dieWithAlert("alertError", "Content must atleast contain 1 letter");
 		}
-
-
 	}
 }
 ?>

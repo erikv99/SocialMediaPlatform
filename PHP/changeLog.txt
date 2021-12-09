@@ -38,3 +38,13 @@
 - Proposalpage layout now finished.
 - Proposal data will now be send to model when clicking the propose button.
 
++ 
+
+- Removed isPostDataEmtpy and isPostFormDataEmpty functions since their use was not needed/used properely
+- Replaced isPostFormDataEmpty with isLoginDataSet, which is used for both the register and login models.
+- Made a function inside the model.php for stopping the code and exiting with a alert. dieWithAlert()
+- Replaced individual die and alert with the function dieWithAlert()
+- Proposal page now done (not including admin functionality)
+
++
+

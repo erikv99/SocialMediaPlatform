@@ -9,13 +9,13 @@ class RegisterModel extends Model
 	{
 		$returnData = [];
 
+		if (!$this->isLoginDataSet()) 
+		{ 
+			return $returnData; 
+		}
+
 		// Making sure we're not getting a extra location bar
 		$returnData["locations"] = ["noLocationBar" => true,];
-				
-		if ($this->isPostFormDataEmpty()) 
-		{
-			return $returnData;
-		}	
 
 		// Getting the values from the form
 		$username = $_POST["username"];
@@ -43,8 +43,7 @@ class RegisterModel extends Model
 		$this->createUser($username, $password);
 
 		// If everthing is well we only want the alert to be returned, not the view itself.
-		echo json_encode(["view" => "<script type='text/javascript'>callController(\".page\", \"alertController\", {\"alertType\":\"alertSuccess\",\"alertMessage\":\"Registry succesful\"});</script>"]);
-		die();
+		$this->dieWithAlert("alertSuccess", "Registry succesful");
 	}
 
 	/**

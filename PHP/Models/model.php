@@ -42,28 +42,6 @@ abstract class Model
 	}
 
 	/**
-	 * Function which checks if the data variable in the post request is empty or not. 
-	 *
-	 * @return bool isPostDataEmpty
-	 */
-	protected function isPostDataEmpty() 
-	{
-		$returnVal = $_POST["data"] == "" ? true : false;
-		return $returnVal;
-	}
-
-	/**
-	 * Function checks if the postFormData is empty or not, intended for login/register only.
-	 * 
-	 * $return bool isPostFormDataEmpty
-	 */
-	protected function isPostFormDataEmpty() 
-	{
-		$returnVal = !isset($_POST["username"]) ? true : false;
-		return $returnVal;
-	}
-
-	/**
 	 * Function to get all primary subjects (no duplicates)
 	 * 
 	 * @return array $primarySubjects
@@ -132,6 +110,37 @@ abstract class Model
 		}
 
 		return $secondarySubjects;
+	}
+
+	/**
+	 * Checks if the login data in the post is set.
+	 * 
+	 * @return bool $isLoginDataSet
+	 */
+	protected function isLoginDataSet() 
+	{
+		if (!isset($_POST["username"])) { return false; }
+		if (!isset($_POST["password"])) { return false; }
+		return true;
+	}
+
+	/**
+	 * Will stop running the code and exit with a alert
+	 * 
+	 * @param string $alertType
+	 * @param string $alertMessage
+	 * @param bool $refreshPageBeforeAlert (optional)
+	 */
+	protected function dieWithAlert(string $alertType, string $alertMessage, bool $refreshPageBeforeAlert = false) 
+	{	
+		$refreshView = "";
+
+		if ($refreshPageBeforeAlert) 
+		{
+			$refreshView = "refreshPage(); ";
+		}
+    	echo json_encode(["view" => "<script type='text/javascript'>$refreshView callController(\".page\", \"alertController\", {\"alertType\":\"$alertType\",\"alertMessage\":\"$alertMessage\"});</script>"]);
+    	die();
 	}
 }
 ?>
