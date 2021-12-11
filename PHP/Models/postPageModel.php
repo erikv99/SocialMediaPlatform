@@ -22,9 +22,12 @@ class PostPageModel extends Model
 
 		// Getting the json array containing all the data of that post.
 		$postData = $this->getPostData($postID);
+	
+		$userIsAdmin = $this->isUserAdmin();
+		$userIsPostOwner = $this->isUserPostOwner($postData["postCreator"]);
 
-		// Checking if the user is the owner of the post
-		if ($this->isUserPostOwner($postData["postCreator"])) 
+		// Checking if the user is the owner of the post or an admin
+		if ($userIsPostOwner or $userIsAdmin) 
 		{
 			$returnData["viewType"] = "owner";
 		}
@@ -48,8 +51,8 @@ class PostPageModel extends Model
 		$returnData["locations"] = 
 		[
 			$primarySubject => "callController('.content', 'primarySubjectController', '$primarySubject')",
-			$secondarySubject => "callController('.content', 'secondarySubjectController', '$primarySubject,$secondarySubject')",
-			"PostID: " . $postID => "callController('.content', 'postPageController', '$primarySubject,$secondarySubject,$postID')"
+			$secondarySubject => "callController('.content', 'secondarySubjectController', '$primarySubject|$secondarySubject')",
+			"PostID: " . $postID => "callController('.content', 'postPageController', '$primarySubject|$secondarySubject|$postID')"
 		];
 
 		return $returnData;
@@ -63,7 +66,7 @@ class PostPageModel extends Model
 	private function getRequestData() 
 	{
 		// Splitting the string on the comma, assigning the vals to a array
-		$temp = explode(",", $_POST['data']);
+		$temp = explode("|", $_POST['data']);
 		$postRequestData["primarySubject"] = $temp[0];
 		$postRequestData["secondarySubject"] = $temp[1];
 		$postRequestData["postID"] = $temp[2];	
@@ -105,9 +108,8 @@ class PostPageModel extends Model
 	private function handleButtonAction (array $postData)
 	{
 		// Getting the data from the post request splitted on each comma
-		$splitResult = explode(",", $_POST['data']);
+		$splitResult = explode("|", $_POST['data']);
 	
-
 		// Checking if a 4th argument is given returning otherwise. (only given when the edit or delete button is pressed)
 		if(!isset($splitResult[3])) 
 		{
@@ -173,7 +175,7 @@ class PostPageModel extends Model
 		$post->delete();
 
 		// Stopping	the code and giving back JS that will call the secondarySubjectController and redirect the user to the secondarysubject that the just deleted post was in
-		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'secondarySubjectController', '$primarySubject,$secondarySubject');</script>"]);
+		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'secondarySubjectController', '$primarySubject|$secondarySubject');</script>"]);
 		die();
 	}
 
@@ -188,7 +190,7 @@ class PostPageModel extends Model
 		$post = new Post($postData);
 
 		// Getting data from the post request, 5th arg is the data from the textArea (updated content), no need for validation since this function only gets called if the 4th arg (button action) is save. which is only the case when the save button is pressed.
-		$splitResult = explode(",", $_POST['data']);
+		$splitResult = explode("|", $_POST['data']);
 		$editedContent = htmlentities($splitResult[4]);		
 
 		// Checking if the editedContent contains atleast 1 letter using regex (dont want empty content) (checking length wont be enough since spaces count for the length as well.)
@@ -205,7 +207,7 @@ class PostPageModel extends Model
 		$postID = $postData["postID"];
 
 		// Stopping the code and calling the postPageController to refresh the post
-		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject,$secondarySubject,$postID');</script>"]);
+		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject|$secondarySubject|$postID');</script>"]);
 		die();
 	}
 }

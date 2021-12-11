@@ -30,10 +30,14 @@ class LoginModel extends Model
 			return $returnData;
 		}
 
+		// Checking if the user is a admin or not
+		$userIsAdmin = $this->userIsAdminCheck($username);
+
 		// loggin the user in in the session
 		$_SESSION['username'] = $username;
+		
 		$_SESSION['loggedIn'] = true;
-
+		
 		// If everthing is well we only want the alert to be returned, not the view itself.
 		$this->dieWithAlert("alertSuccess", "Login succesful", true);
 	}
@@ -69,6 +73,35 @@ class LoginModel extends Model
 		// Checking if the password matches the hashed version then returning the result.
 		$passwordCorrect = password_verify($password, $hashedPassword);
 		return $passwordCorrect;
+	}
+
+	/**
+	 * Checks the db if the user is a admin. if so setting the session var (used in model::isUserAdmin)
+	 * 
+	 * @param string $username
+	 */
+	private function userIsAdminCheck(string $username) 
+	{
+		// Opening a DB connection and checking if the given username is present in our data table
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("SELECT isAdmin FROM users WHERE userName = ?");
+			$stmt->execute([$username]);
+			$output = $stmt->fetch()["isAdmin"];
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+		}
+
+		// Checking if the db output for isAdmin is 1, if so returning true else returning false.
+		$userIsAdmin = ($output == "1") ? true : false;
+		$_SESSION['isAdmin'] = $userIsAdmin;
+
+		// Closing the DB connection
+		closeDBConnection($dbConnection);
 	}
 }
 

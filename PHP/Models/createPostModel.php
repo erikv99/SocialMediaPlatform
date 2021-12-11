@@ -8,13 +8,13 @@ class CreatePostModel extends Model
 		$returnData = [];
 
 		// Checking if user is logged in, else returning with a alert informing the user
-		if (!isUserLoggedIn()) 
+		if (!$this->isUserLoggedIn()) 
 		{
 			$this->dieWithAlert("alertInfo", "Must be logged in to create a new post");
 		}
 
 		// Getting the primary and secondary subjects from the data given
-		$temp = explode(",", $_POST['data']);
+		$temp = explode("|", $_POST['data']);
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 
@@ -36,8 +36,8 @@ class CreatePostModel extends Model
 		$returnData["locations"] = 
 		[
 			$primarySubject => "callController('.content', 'primarySubjectController', '$primarySubject')",
-			$secondarySubject => "callController('.content', 'secondarySubjectController', '$primarySubject,$secondarySubject')",
-			"Create post" => "callController('.content', 'createPostController', '$primarySubject,$secondarySubject')"
+			$secondarySubject => "callController('.content', 'secondarySubjectController', '$primarySubject|$secondarySubject')",
+			"Create post" => "callController('.content', 'createPostController', '$primarySubject|$secondarySubject')"
 		];
 	
 		return $returnData;
@@ -91,7 +91,7 @@ class CreatePostModel extends Model
 		closeDBConnection($dbConn);
 		
 		// Displaying the just created post by calling the postcontroller. 
-		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject,$secondarySubject,$postID');</script>"]);
+		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject|$secondarySubject|$postID');</script>"]);
 		die();
 	}
 

@@ -10,7 +10,7 @@ class SecondarySubjectModel extends Model
 		$returnData = [];
 
 		// Splitting the post data on the comma to get both the primary and secondary subject
-		$temp = explode(",", $_POST['data']);
+		$temp = explode("|", $_POST['data']);
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 		unset($temp);
@@ -19,7 +19,7 @@ class SecondarySubjectModel extends Model
 		$returnData["locations"] = 
 		[
 			$primarySubject => "callController('.content', 'PrimarySubjectController', '$primarySubject')",
-			$secondarySubject => "callController('.content', 'SecondarySubjectController', '$primarySubject,$secondarySubject')"
+			$secondarySubject => "callController('.content', 'SecondarySubjectController', '$primarySubject|$secondarySubject')"
 		];
 
 		// Getting the last x posts to preview.

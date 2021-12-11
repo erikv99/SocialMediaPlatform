@@ -77,7 +77,7 @@ class ContentView extends View
 	{
 		$view = 
 		"<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'>
-				<p class='subjectContainerSubTitle'><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubject . "\")'> " . $secondarySubject . "</a></p>
+				<p class='subjectContainerSubTitle'><a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "|" . $secondarySubject . "\")'> " . $secondarySubject . "</a></p>
 			</td>
 		</tr>";
 

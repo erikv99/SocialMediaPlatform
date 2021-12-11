@@ -8,8 +8,8 @@ class ProposalView extends View
 	{
 		$primarySubjectOptions = $this->getPrimarySubjectsOptionsView($modelOutput["primarySubjects"]);
 		
-		$proposePrimaryDataArg =  "proposePrimary,\" + document.getElementById(\"primProposalTitle\").value + \",\" + document.getElementById(\"primProposalReason\").value";
-		$proposeSecondaryDataArg = "proposeSecondary,\" + document.getElementById(\"secProposalTitle\").value + \",\" + document.getElementById(\"secProposalReason\").value + \",\" + document.getElementById(\"selectPrimarySubject\").options[document.getElementById(\"selectPrimarySubject\").selectedIndex].value";
+		$proposePrimaryDataArg =  "proposePrimary|\" + document.getElementById(\"primProposalTitle\").value + \"|\" + document.getElementById(\"primProposalReason\").value";
+		$proposeSecondaryDataArg = "proposeSecondary|\" + document.getElementById(\"secProposalTitle\").value + \"|\" + document.getElementById(\"secProposalReason\").value + \"|\" + document.getElementById(\"selectPrimarySubject\").options[document.getElementById(\"selectPrimarySubject\").selectedIndex].value";
 
 		$view = "
 		<div class='subjectContainer'>
@@ -51,6 +51,13 @@ class ProposalView extends View
 		</div>
 		";
 
+		// Checking if viewType requested is 'admin'
+		if ($modelOutput["viewType"] == "admin") 
+		{
+			// Adding the admin part of the view to the regular part.
+			$view .= $this->getAdminView();
+		}
+
 		return $view;
 	}
 
@@ -80,5 +87,112 @@ class ProposalView extends View
 
 		return $view;
 	}
+
+	/**
+	 * Returns the part of the view that is for admins only 
+	 * 
+	 * @return string $adminView
+	 */
+	private function getAdminView() : string 
+	{
+		
+		//$proposePrimaryDataArg =  "proposePrimary,\" + document.getElementById(\"primProposalTitle\").value + \",\" + document.getElementById(\"primProposalReason\").value";
+		//$proposeSecondaryDataArg = "proposeSecondary,\" + document.getElementById(\"secProposalTitle\").value + \",\" + document.getElementById(\"secProposalReason\").value + \",\" + document.getElementById(\"selectPrimarySubject\").options[document.getElementById(\"selectPrimarySubject\").selectedIndex].value";
+
+		$primaryProposals = $this->getPrimaryProposals();
+		$secondaryProposals = $this->getSecondaryProposals();
+
+		$view = "
+		<div class='subjectContainer'>
+		<table>
+			<tr class='subjectContainerHeaderRow'><td>
+			<div class='SCHeaderRowSingleButton'>
+				<button class='imageButton SCHeaderRowButton' onClick='collapsePrimaryProposals();'>
+					<img class='SCHeaderRowButtonImg' src='../IMG/collapse.png'>
+				</button>
+			</div>
+			<p class='postTitle'>Primary subject proposals</p>";
+
+
+		// Looping thru all the primary proposals
+		for ($i = 0; $i < count($primaryProposals); $i++) 
+		{
+			// Formatting the proposal date.
+			$proposalDate = date_format(date_create($primaryProposals[$i]["proposalDate"]), "d-m-y");
+			
+			$view .= "
+			</td></tr>
+			<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'>
+			<div class='proposalReview'>
+			<p>Proposed subject: <b>" . $primaryProposals[$i]["proposalTitle"] . "</b></p>
+			<p>Proposed by user <b>" . $primaryProposals[$i]["proposalCreator"] . "</b> on " . $proposalDate . "</p>
+			<p>Reason: " . $primaryProposals[$i]["proposalReason"] . "</p>
+			</div></td></tr>
+			";
+		}
+
+		$view .= "</table></div>";
+
+		return $view;
+	}
+
+	/**
+	 * Gets all the primary proposals from the database
+	 * 
+	 * @return array $primaryProposals
+	 */
+	private function getPrimaryProposals() 
+	{
+		$output = [];
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("SELECT * FROM primaryproposals");
+			$stmt->execute();
+			$output = $stmt->fetchAll();
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+
+		}
+
+		logDebug("prim output: " . var_export($output,true));
+
+		// Closing the DB connection and returning the result
+		closeDBConnection($dbConnection);
+		return $output;
+	}
+
+	/**
+	 * Gets all the secondary proposals from the database
+	 * 
+	 * @return array $secondaryProposals
+	 */
+	private function getSecondaryProposals() 
+	{
+		$output = [];
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("SELECT * FROM secondaryproposals");
+			$stmt->execute();
+			$output = $stmt->fetchAll();
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+
+		}
+
+		logDebug("sec output: " . var_export($output,true));
+
+		// Closing the DB connection and returning the result
+		closeDBConnection($dbConnection);
+		return $output;
+	}
+
 }
 ?>

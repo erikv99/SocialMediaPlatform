@@ -16,7 +16,7 @@ function callControllerFromForm(placeMentTag, controllerName, formID)
 function sendAjaxRequest(placeMentTag, controllerName, data) 
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
-	
+
 	// Handeling the actions regarding a eventual refresh page. we need to save some info in some cases
 	this.saveCallControllerInfo(placeMentTag, controllerName, data);
 
@@ -91,7 +91,8 @@ function saveCallControllerInfo(placeMentTag, controllerName, data)
 	"loginController",
 	"registerController",
 	"alertController",
-	"createPostController"
+	"createPostController",
+	"proposalController"
 	];
 	
 	// Checking if the controller name is one of the excluded controllers, returning if this is the case

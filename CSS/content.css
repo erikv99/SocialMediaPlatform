@@ -167,7 +167,8 @@
 .SCHeaderRowDoubleButton 
 {
 	float: right;
-	width: 5%;
+	width: 4.5%;
+	margin-right: 1em;
 }
 
 .SCHeaderRowSingleButton 
@@ -318,6 +319,7 @@
 	left: 0.5em;
 	top: 0.5em;
 	vertical-align: top;
+	color:  #394263;
 }
 
 .proposalInput 
@@ -332,6 +334,7 @@
 	font-size: inherit;
 	font-family: inherit;
 	margin-top: 0px;
+
 }
 
 .proposalTextArea 
@@ -348,4 +351,16 @@
 	background: none;
 	border-radius: 10%;
 	margin-bottom: 0.3em;
+}
+
+.proposalReview 
+{
+	border-bottom: 1.5px dashed #394263;
+	padding-left: 0.4em;
+	color:  #394263;
+}
+
+.proposalReview p 
+{
+	margin: 0.3em;
 }

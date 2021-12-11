@@ -22,7 +22,7 @@ class SecondarySubjectView extends View
 			<tr class='subjectContainerHeaderRow'>
 			<td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i> " . $modelOutput["secondarySubject"] . "</p>
 			<div class='SCHeaderRowSingleButton'>
-				<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"" . $modelOutput["primarySubject"] . "," . $modelOutput["secondarySubject"] . "\")'>
+				<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"" . $modelOutput["primarySubject"] . "|" . $modelOutput["secondarySubject"] . "\")'>
 					<img class='SCHeaderRowButtonImg' src='../IMG/add.png'>
 				</button>
 			</div></td>

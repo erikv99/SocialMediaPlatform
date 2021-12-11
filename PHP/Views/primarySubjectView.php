@@ -37,9 +37,9 @@ class PrimarySubjectView extends View
 			<div class='subjectContainer previewPost" . $secondarySubjects[$i] . "'>
 				<table>
 					<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i>
-					<a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "," . $secondarySubjects[$i] . "\")'> " . $secondarySubjects[$i] . "</a></p>
+					<a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "|" . $secondarySubjects[$i] . "\")'> " . $secondarySubjects[$i] . "</a></p>
 					<div class='SCHeaderRowDoubleButton'>
-						<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"" . $primarySubject . "," . $secondarySubjects[$i] . "\")'>
+						<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"" . $primarySubject . "|" . $secondarySubjects[$i] . "\")'>
 							<img class='SCHeaderRowButtonImg' src='../IMG/add.png'>
 						</button>
 						<button class='imageButton SCHeaderRowButton' onClick='collapseSubject(\".previewPost" . $secondarySubjects[$i] . "\");'>

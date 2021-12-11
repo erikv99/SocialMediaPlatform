@@ -16,7 +16,7 @@ abstract class Model
 	 * 
 	 * @return bool doesUserExist
 	 */
-	protected function usernameExists(string $username) 
+	protected function usernameExists(string $username) : bool
 	{
 		// Opening a DB connection and checking if the given username is present in our data table
 		$dbConnection = openDBConnection();
@@ -39,6 +39,44 @@ abstract class Model
 		// Closing the DB connection and returning the result
 		closeDBConnection($dbConnection);
 		return $doesUserExist;
+	}
+
+	/**
+	 * Checks if user is logged in or not.
+	 * 
+	 * @return bool $isLoggedIn
+	 */
+	protected function isUserLoggedIn() 
+	{
+		// Checking if the loggedIn session variable is set
+		if (isset($_SESSION["loggedIn"]))
+		{
+		    // checking if it is set to true
+		    if ($_SESSION["loggedIn"] == true) 
+		    {
+		        return true;
+		    }
+		}
+    	return false;
+	}
+
+	/**
+	 * Checks if the user is an admin or not
+	 * 
+	 * @return bool $isAdmin
+	 */
+	protected function isUserAdmin() : bool
+	{	
+		// Checking if the isAdmin var is set
+		if (isset($_SESSION['isAdmin'])) 
+		{
+			// Checking if it is set to true
+			if ($_SESSION['isAdmin'] == true) 
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**

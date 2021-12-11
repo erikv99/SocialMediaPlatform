@@ -48,3 +48,10 @@
 
 +
 
+- Fixed user logging out while on proposal page still granting them access to proposals.
+- Admins can now delete or edit anyones post.
+- isUserLoggedIn function moved from generalFunctions to model class.
+- Fixed a massive bug where comma's couldnt be put in any input due to them being used as a seperator.
+- Started working on the admin panels for accepting/denying subject proposals.
+
++

@@ -28,6 +28,16 @@ function collapseSubject(containerID)
 
 }
 
+function collapsePrimaryProposals() 
+{
+	alert("collapse prime");
+}
+
+function collapseSecondaryProposals() 
+{
+	alert("collapse sec");
+}
+
 function collapseSidebar() 
 {
 	$(".expandedSidebar").fadeOut("fast");

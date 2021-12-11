@@ -82,7 +82,7 @@ Class Post
 		"
 		<table class='previewPostsTable'>
 		<tr>
-		<td><p class='postPreviewTitle'><a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "," . $data["SecondarySubject"] . "," . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
+		<td><p class='postPreviewTitle'><a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "|" . $data["SecondarySubject"] . "|" . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
 		</tr>
 		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["postCreator"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>

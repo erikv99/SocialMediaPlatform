@@ -8,7 +8,7 @@ class ProposalModel extends Model
 		$returnData = [];
 		
 		// Checking if user is logged in, else returning with a alert informing the user
-    	if (!isUserLoggedIn()) 
+    	if (!$this->isUserLoggedIn()) 
      	{
      		$this->dieWithAlert("alertInfo", "Must be logged in to create a proposal");
     	}
@@ -21,8 +21,10 @@ class ProposalModel extends Model
 			$returnData["messageType"] = "alertSuccess";
 		}
 		
-		logDebug("POST: " . var_export($_POST,true));
-		
+		// Checking if the user is a admin, if so setting the viewType to admin else normal
+		$viewType = $this->isUserAdmin() ? "admin" : "normal";
+		$returnData["viewType"] = $viewType;
+
 		// Getting the primary subjects, needed in the view.
 		$primarySubjects = $this->getPrimarySubjects();
 		$returnData["primarySubjects"] = $primarySubjects;
@@ -44,7 +46,7 @@ class ProposalModel extends Model
 	private function handlePostData() 
 	{
 		// Splitting the post data on the comma to get the data send to the controller
-		$temp = explode(",", $_POST['data']);
+		$temp = explode("|", $_POST['data']);
 
 		// If the first arg is empty we dont have to do anything, else we handle the args
 		if ($temp[0] != "") 
