@@ -92,8 +92,8 @@ abstract class Model
 
 		try
 		{
-			// Getting all primary and secondary subjects
-			$stmt = $dbConn->prepare("SELECT DISTINCT(`PrimarySubject`) FROM `posts`");
+			// Getting all primary subjects
+			$stmt = $dbConn->prepare("SELECT DISTINCT(`PrimarySubject`) FROM `subjects`");
 			$stmt->execute();
 			$dbOutput = $stmt->fetchAll();
 		}
@@ -128,7 +128,7 @@ abstract class Model
 		try
 		{
 			// Getting all secondary subjects for the current primary subject
-			$stmt = $dbConn->prepare("SELECT SecondarySubject FROM subjects WHERE PrimarySubject = ?");
+			$stmt = $dbConn->prepare("SELECT SecondarySubject FROM subjects WHERE PrimarySubject = ? AND SecondarySubject IS NOT NULL");
 			$stmt->execute([$primarySubject]);
 			$dbOutput = $stmt->fetchAll();
 		}

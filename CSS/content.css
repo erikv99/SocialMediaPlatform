@@ -183,6 +183,11 @@
 	vertical-align: middle;
 }
 
+.SCHeaderRowButtonImg:hover 
+{
+	cursor: pointer;
+}
+
 .SCHeaderRowButton 
 {
 	position: relative;
@@ -364,3 +369,33 @@
 {
 	margin: 0.3em;
 }
+
+.proposalReviewButtons 
+{
+	float: right;
+	margin-right: 0.6em;
+	height: 1em;
+	margin-top: 0.75em;
+}
+
+.proposalReviewButtons i 
+{
+	scale: 1.7;
+	padding: 0 0.6em;
+}
+
+.proposalReviewButtons i:hover 
+{
+	cursor: pointer;
+}
+
+.propApprove 
+{
+	color: green;
+}
+
+.propReject 
+{
+	color: red;
+}
+

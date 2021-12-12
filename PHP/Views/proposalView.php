@@ -11,7 +11,16 @@ class ProposalView extends View
 		$proposePrimaryDataArg =  "proposePrimary|\" + document.getElementById(\"primProposalTitle\").value + \"|\" + document.getElementById(\"primProposalReason\").value";
 		$proposeSecondaryDataArg = "proposeSecondary|\" + document.getElementById(\"secProposalTitle\").value + \"|\" + document.getElementById(\"secProposalReason\").value + \"|\" + document.getElementById(\"selectPrimarySubject\").options[document.getElementById(\"selectPrimarySubject\").selectedIndex].value";
 
-		$view = "
+		$view = "";
+
+		// Checking if viewType requested is 'admin'
+		if ($modelOutput["viewType"] == "admin") 
+		{
+			// Adding the admin part of the view to the regular part.
+			$view .= $this->getAdminView();
+		}
+
+		$view .= "
 		<div class='subjectContainer'>
 		<table>
 			<tr class='subjectContainerHeaderRow'><td>
@@ -51,13 +60,6 @@ class ProposalView extends View
 		</div>
 		";
 
-		// Checking if viewType requested is 'admin'
-		if ($modelOutput["viewType"] == "admin") 
-		{
-			// Adding the admin part of the view to the regular part.
-			$view .= $this->getAdminView();
-		}
-
 		return $view;
 	}
 
@@ -95,15 +97,39 @@ class ProposalView extends View
 	 */
 	private function getAdminView() : string 
 	{
-		
-		//$proposePrimaryDataArg =  "proposePrimary,\" + document.getElementById(\"primProposalTitle\").value + \",\" + document.getElementById(\"primProposalReason\").value";
-		//$proposeSecondaryDataArg = "proposeSecondary,\" + document.getElementById(\"secProposalTitle\").value + \",\" + document.getElementById(\"secProposalReason\").value + \",\" + document.getElementById(\"selectPrimarySubject\").options[document.getElementById(\"selectPrimarySubject\").selectedIndex].value";
+		$primaryProposalsView = $this->getPrimaryProposalsView();
+		$secondaryProposalsView = $this->getSecondaryProposalsView();
+		$view = $primaryProposalsView . $secondaryProposalsView;
+		return $view;
+	}
 
-		$primaryProposals = $this->getPrimaryProposals();
-		$secondaryProposals = $this->getSecondaryProposals();
+	/**
+	 * Gets all the primary proposals from the database then puts them in a view
+	 * 
+	 * @return string $primaryProposalsView
+	 */
+	private function getPrimaryProposalsView() : string
+	{
+		$primaryProposals = [];
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("SELECT * FROM primaryproposals");
+			$stmt->execute();
+			$primaryProposals = $stmt->fetchAll();
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+
+		}
+
+		// Closing the DB connection
+		closeDBConnection($dbConnection);
 
 		$view = "
-		<div class='subjectContainer'>
+		<div class='subjectContainer primaryProposals'>
 		<table>
 			<tr class='subjectContainerHeaderRow'><td>
 			<div class='SCHeaderRowSingleButton'>
@@ -111,8 +137,8 @@ class ProposalView extends View
 					<img class='SCHeaderRowButtonImg' src='../IMG/collapse.png'>
 				</button>
 			</div>
-			<p class='postTitle'>Primary subject proposals</p>";
-
+			<p class='postTitle'>Primary subject proposals</p>
+			</td></tr>";
 
 		// Looping thru all the primary proposals
 		for ($i = 0; $i < count($primaryProposals); $i++) 
@@ -121,9 +147,12 @@ class ProposalView extends View
 			$proposalDate = date_format(date_create($primaryProposals[$i]["proposalDate"]), "d-m-y");
 			
 			$view .= "
-			</td></tr>
 			<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'>
 			<div class='proposalReview'>
+			<div class='proposalReviewButtons'>
+				<i class='fas fa-times propReject' onClick='callController(\".content\", \"proposalController\", \"rejectProposal|" . $primaryProposals[$i]["proposalTitle"] . "|primary\")'></i>
+				<i class='fas fa-check propApprove' onClick='callController(\".content\", \"proposalController\", \"approveProposal|" . $primaryProposals[$i]["proposalTitle"] . "|primary\")'></i>
+			</div>
 			<p>Proposed subject: <b>" . $primaryProposals[$i]["proposalTitle"] . "</b></p>
 			<p>Proposed by user <b>" . $primaryProposals[$i]["proposalCreator"] . "</b> on " . $proposalDate . "</p>
 			<p>Reason: " . $primaryProposals[$i]["proposalReason"] . "</p>
@@ -132,54 +161,24 @@ class ProposalView extends View
 		}
 
 		$view .= "</table></div>";
-
 		return $view;
 	}
 
 	/**
-	 * Gets all the primary proposals from the database
+	 * Gets all the secondary proposals from the database then puts them in a view
 	 * 
-	 * @return array $primaryProposals
+	 * @return string $secondaryProposalsView
 	 */
-	private function getPrimaryProposals() 
+	private function getSecondaryProposalsView() : string
 	{
-		$output = [];
-		$dbConnection = openDBConnection();
-
-		try 
-		{
-			$stmt = $dbConnection->prepare("SELECT * FROM primaryproposals");
-			$stmt->execute();
-			$output = $stmt->fetchAll();
-		}
-		catch (PDOException $e) 
-		{
-			throw new DBException($e->getMessage());
-
-		}
-
-		logDebug("prim output: " . var_export($output,true));
-
-		// Closing the DB connection and returning the result
-		closeDBConnection($dbConnection);
-		return $output;
-	}
-
-	/**
-	 * Gets all the secondary proposals from the database
-	 * 
-	 * @return array $secondaryProposals
-	 */
-	private function getSecondaryProposals() 
-	{
-		$output = [];
+		$secondaryProposals = [];
 		$dbConnection = openDBConnection();
 
 		try 
 		{
 			$stmt = $dbConnection->prepare("SELECT * FROM secondaryproposals");
 			$stmt->execute();
-			$output = $stmt->fetchAll();
+			$secondaryProposals = $stmt->fetchAll();
 		}
 		catch (PDOException $e) 
 		{
@@ -187,11 +186,43 @@ class ProposalView extends View
 
 		}
 
-		logDebug("sec output: " . var_export($output,true));
-
-		// Closing the DB connection and returning the result
+		// Closing the DB connection 
 		closeDBConnection($dbConnection);
-		return $output;
+		
+		$view = "
+		<div class='subjectContainer secondaryProposals'>
+		<table>
+			<tr class='subjectContainerHeaderRow'><td>
+			<div class='SCHeaderRowSingleButton'>
+				<button class='imageButton SCHeaderRowButton' onClick='collapseSecondaryProposals();'>
+					<img class='SCHeaderRowButtonImg' src='../IMG/collapse.png'>
+				</button>
+			</div>
+			<p class='postTitle'>Secondary subject proposals</p>
+			</td></tr>";
+
+		// Looping thru all the secondary proposals
+		for ($i = 0; $i < count($secondaryProposals); $i++) 
+		{
+			// Formatting the proposal date.
+			$proposalDate = date_format(date_create($secondaryProposals[$i]["proposalDate"]), "d-m-y");
+			
+			$view .= "
+			<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'>
+			<div class='proposalReview'>
+			<div class='proposalReviewButtons'>
+				<i class='fas fa-times propReject' onClick='callController(\".content\", \"proposalController\", \"rejectProposal|" . $secondaryProposals[$i]["proposalTitle"] . "|secondary\")'></i>
+				<i class='fas fa-check propApprove' onClick='callController(\".content\", \"proposalController\", \"approveProposal|" . $secondaryProposals[$i]["proposalTitle"] . "|secondary\")'></i>
+			</div>
+			<p>Proposed subject: <b>" . $secondaryProposals[$i]["proposalTitle"] . "</b></p>
+			<p>Proposed by user <b>" . $secondaryProposals[$i]["proposalCreator"] . "</b> on " . $proposalDate . "</p>
+			<p>Reason: " . $secondaryProposals[$i]["proposalReason"] . "</p>
+			</div></td></tr>
+			";
+		}
+
+		$view .= "</table></div>";
+		return $view;
 	}
 
 }

@@ -62,7 +62,7 @@ class ContentView extends View
 	private function getSecondarySubjectsRowView($secondarySubjectsArr, $primarySubject) 
 	{
 		$view = "";
-
+		
 		// Looping through all the secondary subjects in the array
 		for ($i = 0; $i < count($secondarySubjectsArr); $i++) 
 		{

@@ -15,27 +15,58 @@ function collapseSubject(containerID)
 	// Checkign if we need to hide or show it (im aware toggle exists but i need this for other purposes as well)
 	// Rotating the collapse img accordingly
 	// NOTE: we also kind of rotate the add post (plus icon img) but since its the same upside down as normal its not noticable so just leaving that as is for now.
-	if($(containerID).find(".subjectContainerSubRow").is(":visible")) 
+	var container = $(containerID);
+	var subRow = container.find(".subjectContainerSubRow");
+	var img = container.find(".SCHeaderRowButtonImg")
+
+	if(subRow.is(":visible")) 
 	{
-		$(containerID).find(".subjectContainerSubRow").hide();
-		rotateImage($(containerID).find(".SCHeaderRowButtonImg"), 180);
+		subRow.hide();
+		rotateImage(img, 180);
 	} 
 	else 
 	{
-		$(containerID).find(".subjectContainerSubRow").show();
-		rotateImage($(containerID).find(".SCHeaderRowButtonImg"), 0);
+		subRow.show();
+		rotateImage(img, 0);
 	}
 
 }
 
+// Could have made collapse primary and secondary in to one function but i think this is a bit more cleaner.
 function collapsePrimaryProposals() 
 {
-	alert("collapse prime");
+	var subjectContainer = $(".primaryProposals");
+	var contentRow = subjectContainer.find(".subjectContainerContentRow");
+	var img = subjectContainer.find(".SCHeaderRowButtonImg");
+
+	if (contentRow.is(":visible")) 
+	{
+		contentRow.hide();
+		rotateImage(img, 180);
+	}
+	else 
+	{
+		contentRow.show();
+		rotateImage(img, 0);
+	}
 }
 
 function collapseSecondaryProposals() 
 {
-	alert("collapse sec");
+	var subjectContainer = $(".secondaryProposals");
+	var contentRow = subjectContainer.find(".subjectContainerContentRow");
+	var img = subjectContainer.find(".SCHeaderRowButtonImg");
+
+	if (contentRow.is(":visible")) 
+	{
+		contentRow.hide();
+		rotateImage(img, 180);
+	}
+	else 
+	{
+		contentRow.show();
+		rotateImage(img, 0);
+	}
 }
 
 function collapseSidebar() 

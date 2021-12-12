@@ -55,3 +55,8 @@
 - Started working on the admin panels for accepting/denying subject proposals.
 
 +
+
+- Add and collapse buttons now show a pointer cursor when hovered
+- Admins can now approve and reject suggested subjects
+
++ 

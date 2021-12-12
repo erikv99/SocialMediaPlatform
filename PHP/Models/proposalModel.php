@@ -13,12 +13,14 @@ class ProposalModel extends Model
      		$this->dieWithAlert("alertInfo", "Must be logged in to create a proposal");
     	}
 
-		$subjectIsProposed = $this->handlePostData();
+    	// Handeling the possible data in the post var.
+		$executedAction = $this->handlePostData();
 		
-		if ($subjectIsProposed) 
+		// Checking if any action has been executed
+		if ($executedAction != "none") 
 		{
-			$returnData["message"] = "Subject has been proposed!";
-			$returnData["messageType"] = "alertSuccess";
+			$returnData["messageType"] = "alertInfo";
+			$returnData["message"] = $this->getAlertMessage($executedAction);
 		}
 		
 		// Checking if the user is a admin, if so setting the viewType to admin else normal
@@ -39,9 +41,9 @@ class ProposalModel extends Model
 	}
 
 	/**
-	 * Function will check the post data for arguments and handle them if needed, returns true if a subject has been proposed, else false.
+	 * Function will check the post data for arguments and handle them if needed, returns a string specifying the executed action/
 	 * 
-	 * @return bool $isASubjectProposed
+	 * @return string $executedAction
 	 */
 	private function handlePostData() 
 	{
@@ -49,44 +51,61 @@ class ProposalModel extends Model
 		$temp = explode("|", $_POST['data']);
 
 		// If the first arg is empty we dont have to do anything, else we handle the args
-		if ($temp[0] != "") 
+		if ($temp[0] == "") 
+		{ 
+			return "none"; 
+		} 
+		
+		$actionType = $temp[0];
+
+		// Getting the title and escaping it, also making the first character capitalized
+		$proposalTitle = htmlentities(ucfirst($temp[1]));
+
+		// Checking if the required action is rejecting or approving a proposal
+		if ($actionType == "approveProposal" or $actionType == "rejectProposal") 
 		{
-			$proposalType = $temp[0];
-			$proposalTitle = htmlentities(ucfirst($temp[1]));
-			$proposalReason = htmlentities(ucfirst($temp[2]));
-
-			// Checking if the title and reason atleast contain a letter each.
-			$this->validateInput($proposalTitle, $proposalReason);
-
-			if ($proposalType == "proposeSecondary") 
+			$proposalType = $temp[2];
+			logDebug("prop type: " . var_export($proposalType,true));
+			switch ($actionType) 
 			{
-				$primarySubject = $temp[3];
-
-				// Checking if it already exists
-				if ($this->doesSecondaryProposalExist($proposalTitle, $primarySubject)) 
-				{
-					$this->dieWithAlert("alertError", "Proposal already exists");
-				}
-
-				// Saving the proposal to the db
-				$this->saveSecondaryProposal($proposalTitle, $proposalReason, $primarySubject);
-				return true;
-			}
-			elseif ($proposalType == "proposePrimary") 
-			{
-				// Checking if it already exists
-				if ($this->doesPrimaryProposalExist($proposalTitle)) 
-				{
-					$this->dieWithAlert("alertError", "Proposal already exists");
-				}
-
-				// Saving the proposal to the db
-				$this->savePrimaryProposal($proposalTitle, $proposalReason);
-				return true;
+				case "approveProposal":
+					$this->approveProposal($proposalTitle, $proposalType);
+					return "approvedProposal";
+				
+				case "rejectProposal":
+					$this->rejectProposal($proposalTitle, $proposalType);
+					return "rejectedProposal";
 			}
 		}
 
-		return false;
+		// Checking if the required action is saving a primary or secondary proposal.
+		if ($actionType == "proposeSecondary" or $actionType == "proposePrimary") 
+		{
+
+			// Getting the content and escaping it, also making the first character capitalized
+			$proposalReason = htmlentities(ucfirst($temp[2]));
+			
+			// Checking if the title and reason atleast contain a letter each.
+			$this->validateInput($proposalTitle, $proposalReason);
+		
+			$primarySubject = $temp[3];
+
+			switch ($actionType) 
+			{
+				case 'proposeSecondary':
+					$this->saveSecondaryProposal($proposalTitle, $proposalReason, $primarySubject);
+					break;
+					
+				case "proposePrimary":
+					$this->savePrimaryProposal($proposalTitle, $proposalReason, $primarySubject);
+					break;
+			}
+
+			return "savedProposal";
+		}
+		
+		// Returning none here just in case for some reason we get something that is not "" in the actionType but also is not a valid
+		return "none";
 	}
 
 	/**
@@ -115,9 +134,16 @@ class ProposalModel extends Model
 	 * 
 	 * @param string $proposalTitle
 	 * @param string $proposalReason
+	 * @param string $primarySubject
 	 */
-	private function savePrimaryProposal(string $proposalTitle, string $proposalReason) 
+	private function savePrimaryProposal(string $proposalTitle, string $proposalReason, string $primarySubject) 
 	{
+		// Checking if it already exists
+		if ($this->doesPrimaryProposalExist($proposalTitle)) 
+		{
+			$this->dieWithAlert("alertError", "Proposal already exists");
+		}
+		
 		$proposalCreator = $_SESSION['username'];
 
 		// Opening a DB connection
@@ -145,6 +171,12 @@ class ProposalModel extends Model
 	 */
 	private function saveSecondaryProposal(string $proposalTitle, string $proposalReason, string $primarySubject)
 	{
+		// Checking if it already exists
+		if ($this->doesSecondaryProposalExist($proposalTitle, $primarySubject)) 
+		{
+			$this->dieWithAlert("alertError", "Proposal already exists");
+		}
+
 		$proposalCreator = $_SESSION['username'];
 
 		// Opening a DB connection
@@ -224,6 +256,135 @@ class ProposalModel extends Model
 		// Closing the DB connection and returning the result
 		closeDBConnection($dbConnection);
 		return $proposalExists;
+	}
+
+	/**
+	 * Returns the correct alert message depending on which action has been executed. 
+	 * 
+	 * @param string $executedAction
+	 * @return string $alertMessage
+	 */
+	private function getAlertMessage($executedAction) : string 
+	{
+		// Getting the correct message depending on the executed action.
+		switch ($executedAction) 
+		{
+			case "savedProposal":
+				return "Subject has been proposed!";
+			
+			case "approvedProposal":
+				return "Proposal has been approved!";
+			
+			case "rejectedProposal":
+				return "Proposal has been rejected!";	
+		}
+	}
+
+	/**
+	 * Will approve the proposal with the given title
+	 * 
+	 * @param string $proposalTitle
+	 * @param string $proposalType
+	 * @param string $primarySubject (only needed for secondary subject)
+	 */
+	private function approveProposal(string $proposalTitle, string $proposalType, string $primarySubject = "") 
+	{
+		// Removing the current proposal from the db
+		$this->removeProposal($proposalTitle, $proposalType);
+
+		// checking which type of proposal was approved.
+		if ($proposalType == "primary") 
+		{
+			// When adding a primary subject proposel the first secondary subject is needed. that why we start those off with a 'general'
+			$this->createSubject($proposalTitle, "General");
+		}
+		elseif ($proposalType == "secondary") 
+		{
+			if ($primarySubject == "") 
+			{
+				logError("PrimarySubject was empty when approving a secondary subject!");
+			}
+			$this->createSubject($primarySubject, $proposalTitle);
+		}
+	}
+
+	/**
+	 * Will reject the proposal with the given title
+	 * 
+	 * @param string $proposalTitle
+	 * @param string $proposalType
+	 */
+	private function rejectProposal(string $proposalTitle, string $proposalType) 
+	{
+		// Removing the current proposal from the db
+		$this->removeProposal($proposalTitle, $proposalType);
+	}
+
+	/**
+	 * Removes the proposal from the database
+	 * 
+	 * @param string $proposalTitle (dont worry this is unique)
+	 * @param string $proposalType
+	 */
+	private function removeProposal(string $proposalTitle, string $proposalType) 
+	{
+		if (!($proposalType == "primary" or $proposalType == "secondary")) 
+		{
+			logError("Cant remove proposal, invalid proposal type given");
+			return;
+		}
+
+		$tableName = "";
+		
+		if ($proposalType == "primary") 
+		{
+			$tableName = "primaryproposals";
+		}
+		else 
+		{
+			$tableName = "secondaryproposals";
+		}
+
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("DELETE FROM $tableName WHERE proposalTitle = ?");
+			$stmt->execute([$proposalTitle]);
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+
+		}
+
+		// Closing the DB connection
+		closeDBConnection($dbConnection);
+	}
+
+	/**
+	 * Creates a new entry in the subjects db table.
+	 * 
+	 * @param string $primarySubject
+	 * @param string $secondarySubject
+	 */
+	private function createSubject(string $primarySubject, string $secondarySubject) 
+	{
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("INSERT INTO subjects (primarysubject, secondarysubject) VALUES (?, ?)");
+			$stmt->execute([$primarySubject, $secondarySubject]);
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+
+		}
+
+		// Closing the DB connection
+		closeDBConnection($dbConnection);
 	}
 }
 ?>
