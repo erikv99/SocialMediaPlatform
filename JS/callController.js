@@ -17,6 +17,8 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
 
+	//console.log("data: " + JSON.stringify(data));
+	
 	// Handeling the actions regarding a eventual refresh page. we need to save some info in some cases
 	this.saveCallControllerInfo(placeMentTag, controllerName, data);
 

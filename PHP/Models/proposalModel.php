@@ -46,9 +46,12 @@ class ProposalModel extends Model
 	 * @return string $executedAction
 	 */
 	private function handlePostData() 
-	{
+	{	
+		// Escaping the data from the post.
+		$postData = htmlspecialchars($_POST['data'], ENT_QUOTES | ENT_HTML5, 'UTF-8', /*double_encode*/false );
+
 		// Splitting the post data on the comma to get the data send to the controller
-		$temp = explode("|", $_POST['data']);
+		$temp = explode("|", $postData);
 
 		// If the first arg is empty we dont have to do anything, else we handle the args
 		if ($temp[0] == "") 
@@ -58,14 +61,13 @@ class ProposalModel extends Model
 		
 		$actionType = $temp[0];
 
-		// Getting the title and escaping it, also making the first character capitalized
-		$proposalTitle = htmlentities(ucfirst($temp[1]));
+		// Getting the title also making the first character capitalized
+		$proposalTitle = $temp[1];
 
 		// Checking if the required action is rejecting or approving a proposal
 		if ($actionType == "approveProposal" or $actionType == "rejectProposal") 
 		{
 			$proposalType = $temp[2];
-			logDebug("prop type: " . var_export($proposalType,true));
 			switch ($actionType) 
 			{
 				case "approveProposal":
@@ -83,21 +85,21 @@ class ProposalModel extends Model
 		{
 
 			// Getting the content and escaping it, also making the first character capitalized
-			$proposalReason = htmlentities(ucfirst($temp[2]));
+			$proposalReason = $temp[2];
 			
 			// Checking if the title and reason atleast contain a letter each.
 			$this->validateInput($proposalTitle, $proposalReason);
-		
-			$primarySubject = $temp[3];
-
+			
 			switch ($actionType) 
 			{
 				case 'proposeSecondary':
+					$primarySubject = $temp[3];
+
 					$this->saveSecondaryProposal($proposalTitle, $proposalReason, $primarySubject);
 					break;
 					
 				case "proposePrimary":
-					$this->savePrimaryProposal($proposalTitle, $proposalReason, $primarySubject);
+					$this->savePrimaryProposal($proposalTitle, $proposalReason);
 					break;
 			}
 
@@ -134,9 +136,8 @@ class ProposalModel extends Model
 	 * 
 	 * @param string $proposalTitle
 	 * @param string $proposalReason
-	 * @param string $primarySubject
 	 */
-	private function savePrimaryProposal(string $proposalTitle, string $proposalReason, string $primarySubject) 
+	private function savePrimaryProposal(string $proposalTitle, string $proposalReason) 
 	{
 		// Checking if it already exists
 		if ($this->doesPrimaryProposalExist($proposalTitle)) 

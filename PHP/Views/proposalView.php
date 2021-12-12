@@ -146,12 +146,17 @@ class ProposalView extends View
 			// Formatting the proposal date.
 			$proposalDate = date_format(date_create($primaryProposals[$i]["proposalDate"]), "d-m-y");
 			
+			$title = htmlspecialchars($primaryProposals[$i]["proposalTitle"], ENT_QUOTES);
+			//$title = $primaryProposals[$i]["proposalTitle"];
+			$rejectDataArg = "rejectProposal|$title|primary";
+			$approveDataArg = "approveProposal|$title|primary";
+
 			$view .= "
 			<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'>
 			<div class='proposalReview'>
 			<div class='proposalReviewButtons'>
-				<i class='fas fa-times propReject' onClick='callController(\".content\", \"proposalController\", \"rejectProposal|" . $primaryProposals[$i]["proposalTitle"] . "|primary\")'></i>
-				<i class='fas fa-check propApprove' onClick='callController(\".content\", \"proposalController\", \"approveProposal|" . $primaryProposals[$i]["proposalTitle"] . "|primary\")'></i>
+				<i class='fas fa-times propReject' onClick='callController(\".content\", \"proposalController\", \"$rejectDataArg\");'></i>
+				<i class='fas fa-check propApprove' onClick='callController(\".content\", \"proposalController\", \"$approveDataArg\");'></i>
 			</div>
 			<p>Proposed subject: <b>" . $primaryProposals[$i]["proposalTitle"] . "</b></p>
 			<p>Proposed by user <b>" . $primaryProposals[$i]["proposalCreator"] . "</b> on " . $proposalDate . "</p>
@@ -207,12 +212,17 @@ class ProposalView extends View
 			// Formatting the proposal date.
 			$proposalDate = date_format(date_create($secondaryProposals[$i]["proposalDate"]), "d-m-y");
 			
+			$title = htmlspecialchars($secondaryProposals[$i]["proposalTitle"], ENT_QUOTES);
+			$primary = htmlspecialchars($secondaryProposals[$i]["proposalPrimary"], ENT_QUOTES);
+			$rejectDataArg = "rejectProposal|$title|secondary";
+			$approveDataArg = "approveProposal|$title|secondary|$primary";
+
 			$view .= "
 			<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'>
 			<div class='proposalReview'>
 			<div class='proposalReviewButtons'>
-				<i class='fas fa-times propReject' onClick='callController(\".content\", \"proposalController\", \"rejectProposal|" . $secondaryProposals[$i]["proposalTitle"] . "|secondary\")'></i>
-				<i class='fas fa-check propApprove' onClick='callController(\".content\", \"proposalController\", \"approveProposal|" . $secondaryProposals[$i]["proposalTitle"] . "|secondary\")'></i>
+				<i class='fas fa-times propReject' onClick='callController(\".content\", \"proposalController\", \"$rejectDataArg\");'></i>
+				<i class='fas fa-check propApprove' onClick='callController(\".content\", \"proposalController\", \"$approveDataArg\");'></i>
 			</div>
 			<p>Proposed subject: <b>" . $secondaryProposals[$i]["proposalTitle"] . "</b></p>
 			<p>Proposed by user <b>" . $secondaryProposals[$i]["proposalCreator"] . "</b> on " . $proposalDate . "</p>

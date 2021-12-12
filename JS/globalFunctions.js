@@ -95,3 +95,9 @@ function getCookie(cname) {
   }
   return "";
 }
+
+function escapeStr(string) 
+{
+	var escapedStr = string.replace(/"/g, '&quot;');
+	return escapedStr;
+}
