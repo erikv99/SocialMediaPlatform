@@ -12,6 +12,7 @@ class PrimarySubjectView extends View
 	*/
 	protected function createView($modelOutput) : string
 	{
+		logDebug("modeloutput: " . var_export($modelOutput,true));
 		$secondarySubjects = $modelOutput["secondarySubjects"];
 		$previewPosts = $modelOutput["previewPosts"];
 		$primarySubject = $modelOutput["primarySubject"];
@@ -31,18 +32,22 @@ class PrimarySubjectView extends View
 			// Getting the preview posts for the current secondary subject
 			$previewPostsView = $this->getPreviewPostsView($previewPosts, $secondarySubjects[$i]);
 
+			$escapedPrimSub = htmlspecialchars($primarySubject, ENT_QUOTES);
+			$escapedSecSub = htmlspecialchars($secondarySubjects[$i], ENT_QUOTES);
+			$dataArg = $escapedPrimSub . "|" . $escapedSecSub;
+
 			// Creating the view for the current secondary subject
 			$view .=
 			"
-			<div class='subjectContainer previewPost" . $secondarySubjects[$i] . "'>
+			<div class='subjectContainer previewPost" . $i . "'>
 				<table>
 					<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i>
-					<a onclick='callController(\".content\", \"secondarySubjectController\", \"" . $primarySubject . "|" . $secondarySubjects[$i] . "\")'> " . $secondarySubjects[$i] . "</a></p>
+					<a onclick='callController(\".content\", \"secondarySubjectController\", \"$dataArg\")'> " . $secondarySubjects[$i] . "</a></p>
 					<div class='SCHeaderRowDoubleButton'>
-						<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"" . $primarySubject . "|" . $secondarySubjects[$i] . "\")'>
+						<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"$dataArg\");'>
 							<img class='SCHeaderRowButtonImg' src='../IMG/add.png'>
 						</button>
-						<button class='imageButton SCHeaderRowButton' onClick='collapseSubject(\".previewPost" . $secondarySubjects[$i] . "\");'>
+						<button class='imageButton SCHeaderRowButton' onClick='collapseSubject(\".previewPost" . $i . "\");'>
 							<img class='SCHeaderRowButtonImg' src='../IMG/collapse.png'>
 						</button>
 					</div>
@@ -94,11 +99,11 @@ class PrimarySubjectView extends View
 			{
 				// Making a post obj using the data.
 				$post = new Post($posts[$i]);
-
+				
 				// Making the view 
 				$previewPostsView .= 
 				"
-				<tr class='subjectContainerSubRow postPreview" . $secondarySubject ."' ><td class='subjectContainerSubRowTD postPreviewTD'>
+				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD postPreviewTD'>
 				" .  $post->getPreviewView() . "
 				";
 			}

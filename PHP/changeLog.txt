@@ -62,4 +62,13 @@
 + 
 
 - Quotes no longer break the whole proposal admin panels when put in proposals.
-- 
+
++ 
+
+- Fixed incorrect escaping and all related problems and bugs in header locationbar, content, primarysub, secondary sub, createPost, postPage.
+- Added validation to prevent a secondary subject from having the same name as the primary subject its under. 
+- Added validation to prevent a secondary subject from already existing under the same primary subject.
+- It seems these issues are fixed, further testing is required.
+
++
+

@@ -14,7 +14,7 @@ class CreatePostModel extends Model
 		}
 
 		// Getting the primary and secondary subjects from the data given
-		$temp = explode("|", $_POST['data']);
+		$temp = explode("|", $_POST["data"]);
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 
@@ -56,8 +56,8 @@ class CreatePostModel extends Model
 		$currentDate = new DateTime();
 		$currentDate = $currentDate->format('Y-m-d H:i:s');
 		$dbConn = openDBConnection();
-		$postTitle = htmlentities(ucfirst($temp[3]));
-		$postContent = htmlentities($temp[4]);
+		$postTitle = htmlspecialchars(ucfirst($temp[3]), ENT_QUOTES | ENT_HTML5, 'UTF-8', /*double_encode*/false);
+		$postContent = htmlspecialchars($temp[4], ENT_QUOTES | ENT_HTML5, 'UTF-8', /*double_encode*/false);
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 
@@ -87,11 +87,15 @@ class CreatePostModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
-		$postID = $dbOutput["postID"];
 		closeDBConnection($dbConn);
+		$postID = $dbOutput["postID"];
+
+		// At this point we also have to escape the primary and secondary subjects for when we output them.
+		$escapedPrimSub = htmlspecialchars($primarySubject, ENT_QUOTES | ENT_HTML5, 'UTF-8', /*double_encode*/false);
+		$escapedSecSub = htmlspecialchars($secondarySubject, ENT_QUOTES | ENT_HTML5, 'UTF-8', /*double_encode*/false);
 		
 		// Displaying the just created post by calling the postcontroller. 
-		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$primarySubject|$secondarySubject|$postID');</script>"]);
+		echo json_encode(["view" => "<script type='text/javascript'>callController('.content', 'postPageController', '$escapedPrimSub|$escapedSecSub|$postID');</script>"]);
 		die();
 	}
 

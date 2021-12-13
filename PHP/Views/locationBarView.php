@@ -43,12 +43,27 @@ class LocationBarView
 			return "";
 		}
 
+		// Adding the first basic parts of the location, this is included on everypage.
 		$view = "<div class='locationBar'><ul><li><i class='fas fa-map-signs'></i></li><li><a onclick='callController(\".content\", \"contentController\");'>ThoughtShare</a></li>";
 		$view .= "<li><i class='fas fa-chevron-right'></i></li><li><a onclick='callController(\".content\", \"contentController\");'>Subjects</a></li>";
-	
+		
+		// Looping thru the locations using the key/value
 		foreach ($locations as $key => $value)
 		{
 			$locationName = $key;
+
+			// Splitting the value (callController(placementTag, controllername, args) on each comma so we can get the value at index 2 which is the args.)
+			// We limited the result to 3, so if a comma is present in the arguments for example it wont affect this method.
+			$splitResult = explode(",", $value, 3);
+
+			if (isset($splitResult[2])) 
+			{
+				// Escaping the args value
+				$splitResult[2] = htmlspecialchars($splitResult[2], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+	
+				// Putting everything back in 1 array, this time the args being escaped.
+				$value = implode(",", $splitResult);
+			}
 
 			$view .= "<li><i class='fas fa-chevron-right'></i></li><li><a onclick=\"" . $value . "\"> " . $locationName . "</a></li>";
 		}

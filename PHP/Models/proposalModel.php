@@ -71,7 +71,10 @@ class ProposalModel extends Model
 			switch ($actionType) 
 			{
 				case "approveProposal":
-					$this->approveProposal($proposalTitle, $proposalType);
+
+					// If proposal type = secondary the arg at index 3 is the primary subject. 
+					$primarySubject = $proposalType == "secondary" ? $temp[3] : "";
+					$this->approveProposal($proposalTitle, $proposalType, $primarySubject);
 					return "approvedProposal";
 				
 				case "rejectProposal":
@@ -139,7 +142,13 @@ class ProposalModel extends Model
 	 */
 	private function savePrimaryProposal(string $proposalTitle, string $proposalReason) 
 	{
-		// Checking if it already exists
+		// Checking if the proposal already exists as a primary subject
+		if ($this->doesPrimarySubjectExist($proposalTitle)) 
+		{
+			$this->dieWithAlert("alertError", "Proposal already exists");
+		}
+
+		// Checking if it already exists as a proposal 
 		if ($this->doesPrimaryProposalExist($proposalTitle)) 
 		{
 			$this->dieWithAlert("alertError", "Proposal already exists");
@@ -172,10 +181,23 @@ class ProposalModel extends Model
 	 */
 	private function saveSecondaryProposal(string $proposalTitle, string $proposalReason, string $primarySubject)
 	{
-		// Checking if it already exists
-		if ($this->doesSecondaryProposalExist($proposalTitle, $primarySubject)) 
+
+		// Checking if the proposed sec title is the same as its primary which we dont allow.
+		if ($proposalTitle == $primarySubject) 
 		{
-			$this->dieWithAlert("alertError", "Proposal already exists");
+			$this->dieWithAlert("alertError", "Proposal cannot have the same name as it's parent");
+		}
+
+		// Checking if the proposed sec sub already exists as a secondary subject under that primary subject
+		if ($this->doesSecondarySubjectExist($proposalTitle, $primarySubject))  
+		{
+			$this->dieWithAlert("alertError", "Proposal cannot be a existing secondary subject of the selected parent");
+		}
+
+		// Checking if it already exists
+		if ($this->doesSecondaryProposalExist($proposalTitle, $primarySubject))  
+		{
+			$this->dieWithAlert("alertError", "Proposal already exists for current parent");
 		}
 
 		$proposalCreator = $_SESSION['username'];
@@ -204,7 +226,7 @@ class ProposalModel extends Model
 	 */
 	private function doesPrimaryProposalExist(string $proposalTitle)  
 	{
-		// Opening a DB connection and checking if the given username is present in our data table
+		// Opening a DB connection and checking if the given proposal title is present in our data table
 		$dbConnection = openDBConnection();
 
 		try 
@@ -251,7 +273,7 @@ class ProposalModel extends Model
 
 		}
 
-		// If the username is present $doesUserExist will be true otherwise it shall be false.
+		// If the subject is present returning true otherwise it shall be false.
 		$proposalExists = ($output > 0) ? true : false;
 
 		// Closing the DB connection and returning the result
@@ -289,7 +311,7 @@ class ProposalModel extends Model
 	 * @param string $primarySubject (only needed for secondary subject)
 	 */
 	private function approveProposal(string $proposalTitle, string $proposalType, string $primarySubject = "") 
-	{
+	{	
 		// Removing the current proposal from the db
 		$this->removeProposal($proposalTitle, $proposalType);
 
@@ -386,6 +408,69 @@ class ProposalModel extends Model
 
 		// Closing the DB connection
 		closeDBConnection($dbConnection);
+	}
+
+	/**
+	 * Checks if the given primary subject already exists. returns a bool
+	 * 
+	 * @param string $primarySubject
+	 * @return bool $subjectExists
+	 */
+	private function doesPrimarySubjectExist(string $primarySubject)  
+	{
+		// Opening a DB connection and checking if the given primarysubject is present in our data table
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("SELECT COUNT(primarysubject) FROM subjects WHERE primarysubject = ?");
+			$stmt->execute([$primarySubject]);
+			$output = $stmt->fetch()["COUNT(primarysubject)"];
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+
+		}
+
+		// If the subject is present returning true otherwise it shall be false.
+		$subjectExists = ($output > 0) ? true : false;
+
+		// Closing the DB connection and returning the result
+		closeDBConnection($dbConnection);
+		return $subjectExists;
+	}
+
+		/**
+	 * Checks if the given secondary subject already exists under the given primary. returns a bool
+	 * 
+	 * @param string $primarySubject
+	 * @param string $secondarySubject
+	 * @return bool $subjectExists
+	 */
+	private function doesSecondarySubjectExist(string $secondarySubject, string $primarySubject)  
+	{
+		// Opening a DB connection and checking if the given primarysubject is present in our data table
+		$dbConnection = openDBConnection();
+
+		try 
+		{
+			$stmt = $dbConnection->prepare("SELECT COUNT(secondarysubject) FROM subjects WHERE primarysubject = ? and secondarysubject = ?");
+			$stmt->execute([$primarySubject, $secondarySubject]);
+			$output = $stmt->fetch()["COUNT(secondarysubject)"];
+		}
+		catch (PDOException $e) 
+		{
+			throw new DBException($e->getMessage());
+
+		}
+
+		// If the subject is present returning true otherwise it shall be false.
+		$subjectExists = ($output > 0) ? true : false;
+
+		// Closing the DB connection and returning the result
+		closeDBConnection($dbConnection);
+		return $subjectExists;
 	}
 }
 ?>

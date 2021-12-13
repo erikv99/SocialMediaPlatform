@@ -5,6 +5,7 @@ class PostPageModel extends Model
 {
 	public function execute() : array
 	{
+		logDebug("reached postpagemodel execute");
 		/** the viewType options which can be returned are:
  		* normal : does not include a edit or delete button in the header
  		* owner : user == post owner, includes a edit and delete button

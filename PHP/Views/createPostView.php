@@ -11,7 +11,9 @@ class CreatePostView extends View
 	 */
 	protected function createView(array $modelOutput) : string
 	{
-		$callControllerDataArg = $modelOutput["primarySubject"] . "|" . $modelOutput["secondarySubject"] . "|create|\" + document.getElementById(\"createPostTitle\").value + \"|\"  + document.getElementById(\"createPostContent\").value";
+		$escapedPrimSub = htmlspecialchars($modelOutput["primarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$escapedSecSub = htmlspecialchars($modelOutput["secondarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$callControllerDataArg = $escapedPrimSub . "|" . $escapedSecSub . "|create|\" + document.getElementById(\"createPostTitle\").value + \"|\" + document.getElementById(\"createPostContent\").value";
 		$view = "
 		<div class='postContainer'>
 		<table>

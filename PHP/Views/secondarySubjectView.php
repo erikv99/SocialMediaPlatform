@@ -15,6 +15,8 @@ class SecondarySubjectView extends View
 		// Getting the previewPosts which are set up by our model.
 		$previewPosts = $modelOutput["previewPosts"];
 
+		$dataArg = $modelOutput["primarySubject"] . "|" . $modelOutput["secondarySubject"];
+		$dataArg = htmlspecialchars($dataArg, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 		// Getting the first part of the view, basically the secondary subject title
 		$view = "
 		<div class='subjectContainer'>
@@ -22,7 +24,7 @@ class SecondarySubjectView extends View
 			<tr class='subjectContainerHeaderRow'>
 			<td><p class='subjectContainerHeaderTitle'><i class='fab fa-hive'></i> " . $modelOutput["secondarySubject"] . "</p>
 			<div class='SCHeaderRowSingleButton'>
-				<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"" . $modelOutput["primarySubject"] . "|" . $modelOutput["secondarySubject"] . "\")'>
+				<button class='imageButton SCHeaderRowButton' onClick='callController(\".content\", \"createPostController\", \"$dataArg\")'>
 					<img class='SCHeaderRowButtonImg' src='../IMG/add.png'>
 				</button>
 			</div></td>

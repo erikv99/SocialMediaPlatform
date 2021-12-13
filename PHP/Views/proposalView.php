@@ -147,7 +147,6 @@ class ProposalView extends View
 			$proposalDate = date_format(date_create($primaryProposals[$i]["proposalDate"]), "d-m-y");
 			
 			$title = htmlspecialchars($primaryProposals[$i]["proposalTitle"], ENT_QUOTES);
-			//$title = $primaryProposals[$i]["proposalTitle"];
 			$rejectDataArg = "rejectProposal|$title|primary";
 			$approveDataArg = "approveProposal|$title|primary";
 
@@ -212,8 +211,11 @@ class ProposalView extends View
 			// Formatting the proposal date.
 			$proposalDate = date_format(date_create($secondaryProposals[$i]["proposalDate"]), "d-m-y");
 			
-			$title = htmlspecialchars($secondaryProposals[$i]["proposalTitle"], ENT_QUOTES);
-			$primary = htmlspecialchars($secondaryProposals[$i]["proposalPrimary"], ENT_QUOTES);
+			//$title = htmlspecialchars($secondaryProposals[$i]["proposalTitle"], ENT_QUOTES);
+			//$primary = htmlspecialchars($secondaryProposals[$i]["proposalPrimary"], ENT_QUOTES);
+			$title =  $secondaryProposals[$i]["proposalTitle"]; 
+			$primary =  $secondaryProposals[$i]["proposalCreator"]; 
+
 			$rejectDataArg = "rejectProposal|$title|secondary";
 			$approveDataArg = "approveProposal|$title|secondary|$primary";
 
@@ -224,7 +226,7 @@ class ProposalView extends View
 				<i class='fas fa-times propReject' onClick='callController(\".content\", \"proposalController\", \"$rejectDataArg\");'></i>
 				<i class='fas fa-check propApprove' onClick='callController(\".content\", \"proposalController\", \"$approveDataArg\");'></i>
 			</div>
-			<p>Proposed subject: <b>" . $secondaryProposals[$i]["proposalTitle"] . "</b></p>
+			<p>Proposed subject: <b>" . $secondaryProposals[$i]["proposalTitle"] . "</b> in primary subject <b>" . $secondaryProposals[$i]["proposalPrimary"] . "</b</p>
 			<p>Proposed by user <b>" . $secondaryProposals[$i]["proposalCreator"] . "</b> on " . $proposalDate . "</p>
 			<p>Reason: " . $secondaryProposals[$i]["proposalReason"] . "</p>
 			</div></td></tr>
