@@ -44,7 +44,7 @@ class ContentView extends View
 	 */
 	private function getSubjectView(string $primarySubject, string $secondarySubjectsRowView, int $idNum) : string
 	{
-		$escapedPrimSub = htmlspecialchars($primarySubject, ENT_QUOTES);
+		$escapedPrimSub = htmlspecialchars($primarySubject, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
 		// Making the subject view (current primarysubject with all its secondarysubject)
 		$view = 
@@ -100,7 +100,6 @@ class ContentView extends View
 	{
 		$dataArg = $primarySubject . "|" . $secondarySubject;
 		$dataArg = htmlspecialchars($dataArg, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-
 		$view = 
 		"<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'>
 				<p class='subjectContainerSubTitle'><a onClick='callController(\".content\", \"secondarySubjectController\", \"" . $dataArg . "\");'> " . $secondarySubject . "</a></p>

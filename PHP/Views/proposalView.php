@@ -146,7 +146,7 @@ class ProposalView extends View
 			// Formatting the proposal date.
 			$proposalDate = date_format(date_create($primaryProposals[$i]["proposalDate"]), "d-m-y");
 			
-			$title = htmlspecialchars($primaryProposals[$i]["proposalTitle"], ENT_QUOTES);
+			$title =  htmlspecialchars($primaryProposals[$i]["proposalTitle"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
 			$rejectDataArg = "rejectProposal|$title|primary";
 			$approveDataArg = "approveProposal|$title|primary";
 
@@ -211,10 +211,8 @@ class ProposalView extends View
 			// Formatting the proposal date.
 			$proposalDate = date_format(date_create($secondaryProposals[$i]["proposalDate"]), "d-m-y");
 			
-			//$title = htmlspecialchars($secondaryProposals[$i]["proposalTitle"], ENT_QUOTES);
-			//$primary = htmlspecialchars($secondaryProposals[$i]["proposalPrimary"], ENT_QUOTES);
-			$title =  $secondaryProposals[$i]["proposalTitle"]; 
-			$primary =  $secondaryProposals[$i]["proposalCreator"]; 
+			$title =  htmlspecialchars($secondaryProposals[$i]["proposalTitle"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+			$primary = htmlspecialchars($secondaryProposals[$i]["proposalPrimary"], ENT_QUOTES | ENT_HTML5, 'UTF-8'); 
 
 			$rejectDataArg = "rejectProposal|$title|secondary";
 			$approveDataArg = "approveProposal|$title|secondary|$primary";

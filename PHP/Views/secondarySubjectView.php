@@ -42,6 +42,7 @@ class SecondarySubjectView extends View
 			// Looping through the previewPosts
 			for ($i = 0; $i  < count($previewPosts); $i++) 
 			{
+				
 				// Making a post obj for the current post
 				$post = new Post($previewPosts[$i]);
 				

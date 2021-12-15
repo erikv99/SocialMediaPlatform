@@ -49,9 +49,9 @@ Class Post
 		{
 			$timeAgoCreated = $difference->h . " hour(s)";
 		}	 
-		elseif($difference->m != 0) 
+		elseif($difference->i != 0) 
 		{
-			$timeAgoCreated = $difference->m . " minute(s)";
+			$timeAgoCreated = $difference->i . " minute(s)";
 		}
 		else 
 		{
@@ -77,12 +77,14 @@ Class Post
 		}
 		
 		$data = $this::$dbData;
+		$escapedPrimSub = htmlspecialchars($data["PrimarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$escapedSecSub = htmlspecialchars($data["SecondarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
 		$postPreviewView = 
 		"
 		<table class='previewPostsTable'>
 		<tr>
-		<td><p class='postPreviewTitle'><a onclick='callController(\".content\", \"postPageController\", \"" . $data["PrimarySubject"] . "|" . $data["SecondarySubject"] . "|" . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
+		<td><p class='postPreviewTitle'><a onclick='callController(\".content\", \"postPageController\", \"" . $escapedPrimSub . "|" . $escapedSecSub . "|" . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
 		</tr>
 		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["postCreator"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>

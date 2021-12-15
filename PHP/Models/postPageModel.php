@@ -5,7 +5,6 @@ class PostPageModel extends Model
 {
 	public function execute() : array
 	{
-		logDebug("reached postpagemodel execute");
 		/** the viewType options which can be returned are:
  		* normal : does not include a edit or delete button in the header
  		* owner : user == post owner, includes a edit and delete button
@@ -192,7 +191,7 @@ class PostPageModel extends Model
 
 		// Getting data from the post request, 5th arg is the data from the textArea (updated content), no need for validation since this function only gets called if the 4th arg (button action) is save. which is only the case when the save button is pressed.
 		$splitResult = explode("|", $_POST['data']);
-		$editedContent = htmlentities($splitResult[4]);		
+		$editedContent = htmlspecialchars($splitResult[4], ENT_QUOTES | ENT_HTML5, 'UTF-8');	
 
 		// Checking if the editedContent contains atleast 1 letter using regex (dont want empty content) (checking length wont be enough since spaces count for the length as well.)
 		if (!preg_match('/[A-Za-z]/', $editedContent))

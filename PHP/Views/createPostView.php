@@ -30,6 +30,7 @@ class CreatePostView extends View
 
 	/**
 	 * Function for getting the view
+	 * 
 	 * @return string $view
 	 */
 	public function getView() : string 

@@ -12,7 +12,6 @@ class PrimarySubjectView extends View
 	*/
 	protected function createView($modelOutput) : string
 	{
-		logDebug("modeloutput: " . var_export($modelOutput,true));
 		$secondarySubjects = $modelOutput["secondarySubjects"];
 		$previewPosts = $modelOutput["previewPosts"];
 		$primarySubject = $modelOutput["primarySubject"];

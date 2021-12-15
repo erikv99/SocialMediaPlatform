@@ -72,3 +72,14 @@
 
 +
 
+- Fixed a bug which would cause secondary subjects with the same name but different primaries to be displayed under all primaries with this secondary subject.
+- Added documentation to the primarySubjectModel
+- Fixed a bug causing previewposts to not be shown inside secondary subject page.
+- Fixed a bug of post previews not opening when clicked.
+- Fixed a bug that was showing any time under a hour as less then a minute ago instead of x minutes.
+- Fixed a bug preventing posts that had quotation marks in the post and in their secondary subject to be edited or deleted.
+- Fixed a bug causing new secondary subjects to be added under the approver its name instead of the primary suspect.
+
++ 
+
+

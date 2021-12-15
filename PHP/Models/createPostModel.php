@@ -56,8 +56,9 @@ class CreatePostModel extends Model
 		$currentDate = new DateTime();
 		$currentDate = $currentDate->format('Y-m-d H:i:s');
 		$dbConn = openDBConnection();
-		$postTitle = htmlspecialchars(ucfirst($temp[3]), ENT_QUOTES | ENT_HTML5, 'UTF-8', /*double_encode*/false);
-		$postContent = htmlspecialchars($temp[4], ENT_QUOTES | ENT_HTML5, 'UTF-8', /*double_encode*/false);
+		$postTitle = htmlspecialchars(ucfirst($temp[3]), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$postContent = htmlspecialchars($temp[4], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		logDebug("posttitle: $postTitle, postContent: $postContent");
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 

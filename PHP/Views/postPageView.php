@@ -53,8 +53,10 @@ class PostPageView extends View
 
 	private function createOwnerView(array $data, Post $post) : string 
 	{
-		$editButtonDataArgument = $data["PrimarySubject"] . "|" . $data["SecondarySubject"] . "|" . $data["postID"] . "|edit";
-		$deleteButtonDataArgument =  $data["PrimarySubject"] . "|" . $data["SecondarySubject"] . "|" . $data["postID"] . "|delete";
+		$escapedPrimSub = htmlspecialchars($data["PrimarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$escapedSecSub = htmlspecialchars($data["SecondarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$editButtonDataArgument = $escapedPrimSub . "|" . $escapedSecSub . "|" . $data["postID"] . "|edit";
+		$deleteButtonDataArgument =  $escapedPrimSub . "|" . $escapedSecSub . "|" . $data["postID"] . "|delete";
 		$view = "
 		<div class='postContainer'>
 		<table>
@@ -74,8 +76,10 @@ class PostPageView extends View
 
 	private function createEditView(array $data, Post $post) : string
 	{
-		$editButtonDataArgument = $data["PrimarySubject"] . "|" . $data["SecondarySubject"] . "|" . $data["postID"] . "|delete";
-		$saveButtonDataArgument =  $data["PrimarySubject"] . "|" . $data["SecondarySubject"] . "|" . $data["postID"] . "|save|\" + document.getElementById(\"editedContent\").value";
+		$escapedPrimSub = htmlspecialchars($data["PrimarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$escapedSecSub = htmlspecialchars($data["SecondarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+		$editButtonDataArgument = $escapedPrimSub . "|" . $escapedSecSub . "|" . $data["postID"] . "|delete";
+		$saveButtonDataArgument =  $escapedPrimSub . "|" .$escapedSecSub . "|" . $data["postID"] . "|save|\" + document.getElementById(\"editedContent\").value";
 		$view = "
 		<div class='postContainer'>
 		<table>

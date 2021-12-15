@@ -23,7 +23,7 @@ class SecondarySubjectModel extends Model
 		];
 
 		// Getting the last x posts to preview.
-		$previewPosts = $this->getPosts($secondarySubject);
+		$previewPosts = $this->getPosts($secondarySubject, $primarySubject);
 		
 		// Putting the primarysubject and secondary subjects in the returnData.
 		$returnData["primarySubject"] = $primarySubject;
@@ -37,16 +37,17 @@ class SecondarySubjectModel extends Model
 	 * Gets all the posts for this secondarySubject
 	 * 
 	 * @param string $secondarySubject
+	 * @param string $pimarySubject
 	 * @return array $posts ordered by creation date (newest first)
 	 */
-	private function getPosts($secondarySubject) 
+	private function getPosts(string $secondarySubject, string $primarySubject) 
 	{
 		$posts = [];
 		$dbConn = openDBConnection();
 		try 
 		{
-			$stmt = $dbConn->prepare("SELECT * FROM `posts` WHERE SecondarySubject = ? ORDER BY postCreationDatetime");
-			$stmt->execute([$secondarySubject]);
+			$stmt = $dbConn->prepare("SELECT * FROM `posts` WHERE SecondarySubject = ? AND PrimarySubject = ? ORDER BY postCreationDatetime");
+			$stmt->execute([$secondarySubject, $primarySubject]);
 			$posts = $stmt->fetchAll();
 		}
 		catch (PDOException $e) 
