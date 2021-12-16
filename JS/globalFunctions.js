@@ -77,6 +77,7 @@ function refreshPage()
 
 	// Calling that controller
 	callController(placementTag, controllerName, data);
+
 }
 
 // Definitely didn't copy this from https://www.w3schools.com/js/js_cookies.asp

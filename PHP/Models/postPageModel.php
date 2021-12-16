@@ -147,11 +147,8 @@ class PostPageModel extends Model
 	 */
 	private function isUserPostOwner(string $postOwner) 
 	{
-		// returning if the session var loggedIn is not set
-		if (!isset($_SESSION["loggedIn"])) { return false; }
-
-		// returning if the user isnt logged in
-		if ($_SESSION["loggedIn"] == false) { return false; } 
+		// returning if the user isn't logged in
+		if (!$this->isUserLoggedIn()) { return false; } 
 
 		// returning if the username is not set
 		if (!isset($_SESSION["username"])) { return false; }

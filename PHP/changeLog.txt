@@ -82,4 +82,9 @@
 
 + 
 
+- All alerts now have the Roboto font
+- Fixed a bug causing the background to not expand with the page
+- Header is now implemented using MVC
+
++ 
 
