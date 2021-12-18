@@ -1,7 +1,12 @@
-function callController(placeMentTag, controllerName, data = "") 
+function callController(placeMentTag, controllerName, controllerData = "") 
 {
+
 	// Since data is just a single value we have to put it in array form
-	var dataToSend = {data : data};
+	var dataToSend = {data : controllerData};
+
+	// Handeling the actions regarding a eventual refresh page. we need to save some info in some cases
+	this.saveCallControllerInfo(placeMentTag, controllerName, controllerData);
+	
 	this.sendAjaxRequest(placeMentTag, controllerName, dataToSend);
 } 
 
@@ -17,11 +22,6 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
 
-	//console.log("data: " + JSON.stringify(data));
-	
-	// Handeling the actions regarding a eventual refresh page. we need to save some info in some cases
-	this.saveCallControllerInfo(placeMentTag, controllerName, data);
-
 	console.log("callController to " + filePath);
 	$.ajax(
 	{
@@ -35,7 +35,7 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 			// Parsing the json to a object
 			var jsonObj = JSON.parse(response); 
 
-			console.log("Content after parse:\n" + jsonObj.view);
+			//console.log("Content after parse:\n" + jsonObj.view);
 
 			// Checking if the jsonObj contains a "objectsToRemove" key. (only returned if needed)
 			if (jsonObj.hasOwnProperty("objectsToRemove")) 
@@ -52,6 +52,7 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 			{
 				loginCheck();
 			}
+
 		},
 		error: function(jqXHR, exception) 
 		{
@@ -87,7 +88,7 @@ function removeElementsFromView(objectsToRemove)
 
 // Checks if the callController info needs to be saved, this is the case for basically all controllers except a few specific ones.
 // Reason for saving this is when a page request is needed we need to know which controller was last called.
-function saveCallControllerInfo(placeMentTag, controllerName, data) 
+function saveCallControllerInfo(placeMentTag, controllerName, controllerData) 
 {
 	var excludedControllers = [
 	"loginController",
@@ -104,11 +105,20 @@ function saveCallControllerInfo(placeMentTag, controllerName, data)
 	// If its the post page controller we ONLY want to save it if the arguments dont contain the word EDIT
 	// Reason is that if its edit and someone logs out, the page will be refreshed, if the call containing edit gets saved this is the view which is called.
 	// in simpler terms if user logges out while in edit mode he will still get a edit view if we save that controller call
-	if (controllerName == "postPageController" && data["data"].includes("edit")) { return; }
+	if (controllerName == "postPageController" && controllerData.includes("edit")) { return; }
 	
+	// Parsing the data and manually escpaing the semicolumns since it messes with our JSON
+	controllerData = JSON.stringify(controllerData);	
+	controllerData = controllerData.replace(/;/g, "escapedSC");
+
 	// Saving the current controller call in a cookie for later usage if needed.
 	document.cookie = "lastControllerPlacementTag=" + placeMentTag;
 	document.cookie = "lastControllerName=" + controllerName;
-	document.cookie = "lastControllerData=" + JSON.stringify(data);	
+	document.cookie = "lastControllerData=" + controllerData;
+}
 
+function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
 }

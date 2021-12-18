@@ -39,7 +39,7 @@ class LoginModel extends Model
 		$_SESSION['loggedIn'] = true;
 		
 		// If everthing is well we only want the alert to be returned, not the view itself.
-		$this->dieWithAlert("alertSuccess", "Login succesful", true);
+		$this->dieWithAlert("alertSuccess", "Login succesful", false);
 	}
 
 	/**
@@ -53,7 +53,6 @@ class LoginModel extends Model
 	{
 		// Opening a DB connection
 		$dbConn = openDBConnection();
-
 		$hashedPassword = "";
 
 		// Getting the hashed password coresponding to the given username 
@@ -69,6 +68,7 @@ class LoginModel extends Model
 		}
 
 		closeDBConnection($dbConn);
+		$hashDBpass = password_hash($password, PASSWORD_DEFAULT);
 
 		// Checking if the password matches the hashed version then returning the result.
 		$passwordCorrect = password_verify($password, $hashedPassword);

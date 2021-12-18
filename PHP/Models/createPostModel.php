@@ -58,7 +58,6 @@ class CreatePostModel extends Model
 		$dbConn = openDBConnection();
 		$postTitle = htmlspecialchars(ucfirst($temp[3]), ENT_QUOTES | ENT_HTML5, 'UTF-8');
 		$postContent = htmlspecialchars($temp[4], ENT_QUOTES | ENT_HTML5, 'UTF-8');
-		logDebug("posttitle: $postTitle, postContent: $postContent");
 		$primarySubject = $temp[0];
 		$secondarySubject = $temp[1];
 

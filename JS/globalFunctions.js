@@ -36,7 +36,6 @@ function loginCheck()
 			else if(obj.loginButtonsAction == "hide") 
 			{
 				userIsLoggedIn();
-				refreshPage();
 			}
 		},
 		error: function(xhr, status, error) 
@@ -62,22 +61,24 @@ function rotateImage(imgHandle, degrees)
 // Function refreshes the current page, gets the last called controller from the cookies then calls this controller using the callController function
 function refreshPage() 
 {	
-	console.log("refreshPage called");
+	console.log("refreshPage called by " + refreshPage.caller);
 
 	// Getting the data for the controller to call from the cookie
 	var controllerName = this.getCookie("lastControllerName");
 	var placementTag = this.getCookie("lastControllerPlacementTag");
-	var dataAsJson = this.getCookie("lastControllerData");
+	var data = this.getCookie("lastControllerData");
 
-	// Transforming the json to a obj.
-	var dataObj = JSON.parse(dataAsJson);
+	if (data != "") 
+	{
+			// Replacing the manually escaped semicolumns with actual semicolumns again
+			data = data.replace(/escapedSC/g, ';');
+	}
 
-	// getting the data itself
-	var data = dataObj["data"];
+	// parsing the data.
+	data = JSON.parse(data);
 
 	// Calling that controller
-	callController(placementTag, controllerName, data);
-
+ 	callController(placementTag, controllerName, data);
 }
 
 // Definitely didn't copy this from https://www.w3schools.com/js/js_cookies.asp
@@ -95,10 +96,4 @@ function getCookie(cname) {
     }
   }
   return "";
-}
-
-function escapeStr(string) 
-{
-	var escapedStr = string.replace(/"/g, '&quot;');
-	return escapedStr;
 }

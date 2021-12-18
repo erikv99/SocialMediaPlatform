@@ -23,9 +23,9 @@ class RegisterView extends View
 		</button>
 		<form class='loginForm' onsubmit='callControllerFromForm(\"body\", \"registerController\", \"loginForm\"); return false;' method='POST'>
 		<label for='text'>Username: </label>
-		<input type='text' name='username' minlength='2' maxlength='30' required>
+		<input type='text' name='username' minlength='2' maxlength='20' required>
 		<label for='password'>Password: </label>
-		<input type='password' name='password' minlength='2' maxlength='30' required>
+		<input type='password' name='password' minlength='2' maxlength='100' required>
 		<label class='confirmPassword' for='confirmPassword'>Confirm password</label>
 		<input class='confirmPassword' type='password' name='confirmPassword' minlength='2' maxlength='30' required/>
 		<br/>
