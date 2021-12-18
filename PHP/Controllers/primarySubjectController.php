@@ -17,7 +17,7 @@ $controller = new PrimarySubjectController();
 $response = $controller->register();
 
 // Adding the objects which need to be removed to the response
-$objectsToRemove = [".subjectContainer", ".alert", ".locationBar", ".postContainer", ".login"];
+$objectsToRemove = [".subjectContainer",".locationBar", ".postContainer", ".login"];
 $response["objectsToRemove"] = $objectsToRemove;
 echo json_encode($response);
 ?>

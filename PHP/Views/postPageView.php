@@ -44,7 +44,7 @@ class PostPageView extends View
 		<table>
 			<tr class='postContainerHeaderRow'><td><p class='postTitle'>" . $data["postTitle"] . "</p></tr></td>
 			<tr class='postContainerContentRow'><td><p class='postContent'>" . $data["postContent"] .  "</p></td></tr>
-			<tr class='postContainerContentRow'><td><p class='postAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["postCreator"] . "</b> " . $post->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
+			<tr class='postContainerContentRow'><td><p class='postAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b><a onClick='callController(\".content\", \"accountPageController\", \"" . $data["postCreator"] . "\");'>". $data["postCreator"] . "</a></b> " . $post->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>
 		</div>
 		";
@@ -67,7 +67,7 @@ class PostPageView extends View
 				<a onclick='callController(\".content\", \"postPageController\", \"$deleteButtonDataArgument\");'><i class='far fa-trash-alt'></i></a>
 			</div></tr></td>
 			<tr class='postContainerContentRow'><td><p class='postContent'>" . $data["postContent"] .  "</p></td></tr>
-			<tr class='postContainerContentRow'><td><p class='postAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["postCreator"] . "</b> " . $post->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
+			<tr class='postContainerContentRow'><td><p class='postAuthor'><i class='fas fa-book-reader'></i>  Posted by user <a onClick='callController(\".content\", \"accountPageController\", \"" . $data["postCreator"] . "\");'><b>". $data["postCreator"] . "</a></b> " . $post->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>
 		</div>
 		";
@@ -90,7 +90,7 @@ class PostPageView extends View
 				<a onclick='callController(\".content\", \"postPageController\", \"$saveButtonDataArgument);'><i class='fas fa-check'></i></a>
 			</div></tr></td>
 			<tr class='postContainerContentRow'><td><p class='postContent'><textarea id='editedContent'>" . $data["postContent"] .  "</textarea></p></td></tr>
-			<tr class='postContainerContentRow'><td><p class='postAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["postCreator"] . "</b> " . $post->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
+			<tr class='postContainerContentRow'><td><p class='postAuthor'><i class='fas fa-book-reader'></i>  Posted by user <a onClick='callController(\".content\", \"accountPageController\", \"" . $data["postCreator"] . "\");'><b>". $data["postCreator"] . "</a></b> " . $post->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>
 		</div>
 		";

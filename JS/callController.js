@@ -18,6 +18,8 @@ function callControllerFromForm(placeMentTag, controllerName, formID)
 }
 
 
+var removeAlertTimer = null; 
+
 function sendAjaxRequest(placeMentTag, controllerName, data) 
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
@@ -51,6 +53,16 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 			if (controllerName == "loginController") 
 			{
 				loginCheck();
+			} 
+
+			// If we called a alert we will delete it in 5 seconds
+			if(controllerName == "alertController") 
+			{
+				// This function checks if the alert removal timer needs to be stopped and does so if needed
+				stopAlertTimer();
+
+				// Setting a new timer
+				removeAlertTimer = setTimeout(removeAlert, 5000);
 			}
 
 		},
@@ -117,8 +129,16 @@ function saveCallControllerInfo(placeMentTag, controllerName, controllerData)
 	document.cookie = "lastControllerData=" + controllerData;
 }
 
-function decodeHtml(html) {
-    var txt = document.createElement("textarea");
-    txt.innerHTML = html;
-    return txt.value;
+// Removes the 5 second timer for removing the alert if needed.
+function stopAlertTimer() 
+{
+	if (removeAlertTimer != null) 
+	{
+		// If the timeout was already set we clear it and start a new one.
+		clearTimeout(removeAlertTimer);
+	}
+}
+function removeAlert() 
+{
+	$(".alert").remove();
 }

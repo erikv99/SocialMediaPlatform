@@ -39,7 +39,7 @@ class LoginModel extends Model
 		$_SESSION['loggedIn'] = true;
 		
 		// If everthing is well we only want the alert to be returned, not the view itself.
-		$this->dieWithAlert("alertSuccess", "Login succesful", false);
+		$this->dieWithAlert("alertSuccess", "Login succesful", true);
 	}
 
 	/**

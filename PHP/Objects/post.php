@@ -86,7 +86,7 @@ Class Post
 		<tr>
 		<td><p class='postPreviewTitle'><a onclick='callController(\".content\", \"postPageController\", \"" . $escapedPrimSub . "|" . $escapedSecSub . "|" . $data["postID"] . "\");'>" . $data["postTitle"] . "</a></p></td>
 		</tr>
-		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <b>". $data["postCreator"] . "</b> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
+		<tr><td><p class='postPreviewAuthor'><i class='fas fa-book-reader'></i>  Posted by user <a onClick='callController(\".content\", \"accountPageController\", \"" . $data["postCreator"] . "\");'><b>". $data["postCreator"] . "</b></a> " . $this->getTimeAgoCreated($data["postCreationDatetime"]) . "</p></td></tr>
 		</table>
 		";
 

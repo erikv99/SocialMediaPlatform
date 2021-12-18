@@ -38,7 +38,7 @@ class AlertController
 
 $controller = new AlertController();
 $response = $controller->register();
-$objectsToRemove = [".alert", ".login"];
+$objectsToRemove = [".login"];
 $response["objectsToRemove"] = $objectsToRemove;
 echo json_encode($response);
 ?>

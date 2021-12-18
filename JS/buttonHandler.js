@@ -6,6 +6,7 @@ function closeLoginContainer()
 
 function closeAlert() 
 {
+	stopAlertTimer();
 	$(".alert").remove();
 }
 

@@ -16,7 +16,7 @@ class LoginController extends Controller
 
 $controller = new LoginController();
 $response = $controller->register();
-$objectsToRemove = [".login", ".alert"];
+$objectsToRemove = [".login"];
 $response["objectsToRemove"] = $objectsToRemove;
 echo json_encode($response);
 ?>

@@ -92,4 +92,13 @@
 - Usernames can now have a maximum length of 20 chars
 - Fixed a bug where when a admin logged out the system would still recognize the user as a admin
 - Fixed a bug where logging in sometimes didnt remove the login box.
--
+
++ 
+
+- Alerts called using the callController now dissapear after 5 seconds
+- Fixed a bug giving the wrong view on postPage
+- Started working on the account page
+- All references of a username now link to the account page of that username.
+
++
+

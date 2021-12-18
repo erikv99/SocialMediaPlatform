@@ -399,3 +399,7 @@
 	color: red;
 }
 
+.postAuthor a:hover 
+{
+	color: white;
+}
