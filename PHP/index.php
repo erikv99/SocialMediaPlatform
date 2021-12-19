@@ -25,7 +25,6 @@
 <?php 	
 	include_once("Include/sidebar.inc.php");
 ?>
-
 </div>
 </body>
 </html>

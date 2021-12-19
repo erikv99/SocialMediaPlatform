@@ -1,11 +1,10 @@
 <?php  
-
-require_once("view.php");
+require_once('view.php');
 
 /**
- * View class for the account page (private/public)
+ * View class for the about us page 
  */
-class AccountPageView extends View 
+class AboutUsView extends View 
 {
 	/**
 	 * Function which makes/creates the actual view. (the specific to this page part)
@@ -13,53 +12,36 @@ class AccountPageView extends View
 	 * @param array $modelOutput
 	 * @return string $view
 	 */
-	protected function createView(array $modelOutput) : string
+	public function createView(array $modelOutput) : string
 	{
-		$viewType = $modelOutput["viewType"];
-		$containerTitle = "";
-		$username = $modelOutput["username"];
-		$amountOfPosts = $modelOutput["amountOfPosts"];
-		$creationDate = $modelOutput["creationDate"];
-
-		if ($viewType == "normal") 
-		{
-			$containerTitle = $username . "'s account";
-		}
-		elseif ($viewType == "owner") 
-		{
-			$containerTitle = "My account";
-		}
-
-		$view =
-		"
+		$view = "		
 		<div class='subjectContainer'>
 			<table>
 				<tr class='subjectContainerHeaderRow'><td><p class='subjectContainerHeaderTitle'>
-				$containerTitle
+				About us
 				</p></td></tr>
 				
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				Username: $username
+				1
 				</p><td></tr>
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				Posts created: $amountOfPosts
+				2
 				</p></td></tr>
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				Account creation date: $creationDate
+				3
 				</p></td></tr>
 			</table>
-		</div>
-		";
+		</div>";
 
 		return $view;
 	}
 
 	/**
-	 * Function for getting the view
+	 * Gets the view and returns it
 	 * 
 	 * @return string $view
-	 */	
-	public function getView() : string
+	 */
+	public function getView() : string 
 	{
 		// Updating the view
 		$this::$viewContent = $this->createView($this::$output);

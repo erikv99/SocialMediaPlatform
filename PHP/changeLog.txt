@@ -109,3 +109,12 @@
 
 - Fixed alerts not beign properly centered.
 - Made all documentation under the View folder up to standard.
+
++
+
+- Some minor changes in how the size respons to resizing of the browser.
+- Added a contact page
+- Started working on the about us page.
+
++ 
+
