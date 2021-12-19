@@ -1,8 +1,17 @@
 <?php  
 require_once('view.php');
 
+/**
+ * View class for the header 
+ */
 class HeaderView extends View 
 {
+	/**
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param array $modelOutput
+	 * @return string $view
+	 */
 	public function createView(array $modelOutput) : string
 	{
 		$view = "

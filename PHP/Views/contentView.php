@@ -2,8 +2,17 @@
 
 require_once("view.php");
 
+/**
+ * View class for the contentPage, the content page is basically the main subject page
+ */
 class ContentView extends View 
 {
+	/**
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param array $modelOutput
+	 * @return string $view
+	 */
 	protected function createView(array $modelOutput) : string 
 	{
 		// Getting the subjects from our modelOutput.
@@ -109,6 +118,11 @@ class ContentView extends View
 		return $view;
 	}
 
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */	
 	public function getView() : string 
 	{
 		$this::$viewContent = $this->createView($this::$output);

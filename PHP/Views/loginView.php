@@ -2,14 +2,17 @@
 
 require_once("view.php");
 
+/**
+ * View class for the login 
+ */
 class LoginView extends View 
 {
 	/**
-	* Creates the view and returns it
-	* 
-	* @param array $modelView
-	* @return string $view
-	*/
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param array $modelOutput
+	 * @return string $view
+	 */
 	protected function createView(array $modelView) : string
 	{
 		$cancelImgPath = "../IMG/cancel.png";
@@ -38,6 +41,11 @@ class LoginView extends View
 		return $view;
 	}
 	
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */
 	public function getView() : string
 	{
 		// Updating the view

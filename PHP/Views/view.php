@@ -18,7 +18,6 @@
 		/**
  		* Creates the view and returns it
  		* 
- 		* @param array $modelView
  		* @return string $view
  		*/
 		abstract public function getView();
@@ -61,16 +60,31 @@
 			return $locationBar->getView() . $this::$viewContent . $this->getAlertView();
 		}
 
+		/**
+		 * Function sets the $output variable
+		 * 
+		 * @param array $output
+		 */
 		public function setOutput($output) 
 		{
 			$this::$output = $output;
 		}
 
+		/** 
+		 * Function gets the $output variable
+		 * 
+		 * @return array $output
+		 */
 		public function getOutput() : array 
 		{
 			return $this::$output;
 		}
 
+		/** 
+		 * Function makes and returns the alertView
+		 * 
+		 * @return string $alertView
+		 */
 		private function getAlertView()
 		{
 			$output = $this::$output;

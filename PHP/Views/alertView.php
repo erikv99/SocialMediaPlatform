@@ -12,6 +12,13 @@ class AlertView
 		$this::$alertView = $this->createView($alertType, $alertMessage);
 	}
 
+	/**
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param string $alertType
+	 * @param string $alertMessage
+	 * @return string $view
+	 */
 	public function createView($alertType = "", $alertMessage = "") 
 	{
 		if ($alertMessage == "") 
@@ -35,6 +42,12 @@ class AlertView
 
 		return $view;
 	}
+
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */
 	public function getView() : string 
 	{
 		// if there is not yet a view object or the view inside it is empty we do createView()

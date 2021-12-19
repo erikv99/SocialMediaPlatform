@@ -2,14 +2,17 @@
 require_once("view.php");
 require_once("../Objects/post.php");
 
+/**
+ * View class for the primary subject page 
+ */
 class PrimarySubjectView extends View 
 {
 	/**
-	* Creates the view and returns it
-	* 
-	* @param array $modelView
-	* @return string $view
-	*/
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param array $modelOutput
+	 * @return string $view
+	 */
 	protected function createView($modelOutput) : string
 	{
 		$secondarySubjects = $modelOutput["secondarySubjects"];
@@ -60,6 +63,11 @@ class PrimarySubjectView extends View
 		return $view;
 	}
 
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */
 	public function getView() : string 
 	{
 		$this::$viewContent = $this->createView($this::$output);

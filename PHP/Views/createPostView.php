@@ -1,6 +1,9 @@
 <?php  
 require_once("view.php");
 
+/**
+ * View class for the create post where users can make a new post
+ */
 class CreatePostView extends View 
 {
 	/**

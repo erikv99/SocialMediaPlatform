@@ -1,12 +1,15 @@
 <?php 
 require_once("view.php");
 
+/**
+ * View class for the register  
+ */
 class RegisterView extends View 
 {		
 	/**
-	 * Creates the view and returns it
+	 * Function which makes/creates the actual view. (the specific to this page part)
 	 * 
-	 * @param array $modelView
+	 * @param array $modelOutput
 	 * @return string $view
 	 */
 	protected function createView(array $modelOutput) : string
@@ -39,6 +42,11 @@ class RegisterView extends View
 		return $view;
 	}
 
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */
 	public function getView() : string
 	{
 		// Updating the view (incase message has been changed)

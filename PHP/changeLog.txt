@@ -102,3 +102,10 @@
 
 +
 
+- Fixed some minor bugs
+- A very basic account page is now done.
+
++
+
+- Fixed alerts not beign properly centered.
+- Made all documentation under the View folder up to standard.

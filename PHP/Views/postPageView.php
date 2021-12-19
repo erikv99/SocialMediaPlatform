@@ -2,8 +2,17 @@
 require_once("view.php");
 require_once("../Objects/post.php");
 
+/**
+ * View class for the postPage
+ */
 class PostPageView extends View 
 {
+	/**
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param array $modelOutput
+	 * @return string $view
+	 */
 	protected function createView(array $modelOutput) : string 
 	{		
 		$post = new Post($modelOutput["postData"]);
@@ -28,6 +37,11 @@ class PostPageView extends View
 		return $view;
 	}
 
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */
 	public function getView() : string 
 	{
 		// Updating the view
@@ -37,6 +51,13 @@ class PostPageView extends View
 		return Parent::getViewContent();
 	}
 
+	/** 
+	 * Creates the view when the viewtype is "normal"
+	 * 
+	 * @param array $data
+	 * @param Post $post
+	 * @return string $view
+	 */
 	private function createNormalView(array $data, Post $post) : string
 	{
 		$view = "
@@ -51,6 +72,13 @@ class PostPageView extends View
 		return $view;
 	}
 
+	/** 
+	 * Creates the view when the viewtype is "owner"
+	 * 
+	 * @param array $data
+	 * @param Post $post
+	 * @return string $view
+	 */
 	private function createOwnerView(array $data, Post $post) : string 
 	{
 		$escapedPrimSub = htmlspecialchars($data["PrimarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
@@ -74,6 +102,13 @@ class PostPageView extends View
 		return $view;
 	}
 
+	/** 
+	 * Creates the view when the viewtype is "edit"
+	 * 
+	 * @param array $data
+	 * @param Post $post
+	 * @return string $view
+	 */
 	private function createEditView(array $data, Post $post) : string
 	{
 		$escapedPrimSub = htmlspecialchars($data["PrimarySubject"], ENT_QUOTES | ENT_HTML5, 'UTF-8');

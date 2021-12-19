@@ -2,14 +2,17 @@
 
 require_once("view.php");
 
+/**
+ * View class for the account page (private/public)
+ */
 class AccountPageView extends View 
 {
 	/**
-	* Creates the view and returns it
-	* 
-	* @param array $modelView
-	* @return string $view
-	*/
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param array $modelOutput
+	 * @return string $view
+	 */
 	protected function createView(array $modelOutput) : string
 	{
 		$viewType = $modelOutput["viewType"];
@@ -50,7 +53,12 @@ class AccountPageView extends View
 
 		return $view;
 	}
-	
+
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */	
 	public function getView() : string
 	{
 		// Updating the view

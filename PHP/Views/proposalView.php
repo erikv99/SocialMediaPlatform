@@ -2,8 +2,18 @@
 require_once("view.php");
 require_once("../Objects/post.php");
 
+
+/**
+ * View class for the proposal page
+ */
 class ProposalView extends View 
 {
+	/**
+	 * Function which makes/creates the actual view. (the specific to this page part)
+	 * 
+	 * @param array $modelOutput
+	 * @return string $view
+	 */
 	protected function createView(array $modelOutput) : string 
 	{
 		$primarySubjectOptions = $this->getPrimarySubjectsOptionsView($modelOutput["primarySubjects"]);
@@ -63,6 +73,11 @@ class ProposalView extends View
 		return $view;
 	}
 
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */
 	public function getView() : string 
 	{
 		// Updating the view

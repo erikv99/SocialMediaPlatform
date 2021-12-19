@@ -184,7 +184,8 @@ a:hover
 .alert {
   position: absolute;
   bottom: 1em;
-  left: 32em;
+  left: 50%;
+  transform: translate(-50%, 0);
   min-width: 30em;
   width: 30em;
   padding: 12px 16px;
@@ -193,8 +194,6 @@ a:hover
   border-width: 1px;
   margin-bottom: 5px;
   font-size: 16px;
-  margin-left: auto;
-  margin-right: auto;
   z-index: 999999;
   min-height: 1em;
   font-family: "Roboto";

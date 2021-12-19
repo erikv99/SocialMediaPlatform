@@ -72,6 +72,11 @@ class LocationBarView
 		return $view;
 	}
 
+	/**
+	 * Function for getting the view
+	 * 
+	 * @return string $view
+	 */
 	public function getView() : string 
 	{
 		// Checking if locations array is empty 
