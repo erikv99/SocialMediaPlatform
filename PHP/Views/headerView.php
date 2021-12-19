@@ -16,7 +16,7 @@ class HeaderView extends View
 					<h1><a class='headerTitle' onclick='callController(\".content\", \"contentController\");'>ThougtShare</a></h1>		
 				</td>
 				<td id='logoutButtons'>
-				<button type='button' class='button' id='accountButton' onClick=''><i class='fas fa-user-cog'></i> Account</button>
+				<button type='button' class='button' id='accountButton' onClick='callController(\".content\", \"accountPageController\", \"currentUser\");'><i class='fas fa-user-cog'></i> Account</button>
 				<button type='button' class='button' id='logoutButton' onClick='logout();'><i class='fas fa-user-times'></i> Log out</button>
 				</td>
 				<td id='loginButtons'>		

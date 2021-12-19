@@ -10,7 +10,7 @@
 		</button>
 		<div class="sidebarContent">
 				<p class="button"><a onclick="callController('.content', 'proposalController')">Proposals</a></p>
-				<p class="button"><a>My account</a></p>
+				<p class="button"><a onClick="callController('.content', 'accountPageController', 'currentUser');">My account</a></p>
 				<p class="button"><a>Contact</a></p>
 				<p class="button"><a>About us</a></p>	
 		</div>

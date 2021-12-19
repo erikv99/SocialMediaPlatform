@@ -3,4 +3,5 @@
 	session_start();
 	$_SESSION['loggedIn'] = false;
 	$_SESSION['isAdmin'] = false;
+	$_SESSION['username'] = "";
 ?>
