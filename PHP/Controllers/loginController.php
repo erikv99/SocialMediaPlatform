@@ -4,6 +4,7 @@ require_once("../Controllers/controller.php");
 require_once("../Models/loginModel.php");
 require_once("../Views/loginView.php");
 
+/** class for a specific controller */
 class LoginController extends Controller 
 {
 	public function __construct()

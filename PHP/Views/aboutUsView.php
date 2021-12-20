@@ -22,13 +22,10 @@ class AboutUsView extends View
 				</p></td></tr>
 				
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				1
+				Thoughtshare was founded in 2021 as school project. 
 				</p><td></tr>
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				2
-				</p></td></tr>
-				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				3
+				It was founded by Erik V. and contains no frameworks as per school requirements.
 				</p></td></tr>
 			</table>
 		</div>";

@@ -1,6 +1,12 @@
 <?php  
+/** model class for the Alert model */
 Class AlertModel 
 {
+	/** 
+	 * Executes the logic required for the specific model, sets any needed output and returns it.
+	 * 
+	 * @return array $output
+	 */
 	public function execute () 
 	{
 		$returnData = [];

@@ -3,6 +3,7 @@ require_once("../Models/contentModel.php");
 require_once("../Controllers/controller.php");
 require_once("../Views/contentView.php");
 
+/** class for a specific controller */
 class ContentController extends Controller 
 {
 	public function __construct()

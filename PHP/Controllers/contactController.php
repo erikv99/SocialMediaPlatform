@@ -3,6 +3,7 @@ require_once("../Models/contactModel.php");
 require_once("../Controllers/controller.php");
 require_once("../Views/contactView.php");
 
+/** class for a specific controller */
 class ContactController extends Controller
 {
 	public function __construct()

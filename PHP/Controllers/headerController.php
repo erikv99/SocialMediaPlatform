@@ -3,6 +3,7 @@ require_once("../Models/headerModel.php");
 require_once("../Controllers/controller.php");
 require_once("../Views/headerView.php");
 
+/** class for a specific controller */
 class HeaderController extends Controller
 {
 	public function __construct()

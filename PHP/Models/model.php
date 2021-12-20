@@ -7,7 +7,11 @@ require_once("../Exceptions/customException.php");
 /** Model base class */
 abstract class Model
 {
-	// This functions executes the model logic.
+	/** 
+	 * Executes the logic required for the specific model, sets any needed output and returns it.
+	 * 
+	 * @return array $output
+	 */
 	abstract protected function execute() : array;
 
 	/**

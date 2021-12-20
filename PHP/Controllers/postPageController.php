@@ -3,6 +3,7 @@ require_once("../Models/postPageModel.php");
 require_once("../Controllers/controller.php");
 require_once("../Views/postPageView.php");
 
+/** class for a specific controller */
 class PostPageController extends Controller
 {
 	public function __construct()

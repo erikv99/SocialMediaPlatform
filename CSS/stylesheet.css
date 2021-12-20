@@ -28,24 +28,7 @@ a:hover
 
 }
 
-.footer 
-{
-	text-align: right;
-	margin-left:  4.2em;
-	height:  1em;
-	margin: 0px;
-	margin-right: 2.5em;
-}
-
-.footer h6 
-{
-	margin:  0px;
-}
-
-
 /* Content container / post container css */
-
-
 
 .postText 
 {
@@ -236,4 +219,581 @@ a:hover
 {
 	height: 100%;
 	width: 100%;
+}
+.content
+{
+	padding-top: 7em;
+	padding-left: 4.5em;
+	padding-right:  1em;
+	margin-right: 0.2em;
+	align-content: center;
+	min-width: 80vw;
+}
+
+.subjectContainer 
+{
+	width: auto;
+	min-width: 	35em;
+	margin-left:  auto;
+	margin-bottom: 0.25em;
+	margin-right:  auto;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 4px solid #394263;
+}
+
+.subjectContainer table 
+{
+	padding:  0px;
+	width: 100%;
+	margin: 0px;
+	border-spacing: 0px;
+}
+
+.subjectContainer a 
+{
+	text-decoration: none;
+}
+
+.subjectContainer a:hover 
+{
+	color: white;
+}
+
+.primarySubjectPageTitle, .secondarySubjectPageTitle
+{
+  font-family: 'Electrolize', sans-serif;
+  background: 
+  	-webkit-linear-gradient(rgba(135, 60, 255, 1), rgba(135, 60, 255, 0.0) 0%),
+ 	-webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 30%, rgba(55, 230, 235, 1) 0%);
+	border: 4px solid #394263;
+	
+}
+
+.primarySubjectPageTitle p, .secondarySubjectPageTitle p 
+{
+	padding-left: 0.7em;
+	text-transform: uppercase;
+	font-family: "Trebuchet MS";
+	color: #394263;
+  font-size: 1.2em;
+  margin: 0.5em 0em;
+}
+
+.locationBar ul 
+{
+	list-style-type: none;
+	display: inline;
+}
+
+.locationBar li 
+{
+	float: left;
+	margin: 0px 2px;
+}
+.locationBar 
+{
+	color:  lightseagreen;
+	font-family: "Courier New";
+	font-size: 0.9em;
+	position: absolute;
+	top: 5em;
+	z-index: 400;
+	left: 6.5em;
+}
+
+.locationBar a:hover 
+{
+	color: white;
+}
+.locationBar a 
+{
+	text-decoration: none;
+	color: lightseagreen;
+}
+
+.postPreviewTitle 
+{
+	margin: 0px;
+	font-size: 1.2em;
+	margin-top: 3px;
+}
+
+.postPreviewTD 
+{
+	margin: 0px;
+}
+
+.postPreviewAuthor 
+{
+	font-size: 10px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.postPreviewAuthor, .postPreviewTitle 
+{
+	padding-left: 8px;
+}
+
+.noPostAvailable 
+{
+	padding-bottom: 0.4em;
+	padding-top: 0.2em;
+}
+.subjectContainerHeaderRow 
+{
+	background: #394263 url("../IMG/catOverlay.png");
+	background-position-x: 100%;
+	background-position-y: 100%;
+	background-repeat: no-repeat;
+	color: lightseagreen;
+}
+
+.subjectContainerHeaderTitle, .subjectContainerSubTitle 
+{
+	margin: 0px;
+	font-family: "Trebuchet MS";
+	width: max-content;
+	font-size: 20px;
+	padding-left: 0.3em;
+}
+
+.subjectContainerHeaderTitle 
+{
+	position: relative;
+	float: left;
+	bottom: 0.1em;
+}
+
+.subjectContainerSubRowTD
+{
+	background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 57%);
+}
+.subjectContainerSubTitle 
+{
+	padding: 0.25em;
+}
+
+.subjectContainerHeaderRow
+{
+	line-height: 2.5em;
+}
+
+.subjectContainerSubRow 
+{
+	line-height: initial;
+	color: #394263;
+}
+
+.SCHeaderRowDoubleButton 
+{
+	padding: 0 0.2em;
+	position: absolute;
+	right: 2em;
+	width: 60px;
+}
+
+.SCHeaderRowSingleButton 
+{
+	float: right;
+}
+
+.SCHeaderRowButtonImg 
+{
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+.SCHeaderRowButtonImg:hover 
+{
+	cursor: pointer;
+}
+
+.SCHeaderRowButton 
+{
+	position: relative;
+	background-color: transparent;
+	width: 2%;
+	bottom: 0.1em;
+	height: 100%;
+	margin: 0em 0.75em;
+}
+
+.postContainer table 
+{
+	border-spacing: 0px;
+	line-height: initial;
+	color: #394263;
+	padding: 0px;
+  width: 100%;
+  margin: 0px;
+}
+
+.postContainer 
+{
+	width: auto;
+	min-width: 35em;
+	margin-left: auto;
+	margin-bottom: 0.25em;
+	margin-right: auto;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 4px solid #394263;
+}
+
+.postContainerHeaderRow 
+{
+	background: #394263 url("../IMG/catOverlay.png");
+	    background-position-x: 0%;
+	    background-position-y: 0%;
+	    background-repeat: repeat;
+	background-position-x: 100%;
+	background-position-y: 100%;
+	background-repeat: no-repeat;
+	color: lightseagreen;
+	line-height: 2.5em;
+}
+.postContainerContentRow 
+{
+	line-height: initial;
+	color: #394263;
+}
+
+.postContainerContentRow td 
+{
+	background: linear-gradient(82deg, rgba(93,212,205,1) 16%, rgba(255,255,255,1) 57%);
+}
+
+.postTitle 
+{
+	margin: 0px;
+	font-size: 1.2em;
+	margin-top: 3px;
+	position: relative;
+	float: left;
+	margin: 0px;
+	font-family: "Trebuchet MS";
+	width: max-content;
+	padding-left: 0.3em;
+}
+
+.postAuthor 
+{
+	font-size: 12px;
+	margin-top: 0.5em;
+	margin-bottom: 5px;
+	padding-left: 8px;
+}
+
+.postContent 
+{
+	padding: 5px 8px 1px 8px;
+	margin:  0px;
+}
+
+.postActionButtons
+{
+	position: relative;
+	float: right;
+	padding-right: 0.4em;
+}
+.postActionButtons a 
+{
+	margin-right: 0.5em;
+	color: lightseagreen;
+}
+
+.postContainer textarea 
+{
+	background: none;
+	border: none;
+	width: 100%;
+	height: auto;
+	font-family: inherit;
+	resize: none;
+	color: #394263;
+}
+
+#createPostTitle 
+{
+	border: none;
+	background: none;
+	text-decoration: none;
+	font-size: inherit;
+	font-style: inherit;
+	color: inherit;
+}
+
+.proposeButton 
+{
+	background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
+	text-align: center;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	box-shadow: 0 0 20px black;
+	border: 1px outset white;
+	padding: 6px 12px;
+	font-size: 90%;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.proposalLabel 
+{
+	position: relative;
+	left: 0.5em;
+	top: 0.5em;
+	vertical-align: top;
+	color:  #394263;
+}
+
+.proposalInput 
+{
+	position: relative;
+	left: 0.6em;
+	top: 0.45em;
+	width: 70vw;
+	background: none;
+	border: none;
+	resize: none;
+	font-size: inherit;
+	font-family: inherit;
+	margin-top: 0px;
+
+}
+
+.proposalTextArea 
+{
+	margin-bottom: 0.7em;
+}
+
+.proposalListBox 
+{
+	position: relative;
+	left: 0.7em;
+	top: 0.5em;
+	border: 2px solid #394263;
+	background: none;
+	border-radius: 10%;
+	margin-bottom: 0.3em;
+}
+
+.proposalReview 
+{
+	border-bottom: 1.5px dashed #394263;
+	padding-left: 0.4em;
+	color:  #394263;
+}
+
+.proposalReview p 
+{
+	margin: 0.3em;
+}
+
+.proposalReviewButtons 
+{
+	float: right;
+	margin-right: 0.6em;
+	height: 1em;
+	margin-top: 0.75em;
+}
+
+.proposalReviewButtons i 
+{
+	scale: 1.7;
+	padding: 0 0.6em;
+}
+
+.proposalReviewButtons i:hover 
+{
+	cursor: pointer;
+}
+
+.propApprove 
+{
+	color: green;
+}
+
+.propReject 
+{
+	color: red;
+}
+
+.postAuthor a:hover 
+{
+	color: white;
+}
+
+.basicPageText 
+{
+	margin: 0.25em 0.5em;
+}
+
+.headerIcon 
+{
+	padding-left: 1.5em;
+	width: 60px;
+	height: 60px;
+}
+
+.header h1 
+{
+	display: table-cell;
+	vertical-align: middle;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 39px;
+	color: white;
+}
+
+table 
+{
+	padding: 1em 0px;
+}
+
+.header 		
+{
+	position: absolute;
+	min-width: 40em;
+	width: 100vw;
+	height: 6em;
+	top: 0px;
+	background-color: #394263;
+	margin: 0px;
+	z-index: 2;
+	
+}
+
+.headerTitle
+{
+	color: inherit;
+	text-decoration: inherit;
+}
+
+button 
+{
+	font-size: 100%;
+	border-radius: 25px;
+	padding: 8px 16px;
+	margin-top: 7px;
+	background-color: rgb(57, 66, 99);
+	color: white;
+	border: 3px outset white;
+
+}
+
+#loginButtons, #logoutButtons
+{
+	display: none;
+	position: relative;
+	right: 1.5em;
+	width: 100%;
+	align-content: 	right;
+	text-align: right;
+}
+
+#signupButton, #accountButton
+{
+	margin-right: 0.5em;
+}
+
+.login 
+{
+	width: 100%;
+}
+.loginContainer 
+{
+	position: fixed;
+    top: 25%;
+    left: 35%;
+	width: 30%;
+	height: 40vh;
+	z-index: 5455555;	
+}
+
+.loginContainer form 
+{
+	position: relative;	
+	top: 5%;
+	margin: auto;
+	width: 200px;
+	margin-bottom: 0px;
+	text-decoration: bold;
+}
+#submitButton 
+{	
+	margin-top: 10px;
+}
+
+.loginContainer label, input 
+{
+	margin-left: auto;
+	width: 15em;
+	margin-right: auto;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.loginFormContainer 
+{
+	/* display: none; */
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 60%;
+	border: 3px groove #394263;
+	box-shadow: 0 20px 50px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
+	padding: 24px !important;		
+	background-color: white;
+	color: black;
+	min-width: 200px;
+	border-radius: 7px !important;
+}
+
+.cancelButton 
+{
+	width: 10%;
+	height: 8%;
+	margin-left: 94%;
+	margin-top: -1.2em;
+	border: none;
+	background-color: transparent;
+}
+
+.cancelImage
+{
+	position: relative;
+	right: 0.7em;
+	bottom: 0.3em;
+	height: 1.3em;
+	padding-bottom: 1em;
+}
+.submitButton
+{
+	border-radius: 25px;
+	padding: 8px 16px;
+	margin-top: 15px;
+	background-color: #394263;
+	color: white;
+	
+}
+
+.loginErrorBox 
+{
+	width: 100%;
+	font-size: 50%;
+}
+.overlay 
+{
+	background: rgba(255,255,255,0.6);
+	backdrop-filter: blur(5px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 122234;
+	filter: blur(5px);
 }

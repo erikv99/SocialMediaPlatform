@@ -2,8 +2,8 @@
 require_once("../Models/model.php");
 require_once("../Views/view.php");
 require_once("../generalFunctions.php");
-/** Controller base class */
 
+/** Controller base class */
 class Controller
 {
 	public Model $model;

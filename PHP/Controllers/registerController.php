@@ -3,6 +3,7 @@ require_once("../Models/registerModel.php");
 require_once("../Controllers/controller.php");
 require_once("../Views/registerView.php");
 
+/** class for a specific controller */
 class RegisterController extends Controller 
 {
 	public function __construct()

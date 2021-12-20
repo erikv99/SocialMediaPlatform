@@ -118,3 +118,10 @@
 
 + 
 
+- Finished a basic about us page.
+- Made all function and class documentation under the Model folder up to standard.
+- Made all function and class documentation under the Controller folder up to standard.
+- All css is now in a single file to decrease amount of request being made loading it.
+- Removed Footer since i had no use for it.
+
++

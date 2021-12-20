@@ -3,6 +3,7 @@ require_once("../Controllers/controller.php");
 require_once("../Models/accountPageModel.php");
 require_once("../Views/accountPageView.php");
 
+/** class for a specific controller */
 class AccountPageController extends Controller 
 {
 	public function __construct()

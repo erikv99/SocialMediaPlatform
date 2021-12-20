@@ -1,8 +1,14 @@
 <?php  
 require_once("model.php");
 
+/** specific model class for the post page */
 class PostPageModel extends Model 
 {
+	/** 
+	 * Executes the logic required for the specific model, sets any needed output and returns it.
+	 * 
+	 * @return array $output
+	 */
 	public function execute() : array
 	{
 		/** the viewType options which can be returned are:

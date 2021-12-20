@@ -3,6 +3,7 @@
 require_once("../Controllers/controller.php");
 require_once("../Views/alertView.php");
 require_once("../Models/alertModel.php");
+
 /**
  * This class is a set up a bit different since we're not extending on View inside alertView.
  */

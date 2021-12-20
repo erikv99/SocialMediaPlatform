@@ -3,6 +3,7 @@ require_once("../Models/proposalModel.php");
 require_once("../Controllers/controller.php");
 require_once("../Views/proposalView.php");
 
+/** class for a specific controller */
 class ProposalController extends Controller
 {
 	public function __construct()
