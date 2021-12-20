@@ -155,6 +155,30 @@ abstract class Model
 	}
 
 	/**
+	 * Function to get all subjects (Key = primarySubject, value = array of secondary subjects)
+	 * 
+	 * @return array $subjects (key = primarySubject, value = array containing secondary subjects)
+	 */
+	protected function getSubjects() : array 
+	{
+		$subjects = [];
+
+		// Getting all the primary subjects from the database
+		$primarySubjects = $this->getPrimarySubjects();
+
+		// Looping thru each primarySubject
+		for ($i = 0; $i < count($primarySubjects); $i++) 
+		{		
+
+			$secondarySubjects = $this->getSecondarySubjects($primarySubjects[$i]);
+
+			$subjects[$primarySubjects[$i]] = $secondarySubjects;
+		}
+
+		return $subjects;
+	}
+
+	/**
 	 * Checks if the login data in the post is set.
 	 * 
 	 * @return bool $isLoginDataSet

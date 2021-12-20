@@ -43,7 +43,7 @@ class AccountPageModel extends Model
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
 		[
-			"User: " . $username => "callController('.content', 'AccountPageModel', '$username')"
+			"User: " . $username => "callController('.content', 'accountPageController', '$username')"
 		];
 
 		return $returnData;

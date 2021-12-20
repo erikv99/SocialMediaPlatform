@@ -108,7 +108,8 @@ function saveCallControllerInfo(placeMentTag, controllerName, controllerData)
 	"alertController",
 	"createPostController",
 	"proposalController",
-	"headerController"
+	"headerController",
+	"adminController"
 	];
 	
 	// Checking if the controller name is one of the excluded controllers, returning if this is the case

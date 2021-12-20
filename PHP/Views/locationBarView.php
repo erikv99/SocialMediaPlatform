@@ -45,7 +45,6 @@ class LocationBarView
 
 		// Adding the first basic parts of the location, this is included on everypage.
 		$view = "<div class='locationBar'><ul><li><i class='fas fa-map-signs'></i></li><li><a onclick='callController(\".content\", \"homeController\");'>Home</a></li>";
-		$view .= "<li><i class='fas fa-chevron-right'></i></li><li><a onclick='callController(\".content\", \"contentController\");'>Subjects</a></li>";
 		
 		// Looping thru the locations using the key/value
 		foreach ($locations as $key => $value)

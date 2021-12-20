@@ -40,7 +40,7 @@ class ProposalModel extends Model
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
 		[
-			"Subject proposal" => "callController('.content', 'proposalController')",
+			"Proposals" => "callController('.content', 'proposalController')",
 		];
 
 		return $returnData;

@@ -140,3 +140,8 @@
 - Sidebar now only shows the button the user has access to
 
 +
+
+- Created the mvc framework for the homepage and admin page.
+- Started working inside the admin model and view.
+
++ 
