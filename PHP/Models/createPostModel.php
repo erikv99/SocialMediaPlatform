@@ -93,6 +93,9 @@ class CreatePostModel extends Model
 			throw new DBException($e->getMessage());
 		}
 
+		// Giving the user 10 credits for making the post
+		$this->giveUserCredits($postCreator, 10);
+
 		closeDBConnection($dbConn);
 		$postID = $dbOutput["postID"];
 

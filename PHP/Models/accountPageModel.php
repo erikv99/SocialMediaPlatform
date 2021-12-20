@@ -37,6 +37,9 @@ class AccountPageModel extends Model
 		// Getting the account creationdate
 		$returnData["creationDate"] = $this->getAccountCreationDate($username);
 
+		// Getting the amount of credits a user owns
+		$returnData["creditBalance"] = $this->getUserCreditBalance($username);
+
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
 		[

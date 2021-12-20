@@ -125,3 +125,11 @@
 - Removed Footer since i had no use for it.
 
 +
+
+- Added a credit system
+- Users currently gain 10 credits when making a post
+- Credit is also shown on account page.
+- Added icons to the account page
+
++ 
+

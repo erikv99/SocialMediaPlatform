@@ -184,5 +184,72 @@ abstract class Model
     	echo json_encode(["view" => "<script type='text/javascript'>$refreshView callController(\".page\", \"alertController\", {\"alertType\":\"$alertType\",\"alertMessage\":\"$alertMessage\"});</script>"]);
     	die();
 	}
+
+	/** 
+	 * Function to give the a user a certain amount of credits, uses pdo transaction methods.
+	 * 
+	 * @param string $username
+	 * @param int $credits
+	 */
+	protected function giveUserCredits(string $username, int $credits) 
+	{
+		// Checking if the amount of credits we're suppose to give is more then zero
+		if ($credits < 1) 
+		{
+			logError("giveUserCredits arguments $credits can not be less then 1");
+			return;
+		} 
+
+		$dbConn = openDBConnection();
+		
+		try
+		{
+			// Beginning the transaction
+			$dbConn->beginTransaction();
+
+			// updating the users amount of credits
+			$stmt = $dbConn->prepare("UPDATE users SET credits = credits + ? WHERE username = ?");
+			$stmt->execute([$credits, $username]);
+
+			// If we reach this point without exceptions we will commit our change
+			$dbConn->commit();
+		}
+		catch (PDOException $e)
+		{
+			// Rolling back the transaction.
+			$dbConn->rollback();
+			throw new DBException($e->getMessage());
+		}	
+
+		closeDBConnection($conn);
+
+	}
+
+	/**
+	 * Function which will return the amount of credits a user owns
+	 *
+	 * @param string $username
+	 * @return $credits
+	 */
+	protected function getUserCreditBalance(string $username) 
+	{
+		$dbConn = openDBConnection();
+		$dbOutput = [];
+
+		try
+		{
+			// getting the amount of credits of the user
+			$stmt = $dbConn->prepare("SELECT credits FROM users WHERE username = ?");
+			$stmt->execute([$username]);
+			$dbOutput = $stmt->fetch()["credits"];
+		}
+		catch (PDOException $e)
+		{
+			throw new DBException($e->getMessage());
+		}	
+
+		closeDBConnection($conn);
+		return $dbOutput;
+	}
 }
 ?>

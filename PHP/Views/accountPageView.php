@@ -20,6 +20,7 @@ class AccountPageView extends View
 		$username = $modelOutput["username"];
 		$amountOfPosts = $modelOutput["amountOfPosts"];
 		$creationDate = $modelOutput["creationDate"];
+		$creditBalance = $modelOutput["creditBalance"];
 
 		if ($viewType == "normal") 
 		{
@@ -39,13 +40,16 @@ class AccountPageView extends View
 				</p></td></tr>
 				
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				Username: $username
+				<i class='fas fa-user-tie'></i> Username: <b>$username</b>
 				</p><td></tr>
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				Posts created: $amountOfPosts
+				<i class='far fa-lightbulb'></i> Posts created: <b>$amountOfPosts</b>
 				</p></td></tr>
 				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
-				Account creation date: $creationDate
+				<i class='fas fa-money-check-alt'></i> Credit balance: <b>$creditBalance</b>
+				</p></td></tr>
+				<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='basicPageText'>
+				<i class='far fa-calendar-alt'></i> Account creation date: <b>$creationDate</b>
 				</p></td></tr>
 			</table>
 		</div>
