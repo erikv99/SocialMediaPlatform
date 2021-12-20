@@ -5,6 +5,7 @@ function userIsLoggedIn()
 {
 	$("#loginButtons").hide();
 	$("#logoutButtons").show();
+	$(".userButton").show();
 }
 
 // Takes the actions needed when a user is not logged in
@@ -12,6 +13,14 @@ function userIsNotLoggedIn()
 {
 	$("#logoutButtons").hide();
 	$("#loginButtons").show();
+	$(".userButton").hide();
+	$(".adminButton").hide();
+}
+
+// Function takes the actions needed when a user is a admin
+function userIsAdmin() 
+{
+	$(".adminButton").show();
 }
 
 // Will check if the user is logged in and take the appropiate actions.
@@ -29,13 +38,18 @@ function loginCheck()
 			var obj = JSON.parse(response);
 
 			// calling the correct function depending if the user is logged in or not
-			if (obj.loginButtonsAction == "show") 
+			if (obj.loggedIn == false) 
 			{
 				userIsNotLoggedIn();
 			} 
-			else if(obj.loginButtonsAction == "hide") 
+			else if(obj.loggedIn == true) 
 			{
 				userIsLoggedIn();
+
+				if (obj.isAdmin == true) 
+				{
+					userIsAdmin();
+				}
 			}
 		},
 		error: function(xhr, status, error) 

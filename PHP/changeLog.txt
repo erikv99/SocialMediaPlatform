@@ -133,3 +133,10 @@
 
 + 
 
+- Added icons to the login and register views
+- Made the sidebar MVC
+- Added a subjects, admin and home button to the sidebar.
+- Changed Thoughtshare in the locationbar to home
+- Sidebar now only shows the button the user has access to
+
++

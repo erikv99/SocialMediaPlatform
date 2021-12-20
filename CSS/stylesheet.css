@@ -797,3 +797,8 @@ button
 	z-index: 122234;
 	filter: blur(5px);
 }
+
+.userButton, .adminButton 
+{
+	display: none;
+}

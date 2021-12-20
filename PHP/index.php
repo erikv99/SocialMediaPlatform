@@ -12,16 +12,15 @@
 </head>
 <body>
 <div class="header"></div>
+<div class="sidebar"></div>
 <div class="page">
 	<div class="content">
 		<script type = "text/javascript">  
+			callController(".sidebar", "sidebarController");
 			callController(".content", "contentController");
 			callController(".header", "headerController");
          </script> 
 	</div>
-<?php 	
-	include_once("Include/sidebar.inc.php");
-?>
 </div>
 </body>
 </html>
