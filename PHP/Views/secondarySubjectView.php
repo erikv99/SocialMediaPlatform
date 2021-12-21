@@ -37,7 +37,7 @@ class SecondarySubjectView extends View
 		if (empty($previewPosts)) 
 		{
 			// Getting the view for no posts
-			$postPreviewView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='subjectContainerSubTitle'>No posts available!</p></td></tr>";
+			$postPreviewView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='noPostAvailable'>No posts available!</p></td></tr>";
 			$view .= $postPreviewView;
 		}
 		else

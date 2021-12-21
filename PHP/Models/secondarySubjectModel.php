@@ -22,6 +22,7 @@ class SecondarySubjectModel extends Model
 		// Setting the data needed for the locationBar
 		$returnData["locations"] = 
 		[
+			"Subjects" => "callController('.content', 'contentController')",
 			$primarySubject => "callController('.content', 'PrimarySubjectController', '$primarySubject')",
 			$secondarySubject => "callController('.content', 'SecondarySubjectController', '$primarySubject|$secondarySubject')"
 		];

@@ -145,3 +145,13 @@
 - Started working inside the admin model and view.
 
 + 
+
+- Admin page is done, admins can now delete primary and secondary subjects including posts and proposals if need be.
+- Fixed background not fully covering the page
+- Proposal creation dates now display years using 4 digits instead of 2
+- Clicking the thoughtshare logo/name now links to the home page instead of the subjects page.
+- Fixed "subjects" not showing in the locationBar for post, create post, primary sub and secondary subject pages.
+- No post available no has the same appearance as the regular titles.
+
++
+

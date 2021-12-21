@@ -22,7 +22,7 @@ class HeaderView extends View
 					<img src='../IMG/headerIcon.png' class='headerIcon' alt='Thinking related image'/>			
 				</td>		
 				<td>		
-					<h1><a class='headerTitle' onclick='callController(\".content\", \"contentController\");'>ThougtShare</a></h1>		
+					<h1><a class='headerTitle' onclick='callController(\".content\", \"homeController\");'>ThougtShare</a></h1>		
 				</td>
 				<td id='logoutButtons'>
 				<button type='button' class='button' id='accountButton' onClick='callController(\".content\", \"accountPageController\", \"currentUser\");'><i class='fas fa-user-cog'></i> Account</button>

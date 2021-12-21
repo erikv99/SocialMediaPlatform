@@ -57,7 +57,7 @@ class ProposalView extends View
 			</td></tr>
 			<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'>
 				<label class='proposalLabel'>Primary subject: </label>
-				<select class='proposalListBox' id='selectPrimarySubject'>
+				<select class='listBox' id='selectPrimarySubject'>
 				" . $primarySubjectOptions . "
 				</select>
 			</td></tr>
@@ -159,7 +159,7 @@ class ProposalView extends View
 		for ($i = 0; $i < count($primaryProposals); $i++) 
 		{
 			// Formatting the proposal date.
-			$proposalDate = date_format(date_create($primaryProposals[$i]["proposalDate"]), "d-m-y");
+			$proposalDate = date_format(date_create($primaryProposals[$i]["proposalDate"]), "d-m-Y");
 			
 			$title =  htmlspecialchars($primaryProposals[$i]["proposalTitle"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
 			$rejectDataArg = "rejectProposal|$title|primary";
@@ -224,7 +224,7 @@ class ProposalView extends View
 		for ($i = 0; $i < count($secondaryProposals); $i++) 
 		{
 			// Formatting the proposal date.
-			$proposalDate = date_format(date_create($secondaryProposals[$i]["proposalDate"]), "d-m-y");
+			$proposalDate = date_format(date_create($secondaryProposals[$i]["proposalDate"]), "d-m-Y");
 			
 			$title =  htmlspecialchars($secondaryProposals[$i]["proposalTitle"], ENT_QUOTES | ENT_HTML5, 'UTF-8');
 			$primary = htmlspecialchars($secondaryProposals[$i]["proposalPrimary"], ENT_QUOTES | ENT_HTML5, 'UTF-8'); 

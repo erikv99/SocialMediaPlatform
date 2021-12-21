@@ -23,7 +23,7 @@ a:hover
 		background: url("../IMG/whitepatternbackground.jpg");
 		background-position: 100%;
 		background-size: 1500px;
-		background-repeat: repeat-y;
+		background-repeat: repeat;
 		min-height: 100%;
 
 }
@@ -570,7 +570,7 @@ a:hover
 	margin-bottom: 0.7em;
 }
 
-.proposalListBox 
+.listBox 
 {
 	position: relative;
 	left: 0.7em;
@@ -801,4 +801,27 @@ button
 .userButton, .adminButton 
 {
 	display: none;
+}
+
+.listboxLabel 
+{
+		position: relative;
+	left: 0.5em;
+	top: 0.5em;
+	vertical-align: top;
+	color:  #394263;
+}
+
+#secondaryToDelete, #primaryToDelete
+{
+	margin-bottom: 1em;
+}
+
+.noPostAvailable 
+{
+	font-size: 1.2em;
+	padding: 0px;
+	padding-left: 8px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }

@@ -17,7 +17,10 @@ class PrimarySubjectModel extends Model
 		$primarySubject = $_POST['data'];
 
 		// Setting the data needed for the locationBar
-		$returnData["locations"] = [$primarySubject => "callController('.content', 'primarySubjectController', '$primarySubject')",];
+		$returnData["locations"] = [
+			"Subjects" => "callController('.content', 'contentController')",
+			$primarySubject => "callController('.content', 'primarySubjectController', '$primarySubject')",
+		];
 
 		// Getting all secondary subjects which fall under the given primary subject
 		$secondarySubjects = $this->getSecondarySubjects($primarySubject);

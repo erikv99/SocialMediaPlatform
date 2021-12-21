@@ -106,3 +106,44 @@ function logout()
 		}
 	});
 }
+
+function loadSecondaries() 
+{
+	var primarySubject = $("#primaryToLoadSecondariesFrom").val();
+	//alert(primarySubject);
+
+	data = { "primarySubject" : primarySubject};
+
+
+	$.ajax(
+	{
+		url: "Ajax/getSecondarySubjects.ajax.php",
+		method: "POST",
+		data : data,
+
+		success: function(response) 
+		{
+
+			// Parsing the json response into a object
+			var obj = JSON.parse(response);
+
+			// Getting the secondarySubjects array and putting it in a seperate var.
+			var secondarySubjects = obj.secondarySubjects;
+			
+			var output = [];
+
+			for (var i = 0; i < secondarySubjects.length; i++) 
+			{
+				output.push("<option value='"+ secondarySubjects[i] +"'>" + secondarySubjects[i] + "</option>");
+			}
+
+			$("#secondaryToDelete").html(output.join(""));
+
+		},
+		error: function(xhr, status, error) 
+		{
+			var errorMessage = xhr.status + ': ' + xhr.statusText;
+			console.log(errorMessage);
+		}
+	});
+}

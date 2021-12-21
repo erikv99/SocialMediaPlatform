@@ -68,7 +68,7 @@ class ProposalModel extends Model
 		$actionType = $temp[0];
 
 		// Getting the title also making the first character capitalized
-		$proposalTitle = $temp[1];
+		$proposalTitle = ucfirst($temp[1]);
 
 		// Checking if the required action is rejecting or approving a proposal
 		if ($actionType == "approveProposal" or $actionType == "rejectProposal") 

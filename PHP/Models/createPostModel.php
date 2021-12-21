@@ -41,6 +41,7 @@ class CreatePostModel extends Model
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
 		[
+			"Subjects" => "callController('.content', 'contentController')",
 			$primarySubject => "callController('.content', 'primarySubjectController', '$primarySubject')",
 			$secondarySubject => "callController('.content', 'secondarySubjectController', '$primarySubject|$secondarySubject')",
 			"Create post" => "callController('.content', 'createPostController', '$primarySubject|$secondarySubject')"

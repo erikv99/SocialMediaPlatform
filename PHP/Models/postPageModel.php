@@ -56,6 +56,7 @@ class PostPageModel extends Model
 		// Setting the locations for the locationsbar
 		$returnData["locations"] = 
 		[
+			"Subjects" => "callController('.content', 'contentController')",
 			$primarySubject => "callController('.content', 'primarySubjectController', '$primarySubject')",
 			$secondarySubject => "callController('.content', 'secondarySubjectController', '$primarySubject|$secondarySubject')",
 			"PostID: " . $postID => "callController('.content', 'postPageController', '$primarySubject|$secondarySubject|$postID')"

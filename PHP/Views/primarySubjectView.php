@@ -97,7 +97,7 @@ class PrimarySubjectView extends View
 		if (empty($posts)) 
 		{
 			// If its empty we want to add a "no posts created yet" type box
-			$previewPostsView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='postTitle noPostAvailable'>No posts available!</p></td></tr>";
+			$previewPostsView = "<tr class='subjectContainerSubRow'><td class='subjectContainerSubRowTD'><p class='noPostAvailable'>No posts available!</p></td></tr>";
 	 	}
 		else 
 		{
