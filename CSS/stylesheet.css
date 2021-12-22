@@ -831,3 +831,35 @@ button
 	margin: 0.25em 0.5em;
 	color:  #394263;
 }
+
+.homeTitle 
+{
+	font-size: 2.5em;
+	margin: 0.3em;
+	text-align: center;
+}
+
+.homeText 
+{
+	margin: 0px;
+	margin-bottom: 0.35em;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.homePageWrapper 
+{
+	padding: 1em;
+}
+
+.quoteIMG 
+{
+
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 30%;
+	border: 2px solid #394263;
+	border-radius: 10%;
+	margin-top: 2em;
+}

@@ -161,3 +161,7 @@
 - Added a no open proposals available message
 
 +
+
+- Filled the homepage
+
++
