@@ -155,3 +155,9 @@
 
 +
 
+- Minor design changes
+- Fixed content sometimes not loading
+- Fixed login buttons sometimes not properely displaying
+- Added a no open proposals available message
+
++

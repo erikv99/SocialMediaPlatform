@@ -179,6 +179,12 @@ class ProposalView extends View
 			";
 		}
 
+		// Displaying a message if no proposals are available to display
+		if (count($primaryProposals) == 0) 
+		{
+			$view .= "<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'><p class='noProposalsAvailable'>No open proposals available</p></td></tr>";
+		}
+
 		$view .= "</table></div>";
 		return $view;
 	}
@@ -244,6 +250,12 @@ class ProposalView extends View
 			<p>Reason: " . $secondaryProposals[$i]["proposalReason"] . "</p>
 			</div></td></tr>
 			";
+		}
+
+		// Displaying a message if no proposals are available to display
+		if (count($secondaryProposals) == 0) 
+		{
+			$view .= "<tr class='subjectContainerContentRow'><td class='subjectContainerSubRowTD'><p class='noProposalsAvailable'>No open proposals available</p></td></tr>";
 		}
 
 		$view .= "</table></div>";
