@@ -18,7 +18,7 @@
 		<script type = "text/javascript">  
 			callController(".sidebar", "sidebarController");
 			callController(".header", "headerController");
-			callController(".content", "contentController");
+			callController(".content", "homeController");
          </script> 
 	</div>
 </div>

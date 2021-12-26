@@ -33,6 +33,7 @@ class SidebarView extends View
 						<p class='button'><a onClick='callController(\".content\", \"aboutUsController\");'>About us</a></p>
 						<p class='button adminButton'><a onClick='callController(\".content\", \"adminController\");'>Admin</a></p>		
 				</div>
+				<p class='sidebarFooter'><i class='far fa-copyright'></i> Erik V.</p>
 			</div>     
 		</div>
 		";

@@ -97,13 +97,13 @@ a:hover
 }
 .expandedSidebar 
 {
-	display: none;
 	min-height:  45em;
 	width: 12em;
 }
 
 .collapsedSidebar 
 {
+	display: none;
 	min-height:  45em;
 	width: 3em;
 }
@@ -136,13 +136,11 @@ a:hover
 
 .expandedSidebar p 
 {
-	border-radius: 10px;
-	border:  1px outset white;
 	padding: 4px 8px;
-	margin: 5px 20px;
+	border: 2px outset cadetblue;
 	font-size: 100%;
-
-
+	margin: 0.4em 0.5em;
+	border-radius: 5%;
 }
 
 .button 
@@ -223,7 +221,7 @@ a:hover
 .content
 {
 	padding-top: 7em;
-	padding-left: 4.5em;
+	padding-left: 14em;
 	padding-right:  1em;
 	margin-right: 0.2em;
 	align-content: center;
@@ -440,7 +438,7 @@ a:hover
 	margin-right: auto;
 	border-radius: 5px;
 	overflow: hidden;
-	border: 4px solid #394263;
+	border: 2px ridge darkgray;;
 }
 
 .postContainerHeaderRow 
@@ -862,4 +860,12 @@ button
 	border: 2px solid #394263;
 	border-radius: 10%;
 	margin-top: 2em;
+}
+
+.sidebarFooter 
+{
+	position: absolute;
+	bottom: 0.5em;
+	left: 2.5em;
+
 }

@@ -165,3 +165,12 @@
 - Filled the homepage
 
 +
+
+- Page now starts with sidebar expanded 
+- Site now starts on homepage.
+- added a small delay to the logincheck to prevent login/out buttons not loading
+- Minor design changes in sidebar.
+- Added a footer to the sidebar
+
++
+
