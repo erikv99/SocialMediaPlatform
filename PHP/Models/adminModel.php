@@ -117,6 +117,11 @@ class AdminModel extends Model
 		}	
 
 		closeDBConnection($conn);
+
+		// Calling the admin controller to refresh the admin page (cant use normal refresh since admin info is not saved in callController) then calling the alert.
+		echo json_encode(["view" => "<script type='text/javascript'>callController(\".content\",\"adminController\"); callController(\".page\", \"alertController\", {\"alertType\":\"alertInfo\",\"alertMessage\":\"Primary subject has been deleted\"});</script>"]);
+   		die();
+
 	}
 
 	/** 
@@ -147,6 +152,10 @@ class AdminModel extends Model
 		}	
 
 		closeDBConnection($conn);
+
+		// Calling the admin controller to refresh the admin page (cant use normal refresh since admin info is not saved in callController) then calling the alert.
+		echo json_encode(["view" => "<script type='text/javascript'>callController(\".content\",\"adminController\"); callController(\".page\", \"alertController\", {\"alertType\":\"alertInfo\",\"alertMessage\":\"Secondary subject has been deleted\"});</script>"]);
+   		die();
 	}
 }
 ?>

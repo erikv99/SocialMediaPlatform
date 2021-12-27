@@ -174,3 +174,6 @@
 
 +
 
+- Alert messages are now shown when deleting a primary or secondary subject
+- Admin page is now properely refreshed when a primary or secondary subject is deleted.
+
