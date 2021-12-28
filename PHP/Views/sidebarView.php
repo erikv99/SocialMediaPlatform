@@ -29,6 +29,7 @@ class SidebarView extends View
 						<p class='button'><a onClick='callController(\".content\", \"homeController\");'>Home</a></p>	
 						<p class='button'><a onClick='callController(\".content\", \"contentController\");'>Subjects</a></p>	
 						<p class='button userButton'><a onclick='callController(\".content\", \"proposalController\")'>Proposals</a></p>
+						<p class='button'><a onclick='callController(\".content\", \"infoController\")'>Info</a></p>
 						<p class='button'><a onClick='callController(\".content\", \"contactController\");'>Contact</a></p>
 						<p class='button'><a onClick='callController(\".content\", \"aboutUsController\");'>About us</a></p>
 						<p class='button adminButton'><a onClick='callController(\".content\", \"adminController\");'>Admin</a></p>		

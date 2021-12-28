@@ -151,7 +151,7 @@ a:hover
 		background-size: 200% auto;
 		color: white;            
 		box-shadow: 0 0 20px black;
-		border: 1px outset white;
+		border: 2px outset cadetblue;
 }
 
 .button:hover 

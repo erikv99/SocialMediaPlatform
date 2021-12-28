@@ -175,5 +175,13 @@
 +
 
 - Alert messages are now shown when deleting a primary or secondary subject
-- Admin page is now properely refreshed when a primary or secondary subject is deleted.
+- Admin page is now properely refreshed when a primary or secondary subject is deleted.	
+
++ 
+
+- Added a info page
+- Added restful api, can be accesed using SocialMediaPlatform/api/users or SocialMediaPlatform/api/user/username 
+- Added a info section about the restful api
+
++
 

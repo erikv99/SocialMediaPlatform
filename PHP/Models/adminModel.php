@@ -58,8 +58,6 @@ class AdminModel extends Model
 		// Getting the given args by splitting the post data
 		$args = explode("|", $_POST["data"]);
 
-		logDebug("args: " . var_export($args,true));
-
 		// Checking if args at index 0 is set
 		if (isset($args[0])) 
 		{	
@@ -132,8 +130,6 @@ class AdminModel extends Model
 	 */
 	private function deleteSecondary(string $primarySubject, string $secondarySubject) 
 	{
-		logDebug("delete primary: " . var_export($primarySubject,true));
-
 		$dbConn = openDBConnection();
 
 		try
