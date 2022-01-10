@@ -24,7 +24,6 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 {
 	var filePath = "../PHP/Controllers/" + controllerName + ".php";
 
-	console.log("callController to " + filePath);
 	$.ajax(
 	{
 		url: filePath, 
@@ -33,7 +32,6 @@ function sendAjaxRequest(placeMentTag, controllerName, data)
 
 		success: function(response) 
 		{
-			console.log("Content before parse:\n" + response);
 			// Parsing the json to a object
 			var jsonObj = JSON.parse(response); 
 

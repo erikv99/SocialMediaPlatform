@@ -117,9 +117,7 @@ class AdminView extends View
 	 */
 	private function getRemoveSecondarySubView($primarySubjects, $secondarySubjects) : string
 	{
-		logDebug("primsubs: " . var_export($primarySubjects,true));
 		$primaryOptions = $this->getOptionsView($primarySubjects);
-		logDebug("secsubs: " . var_export($secondarySubjects,true));
 		$secondaryOptions = $this->getOptionsView($secondarySubjects);
 		$dataArg = "deleteSecondary|\" + document.getElementById(\"primaryToLoadSecondariesFrom\").options[document.getElementById(\"primaryToLoadSecondariesFrom\").selectedIndex].value + \"|\" + document.getElementById(\"secondaryToDelete\").options[document.getElementById(\"secondaryToDelete\").selectedIndex].value";
 

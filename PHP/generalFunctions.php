@@ -52,7 +52,7 @@ function openDBConnection()
 
     try 
     {
-        $conn = new PDO("mysql:host=" . $dbHost . ";dbname=" . $dbName . ";", $dbUser, $dbPass);
+        $conn = new PDO("mysql:host=" . $dbHost . ";port=3306;dbname=" . $dbName . ";", $dbUser, $dbPass);
     }
     catch (PDOException $e) 
     {

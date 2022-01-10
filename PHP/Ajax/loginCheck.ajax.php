@@ -14,7 +14,6 @@ if (isset($_SESSION["loggedIn"]))
     {
         $response["loggedIn"] = true;
 
-        //logDebug("session isadmin: " . var_export($_SESSION['isAdmin'],true));
         if ($_SESSION["isAdmin"] == true) 
         {
             $response["isAdmin"] = true;
